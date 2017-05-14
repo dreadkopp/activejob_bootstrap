@@ -25,7 +25,7 @@ SECRET_KEY = '@(m2uopcek&#ct6*uf8=n!+@i$3r*i9rq3th52#=voexp-mm@2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['yoshi.dynu.com']
 
 
 # Application definition
@@ -54,7 +54,7 @@ ROOT_URLCONF = 'activejob.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': ['templates', 'res'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -117,4 +117,5 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'res')
 STATIC_URL = 'res/'

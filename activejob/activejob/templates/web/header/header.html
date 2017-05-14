@@ -1,3 +1,5 @@
+{% load static %}
+
 <div class="topcontent">
   <div class="element inhalt">
     <p><a href="kontakt.html">Kontakt</a> | <a href=
@@ -6,11 +8,11 @@
   </div>
 </div>
 <div class="logo">
-  <a href="index.html">{% load static %} <img src={% static 'images/logo.gif' %} alt=
+  <a href="index.html"><img src={% static 'css/images/logo.gif' %} alt=
   "activjob Logo" /></a>
 </div>
 <div class"menu">
-  <!-- load menu -->
+  {% include "web/nav/nav.html" %}
 </div>
 <div class="headcontent">
   {% include "web/header/banner/banner.html" %}
