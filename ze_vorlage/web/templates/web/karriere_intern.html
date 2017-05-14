@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Karriere als Personalberater (m/w){{ block.super }}{% endblock %}
+
+{% block right_content %}
+    <h1>Grenzen überschreiten. Jetzt bewerben.</h1>
+
+    <p>Wir sind immer auf der Suche nach Menschen, die
+    noch weiter denken und sich heute mit den Märkten
+    von morgen auseinandersetzen.</p>
+
+    <p>Informieren Sie sich über Ihre Möglichkeiten in
+    den nachfolgenden Stellenausschreibungen.</p>
+
+    <p>Wir freuen uns auf Ihren aussagekräftigen
+    Lebenslauf.<br>
+    Bitte senden Sie diesen an <a href="mailto:info@zukunft-elite.de"
+    >info@zukunft-elite.de</a>.
+    </p>
+
+    {% include "web/snippets/stellenmarkt-table.html" %}
+{% endblock right_content %}

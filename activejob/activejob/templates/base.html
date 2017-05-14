@@ -1,0 +1,38 @@
+{% extends "bootstrap.html" %}
+{% load static %}
+
+{% block meta %}
+
+{% endblock meta %}
+
+{% block title %} Arbeitsvermittlung, Personalvermittlung, Zeitarbeit -
+activjob. {% endblock title %}
+
+{% block content %}
+    <div class="site">
+      <div class="sitetop">
+        <div class="topbuttons">
+        </div>
+        <div class="sitecontent">
+          <div class="header">
+            {% include "web/header/header.html" %}
+          </div>
+          <div class="content">
+             <!-- load content -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    {% block end_js %}
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+    {% endblock end_js %}
+
+{% endblock content %}

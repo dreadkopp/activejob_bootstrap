@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Kontakt zur Agentur für Personalberatung aufnehmen{{ block.super }}{% endblock %}
+
+{% block right_content %}
+    <h1>Kontaktieren Sie uns.</h1>
+
+    <p>Für weitere Informationen oder zur Besprechung
+    eines Mandats stehen wir Ihnen gern zur Verfügung.</p>
+
+    <p>Standort Dresden:</p>
+
+    {% include "web/snippets/address.html" %}
+{% endblock %}

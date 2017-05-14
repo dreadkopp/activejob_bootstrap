@@ -1,0 +1,51 @@
+{% load bootstrap3 %}
+
+{% if jobs %}
+    <table class="table table-hover" id="table_jobs">
+        <thead>
+            <tr>
+                <th>Stelle</th>
+                <th>Einsatzort</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            {% for job in jobs %}
+            <tr>
+                <td>
+                    <a href="{% url 'stelle' slug=job.slug %}">{{ job }}</a>
+                </td>
+                <td>
+                    {{ job.location }}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% if page_obj and page_obj.has_other_pages %}
+        <div class="pagination">
+            <span class="step-links">
+                {% if page_obj.has_previous %}
+                    <a href="?page={{ page_obj.previous_page_number }}#table_jobs">« zurück</a> |
+                {% endif %}
+
+                <span class="current">
+                    Seite {{ page_obj.number }} von {{ page_obj.paginator.num_pages }}
+                </span>
+
+                {% if page_obj.has_next %}
+                    | <a href="?page={{ page_obj.next_page_number }}#table_jobs">weiter »</a>
+                {% endif %}
+            </span>
+        </div>
+    {% endif %}
+
+{% else %}
+
+    <div class="alert alert-warning" role="alert">
+        {% bootstrap_icon "exclamation-sign" %}
+        keine passenden Stellenangebote
+    </div>
+
+{% endif %}

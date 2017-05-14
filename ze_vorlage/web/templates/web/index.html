@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% load static %}
+{% load bootstrap3 %}
+
+
+
+{% block title %}Personalberatung für IT, Telekommunikation, Technologie,
+  Bau, Consulting, Pharma, Medizin{{ block.super }}{% endblock %}
+
+
+
+{% block ze_maincontainer_class %}home{% endblock %}
+
+
+
+{% block ze_maincontainer %}
+
+    <div class="row ContentSlider">
+
+        {% for contact in contacts %}
+            {% include "web/snippets/_slide.html" %}
+        {% endfor %}
+
+    </div>
+
+
+    <div class="row" id="bottomcontainer">
+
+        <div class="col col-sm-4">
+            {% if stellenmarkt %}
+                <h2>Stellenmarkt</h2>
+
+                <form action="{% url "stellenmarkt" %}" method="GET">
+                    {% bootstrap_form quicksearchform layout="inline" %}
+
+                    <button type="submit" class="btn btn-primary">Suchen</button>
+                </form>
+
+                {# <a href="{% url 'stellenmarkt' %}">Detailsuche</a> #}
+            {% endif %}
+
+        </div>
+
+
+        <div class="col col-sm-4">
+            <h2>Was wir tun</h2>
+
+            <p>Als Personalberatung finden wir für Sie die
+                Elite unter den Fach- und Führungskräften.
+                <a href="{% url 'unternehmen' %}">… mehr</a>
+            </p>
+        </div>
+
+
+        <div class="col col-sm-4">
+            <h2>ZUKUNFT | ELITE.</h2>
+
+            <p>
+                Reichenbachstraße 55<br>
+                01069 Dresden<br>
+
+                <a href="tel:+493512502088-550">
+                    {% bootstrap_icon "phone" %}
+                    +49 351 2502088-550
+                </a><br>
+
+                {% bootstrap_icon "print" %}
+                +49 351 2502088-6<br>
+
+                <a href="mailto:info@zukunft-elite.de">
+                    {% bootstrap_icon "envelope" %}
+                    info@zukunft-elite.de
+                </a>
+            </p>
+        </div>
+
+    </div>
+
+{% endblock ze_maincontainer %}
+
+
+
+{% block end_js %}
+    {{ block.super }}
+    <script src="{% static 'web/js/slick/slick.js' %}"></script>
+
+    <script>
+        {% comment %}
+        function cycle_toggle () {
+            objects = $(".ContentSlider .slide");
+            n = objects.length;
+
+            success = objects.each(function(i) {
+                pair = $(".ContentSlider #slide-" + i%n + ", .ContentSlider #slide-" + (i+1)%n );
+                $(pair).delay( 2000 ).toggle();
+            });
+        }
+        {% endcomment %}
+
+        $(document).ready(function() {
+            $('.ContentSlider').slick({
+                "autoplay": true,
+                "autoplaySpeed": 8000,
+                "arrows": false,
+                "swipeToSlide": true,
+                //"fade": true,
+            });
+        });
+    </script>
+
+{% endblock end_js %}

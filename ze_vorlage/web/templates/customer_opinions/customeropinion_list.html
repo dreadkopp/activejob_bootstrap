@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Kundenmeinungen, Personalberatung für IT, Telekommunikation,
+    Technologie, Bau, Consulting, Pharma, Medizin{{ block.super }}{% endblock %}
+
+{% block right_content %}
+    <h1>Kundenmeinungen</h1>
+
+    <div id="customeropinion_list">
+        {% for opinion in customeropinion_list %}
+            <blockquote>
+                {{ opinion.quote|safe }}
+                <footer>{{ opinion.author }}</footer>
+            </blockquote>
+        {% endfor %}
+    </div>
+{% endblock right_content %}

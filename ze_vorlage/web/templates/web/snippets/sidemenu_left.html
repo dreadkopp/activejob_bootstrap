@@ -1,0 +1,7 @@
+<ul id="sidemenu_left" class="list-unstyled">
+    {% for _, node in submenu.items %}
+        <li {% if node.active %}class="active"{% endif %}>
+            <a href="{{ node.href }}">{{ node.name|capfirst }}</a>
+        </li>
+    {% endfor %}
+</ul>
