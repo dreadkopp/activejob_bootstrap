@@ -15,54 +15,20 @@
 
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                {% for node in menu %}
-                <li
-                    {% comment %}id="{{ node.id }}"{% endcomment %}
-                    {% if node.active %} class="active"{% endif %}
-                >
-                    <a href="{{ node.href }}"
-                        {% if node.active %}class="active"{% endif %}
-                    >{{ node.name|upper }}</a>
-                </li>
-                {% endfor %}
 
-
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle"
-                        data-toggle="dropdown" role="button"
-                        aria-haspopup="true" aria-expanded="false"
-                        >mehr <span class="caret"></span>
-                    </a>
-
-                    <ul class="dropdown-menu">
-
-                        {% for primary_node in menu %}
-
-                            {% if primary_node.node and primary_node.node.items %}
-                                <li class="dropdown-header">{{ primary_node.name|capfirst }}</li>
-
-                                {% for _, secondary_node in primary_node.node.items %}
-                                    <li>
-                                        <a href="{{ secondary_node.href }}"
-                                            >{{ secondary_node.name|capfirst }}</a>
-                                    </li>
-                                {% endfor %}
-                            {% endif %}
-
-                        {% endfor %}
-
-                    </ul>
-                </li>
+              <style>
+                .active {
+                  background-color: grey;
+                  }
+              </style>
+              <ul class="topmenu">
+                <li class="{% if active_tab == 'tab1' %} active{% endif %}"><a href="/">Home</a></li>
+                <li class="{% if active_tab == 'tab2' %} active{% endif %}"><a href="unternehmensprofil">ÜBER UNS</a></li>
+                <li class="{% if active_tab == 'tab3' %} active{% endif %}"><a href="unternehmen">UNTERNEHMEN</a></li>
+                <li class="{% if active_tab == 'tab4' %} active{% endif %}"><a href="#">BEWERBER</a></li>
+              </ul>
             </ul>
 
-            {% comment %}
-            <form class="navbar-form navbar-right">
-                <div class="form-group">
-                    <input type="text" placeholder="Stellenangebot" class="form-control">
-                </div>
-                <button type="submit" class="btn btn-success">Suchen</button>
-            </form>
-            {% endcomment %}
 
         </div><!--/.navbar-collapse -->
     </div>

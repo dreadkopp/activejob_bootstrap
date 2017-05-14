@@ -15,22 +15,39 @@ activjob. {% endblock title %}
         </div>
         <div class="sitecontent">
           <div class="header">
-            {% include "web/header/header.html" %}
+            <div class="topcontent">
+              <div class="element inhalt">
+                <p><a href="kontakt.html">Kontakt</a> | <a href=
+                "sitemap.html">Sitemap</a> | <a href=
+                "impressum.html">Impressum</a></p>
+              </div>
+            </div>
+            <div class="logo">
+              <a href="index.html"><img src={% static 'css/images/logo.gif' %} alt=
+              "activjob Logo" /></a>
+            </div>
+            <div class"menu">
+              {% block navigation_top %}
+                {% include "web/nav/nav.html" %}
+              {% endblock %}
+            </div>
+            <div class="headcontent">
+              {% block banner %}
+                {% include "web/header/banner/banner.html" %}
+              {% endblock %}
+            </div>
           </div>
           <div class="content">
             {% block page_content %}
              {% block left_col %}
-                <!-- switch that by menu... need to learn how -->
-                {% include "web/nav/left_col_menu.html" %}
              {% endblock left_col %}
              {% block middle_col %}
-                <!-- switch that by menu.... need to learn how -->
-                
              {% endblock middle_col %}
+             {% endblock page_content %}
              {% block right_col %}
                 {% include "web/pages/contact.html" %}
              {% endblock right_col %}
-            {% endblock page_content %}
+
           </div>
         </div>
       </div>

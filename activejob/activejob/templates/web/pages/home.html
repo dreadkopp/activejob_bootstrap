@@ -1,8 +1,12 @@
-
 {% extends "base.html" %}
+
 {% load static %}
 
-{% block middle_col %}
+{% block navigation_top %}
+  {% include "web/nav/nav.html" with active_tab='tab1' %}
+{% endblock %}
+
+{% block page_content %}
 
 
 <div id="inhalt">

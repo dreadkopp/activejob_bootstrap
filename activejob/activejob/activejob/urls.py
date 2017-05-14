@@ -21,6 +21,21 @@ from django.core.urlresolvers import reverse
 from django.conf.urls.static import static
 from django.conf import settings
 
+siteTemplatesRootDir = 'web/pages/'
+
+"""spare some typing"""
+def view(regex):
+    str = regex[1:]
+    str =  siteTemplatesRootDir + str + '.html'
+    if regex == r'^$':
+        return url(regex, TemplateView.as_view(template_name="web/pages/home.html"))
+    else:
+        return url(regex, TemplateView.as_view(template_name=str))
+
+
 urlpatterns = [
-    url(r'^$', TemplateView.as_view(template_name="base.html")),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    view(r'^$'),
+    view(r'^unternehmensprofil'),
+    view(r'^kontakt'),
+    view(r'^unternehmen'),
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
