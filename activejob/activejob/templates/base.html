@@ -6,31 +6,37 @@ activjob. {% endblock title %}
 
 {% block content %}
     <div class="site">
-      <div class="sitetop">
-        <div class="topbuttons">
-        </div>
-        <div class="sitecontent">
-          <div class="header">
-            <div class="topcontent">
-              <div class="element inhalt">
-                <p><a href="kontakt.html">Kontakt</a> | <a href=
-                "sitemap.html">Sitemap</a> | <a href=
-                "impressum.html">Impressum</a></p>
-              </div>
+
+      <div class="sitetop container">
+        <div class="row upper_content">
+          <div id="topbuttons"></div>
+          <div class="topcontent">
+            <div class="element inhalt">
+              <p><a href="kontakt.html">Kontakt</a> | <a href=
+              "sitemap.html">Sitemap</a> | <a href=
+              "impressum.html">Impressum</a></p>
             </div>
-            <div class="logo">
+          </div>
+          <div class="logo">
               <a href="/"><img src={% static 'css/images/logo.gif' %} alt=
               "activjob Logo" /></a>
-            </div>
-            <div class"menu">
-              {% block navigation_top %}
-                {% include "web/nav/nav.html" %}
-              {% endblock %}
-            </div>
+          </div>
+          <div class="menu">
+            {% block navigation_top %}
+              {% include "web/nav/nav.html" %}
+            {% endblock %}
+          </div>
+        </div>
+        <div class="sitecontent">
+
+          <div class="header">
+
+
+
             <div id="split">
               <div id="absmen"></div>
             </div>
-            <div class="headcontent row">
+            <div class="headcontent">
               {% block banner %}
 
 
@@ -94,7 +100,7 @@ activjob. {% endblock title %}
           <div class="content container">
             <div class="col-md-9">
               {% block page_content %}
-                <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="col-md-3 col-sm-4 col-xs-12 menu-left">
                  {% block left_col %}
                  {% endblock left_col %}
                </div>
