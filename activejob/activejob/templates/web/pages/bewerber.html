@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block navigation_top %}
+  {% include "web/nav/nav.html" with active_tab='tab4' %}
+{% endblock %}
+
+{% block middle_col %}
+
+<div class="element inhalt">
+  <h3>Der Mensch im Mittelpunkt</h3>
+
+  <p>Egal ob Sie sich für ein unbefristetes
+  Arbeitsverhältnis im Rahmen der Zeitarbeit
+  oder einen direkten Einstieg bei einem
+  unserer Kundenunternehmen interessieren, wir
+  sind Ansprechpartner für Ihren nächsten
+  Karriereschritt.</p>
+
+  <p>Nutzen Sie unseren Stellenmarkt und
+  bewerben Sie sich jetzt. Wir bieten sowohl
+  spannende Projekte und Positionen im
+  kaufmännischen als auch im
+  technisch-gewerblichen Bereich und im
+  Dienstleistungssektor an.<br />
+  Im Rahmen der Zeitarbeit bezahlen wir
+  entsprechend Ihrer Qualifikationen auch
+  übertariflich.</p>
+
+  <p>Engagierte und qualifizierte Mitarbeiter
+  sind unsere größte Stärke.<br />
+  Deshalb investieren wir viel in unsere
+  Kollegen. Ihr Know-how und Ihre Motivation
+  sind maßgeblich für den Erfolg unseres
+  Unternehmens.</p>
+
+  <p>Bei uns erhalten Sie die Chance Ihre
+  Fähigkeiten weiterzuentwickeln.<br />
+  Eine persönliche und vertrauensvolle
+  Arbeitsatmosphäre schreiben wir groß.
+  Überzeugen Sie sich selbst von den Vorteilen
+  in unserem Unternehmen.</p>
+</div>
+
+{% endblock %}
+
+{% block left_col %}
+
+{% include "web/nav/left_col_menu_applicant.html" %}
+
+{% endblock %}

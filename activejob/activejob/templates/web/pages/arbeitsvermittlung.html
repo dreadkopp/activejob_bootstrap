@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block navigation_top %}
+  {% include "web/nav/nav.html" with active_tab='tab3' %}
+{% endblock %}
+
+{% block middle_col %}
+
+<div class="element inhalt">
+  <h3>Private Arbeitsvermittlung</h3>
+
+  <p>Im Rahmen der
+  privaten&nbsp;Arbeitsvermittlung führen wir
+  Unternehmen und Arbeitsuchende auf der Basis
+  eines Aktivierungs- und
+  Vermittlungsgutscheins zu einem gemeinsamen
+  Arbeitsverhältnis zusammen.</p>
+
+  <p>Der Vermittlungsgutschein wird vom
+  zuständigen Leitungsträger (Arbeitsagentur,
+  Jobcenter, Landkreis, etc.) an Arbeitsuchende
+  mit Anspruch auf Arbeitslosengeld
+  ausgestellt. Bei dieser Form der Vermittlung
+  entstehen dem Arbeitgeber sowie dem
+  Arbeitsuchenden keine Kosten.</p>
+
+  <p>Als Unternehmen vemitteln wir Ihnen
+  entsprechendes&nbsp;Fachpersonal und
+  entlasten Sie durch die komplette Erledigung
+  aller administrativen Aufgaben.<br />
+  <br />
+  Von der gezielten Personalsuche über die
+  Durchführung der Bewerbungsgespräche bis hin
+  zur Vereinbarung von Vorstellungsterminen,
+  übernehmen wir alle anfallenden
+  Tätigkeiten.</p>
+
+  <p>Besonders großen Wert legen wir dabei auf
+  eine qualifizierte Bewerbervorauswahl. In
+  mehreren Gesprächen lernen wir jeden Bewerber
+  persönlich kennen und prüfen die fachliche
+  und persönliche Eignung des Kandidaten für
+  die vorgesehene Position.</p>
+
+  <p>Unsere aussagekräftigen Bewerberprofile
+  dienen Ihnen im Anschluss als professionelle
+  Entscheidungshilfe.</p>
+
+  <p><br />
+  <strong>Ihre Vorteile auf einen
+  Blick:</strong></p>
+
+  <ul>
+    <li style="margin-left: 40px;">Wir
+    präsentieren maßgeschneidertes
+    Personal.</li>
+
+    <li style="margin-left: 40px;">Wir kennen
+    jeden Bewerber persönlich.</li>
+
+    <li style="margin-left: 40px;">Wir treffen
+    eine qualifizierte Vorauswahl für Sie.</li>
+
+    <li style="margin-left: 40px;">Sie sparen
+    Zeit und Geld.</li>
+  </ul>
+</div>
+
+{% endblock %}
+
+{% block left_col %}
+
+{% include "web/nav/left_col_menu_business.html" with active_tab='left_tab8' %}
+
+{% endblock %}
+
+{% block banner %}
+<div class="orange col-md-9">>
+<div id="banner">
+  <h2>„Ein offenes Wort und eine ehrliche
+  Einschätzung sind Dinge, die Kunden und
+  Mitarbeiter jederzeit von uns erwarten
+  können.“</h2>
+</div>
+</div>
+{% endblock %}

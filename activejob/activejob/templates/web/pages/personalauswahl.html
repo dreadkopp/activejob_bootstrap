@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block navigation_top %}
+  {% include "web/nav/nav.html" with active_tab='tab3' %}
+{% endblock %}
+
+{% block middle_col %}
+
+<div class="element inhalt">
+  <div class="floatdiv">
+    <div class="csc-header csc-header-n1">
+      <h1 class="csc-firstHeader">Qualifizierte
+      Personalauswahl</h1>
+
+      <p class="csc-firstHeader">Mit unserer
+      Methodenkompetenz zur „qualifizierten
+      Personalauswahl“ finden wir potenzielle
+      Mitarbeiter, die fachlich und persönlich
+      genau Ihren Anforderungen
+      entsprechen.</p>
+    </div>
+
+    <p class="bodytext">In zwei Testverfahren
+    überprüfen wir die emotionale Eignung und
+    die Beziehungsfähigkeit der Bewerber für
+    Ihre vakanten Positionen. Im Resultat
+    entstehen Aussagen zur Team- und
+    Konfliktfähigkeit, Eigenmotivation, Umgang
+    mit Zielsetzungen, dem dauerhaften
+    Arbeitsvermögen und dem Aufarbeiten von
+    Rückschlägen. Für die vorgenannte Analyse
+    verwenden wir Verfahren nach
+    Salovey/Garders/Goleman und Gross.</p>
+
+    <p class="bodytext">Kunden und Mitarbeiter
+    schätzen das gute Image und die
+    Professionalität der activjob GmbH.</p>
+
+    <p class="bodytext">Wir verfolgen mit Ihnen
+    ein gemeinsames Ziel: Erfolgreich sein.</p>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block left_col %}
+
+{% include "web/nav/left_col_menu_business.html" with active_tab='left_tab12' %}
+
+{% endblock %}
