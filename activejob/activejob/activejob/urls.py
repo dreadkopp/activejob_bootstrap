@@ -41,4 +41,9 @@ urlpatterns = [
     view(r'^leitbild'),
     view(r'^standorte'),
     view(r'^arbeitnehmerueberlassung'),
+    view(r'^zeitarbeit_kompetenzbereiche'),
+    view(r'^zeitarbeit_ansprechpartner'),
+    view(r'^personalvermittlung_kompetenzbereiche'),
+    view(r'^personalvermittlung_referenzen'),
+    view(r'^personalvermittlung'),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

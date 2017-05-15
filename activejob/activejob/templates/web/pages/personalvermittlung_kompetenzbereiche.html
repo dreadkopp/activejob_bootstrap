@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block navigation_top %}
+  {% include "web/nav/nav.html" with active_tab='tab3' %}
+{% endblock %}
+
+{% block middle_col %}
+
+<div class="floatdiv">
+  <h1 class="csc-firstHeader">Nicht alle
+  Branchen – aber jede Branche mit
+  Expertise</h1>
+
+  <p class="bodytext">Im Geschäftsfeld der
+  Personalvermittlung vertreten wir nicht
+  alle Branchen – aber wir sind Experten in
+  den Dienstleistungsbereichen, die wir
+  anbieten.<br />
+  Sie können auf das Know-how und die
+  Kompetenzen unserer Mitarbeiter vertrauen.
+  Fachlich und menschlich.<br />
+  Als erfahrenes
+  Personaldienstleistungsunternehmen kennen
+  wir die Anforderungen und Besonderheiten
+  des Marktes.</p>
+
+  <p class="bodytext"><strong>Branchen, die
+  wir bedienen:</strong></p>
+
+  <ul>
+    <li class="bodytext" style=
+    "margin-left: 40px;">Industrie und
+    Technik</li>
+
+    <li class="bodytext" style=
+    "margin-left: 40px;">Pharma und
+    Medizin</li>
+
+    <li class="bodytext" style=
+    "margin-left: 40px;">IT und
+    Telekommunikation</li>
+
+    <li class="bodytext" style=
+    "margin-left: 40px;">Dienstleistung und
+    Beratung</li>
+
+    <li class="bodytext" style=
+    "margin-left: 40px;">Baugewerbe</li>
+  </ul>
+
+  <p class="bodytext">
+  <strong>Unternehmensbereiche, in denen wir
+  Vakanzen besetzen:</strong></p>
+
+  <ul>
+    <li class="bodytext" style=
+    "margin-left: 40px;">Office und IT</li>
+
+    <li class="bodytext" style=
+    "margin-left: 40px;">Finanzen und
+    Controlling</li>
+
+    <li class="bodytext" style=
+    "margin-left: 40px;">Vertrieb und
+    Marketing</li>
+
+    <li class="bodytext" style=
+    "margin-left: 40px;">Beschaffung</li>
+
+    <li class="bodytext" style=
+    "margin-left: 40px;">Entwicklung und
+    Konstruktion</li>
+  </ul>
+</div>
+
+
+{% endblock %}
+
+{% block left_col %}
+
+{% include "web/nav/left_col_menu_business.html" with active_tab='left_tab5' %}
+
+{% endblock %}
+
+{% block banner %}
+<div class="green col-md-9">>
+<div id="banner">
+    <h2>„Unsere Mitarbeiter sind spezialisierte
+    Fachkräfte aus Ihrer Region. So kann jede
+    einzelne Stelle optimal besetzt werden.“</h2>
+</div>
+</div>
+{% endblock %}

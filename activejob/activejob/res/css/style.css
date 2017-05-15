@@ -1,5 +1,8 @@
 /* Responsive Makeover */
 
+.sitecontent {
+  overflow: hidden;
+}
 
 /*Fix Standorte Tabellen-Madness */
 .limiter {
@@ -31,8 +34,13 @@ background: url(images/bannerRed.png) top left no-repeat;
 margin-top: -30px;
 }
 
-#banner h2{
-  color: #fff;
+#banner h2 {
+    color: #fff;
+    width: 50%;
+    margin: auto;
+    padding-top: 120px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .blue #banner{
