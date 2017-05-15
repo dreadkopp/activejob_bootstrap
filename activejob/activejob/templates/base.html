@@ -31,22 +31,88 @@ activjob. {% endblock title %}
                 {% include "web/nav/nav.html" %}
               {% endblock %}
             </div>
-            <div class="headcontent">
+            <div id="split">
+              <div id="absmen"></div>
+            </div>
+            <div class="headcontent row">
               {% block banner %}
-                {% include "web/header/banner/banner.html" %}
+
+
+
+
+              <div id="banner" class="col-md-9">
+                
+              </div>
+
               {% endblock %}
+
+
+
+              <div id="quicksearch" class="col-md-3">
+                <div id="searchbg">
+                  <div class="element userPlugin">
+                    <h2>Stellenmarkt:</h2>
+
+                    <p>Durchsuchen Sie hier die Angebote unseres
+                    Stellenmarktes.</p>
+
+                    <form action="http://www.activ-job.com/Stellenmarkt.html" method="post"
+                    enctype="multipart/form-data">
+                      <div>
+                        <div class=
+                        "formcontent filterOwnEinsatzort" id=
+                        "nrquick1">
+                          <span class=
+                          "fieldname">Einsatzort:</span><input type="text"
+                          name="filterOwnEinsatzort" value="" id=
+                          "quickStadt" />
+                        </div>
+
+                        <div class="formcontent filterOwnStichwort"
+                        id="nrquick2">
+                          <span class=
+                          "fieldname">Stichwort:</span><input type=
+                          "text" name="filterOwnStichwort" value=""
+                          id="quickStelle" />
+                        </div>
+
+                        <div class="formcontent submit" id=
+                        "nrquick3">
+                          <input type="hidden" name="submit" value=
+                          "" />
+                        </div>
+                      </div>
+
+                      <div class="submit">
+                        <input type="submit" name="submitquick"
+                        class="savebutton" value=" " />
+                      </div>
+                    </form><a class="adv_search" href=
+                    "Stellenmarkt.html">Detailsuche</a>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
-          <div class="content">
-            {% block page_content %}
-             {% block left_col %}
-             {% endblock left_col %}
-             {% block middle_col %}
-             {% endblock middle_col %}
-             {% endblock page_content %}
+          <div class="content container">
+            <div class="col-md-9">
+              {% block page_content %}
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                 {% block left_col %}
+                 {% endblock left_col %}
+               </div>
+               <div class="col-md-9 col-sm-8 col-xs-12">
+                 {% block middle_col %}
+                 {% endblock middle_col %}
+               </div>
+              {% endblock page_content %}
+            </div>
+            <div id="contact" class="col-md-3 col-sm-12 col-xs-12">
              {% block right_col %}
                 {% include "web/pages/contact.html" %}
              {% endblock right_col %}
+            </div>
 
           </div>
         </div>

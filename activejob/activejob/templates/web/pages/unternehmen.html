@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block navigation_top %}
+  {% include "web/nav/nav.html" with active_tab='tab2' %}
+{% endblock %}
+
+{% block middle_col %}
+
+<h3>Vorsprung durch innovative
+Personaldienstleistungen</h3>
+
+<p>Das heutige Personalmanagement unterliegt
+einer Vielzahl von Rahmenbedingungen und ist
+dabei komplex geworden. Unterschiedliche
+strategische Möglichkeiten führen dazu, dass
+immer mehr Unternehmen mit einem
+spezialisierten Partner kooperieren. Jede
+Branche unterliegt eigenen
+Personalanforderungen und jedes Unternehmen
+braucht individuelle Lösungen.</p>
+
+<p>Die activjob GmbH hat ihr
+Leistungsspektrum optimal auf die aktuellen
+Bedürfnisse von Unternehmen abgestimmt.
+Unsere Disponenten und Personalvermittler
+verfügen über eine gute Menschenkenntnis,
+strategischen Weitblick, operatives
+Fingerspitzengefühl und umfassenden
+Sachverstand.</p>
+
+<p>Überzeugen Sie sich persönlich von der
+fachlichen und sozialen Kompetenz unserer
+Kollegen bei einem ersten Gespräch. Wir
+beraten Sie individuell und bieten Ihnen
+dabei maßgeschneiderte Lösungen – ob für
+einen temporär begrenzten Einsatz oder zur
+sofortigen Festeinstellung. Je genauer Sie
+uns Ihr Anforderungsprofil beschreiben, desto
+qualifizierter ist unser Personal.</p>
+
+
+{% endblock %}
+
+{% block left_col %}
+
+{% include "web/nav/left_col_menu_1.html" %}
+
+{% endblock %}

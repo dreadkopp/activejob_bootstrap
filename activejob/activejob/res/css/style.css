@@ -1,3 +1,91 @@
+/* Responsive Makeover */
+
+
+/*Fix Standorte Tabellen-Madness */
+.limiter {
+  margin-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 1px solid gray;
+}
+
+.location_info {
+  float:left;
+  width:40%;
+  height: 200px;
+}
+.location_map {
+  float: left;
+  width: 55%;
+  margin-left: 5%;
+}
+
+.location {
+  height: 200px;
+}
+
+/*Fix static Bannercrapshit -> maybe keep old banner and just add red */
+
+#banner {
+  height: 280px;
+background: url(images/bannerRed.png) top left no-repeat;
+margin-top: -30px;
+}
+
+#banner h2{
+  color: #fff;
+}
+
+.blue #banner{
+  background: url(images/bannerBlue.png) top left no-repeat;
+  margin-top: -43px;
+}
+.orange #banner{
+  background: url(images/bannerOrange.png) top left no-repeat;
+  margin-top: -46px;
+}
+.green #banner{
+  background: url(images/bannerGreen.png) top left no-repeat;
+  margin-top: -45px;
+}
+
+#quicksearch {
+  background: url(images/search_bot.gif) bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #761a1c;
+  float: left;
+  color: #fff;
+  height: 260px;
+  margin-top: 6px;
+}
+
+#quicksearch a{
+  color: #fff;
+}
+#quicksearch input.savebutton{
+  background: url(images/searchButton.gif) top left no-repeat;
+  border: 0;
+  width: 58px;
+  height:23px;
+  float:right;
+  margin-top: 5px;
+  cursor: pointer;
+}
+#quicksearch h2{
+  color: #fff;
+}
+#quicksearch input{
+  width: 100%;
+  margin: 3px 0;
+}
+#searchbg{
+  height: 230px;
+}
+
+
+
+
+
 /*new*/
 body {
   background: url(images/bg.gif) 0 0 repeat-x #fff;
@@ -104,9 +192,7 @@ a img{
   position: relative;
   width: 930px;
 }
-/*#websiteContent #absmen{
-  position: static;
-}*/
+
 #split ul{
   float: right;
   list-style: none;
@@ -124,70 +210,12 @@ a img{
   color: #5f5f5f;
   text-decoration: none;
 }
-#banner{
-  background: url(images/bannerRed.png) top left no-repeat;
-  height: 240px;
-  width: 423px;
-  margin-top: -31px;
-  float: left;
-  color: #fff;
-  padding: 80px 20px 0 240px;
-  line-height: 30px;
-}
-#banner h2{
-  color: #fff;
-}
-#banner .element{
-  min-height: 200px;
-}
-/*#websiteContent #banner{
-  margin-top: 0;
-  width: 640px;
-}*/
-.blue #banner{
-  background: url(images/bannerBlue.png) top left no-repeat;
-  margin-top: -43px;
-}
-.orange #banner{
-  background: url(images/bannerOrange.png) top left no-repeat;
-  margin-top: -46px;
-}
-.green #banner{
-  background: url(images/bannerGreen.png) top left no-repeat;
-  margin-top: -45px;
-}
 
-#quicksearch{
-  margin: 5px 0 0 10px;
-  background: url(images/search_bg.gif) top left #761a1c repeat-x;
-  float: left;
-  width: 237px;
-  color: #fff;
-}
-#quicksearch a{
-  color: #fff;
-}
-#quicksearch input.savebutton{
-  background: url(images/searchButton.gif) top left no-repeat;
-  border: 0;
-  width: 58px;
-  height:23px;
-  float:right;
-  margin-top: 5px;
-  cursor: pointer;
-}
-#quicksearch h2{
-  color: #fff;
-}
-#quicksearch input{
-  width: 100%;
-  margin: 3px 0;
-}
-#searchbg{
-  background: url(images/search_bot.gif) bottom no-repeat;
-  height: 240px;
-  padding: 5px 15px;
-}
+
+
+
+
+
 #inhalt{
   clear: both;
   padding-top: 20px;

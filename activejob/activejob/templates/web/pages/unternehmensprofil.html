@@ -8,12 +8,7 @@
 
 {% block middle_col %}
 
-<div id="inhalt">
 
-  <div id="main">
-    <div class="element mainelement container">
-      <div class="element inhalt">
-        <div class="floatdiv">
           <h3>Das Unternehmen</h3>
 
           <p>Herzlich Willkommen bei der activjob
@@ -75,15 +70,12 @@
             "dateien/Zertifikate/2015-05-26_activjob_GmbH_CSR.pdf">
             „Geprüfte Nachhaltigkeit“ 2015</a></li>
           </ul>
-        </div>
 
-        <p>&nbsp;</p>
-      </div>
 
 {% endblock %}
 
 {% block left_col %}
 
-{% include "web/nav/left_col_menu_1.html" %}
+{% include "web/nav/left_col_menu_about.html" with active_tab='left_tab1' %}
 
 {% endblock %}

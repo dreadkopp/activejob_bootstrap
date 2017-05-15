@@ -38,4 +38,7 @@ urlpatterns = [
     view(r'^unternehmensprofil'),
     view(r'^kontakt'),
     view(r'^unternehmen'),
+    view(r'^leitbild'),
+    view(r'^standorte'),
+    view(r'^arbeitnehmerueberlassung'),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

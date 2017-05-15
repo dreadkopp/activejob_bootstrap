@@ -2,11 +2,13 @@
 
 {% load static %}
 
+{% block navigation_top %}
+  {% include "web/nav/nav.html" with active_tab='tab2' %}
+{% endblock %}
+
 {% block middle_col %}
 
-<div id="inhalt">
-  <div id="main">
-    <div class="element mainelement container">
+
       <div class="element inhalt">
         <h1>Kontakt</h1>
 
@@ -134,15 +136,11 @@
           </div>
         </form>
       </div>
-    </div>
-  </div>
-
-</div>
 
 {% endblock %}
 
 {% block left_col %}
 
-{% include "web/nav/left_col_menu_1.html" %}
+{% include "web/nav/left_col_menu_about.html" with active_tab='left_tab4' %}
 
 {% endblock %}
