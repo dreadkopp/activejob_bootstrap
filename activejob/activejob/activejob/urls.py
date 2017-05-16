@@ -37,6 +37,21 @@ class ContactPerson:
         self.mail = mail
         self.imageurl = imageurl
 
+class Location:
+    def __init__(self, name, street, city, phone, fax, mail, gmapsIframeHref ):
+        self.name = name
+        self.street = street
+        self.city = city
+        self.phone = phone
+        self.fax = fax
+        self.mail = mail
+        self.gmapsIframeHref = gmapsIframeHref
+
+standorte = [
+    Location("Standort Springfield", "742 Evergreen Terrace", "<somezipcode> Springfield", "555-SIMPSONS", "555-SIMPSONSFAX", "simpsons@somewhere.com", "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3224.6601807984257!2d-115.01758844877891!3d36.07739181565208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8d0b899a5328b%3A0x53a02fbbc05432c3!2s712+Red+Bark+Ln%2C+Henderson%2C+NV+89011%2C+USA!5e0!3m2!1sde!2sde!4v1494937738392" ),
+    Location("Standort Springfield", "742 Evergreen Terrace", "<somezipcode> Springfield", "555-SIMPSONS", "555-SIMPSONSFAX", "simpsons@somewhere.com", "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3224.6601807984257!2d-115.01758844877891!3d36.07739181565208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8d0b899a5328b%3A0x53a02fbbc05432c3!2s712+Red+Bark+Ln%2C+Henderson%2C+NV+89011%2C+USA!5e0!3m2!1sde!2sde!4v1494937738392" ),
+]
+
 menu_left = [
     MenuItem("Ipsum","#",active=True,sublist=[
         MenuItem("Lorem","#"),
@@ -65,6 +80,7 @@ class MyTemplateView(TemplateView):
         context.update({"menu_left": menu_left})
         context.update({"menu_top": menu_top})
         context.update({"ansprechpartner": ansprechpartner})
+        context.update({"standorte": standorte})
         return context
 
 
