@@ -132,27 +132,95 @@
 
 /*Fix static Bannercrapshit -> maybe keep old banner and just add red */
 
-@media (min-width: 1200px) {
-  .headcontent .green #banner {
-    margin-top: -57px;
-    padding: 0px;
-    margin-left: -14px;
-    margin-right: -10px;
-    height: 305px;
-  }
-  .headcontent .blue #banner {
-    margin-left: -20px;
-    margin-right: -10px;
-    margin-top: -54px;
-    height: 302px;
-  }
+.header #quicksearch_container {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
+/*bar for splitting arch below header. #quicksearch is 100% minus the bars width wide bars color = background color of content. show only in wide view*/
+#bar {
+  width: 10px;
+  height: 310px;
+  position: relative;
+  float: left;
+  z-index: 81;
+  background-color: #fff;
+  display: none;
+}
+
+#quicksearch {
+  width: 100%;
+  padding: 20px;
+}
+
+#arch {
+  width: 100%;
+    height: 46px;
+    display: inline-block;
+    border-radius: 50% 50% 0% 0%;
+    margin-top: -17px;
+    background-color: #fff;
+    box-shadow: 0px -4px 0px 0px #fff;
+    background: #d5a6a7;
+    position: relative;
+    z-index: 79;
+
+}
+
+#arch_helper {
+  width: 123%;
+    height: 46px;
+    border: 10px solid #777;
+    display: inline-block;
+    border-radius: 50%;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    margin-top: -36px;
+    background-color: #fff;
+    position: relative;
+    z-index: 80;
+    left: -12%;
+    right: -12%;
+  }
+
+/* Switch to dual-color arch when on wider screen*/
+@media (min-width: 992px) {
+  #arch {
+    background: linear-gradient(to right, #ccc 0%, #ccc 75%, #d5a6a7 75%, #d5a6a7);
+  }
+  #bar {
+    display: block;
+  }
+  #quicksearch {
+      width: calc(100% - 10px);
+  }
+  #banner {
+    margin-bottom: 0px;
+  }
+  #arch {
+    margin-top: -26px;
+  }
+
+}
+
+
 #banner {
-  height: 280px;
-  background: url(images/bannerRed.png) top left no-repeat;
-  margin-top: -39px;
-  background-size: cover;
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+#overlay_object {
+  height: 380px;
+  width:calc(40% - 10px);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 100;
+  top: -50px;
+  left: 10%;
+  float:left;
 }
 
 .headcontent .blue #banner, .headcontent .orange #banner,.headcontent .green #banner {
@@ -161,35 +229,19 @@
 
 #banner h2 {
     color: #fff;
-    width: 50%;
+    width: 90%;
     margin: auto;
-    padding-top: 120px;
+    padding-top: 110px;
     margin-top: 0px;
     margin-bottom: 0px;
 }
 
-.blue #banner{
-  background: url(images/bannerBlue.png) top left no-repeat;
-  margin-top: -43px;
-}
-.orange #banner{
-  background: url(images/bannerOrange.png) top left no-repeat;
-  margin-top: -46px;
-}
-.green #banner{
-  background: url(images/bannerGreen.png) top left no-repeat;
-  margin-top: -45px;
-}
 
 #quicksearch {
-  background: url(images/search_bot.gif) bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-color: #761a1c;
+  background: linear-gradient(to top, #7c1b1e 0%, #7c1b1e 90%,#a03739);
   float: left;
   color: #fff;
-  height: 260px;
-  margin-top: 6px;
+  height: 300px;
 }
 
 #quicksearch a{
@@ -306,6 +358,7 @@ a img{
   font-weight: bold;
 }
 #split{
+  margin-bottom: 10px;
   height: 61px;
   background: url(images/split.gif) top repeat-x;
 }

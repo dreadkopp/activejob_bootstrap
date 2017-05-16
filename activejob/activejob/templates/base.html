@@ -36,22 +36,33 @@ activjob. {% endblock title %}
             <div id="split">
               <div id="absmen"></div>
             </div>
-            <div class="headcontent">
-              {% block banner %}
-
-
-
 
               <div id="banner" class="col-md-9 col-sm-12">
+                <div id="overlay_object">
+                </div>
+                {% block banner %}
+                <style>
+                #banner {
+                  background-image:url("res/banner/banner_red_background.png");
+                  background-size: cover;
+                }
+                #overlay_object {
+                  background-image:url("res/banner/red_woman.png")
+                }
+                </style>
 
+                {% endblock %}
               </div>
 
-              {% endblock %}
 
 
+              <div id="quicksearch_container" class="col-md-3 col-sm-12">
+              <div id="bar">
+              </div>
+              {% comment %}<!--begin quicksearch -->{% endcomment %}
 
-              <div id="quicksearch" class="col-md-3 col-sm-12" >
-                <div id="searchbg">
+              <div id="quicksearch"  >
+
                   <div class="element userPlugin">
                     <h2>Stellenmarkt:</h2>
 
@@ -65,7 +76,7 @@ activjob. {% endblock title %}
                         "formcontent filterOwnEinsatzort" id=
                         "nrquick1">
                           <span class=
-                          "fieldname">Einsatzort:</span><input type="text"
+                          "fieldname">Einsatzort:</span><input type="text" class="form-control"
                           name="filterOwnEinsatzort" value="" id=
                           "quickStadt" />
                         </div>
@@ -74,7 +85,7 @@ activjob. {% endblock title %}
                         id="nrquick2">
                           <span class=
                           "fieldname">Stichwort:</span><input type=
-                          "text" name="filterOwnStichwort" value=""
+                          "text" class="form-control" name="filterOwnStichwort" value=""
                           id="quickStelle" />
                         </div>
 
@@ -87,15 +98,19 @@ activjob. {% endblock title %}
 
                       <div class="submit">
                         <input type="submit" name="submitquick"
-                        class="savebutton" value=" " />
+                        class="savebutton form-control" value=" " />
                       </div>
                     </form><a class="adv_search" href=
                     "Stellenmarkt.html">Detailsuche</a>
-                  </div>
                 </div>
               </div>
+{% comment %}<!--end quicksearch -->{% endcomment %}
+              </div>
+              <div id="arch">
+              </div>
+              <div id="arch_helper">
+              </div>
 
-            </div>
           </div>
           <div class="content container">
             <div class="col-md-9">
