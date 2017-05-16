@@ -81,29 +81,23 @@
 
 .menu-left li {
   line-height: 25px;
+}
+
+.menu-left div {
   border-bottom: 1px solid #cacaca;
 }
 
-.menu-left ul li ul li {
-  border-bottom: none;
+.menu-left .active > div {
+  text-decoration: underline;
 }
 
-.menu-left ul li:hover ul li {
-  border-bottom: 1px solid #cacaca;
-}
-
-.menu-left ul li ul li div{
+.menu-left li ul {
   display: none;
   padding-left: 15px;
 }
 
-.menu-left ul li:hover ul li div{
+.menu-left .active ul {
   display: block;
-}
-
-.menu-left ul .active {
-  display: block;
-  text-decoration: underline;
 }
 
 /*Fix Standorte Tabellen-Madness */
@@ -156,9 +150,9 @@
 
 #banner {
   height: 280px;
-background: url(images/bannerRed.png) top left no-repeat;
-margin-top: -30px;
-background-size: cover;
+  background: url(images/bannerRed.png) top left no-repeat;
+  margin-top: -39px;
+  background-size: cover;
 }
 
 .headcontent .blue #banner, .headcontent .orange #banner,.headcontent .green #banner {
