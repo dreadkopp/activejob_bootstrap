@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block navigation_top %}
+  {% include 'test/topnav.html' %}
+{% endblock %}
+
+{% block middle_col %}
+
+  <div class="element inhalt">
+    <h3>Ihre Ansprechpartner im Bereich
+    'TEST'</h3>
+  </div>
+  <br />
+
+  {% for node in ansprechpartner %}
+    <div class="element inhalt">
+      <p><strong>{{node.name}}</strong> <img alt="{{node.name}}" src="{{node.imageurl}}" class="contact_person_image" /></p>
+      <p>
+        {{node.stat}}<br />
+        Telefon: {{node.phone}}<br />
+        E-Mail: <a href="mailto:{{node.mail}}">{{node.mail}}</a>
+      </p>
+      <p><br />
+      &nbsp;</p>
+    </div>
+  {% endfor %}
+
+
+
+{% endblock %}
+
+{% block left_col %}
+ {% include 'test/leftnav.html' %}
+{% endblock %}

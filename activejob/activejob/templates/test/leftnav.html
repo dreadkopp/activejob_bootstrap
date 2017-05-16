@@ -1,0 +1,20 @@
+<ul>
+{% for node in menu_left %}
+<li>
+  <div class="element menuepunkte {% if node.active %} active{% endif %}">
+      <a href="{{ node.url }}">{{ node.name }}</a>
+  {% if node.sublist %}
+  <ul>
+    {% for subnode in node.sublist %}
+    <li>
+      <div class="element menuepunkte {% if subnode.active %} active{% endif %}">
+          <a href="{{ subnode.url }}">{{ subnode.name }}</a>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  </div>
+</li>
+{% endfor %}
+</ul>
