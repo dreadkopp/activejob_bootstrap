@@ -69,6 +69,21 @@
 
 {% endblock %}
 
+{% block banner %}
+<style>
+#banner {
+  background: linear-gradient(to top, #ca6000, #f39700);
+}
+#overlay_object {
+  background-image:url("res/banner/orange_guy.png")
+}
+</style>
+<h2>
+  „Ein fester Ansprechpartner nimmt sich Ihrer
+ Anliegen persönlich an und betreut Sie individuell.“
+</h2>
+{% endblock %}
+
 {% block left_col %}
 
 {% include "web/nav/left_col_menu_applicant.html" with active_tab='left_tab11' %}

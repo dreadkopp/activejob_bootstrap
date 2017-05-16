@@ -213,13 +213,13 @@
 
 #overlay_object {
   height: 380px;
-  width:calc(40% - 10px);
+  width:calc(50% - 10px);
   background-size: contain;
   background-repeat: no-repeat;
   position: relative;
   z-index: 100;
   top: -50px;
-  left: 10%;
+  left: 4%;
   float:left;
 }
 
@@ -536,9 +536,17 @@ ul li{
   float: left;
 }
 .userFilter .formcontent{
-  float:left;
+  float: left;
   width: 50%;
   height: 45px;
+  margin-top: 15px;
+}
+
+.userFilter .submit {
+  float: right;
+}
+.kontaktFormular .submit {
+  margin-top:10px;
 }
 .userFilter input,.userFilter select{
   width: 95%;
@@ -589,9 +597,7 @@ textarea{
 .DatenListe table{
   width: 100%;
 }
-.userFilter .submit{
-  margin: 5px 0 0 0;
-}
+
 .noResult{
   display: block;
   clear: both;
