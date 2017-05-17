@@ -98,20 +98,20 @@ ansprechpartner = [
 
 
 
-def testview():
+def contextView(nav_left,nav_top,people,places,paginated_jobs,template_):
     def classWithContext():
         class ActivJobView(TemplateView):
             def get_context_data(self, **kwargs):
                 context = super(ActivJobView, self).get_context_data(**kwargs)
-                context.update({"menu_left": menu_left})
-                context.update({"menu_top": menu_top})
-                context.update({"ansprechpartner": ansprechpartner})
-                context.update({"standorte": standorte})
-                context.update({"page_obj": page_obj})
+                context.update({"menu_left": nav_left})
+                context.update({"menu_top": nav_top})
+                context.update({"ansprechpartner": people})
+                context.update({"standorte": places})
+                context.update({"page_obj": paginated_jobs})
                 return context
         return ActivJobView
 
-    return classWithContext().as_view(template_name="test/test.html")
+    return classWithContext().as_view(template_name=template_)
 
 siteTemplatesRootDir = 'web/pages/'
 
@@ -126,7 +126,7 @@ def view(regex):
 
 
 urlpatterns = [
-    url(r'^test', testview()),
+    url(r'^test', contextView(menu_left,menu_top,ansprechpartner,standorte,page_obj,"test/test.html")),
     view(r'^$'),
     view(r'^arbeitnehmerueberlassung'),
     view(r'^arbeitsvermittlung_kompetenzbereiche'),
