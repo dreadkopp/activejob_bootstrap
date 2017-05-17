@@ -50,17 +50,18 @@ class Location:
         self.gmapsIframeHref = gmapsIframeHref
 
 class Job:
-    def __init__(self, name, slug, location):
+    def __init__(self, name, slug, location, contact):
         self.name = name
         self.slug = slug
         self.location = location
+        self.contact = contact
     def __str__(self):
         return self.name
 
 def generate_jobs(count):
     jobs = []
     for i in range(count):
-        jobs.append(Job("Beschaeftigungstherapie","somewhere.com","somewhere"))
+        jobs.append(Job("Beschaeftigungstherapie","somewhere.com","somewhere",ContactPerson("John Doe","Platzhalter","555-424242","JohnDoe@Platzhalter.de","res/Ansprechpartner/JohnDoe.png")))
     return jobs
 
 """testcase no pagination, only for the looks"""
@@ -97,8 +98,8 @@ ansprechpartner = [
 ]
 
 
-
-def contextView(nav_left,nav_top,people,places,paginated_jobs,template_):
+#just for testing
+def contextView(nav_left,nav_top,people,places,paginated_jobs,job,template_):
     class ActivJobView(TemplateView):
         def get_context_data(self, **kwargs):
             context = super(ActivJobView, self).get_context_data(**kwargs)
@@ -107,6 +108,7 @@ def contextView(nav_left,nav_top,people,places,paginated_jobs,template_):
             if people: context.update({"ansprechpartner": people})
             if places: context.update({"standorte": places})
             if paginated_jobs: context.update({"page_obj": paginated_jobs})
+            if job: context.update({"job": job})
             return context
 
     return ActivJobView.as_view(template_name=template_)
@@ -118,13 +120,16 @@ def view(regex):
     str = regex[1:]
     str =  siteTemplatesRootDir + str + '.html'
     if regex == r'^$':
-        return url(regex, TemplateView.as_view(template_name="web/pages/home.html"))
+        return url(regex, contextView(menu_left,menu_top,ansprechpartner,standorte,page_obj,"","web/pages/home.html"))
     else:
-        return url(regex, TemplateView.as_view(template_name=str))
+        return url(regex, contextView(menu_left,menu_top,ansprechpartner,standorte,page_obj,"",str))
 
+testjob = Job("Beschaeftigungstherapie","somewhere.com","somewhere",ContactPerson("John Doe","Platzhalter","555-424242","JohnDoe@Platzhalter.de","res/Ansprechpartner/JohnDoe.png"))
 
 urlpatterns = [
-    url(r'^test', contextView(menu_left,menu_top,ansprechpartner,standorte,page_obj,"test/test.html")),
+    url(r'^testjob', contextView(menu_left,menu_top,ansprechpartner,standorte,page_obj,testjob,"web/pages/stellenmarkt/job-detail.html")),
+    url(r'^test', contextView(menu_left,menu_top,ansprechpartner,standorte,page_obj,"","test/test.html")),
+    url(r'^stellenmarkt', contextView(menu_left,menu_top,ansprechpartner,standorte,page_obj,"","web/pages/stellenmarkt.html"), name="stellenmarkt"),
     view(r'^$'),
     view(r'^arbeitnehmerueberlassung'),
     view(r'^arbeitsvermittlung_kompetenzbereiche'),

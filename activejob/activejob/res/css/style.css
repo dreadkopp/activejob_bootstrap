@@ -86,9 +86,17 @@
 .menu-left div {
   border-bottom: 1px solid #cacaca;
 }
+.menu-left li .active div::before {
+  color: #9b1000;
+  content:"▪";
+}
 
-.menu-left .active > div {
-  text-decoration: underline;
+.menu-left a {
+  color: #5a5a5a;
+}
+
+.menu-left .active a {
+  color: #9b1000
 }
 
 .menu-left li ul {

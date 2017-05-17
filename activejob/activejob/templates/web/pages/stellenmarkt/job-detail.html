@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ job }}, {{ job.location }}{{ block.super }}{% endblock %}
+
+{% block middle_col %}
+    <div>
+        <h1>{{ job }}</h1>
+
+        <dl>
+            <dt>Arbeitsort:</dt>
+            <dd>{{ job.location }}</dd>
+            <dt>Kennziffer:</dt>
+            <dd>{{ job.id }}</dd>
+        </dl>
+
+
+        <h4>Unternehmen</h4>
+
+        <div> {{ job.company.description|safe }} </div>
+
+
+        <h4>Ihre Aufgaben</h4>
+
+        <div> {{ job.description|safe }} </div>
+
+
+        <h4>Ihr Profil</h4>
+
+        <div> {{ job.profile|safe }} </div>
+
+
+        <h4>Ihre Perspektive</h4>
+
+        <div> {{ job.perspective|safe }} </div>
+
+        <div class="well hidden-xs">
+            <a href="{% url 'stellenmarkt' %}">zurück zur Stellenliste</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block right_col %}
+    <div>
+        <h2>Ansprechpartner</h2>
+
+        <h4><a {{ job.contact }}</a></h4>
+
+        <div>
+            <a href="mailto:{{ job.contact.mail }}">
+{{ job.contact.mail }}</a>
+        </div>
+
+        <div>
+            <a href="tel:{{ job.contact.phone|cut:" " }}">
+{{ job.contact.phone }}</a>
+        </div>
+
+        <div>
+
+        </div>
+    </div>
+{% endblock %}
