@@ -20,6 +20,7 @@ from django.contrib.syndication.views import Feed
 from django.core.urlresolvers import reverse
 from django.conf.urls.static import static
 from django.conf import settings
+from django.core.paginator import Paginator
 
 
 
@@ -62,7 +63,10 @@ def generate_jobs(count):
         jobs.append(Job("Beschaeftigungstherapie","somewhere.com","somewhere"))
     return jobs
 
+"""testcase no pagination, only for the looks"""
 jobs = generate_jobs(100);
+paginator = Paginator(jobs,10);
+page_obj = paginator.page(1);
 
 
 standorte = [
@@ -100,6 +104,7 @@ class MyTemplateView(TemplateView):
         context.update({"ansprechpartner": ansprechpartner})
         context.update({"standorte": standorte})
         context.update({"jobs":jobs})
+        context.update({"page_obj":page_obj})
         return context
 
 
