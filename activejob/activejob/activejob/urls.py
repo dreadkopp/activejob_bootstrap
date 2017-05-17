@@ -50,11 +50,15 @@ class Location:
         self.gmapsIframeHref = gmapsIframeHref
 
 class Job:
-    def __init__(self, name, slug, location, contact):
+    def __init__(self, name, slug, location, contact, company=None, description=None, profile=None, perspective=None):
         self.name = name
         self.slug = slug
         self.location = location
         self.contact = contact
+        self.company = company
+        self.description = description
+        self.profile = profile
+        self.perspective = perspective
     def __str__(self):
         return self.name
 
@@ -63,6 +67,10 @@ def generate_jobs(count):
     for i in range(count):
         jobs.append(Job("Beschaeftigungstherapie","somewhere.com","somewhere",ContactPerson("John Doe","Platzhalter","555-424242","JohnDoe@Platzhalter.de","res/Ansprechpartner/JohnDoe.png")))
     return jobs
+
+class Company:
+    def __init__(self,description):
+        self.description = description
 
 """testcase no pagination, only for the looks"""
 jobs = generate_jobs(100);
@@ -124,7 +132,12 @@ def view(regex):
     else:
         return url(regex, contextView(menu_left,menu_top,ansprechpartner,standorte,page_obj,"",str))
 
-testjob = Job("Beschaeftigungstherapie","somewhere.com","somewhere",ContactPerson("John Doe","Platzhalter","555-424242","JohnDoe@Platzhalter.de","res/Ansprechpartner/JohnDoe.png"))
+testcompany = Company("Unser Kunde ist ein erfolgreiches Bauunternehmen, das sich im Bereich des Erd- und Straszenbaus ueber viele Jahre etabliert hat. Als zuverlaessiger Partner seiner Auftraggeber legt er besonderen Wert auf Qualitaet und Kompetenz. Fuer das weitere Wachstum werden erfahrene und motivierte Mitarbeiter gesucht. Die Position wird zur Festanstellung direkt bei unserem Kunden angeboten. Unser Service ist fuer Bewerber/Kandidaten kostenfrei.")
+description="<ul><li>Aufmaszerstellung</li><li>Durchfuehrung der Mengenberechnung</li><li>normgerechte Abrechnung der Projekte</li>"
+profile="Sie koennen das"
+perspective="In der angebotenen Position uebernehmen Sie verantwortungsvolle Aufgaben fuer interessante Bauvorhaben. In einem teamorientierten und vertrauensvollen Umfeld sorgen Sie mit Ihrer Arbeit fuer die erfolgreiche Projektumsetzung. Weiterbildungs- und Entwicklungsmoeglichkeiten sind bei unserem Kunden gegeben."
+testjob = Job("Beschaeftigungstherapie","somewhere.com","somewhere",ContactPerson("John Doe","Platzhalter","555-424242","JohnDoe@Platzhalter.de","res/Ansprechpartner/JohnDoe.png",company=testcompany,description=description,profile=profile,perspective=perspective))
+
 
 urlpatterns = [
     url(r'^testjob', contextView(menu_left,menu_top,ansprechpartner,standorte,page_obj,testjob,"web/pages/stellenmarkt/job-detail.html")),
