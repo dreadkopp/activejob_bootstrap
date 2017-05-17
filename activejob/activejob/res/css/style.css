@@ -274,6 +274,9 @@
   text-align: right;
 }
 
+#table_jobs tr:nth-child(2n) {
+  background-color: #eee;
+}
 .pagination {
   float:right;
 }
