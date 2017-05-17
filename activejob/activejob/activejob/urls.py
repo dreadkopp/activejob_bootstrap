@@ -99,19 +99,17 @@ ansprechpartner = [
 
 
 def contextView(nav_left,nav_top,people,places,paginated_jobs,template_):
-    def classWithContext():
-        class ActivJobView(TemplateView):
-            def get_context_data(self, **kwargs):
-                context = super(ActivJobView, self).get_context_data(**kwargs)
-                context.update({"menu_left": nav_left})
-                context.update({"menu_top": nav_top})
-                context.update({"ansprechpartner": people})
-                context.update({"standorte": places})
-                context.update({"page_obj": paginated_jobs})
-                return context
-        return ActivJobView
+    class ActivJobView(TemplateView):
+        def get_context_data(self, **kwargs):
+            context = super(ActivJobView, self).get_context_data(**kwargs)
+            if nav_left: context.update({"menu_left": nav_left})
+            if nav_top: context.update({"menu_top": nav_top})
+            if people: context.update({"ansprechpartner": people})
+            if places: context.update({"standorte": places})
+            if paginated_jobs: context.update({"page_obj": paginated_jobs})
+            return context
 
-    return classWithContext().as_view(template_name=template_)
+    return ActivJobView.as_view(template_name=template_)
 
 siteTemplatesRootDir = 'web/pages/'
 
