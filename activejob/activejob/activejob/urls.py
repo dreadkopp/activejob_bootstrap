@@ -96,32 +96,22 @@ ansprechpartner = [
     ContactPerson("John Doe","Platzhalter","555-424242","JohnDoe@Platzhalter.de","res/Ansprechpartner/JohnDoe.png"),
 ]
 
-class ActivJobView(TemplateView):
-    menu_left = []
-    menu_top = []
-    ansprechpartner = []
-    standorte = []
-    page_obj = []
-    def set_activeJob_context(self, menu_left=[], menu_top=[], ansprechpartner=[], standorte=[], page_obj=[]):
-        self.menu_left = menu_left
-        self.menu_top = menu_top
-        self.ansprechpartner = ansprechpartner
-        self.standorte = standorte
-        self.page_obj = page_obj
 
-    def get_context_data(self, **kwargs):
-        context = super(MyTemplateView, self).get_context_data(**kwargs)
-        context.update({"menu_left": self.menu_left})
-        context.update({"menu_top": self.menu_top})
-        context.update({"ansprechpartner": self.ansprechpartner})
-        context.update({"standorte": self.standorte})
-        context.update({"page_obj": self.page_obj})
-        return context
 
 def testview():
-    view = ActivJobView()
-    view.set_activeJob_context(menu_left,menu_top,ansprechpartner,standorte,page_obj)
-    return view.as_view(template_name="test/test.html")
+    def classWithContext():
+        class ActivJobView(TemplateView):
+            def get_context_data(self, **kwargs):
+                context = super(ActivJobView, self).get_context_data(**kwargs)
+                context.update({"menu_left": menu_left})
+                context.update({"menu_top": menu_top})
+                context.update({"ansprechpartner": ansprechpartner})
+                context.update({"standorte": standorte})
+                context.update({"page_obj": page_obj})
+                return context
+        return ActivJobView
+
+    return classWithContext().as_view(template_name="test/test.html")
 
 siteTemplatesRootDir = 'web/pages/'
 
