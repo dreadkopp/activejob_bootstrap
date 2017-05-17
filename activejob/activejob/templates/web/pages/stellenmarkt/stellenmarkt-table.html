@@ -16,7 +16,7 @@
           </span>
       </div>
   {% endif %}
-  
+
     <table class="table table-hover" id="table_jobs">
         <thead>
             <tr>
@@ -26,7 +26,7 @@
         </thead>
 
         <tbody>
-            {% for job in jobs %}
+            {% for job in page_obj.object_list %}
             <tr>
                 <td>
                   {% comment %}<!--missing url 'stelle' slug=job.slug -->{% endcomment %}
