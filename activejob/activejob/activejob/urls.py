@@ -59,7 +59,7 @@ class Job:
 
 def generate_jobs(count):
     jobs = []
-    for i in range(1,count+1):
+    for i in range(count):
         jobs.append(Job("Beschaeftigungstherapie","somewhere.com","somewhere"))
     return jobs
 
