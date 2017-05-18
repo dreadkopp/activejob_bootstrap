@@ -5,6 +5,7 @@
 {% block title %}
 Ihre Ansprechpartner für die Personalvermittlung{{ block.super }}
 {% endblock %}
+
 {% block middle_col %}
 
 <h3>Ihre Ansprechpartner im Bereich
@@ -28,6 +29,7 @@ Personalvermittlung</h3>
 
 {% endblock %}
 
+
 {% block banner %}
-  {% include "web/banner/blue.html" %}
+  {% include "web/banner/blue.html" with slogan="„Wir vermitteln Mitarbeiter, die nicht nur Ihren fachlichen Anforderungen entsprechen, sondern mit Leidenschaft und Enthusiasmus bei der Arbeit sind.“"%}
 {% endblock %}

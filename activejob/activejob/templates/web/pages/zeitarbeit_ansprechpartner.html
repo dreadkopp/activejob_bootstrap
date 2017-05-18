@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block title %}
-Ihre Ansprehnpartner für die Zeitarbeit{{ block.super }}
+Ihre Ansprechpartner für die Zeitarbeit{{ block.super }}
 {% endblock %}
 
 {% block middle_col %}
@@ -28,18 +28,6 @@ Arbeitnehmerüberlassung</h3>
 
 {% endblock %}
 
-{% block left_col %}
-
-{% include "web/nav/left_col_menu_business.html" with active_tab='left_tab3' %}
-
-{% endblock %}
-
 {% block banner %}
-<div class="green col-md-9 col-sm-12">
-<div id="banner">
-    <h2>„Unsere Mitarbeiter sind spezialisierte
-    Fachkräfte aus Ihrer Region. So kann jede
-    einzelne Stelle optimal besetzt werden.“</h2>
-</div>
-</div>
+  {% include "web/banner/green.html" with slogan="„Unsere Mitarbeiter sind spezialisierte Fachkräfte aus Ihrer Region. So kann jede einzelne Stelle optimal besetzt werden.“" %}
 {% endblock %}
