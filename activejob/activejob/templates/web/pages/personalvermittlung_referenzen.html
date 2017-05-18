@@ -2,6 +2,10 @@
 
 {% load static %}
 
+{% block title %}
+Referenzen in der Personalvermittlung{{ block.super }}
+{% endblock %}
+
 {% block middle_col %}
 
 <div class="csc-header csc-header-n1">
@@ -18,123 +22,18 @@ Gern nennen wir Ihnen diese in einem
 persönlichen Gespräch.</p>
 
 <p>Folgende Referenzprojekte konnten wir
-erfolgreich abschließen:*</p>
+erfolgreich abschließen:</p>
 
-<p class="bodytext">
-<b>Informationstechnologie und
-Telekommunikation</b></p>
-
-<ul>
-  <li class="bodytext" style=
-  "margin-left: 40px;">
-  Systemadministrator</li>
-
-  <li class="bodytext" style=
-  "margin-left: 40px;">
-  Vertriebsmitarbeiter</li>
-
-  <li class="bodytext" style=
-  "margin-left: 40px;">
-  Vertriebscontroller</li>
-
-  <li class="bodytext" style=
-  "margin-left: 40px;">Berater
-  Mobilfunklösungen</li>
-
-  <li class="bodytext" style=
-  "margin-left: 40px;">Assistenz Bereich
-  Finanzen</li>
-
-  <li class="bodytext" style=
-  "margin-left: 40px;">
-  Personalsachbearbeiter</li>
-
-  <li class="bodytext" style=
-  "margin-left: 40px;">
-  Call-Center-Agent</li>
-</ul>
-
-<p class="bodytext">
-<b>Ingenieurwesen/Industrie und
-Technik</b></p>
-
-<ul>
-  <li class="bodytext" style=
-  "margin-left: 40px;">Bereichsleiter
-  Bahnsicherung</li>
-
-  <li class="bodytext" style=
-  "margin-left: 40px;">
-  Eisenbahnbetriebsleiter</li>
-
-  <li class="bodytext" style=
-  "margin-left: 40px;">Technischer
-  Kundenberater</li>
-
-  <li class="bodytext" style=
-  "margin-left: 40px;">Assistenz der
-  Geschäftsführung</li>
-
-  <li class="bodytext" style=
-  "margin-left: 40px;">Mitarbeiter
-  Qualitätssicherung</li>
-
-  <li class="bodytext" style=
-  "margin-left: 40px;">Projektingenieure
-  für Verkehrswesen- und
-  Schienenfahrzeugtechnik</li>
-
-  <li class="bodytext" style=
-  "margin-left: 40px;">Ingenieur
-  Elektrotechnik</li>
-
-  <li class="bodytext" style=
-  "margin-left: 40px;">
-  Vertriebsingenieur</li>
-
-  <li class="bodytext" style=
-  "margin-left: 40px;">Projektkoordinator
-  Produktentwicklung</li>
-
-  <li class="bodytext" style=
-  "margin-left: 40px;">Techniker
-  Inbetriebnahme</li>
-
-  <li class="bodytext" style=
-  "margin-left: 40px;">Leiter strategisch
-  und operativer Einkauf</li>
-
-  <li class="bodytext" style=
-  "margin-left: 40px;">
-  Wissenschaftsingenieur</li>
-</ul>
-
-<p class="bodytext">
-<b>Gesundheitswesen</b></p>
-
-<ul>
-  <li class="bodytext" style=
-  "margin-left: 40px;">Examinierte
-  Pflegefachkraft</li>
-
-  <li class="bodytext" style=
-  "margin-left: 40px;">
-  Medizintechniker</li>
-
-  <li class="bodytext" style=
-  "margin-left: 40px;">Customer Service
-  Mitarbeiter</li>
-
-  <li class="bodytext" style=
-  "margin-left: 40px;">Arzthelfer</li>
-
-  <li class="bodytext" style=
-  "margin-left: 40px;">Mitarbeiter
-  Apothekenaußendienst</li>
-
-  <li class="bodytext" style=
-  "margin-left: 40px;">Pharmareferent</li>
-</ul><br />
+{% for node in referenzen %}
+  <p><b>{{node}}</b></p>
+  <ul>
+    {% for subnode in node.jobs %}
+      <li>
+        {{ subnode }}
+      </li>
+    {% endfor %}
+  </ul>
+{% endfor %}
 
 <p>* Die verwendete männliche Bezeichnung
 umfasst weibliche und männliche Personen.

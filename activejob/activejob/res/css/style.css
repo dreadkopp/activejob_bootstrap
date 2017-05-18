@@ -25,14 +25,16 @@
   margin-left: 3em;
 }
 
-/* __kompetenzbereiche */
- .kompetenzbereiche p {
+/* __kompetenzbereiche, referenzen */
+ .referenzen p, .kompetenzbereiche p {
    margin-left: 40px;
  }
 
- .kompetenzbereiche ul {
+ .referenzen ul, .kompetenzbereiche ul {
    margin-left: 80px;
  }
+
+
 
 
 /*Header*/

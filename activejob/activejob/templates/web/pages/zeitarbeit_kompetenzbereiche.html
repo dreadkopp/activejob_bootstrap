@@ -2,20 +2,24 @@
 
 {% load static %}
 
+{% block title %}
+Kompetenzbereiche für Ingeneure, Facharbeiter, Techniker und kaufmännisches Personal{{ block.super }}
+{% endblock %}
+
 {% block middle_col %}
 
 
 
-<div class="kompetenzbereiche">
+
   <h3>Nicht alle Branchen – aber jede Branche
   mit Expertise</h3>
 
   <p><br />
   In den folgenden Bereichen können wir Sie im
-  Rahmen der&nbsp; Arbeitnehmerüberlassung
+  Rahmen der Arbeitnehmerüberlassung
   effektiv unterstützen:</p>
 
-
+<div class="kompetenzbereiche">
   {% for node in kompetenzbereiche %}
 
     <p><strong>{{node}}</strong><p>
@@ -25,13 +29,14 @@
     {% endfor %}
     </ul>
   {% endfor %}
+</div>
 
   <p>* Die verwendete männliche Bezeichnung
   umfasst weibliche und männliche Personen. Die
   undifferenzierte Bezeichnung dient allein der
   besseren Lesbarkeit.</p>
-  
-</div>
+
+
 
 {% endblock %}
 

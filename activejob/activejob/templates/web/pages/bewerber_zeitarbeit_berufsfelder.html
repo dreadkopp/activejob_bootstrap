@@ -2,10 +2,13 @@
 
 {% load static %}
 
+{% block title %}
+Berufsfelder in der Zeitarbeit{{ block.super }}
+{% endblock %}
+
+
 {% block middle_col %}
 
-
-<div class="element inhalt">
   <h3>Einsatzgebiete und Berufsfelder</h3>
 
   <p>Gern beraten wir Sie individuell.
@@ -20,124 +23,25 @@
   Ihr Ansprechpartner unterstützt Sie dauerhaft
   bei allen Angelegenheiten und Fragen.</p>
 
-  <p>Wir sind immer auf der Suche nach:*</p>
+  <p>Wir sind immer auf der Suche nach:</p>
 
-  <div class="floatdiv" style=
-  "margin-left: 40px;">
-    - <strong>Facharbeitern aus allen
-    gewerblichen&nbsp;Tätigkeitsfeldern:</strong>
+  <div class="kompetenzbereiche">
+    {% for node in berufsfelder %}
+
+      <p><strong>{{node}}</strong><p>
+      <ul>
+      {% for subnode in node.jobs %}
+        <li>{{subnode}}</li>
+      {% endfor %}
+      </ul>
+    {% endfor %}
   </div>
 
-  <ul>
-    <li class="floatdiv" style=
-    "margin-left: 80px;">Schlosser und
-    Schweißer</li>
 
-    <li class="floatdiv" style=
-    "margin-left: 80px;">Installateure HLS</li>
-
-    <li class="floatdiv" style=
-    "margin-left: 80px;">Elektriker und
-    Energieelektroniker</li>
-
-    <li class="floatdiv" style=
-    "margin-left: 80px;">Industrie- und
-    Anlagenmechaniker</li>
-
-    <li class="floatdiv" style=
-    "margin-left: 80px;">Tischler und
-    Fenstermonteure</li>
-
-    <li class="floatdiv" style=
-    "margin-left: 80px;">CNC-Fachkräfte</li>
-
-    <li class="floatdiv" style=
-    "margin-left: 80px;">Mechatroniker</li>
-
-    <li class="floatdiv" style=
-    "margin-left: 80px;">Lackierer und
-    Maler</li>
-  </ul>
-
-  <div class="floatdiv" style=
-  "margin-left: 40px;">
-    <strong>- Technikern und Ingenieuren aus
-    den Fachgebieten:</strong>
-  </div>
-
-  <ul>
-    <li class="floatdiv" style=
-    "margin-left: 80px;">Maschinenbau,
-    Automatisierungs-, Energie- und
-    Anlagentechnik</li>
-
-    <li class="floatdiv" style=
-    "margin-left: 80px;">
-    Elektrotechnik/Elektronik,
-    Nachrichtentechnik</li>
-
-    <li class="floatdiv" style=
-    "margin-left: 80px;">Fahrzeugtechnik,
-    Konstruktion, Entwicklung</li>
-
-    <li class="floatdiv" style=
-    "margin-left: 80px;">Feinwerk-, Verfahrens-
-    und Umwelttechnik</li>
-
-    <li class="floatdiv" style=
-    "margin-left: 80px;">Vermessungs- und
-    Bauwesen</li>
-  </ul>
-
-  <div class="floatdiv" style=
-  "margin-left: 40px;">
-    <strong>- kaufmännischem Personal aus den
-    Funktionsbereichen:</strong>
-  </div>
-
-  <ul>
-    <li class="floatdiv" style=
-    "margin-left: 80px;">Office und
-    Sachbearbeitung</li>
-
-    <li class="floatdiv" style=
-    "margin-left: 80px;">Finanzen und
-    Controlling</li>
-
-    <li class="floatdiv" style=
-    "margin-left: 80px;">Vertrieb und
-    Marketing</li>
-
-    <li class="floatdiv" style=
-    "margin-left: 80px;">Personal</li>
-  </ul>
-
-  <div class="floatdiv" style=
-  "margin-left: 40px;">
-    <strong>Dienstleistungsfachkräften aus den
-    Bereichen:</strong>
-  </div>
-
-  <ul>
-    <li class="floatdiv" style=
-    "margin-left: 80px;">Call-Center</li>
-
-    <li class="floatdiv" style=
-    "margin-left: 80px;">Kundenbetreuung</li>
-  </ul>
-
-  <div class="floatdiv">
-    <br />
-    * Die verwendete männliche Bezeichnung
-    umfasst weibliche und männliche Personen.
-    Die undifferenzierte Bezeichnung dient
-    allein der besseren Lesbarkeit.
-  </div>
-
-  <div class="floatdiv">
-    &nbsp;
-  </div>
-</div>
+  <p>* Die verwendete männliche Bezeichnung
+  umfasst weibliche und männliche Personen. Die
+  undifferenzierte Bezeichnung dient allein der
+  besseren Lesbarkeit.</p>
 
 
 {% endblock %}

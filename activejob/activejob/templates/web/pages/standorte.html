@@ -2,6 +2,14 @@
 
 {% load static %}
 
+
+{% block title %}
+ Standorte
+ {% for node in standorte %}
+  {{node.name|cut:"Standort "}}
+ {% endfor %}{{ block.super }}
+{% endblock %}
+
 {% block middle_col %}
 
 

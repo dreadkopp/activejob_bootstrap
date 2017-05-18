@@ -2,6 +2,16 @@
 
 {% load static %}
 
+
+{% block title %}
+Arbeitsvermittlung Kompetenzbereiche
+  {% for node in kompetenzbereiche %}
+    {{node}}
+  {% endfor %}
+  {{ block.super }}
+{% endblock %}
+
+
 {% block middle_col %}
 
 <div class="kompetenzbereiche">
