@@ -5,13 +5,11 @@
 
 {% block middle_col %}
     <div>
-        <h1>{{ job }}</h1>
+        <h1 id="job_name">{{ job }}   </h1>
 
-        <dl>
-            <dt>Arbeitsort:</dt>
-            <dd>{{ job.location }}</dd>
-            <dt>Kennziffer:</dt>
-            <dd>{{ job.id }}</dd>
+        <dl id="job_base_details">
+            <dt>Arbeitsort: <small>{{ job.location }}</small></dt>
+            <dt>Kennziffer: <small>{{ job.id }}</small></dt>
         </dl>
 
 
@@ -34,30 +32,49 @@
 
         <div> {{ job.perspective|safe }} </div>
 
-        <div class="well hidden-xs">
-            <a href="{% url 'stellenmarkt' %}">zurück zur Stellenliste</a>
+        <div class="link_return" >
+            <a  href="{% url 'stellenmarkt' %}">neue Suche</a>
         </div>
     </div>
 {% endblock %}
 
 {% block right_col %}
-    <div>
-        <h2>Ansprechpartner</h2>
-
-        <h4><a {{ job.contact }}</a></h4>
-
+    <div id="job_contact" class="row">
         <div>
-            <a href="mailto:{{ job.contact.mail }}">
+          <h2 class="col-xs-12">Ansprechpartner</h2>
+        </div>
+
+        <div id="contact_name">
+          <h4 class="col-xs-12">{{ job.contact }}</h4>
+
+        </div>
+
+
+        <div id="contact_mail" >
+          <strong class="col-xs-4">E-Mail:</strong>
+            <a class="col-xs-8" href="mailto:{{ job.contact.mail }}">
 {{ job.contact.mail }}</a>
         </div>
 
-        <div>
-            <a href="tel:{{ job.contact.phone|cut:" " }}">
+        <div id="contact_phone" >
+          <strong class="col-xs-4">Telefon:</strong>
+            <a class="col-xs-8" href="tel:{{ job.contact.phone|cut:" " }}">
 {{ job.contact.phone }}</a>
         </div>
 
-        <div>
+        <div id="contact_image" >
+          <img class="col-xs-12" alt="{{ job.contact }}"
+          src="{{job.contact.imageurl}}" />
+        </div>
 
+        <div id="contact_adress" >
+          <p class="col-xs-12">
+            activjob GmbH
+            <br />
+            {{ job.contact.standort.street }}
+            <br />
+            {{ job.contact.standort.city }}
+          </p>
         </div>
     </div>
 {% endblock %}

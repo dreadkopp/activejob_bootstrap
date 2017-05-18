@@ -15,6 +15,26 @@
   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.67);
 }
 
+/*sitemap*/
+
+.sitemap li {
+  list-style: none;
+}
+
+.sitemap {
+  margin-left: 3em;
+}
+
+/* __kompetenzbereiche */
+ .kompetenzbereiche p {
+   margin-left: 40px;
+ }
+
+ .kompetenzbereiche ul {
+   margin-left: 80px;
+ }
+
+
 /*Header*/
 
 .logo {
@@ -44,6 +64,50 @@
 
 /*Menus*/
 
+@media (min-width: 768px) {
+  .menu-top .nav li  {
+    display: block;
+    height: 29px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .menu-top .nav li a {
+    background: url(images/menu_bg.gif) no-repeat;
+  }
+
+  .menu-top .nav li.active a, .menu-top .nav li a:hover {
+      background: url(images/menu_bg_act.gif) no-repeat;
+  }
+
+  .menu-top .nav li a {
+    color: #fff;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .menu-top .navbar {
+    min-height: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-top .nav li {
+    text-align:center;
+  }
+  .menu-top .nav li:hover {
+    background-color: #cacaca;
+  }
+  .menu-top .nav li:not(:last-child) {
+    border-bottom: solid 1px #cacaca;
+  }
+
+}
 .row .menu {
   padding-left: 15px;
   padding-right: 15px;
@@ -56,7 +120,6 @@
 
 .menu .navbar {
     position: relative;
-    min-height: 50px;
     margin-bottom: 0px;
     border: none;
 }
@@ -289,6 +352,52 @@
   float:right;
 }
 
+/* Job-details */
+
+.link_return {
+  margin-top: 3em;
+}
+
+#job_name{
+  padding-bottom: 3px;
+  border-bottom: 1px solid #cacaca;
+  display: inline-block;
+}
+
+#job_base_details {
+  margin-top: 1em;
+  width: 100%;
+  height: 1em;
+  padding-bottom: 2em;
+}
+#job_base_details dt {
+  float: left;
+  padding-right:20px;
+}
+
+#contact_name, #contact_mail{
+  border-bottom: 1px solid #cacaca;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+#contact_phone {
+  padding-top: 5px;
+}
+
+#job_contact {
+  display: inline-grid;
+}
+
+#job_contact div .col-xs-12, #job_contact div .col-xs-4 {
+  padding-left: 0px;
+}
+
+#contact_image {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 
 
 /*new*/
@@ -380,7 +489,8 @@ a img{
 #split{
   margin-bottom: 10px;
   height: 61px;
-  background: url(images/split.gif) top repeat-x;
+  background: linear-gradient(to top, #cdcdcd 30%, #fcfcfc);
+  border-top: 2px solid #afafaf;
 }
 #split .menu{
   clear: both;
@@ -506,9 +616,9 @@ h4{
 }
 ul{
   line-height: 20px;
-  padding-left: 20px;
   list-style: none;
   color: #000;
+  padding-left: 15px;
   list-style-image: url(images/li_bg.gif);
 }
 ul li{
@@ -591,20 +701,7 @@ textarea{
 .multiSelect{
   height: 100px;
 }
-.menu ul #node73{
-  width: 35px;
-}
-.menu ul #node73 a{
-  width: 20px;
-  display:block;
-  margin: 1px 0 0 10px;
-  height: 20px;
-  background: url(images/home.png) no-repeat;
-  padding-left: 30px;
-}
-#menu ul #node73 a.active,#inhalt .menu ul #node73 a{
-  background: url(images/homeAct.png) no-repeat;
-}
+
 .DatenListe .col1{
   text-align: left;
 }

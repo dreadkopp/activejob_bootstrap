@@ -2,134 +2,42 @@
 
 {% load static %}
 
-{% block navigation_top %}
-  {% include "web/nav/nav.html" with active_tab='tab2' %}
-{% endblock %}
-
 {% block middle_col %}
 
-<div class="location">
-        <div class="location_info">
-        <h3>activjob GmbH<br />
-          Standort Dresden</h3>
 
-          <p class="bodytext">Reichenbachstraße
-          55<br />
-          01069 Dresden</p>
+{% for node in standorte %}
+  <div class="location">
+          <div class="location_info">
+            <h3>activjob GmbH
+              <br />
+              {{node.name}}
+            </h3>
 
-          <p>Telefon: 0351 2502088-0<br />
-          Fax: 0351 2502088-6<br />
-          E-Mail: <a href=
-          "javascript:mt('dresden','activ-job.com','','')">
-          dresden@activ-job.com</a></p>
+            <p class="bodytext">
+              {{node.street}}
+              <br />
+              {{node.city}}
+            </p>
 
-        </div>
+            <p>
+              Telefon: {{node.phone}}
+              <br />
+              Fax: {{node.fax}}
+              <br />
+              E-Mail: <a href="mailto:{{node.mail}}">{{node.mail}}</a>
+            </p>
+          </div>
 
-        <div class="location_map">
-        <iframe frameborder="0"
-        marginheight="0" marginwidth="0"
-        scrolling="no" src=
-        "https://maps.google.de/maps?f=q&amp;source=s_q&amp;hl=de&amp;geocode=&amp;q=Reichenbachstra%C3%9Fe%2055%2001069%20Dresden&amp;aq=&amp;sll=51.032854740879024,13.74108000000001&amp;sspn=51.02853660133464,13.730780317382823&amp;ie=UTF8&amp;hq=&amp;hnear=Reichenbachstra%C3%9Fe%2055%2001069%20Dresden&amp;ll=51.032854740879024,13.74108000000001&amp;spn=51.02853660133464,13.730780317382823&amp;z=15&amp;iwloc=A&amp;output=embed"
-        width="100%" height="200px"></iframe>
-        </div>
-</div>
+          <div class="location_map">
+            <iframe frameborder="0"
+            marginheight="0" marginwidth="0"
+            scrolling="no" src="{{node.gmapsIframeHref}}"
+            width="100%" height="200px"></iframe>
+          </div>
+  </div>
 
-<div class="limiter"></div>
+  <div class="limiter"></div>
+{% endfor %}
 
-<div class="location">
-
-        <div class="location_info">
-        <h3>activjob GmbH<br />
-          Standort Leipzig</h3>
-
-          <p class="bodytext">Schlegelstraße
-          15<br />
-          04275 Leipzig</p>
-
-          <p class="bodytext">Telefon: 0341
-          303792-0<br />
-          Fax: 0341 303792-19<br />
-          E-Mail: <a href=
-          "javascript:mt('leipzig','activ-job.com','','')"
-          style=
-          "color: rgb(224, 81, 64);">leipzig@activ-job.com</a></p>
-        </div>
-        <div class="location_map">
-        <iframe
-        frameborder="0" scrolling="no"
-        marginheight="0" marginwidth="0" src=
-        "https://maps.google.de/maps?f=q&amp;source=s_q&amp;hl=de&amp;geocode=&amp;q=Schlegelstra%C3%9Fe+15+04275+Leipzig&amp;sll=51.327099,12.369018&amp;sspn=0.019013,0.028367&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=Schlegelstra%C3%9Fe+15,+Leipzig+04275+Leipzig,+Sachsen&amp;ll=51.324095,12.366529&amp;spn=0.004693,0.009613&amp;z=15&amp;iwloc=A&amp;output=embed"
-        width="100%" height="200px"></iframe></td>
-      </div>
-    </div>
-
-<div class="limiter"/></div>
-
-<div class="location">
-
-        <div class="location_info">
-        <h3>activjob GmbH<br />
-          Standort Chemnitz</h3>
-
-          <p class="bodytext">Bahnhofstraße
-          6<br />
-          09111 Chemnitz</p>
-
-          <p class="bodytext">Telefon: 0371
-          4937582-0<br />
-          Fax: 0371 4937582-9<br />
-          E-Mail: <a href=
-          "javascript:mt('chemnitz','activ-job.com','','')"
-          style=
-          "color: rgb(224, 81, 64);">chemnitz@activ-job.com</a></p>
-
-        </div>
-
-        <div class="location_map">
-        <iframe frameborder="0"
-        marginheight="0" marginwidth="0"
-        scrolling="no" src=
-        "https://maps.google.de/maps?f=q&amp;source=s_q&amp;hl=de&amp;geocode=&amp;q=Bahnhofstra%C3%9Fe%206%2009111%20Chemnitz&amp;aq=&amp;sll=50.83897530436071,12.929059999999936&amp;sspn=50.834639124245356,12.918760317382748&amp;ie=UTF8&amp;hq=&amp;hnear=Bahnhofstra%C3%9Fe%206%2009111%20Chemnitz&amp;ll=50.83897530436071,12.929059999999936&amp;spn=50.834639124245356,12.918760317382748&amp;z=15&amp;iwloc=A&amp;output=embed"
-        width="100%" height="200px"></iframe>
-      </div>
-
-</div>
-
-<div class="limiter"/></div>
-
-<div class="location">
-      <div class="location_info">
-        <h3>activjob GmbH<br />
-          Standort Bautzen</h3>
-
-          <p class="bodytext">Edisonstraße
-          17<br />
-          02625 Bautzen</p>
-
-          <p class="bodytext">Telefon: 03591
-          351399-0<br />
-          Fax: 03591 351399-6<br />
-          E-Mail: <a href=
-          "mailto:bautzen@activ-job.com" style=
-          "color: rgb(224, 81, 64);">bautzen@activ-job.com</a></p>
-
-        </div>
-
-
-        <div class="location_map">
-        <iframe frameborder="0"
-        marginheight="0" marginwidth="0"
-        scrolling="no" src=
-        "https://maps.google.de/maps?f=q&amp;source=s_q&amp;hl=de&amp;geocode=&amp;q=Edisonstra%C3%9Fe%2017%2002625%20Bautzen&amp;aq=&amp;sll=51.163754359569815,14.42515000000003&amp;sspn=51.15944842826866,14.414850317382843&amp;ie=UTF8&amp;hq=&amp;hnear=Edisonstra%C3%9Fe%2017%2002625%20Bautzen&amp;ll=51.163754359569815,14.42515000000003&amp;spn=51.15944842826866,14.414850317382843&amp;z=15&amp;iwloc=A&amp;output=embed"
-        width="100%" height="200px"></iframe>
-      </div>
-
-</div>
-
-{% endblock %}
-
-{% block left_col %}
-
-{% include "web/nav/left_col_menu_about.html" with active_tab='left_tab3' %}
 
 {% endblock %}

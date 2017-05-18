@@ -2,10 +2,6 @@
 
 {% load static %}
 
-{% block navigation_top %}
-  {% include "web/nav/nav.html" with active_tab='tab4' %}
-{% endblock %}
-
 {% block middle_col %}
 
 <div class="element inhalt">
@@ -79,8 +75,6 @@
 
 {% endblock %}
 
-{% block left_col %}
-
-{% include "web/nav/left_col_menu_applicant.html" with active_tab='left_tab12' %}
-
+{% block banner %}
+  {% include "web/banner/orange.html"}
 {% endblock %}

@@ -1,7 +1,7 @@
 {% extends "bootstrap.html" %}
 {% load static %}
 
-{% block title %} Arbeitsvermittlung, Personalvermittlung, Zeitarbeit -
+{% block title %} -
 activjob. {% endblock title %}
 
 {% block content %}
@@ -21,9 +21,9 @@ activjob. {% endblock title %}
               <a href="/"><img src={% static 'css/images/logo.gif' %} alt=
               "activjob Logo" /></a>
           </div>
-          <div class="menu">
+          <div class="menu menu-top">
             {% block navigation_top %}
-              {% include "web/nav/nav.html" %}
+              {% include "web/nav/topnav.html" %}
             {% endblock %}
           </div>
         </div>
@@ -117,7 +117,7 @@ activjob. {% endblock title %}
               {% block page_content %}
                 <div class="col-md-3 col-sm-4 col-xs-12 menu-left">
                  {% block left_col %}
-                  {% include "test/leftnav.html" %}
+                  {% include "web/nav/leftnav.html" %}
                  {% endblock left_col %}
                </div>
                <div class="col-md-9 col-sm-8 col-xs-12">
@@ -147,10 +147,30 @@ activjob. {% endblock title %}
         <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+        <script src= {% static 'script/script.js' %} ></script>
+
+        <!-- Piwik -->
+        <script type="text/javascript">
+       //<![CDATA[
+                          var pkBaseURL = (("https:" == document.location.protocol) ? "https://stats.activ-job.com/" : "http://stats.activ-job.com/");
+                          document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+        //]]>
+        </script><script type="text/javascript">
+       //<![CDATA[
+                          try {
+                          var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 30);
+                          piwikTracker.trackPageView();
+                          piwikTracker.enableLinkTracking();
+                          } catch( err ) {}
+        //]]>
+        </script><noscript>
+        <p><img src="http://stats.activ-job.com/piwik.php?idsite=30"
+        style="border:0" alt="" /></p></noscript>
+        <!-- End Piwik Tracking Code -->
 
     {% endblock end_js %}
 
 
- <script src= {% static 'script/script.js' %} ></script>
+
 
 {% endblock content %}

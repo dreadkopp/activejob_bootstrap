@@ -2,9 +2,6 @@
 
 {% load static %}
 
-{% block navigation_top %}
-  {% include "web/nav/nav.html" with active_tab='tab3' %}
-{% endblock %}
 
 {% block middle_col %}
 
@@ -86,18 +83,7 @@
 
 {% endblock %}
 
-{% block left_col %}
-
-{% include "web/nav/left_col_menu_business.html" with active_tab='tab1'%}
-
-{% endblock %}
 
 {% block banner %}
-<div class="green col-md-9 col-sm-12">
-<div id="banner">
-    <h2>„Unsere Mitarbeiter sind spezialisierte
-    Fachkräfte aus Ihrer Region. So kann jede
-    einzelne Stelle optimal besetzt werden.“</h2>
-</div>
-</div>
+  {% include "web/banner/green.html"}
 {% endblock %}

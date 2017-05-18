@@ -2,10 +2,6 @@
 
 {% load static %}
 
-{% block navigation_top %}
-  {% include "web/nav/nav.html" with active_tab='tab2' %}
-{% endblock %}
-
 {% block middle_col %}
 
 
@@ -53,7 +49,7 @@
           Mit 1.852 Mitgliedsunternehmen ist der BAP
           als größter Zeitarbeitsverband
           flächendeckend in Deutschland
-          organisiert.</p><!--<h3>                <br />                  ZUKUNFT | ELITE - Agentur für Personalberatung</h3>     <p>             Im Bereich der Suche und Auswahl von Führungskräften und Spezialisten hat sich die activjob GmbH mit der eigenständigen Marke<br />             <a href="http://www.zukunft-elite.de">ZUKUNFT | ELITE</a>. etabliert. Hier werden Positionen mit höchstem Anforderungsprofil besetzt. Dabei nutzen unsere Personalberater insbesondere die Methode der Direktansprache.</p>-->
+          organisiert.</p>
 
           <p>Zertifiziert nach:</p>
 
@@ -71,11 +67,5 @@
             „Geprüfte Nachhaltigkeit“ 2015</a></li>
           </ul>
 
-
-{% endblock %}
-
-{% block left_col %}
-
-{% include "web/nav/left_col_menu_about.html" with active_tab='left_tab1' %}
 
 {% endblock %}

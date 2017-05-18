@@ -2,10 +2,6 @@
 
 {% load static %}
 
-{% block navigation_top %}
-  {% include "web/nav/nav.html" with active_tab='tab2' %}
-{% endblock %}
-
 {% block middle_col %}
 
 <h3>15 Jahre<br>Erfolg mit Leidenschaft</h3>
@@ -47,11 +43,5 @@ und bezahlen unsere Leasingmitarbeiter nach
 <a href="http://www.personaldienstleister.de/"
 target="_blank">BAP</a>-Tarif. Das ist fair
 und sorgt für Transparenz.</p>
-
-{% endblock %}
-
-{% block left_col %}
-
-{% include "web/nav/left_col_menu_about.html" with active_tab='left_tab2' %}
 
 {% endblock %}

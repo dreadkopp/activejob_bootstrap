@@ -32,12 +32,15 @@ class MenuItem:
         self.sublist = sublist
 
 class ContactPerson:
-    def __init__(self, name, stat, phone, mail, imageurl):
+    def __init__(self, name, stat, phone, mail, imageurl, standort=None):
         self.name = name
         self.stat = stat
         self.phone = phone
         self.mail = mail
         self.imageurl = imageurl
+        self.standort = standort
+    def __str__(self):
+        return self.name
 
 class Location:
     def __init__(self, name, street, city, phone, fax, mail, gmapsIframeHref ):
@@ -48,9 +51,12 @@ class Location:
         self.fax = fax
         self.mail = mail
         self.gmapsIframeHref = gmapsIframeHref
+    def __str__(self):
+        return self.name
+
 
 class Job:
-    def __init__(self, name, slug, location, contact, company=None, description=None, profile=None, perspective=None):
+    def __init__(self, name, slug, location, contact, company=None, description=None, profile=None, perspective=None, id=None):
         self.name = name
         self.slug = slug
         self.location = location
@@ -59,6 +65,7 @@ class Job:
         self.description = description
         self.profile = profile
         self.perspective = perspective
+        self.id = id
     def __str__(self):
         return self.name
 
@@ -107,7 +114,7 @@ ansprechpartner = [
 
 
 #just for testing
-def contextView(nav_left,nav_top,people,places,paginated_jobs,job,template_):
+def contextView(nav_left,nav_top,people,places,paginated_jobs,job,template_,sitemap=None):
     class ActivJobView(TemplateView):
         def get_context_data(self, **kwargs):
             context = super(ActivJobView, self).get_context_data(**kwargs)
@@ -117,6 +124,7 @@ def contextView(nav_left,nav_top,people,places,paginated_jobs,job,template_):
             if places: context.update({"standorte": places})
             if paginated_jobs: context.update({"page_obj": paginated_jobs})
             if job: context.update({"job": job})
+            if sitemap: context.update({"sitemap": sitemap})
             return context
 
     return ActivJobView.as_view(template_name=template_)
@@ -130,13 +138,14 @@ def view(regex):
     if regex == r'^$':
         return url(regex, contextView(menu_left,menu_top,ansprechpartner,standorte,page_obj,"","web/pages/home.html"))
     else:
-        return url(regex, contextView(menu_left,menu_top,ansprechpartner,standorte,page_obj,"",str))
+        return url(regex, contextView(menu_left,menu_top,ansprechpartner,standorte,page_obj,"",str,sitemap=menu_left))
 
 testcompany = Company("Unser Kunde ist ein erfolgreiches Bauunternehmen, das sich im Bereich des Erd- und Straszenbaus ueber viele Jahre etabliert hat. Als zuverlaessiger Partner seiner Auftraggeber legt er besonderen Wert auf Qualitaet und Kompetenz. Fuer das weitere Wachstum werden erfahrene und motivierte Mitarbeiter gesucht. Die Position wird zur Festanstellung direkt bei unserem Kunden angeboten. Unser Service ist fuer Bewerber/Kandidaten kostenfrei.")
 description="<ul><li>Aufmaszerstellung</li><li>Durchfuehrung der Mengenberechnung</li><li>normgerechte Abrechnung der Projekte</li>"
 profile="Sie koennen das"
 perspective="In der angebotenen Position uebernehmen Sie verantwortungsvolle Aufgaben fuer interessante Bauvorhaben. In einem teamorientierten und vertrauensvollen Umfeld sorgen Sie mit Ihrer Arbeit fuer die erfolgreiche Projektumsetzung. Weiterbildungs- und Entwicklungsmoeglichkeiten sind bei unserem Kunden gegeben."
-testjob = Job("Beschaeftigungstherapie","somewhere.com","somewhere",ContactPerson("John Doe","Platzhalter","555-424242","JohnDoe@Platzhalter.de","res/Ansprechpartner/JohnDoe.png",company=testcompany,description=description,profile=profile,perspective=perspective))
+teststandort=Location("Standort Springfield", "742 Evergreen Terrace", "<somezipcode> Springfield", "555-SIMPSONS", "555-SIMPSONSFAX", "simpsons@somewhere.com", "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3224.6601807984257!2d-115.01758844877891!3d36.07739181565208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8d0b899a5328b%3A0x53a02fbbc05432c3!2s712+Red+Bark+Ln%2C+Henderson%2C+NV+89011%2C+USA!5e0!3m2!1sde!2sde!4v1494937738392")
+testjob = Job("Beschaeftigungstherapie","somewhere.com","somewhere",ContactPerson("John Doe","Platzhalter","555-424242","JohnDoe@Platzhalter.de","res/Ansprechpartner/JohnDoe.png", standort=teststandort),company=testcompany,description=description,profile=profile,perspective=perspective,id="123456789Z")
 
 
 urlpatterns = [

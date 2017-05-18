@@ -2,14 +2,22 @@
 
 {% load static %}
 
-{% block navigation_top %}
-  {% include "web/nav/nav.html" with active_tab='tab1' %}
+{% block title %}
+ Arbeitsvermittlung, Personalvermittlung, Zeitarbeit {{ block.super }}
 {% endblock %}
 
 {% block page_content %}
 
 
-<div id="inhalt row">
+<div class="home">
+  {% comment %}These borders are found nowhere else so i just put the styling in the html{% endcomment %}
+  <style>
+  @media (min-width:992px) {
+    #contact , #fuer_unternehmen, #fuer_bewerber {
+      border-left: solid 1px #c79193;
+    }
+  }
+  </style>
   <div id="about" class="col-md-4">
         <h1>Über uns</h1>
 

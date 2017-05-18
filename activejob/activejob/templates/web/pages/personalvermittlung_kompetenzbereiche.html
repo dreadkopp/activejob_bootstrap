@@ -2,10 +2,6 @@
 
 {% load static %}
 
-{% block navigation_top %}
-  {% include "web/nav/nav.html" with active_tab='tab3' %}
-{% endblock %}
-
 {% block middle_col %}
 
 <div class="floatdiv">
@@ -78,16 +74,6 @@
 
 {% endblock %}
 
-{% block left_col %}
-
-{% include "web/nav/left_col_menu_business.html" with active_tab='left_tab5' %}
-
-{% endblock %}
-
 {% block banner %}
-<div class="blue col-md-9 col-sm-12">
-<div id="banner">
-    <h2>„Wir vermitteln Mitarbeiter, die nicht nur Ihren fachlichen Anforderungen entsprechen, sondern mit Leidenschaft und Enthusiasmus bei der Arbeit sind.“</h2>
-</div>
-</div>
+  {% include "web/banner/blue.html" %}
 {% endblock %}
