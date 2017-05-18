@@ -18,173 +18,59 @@ from django.views.generic import TemplateView
 from django.conf.urls.static import static
 from django.conf import settings
 
-
-
-class MenuItem:
-    def __init__(self, name, url, active=False, sublist=None):
-        self.name = name
-        self.url = url
-        self.active = active
-        self.sublist = sublist
-
-class ContactPerson:
-    def __init__(self, name, stat, phone, mail, imageurl, standort=None):
-        self.name = name
-        self.stat = stat
-        self.phone = phone
-        self.mail = mail
-        self.imageurl = imageurl
-        self.standort = standort
-    def __str__(self):
-        return self.name
-
-class Location:
-    def __init__(self, name, street, city, phone, fax, mail, gmapsIframeHref ):
-        self.name = name
-        self.street = street
-        self.city = city
-        self.phone = phone
-        self.fax = fax
-        self.mail = mail
-        self.gmapsIframeHref = gmapsIframeHref
-    def __str__(self):
-        return self.name
-
-
-class Job:
-    def __init__(self, name, slug, location, contact, company=None, description=None, profile=None, perspective=None, id=None):
-        self.name = name
-        self.slug = slug
-        self.location = location
-        self.contact = contact
-        self.company = company
-        self.description = description
-        self.profile = profile
-        self.perspective = perspective
-        self.id = id
-    def __str__(self):
-        return self.name
-
-def generate_jobs(count):
-    jobs = []
-    for i in range(count):
-        jobs.append(Job("Beschaeftigungstherapie","somewhere.com","somewhere",ContactPerson("John Doe","Platzhalter","555-424242","JohnDoe@Platzhalter.de","res/Ansprechpartner/JohnDoe.png")))
-    return jobs
-
-class Company:
-    def __init__(self,description):
-        self.description = description
-
-"""testcase no pagination, only for the looks"""
-jobs = generate_jobs(100);
-paginator = Paginator(jobs,10);
-page_obj = paginator.page(1);
-
-
-standorte = [
-    Location("Standort Springfield", "742 Evergreen Terrace", "<somezipcode> Springfield", "555-SIMPSONS", "555-SIMPSONSFAX", "simpsons@somewhere.com", "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3224.6601807984257!2d-115.01758844877891!3d36.07739181565208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8d0b899a5328b%3A0x53a02fbbc05432c3!2s712+Red+Bark+Ln%2C+Henderson%2C+NV+89011%2C+USA!5e0!3m2!1sde!2sde!4v1494937738392" ),
-    Location("Standort Springfield", "742 Evergreen Terrace", "<somezipcode> Springfield", "555-SIMPSONS", "555-SIMPSONSFAX", "simpsons@somewhere.com", "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3224.6601807984257!2d-115.01758844877891!3d36.07739181565208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8d0b899a5328b%3A0x53a02fbbc05432c3!2s712+Red+Bark+Ln%2C+Henderson%2C+NV+89011%2C+USA!5e0!3m2!1sde!2sde!4v1494937738392" ),
-]
-
-menu_left = [
-    MenuItem("Ipsum","#",active=True,sublist=[
-        MenuItem("Lorem","#"),
-        MenuItem("Larum","#",active=True),
-    ]),
-    MenuItem("Lorem","#"),
-    MenuItem("Larum","#"),
-]
-menu_top = [
-    MenuItem("Home","/",active=True),
-    MenuItem("Ueber Uns","#"),
-    MenuItem("Unternehmen","#"),
-    MenuItem("Bewerber","#"),
-]
-
-ansprechpartner = [
-    ContactPerson("John Doe","Platzhalter","555-424242","JohnDoe@Platzhalter.de","res/Ansprechpartner/JohnDoe.png"),
-    ContactPerson("John Doe","Platzhalter","555-424242","JohnDoe@Platzhalter.de","res/Ansprechpartner/JohnDoe.png"),
-    ContactPerson("John Doe","Platzhalter","555-424242","JohnDoe@Platzhalter.de","res/Ansprechpartner/JohnDoe.png"),
-    ContactPerson("John Doe","Platzhalter","555-424242","JohnDoe@Platzhalter.de","res/Ansprechpartner/JohnDoe.png"),
-]
-
-
-#just for testing
-def contextView(nav_left,nav_top,people,places,paginated_jobs,job,template_,sitemap=None):
-    class ActivJobView(TemplateView):
-        def get_context_data(self, **kwargs):
-            context = super(ActivJobView, self).get_context_data(**kwargs)
-            if nav_left: context.update({"menu_left": nav_left})
-            if nav_top: context.update({"menu_top": nav_top})
-            if people: context.update({"ansprechpartner": people})
-            if places: context.update({"standorte": places})
-            if paginated_jobs: context.update({"page_obj": paginated_jobs})
-            if job: context.update({"job": job})
-            if sitemap: context.update({"sitemap": sitemap})
-            return context
-
-    return ActivJobView.as_view(template_name=template_)
-
-siteTemplatesRootDir = 'web/pages/'
-
-"""spare some typing"""
-def view(regex):
-    str = regex[1:]
-    str =  siteTemplatesRootDir + str + '.html'
-    if regex == r'^$':
-        return url(regex, contextView(menu_left,menu_top,ansprechpartner,standorte,page_obj,"","web/pages/home.html"))
-    else:
-        return url(regex, contextView(menu_left,menu_top,ansprechpartner,standorte,page_obj,"",str,sitemap=menu_left))
-
-testcompany = Company("Unser Kunde ist ein erfolgreiches Bauunternehmen, das sich im Bereich des Erd- und Straszenbaus ueber viele Jahre etabliert hat. Als zuverlaessiger Partner seiner Auftraggeber legt er besonderen Wert auf Qualitaet und Kompetenz. Fuer das weitere Wachstum werden erfahrene und motivierte Mitarbeiter gesucht. Die Position wird zur Festanstellung direkt bei unserem Kunden angeboten. Unser Service ist fuer Bewerber/Kandidaten kostenfrei.")
-description="<ul><li>Aufmaszerstellung</li><li>Durchfuehrung der Mengenberechnung</li><li>normgerechte Abrechnung der Projekte</li>"
-profile="Sie koennen das"
-perspective="In der angebotenen Position uebernehmen Sie verantwortungsvolle Aufgaben fuer interessante Bauvorhaben. In einem teamorientierten und vertrauensvollen Umfeld sorgen Sie mit Ihrer Arbeit fuer die erfolgreiche Projektumsetzung. Weiterbildungs- und Entwicklungsmoeglichkeiten sind bei unserem Kunden gegeben."
-teststandort=Location("Standort Springfield", "742 Evergreen Terrace", "<somezipcode> Springfield", "555-SIMPSONS", "555-SIMPSONSFAX", "simpsons@somewhere.com", "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3224.6601807984257!2d-115.01758844877891!3d36.07739181565208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8d0b899a5328b%3A0x53a02fbbc05432c3!2s712+Red+Bark+Ln%2C+Henderson%2C+NV+89011%2C+USA!5e0!3m2!1sde!2sde!4v1494937738392")
-testjob = Job("Beschaeftigungstherapie","somewhere.com","somewhere",ContactPerson("John Doe","Platzhalter","555-424242","JohnDoe@Platzhalter.de","res/Ansprechpartner/JohnDoe.png", standort=teststandort),company=testcompany,description=description,profile=profile,perspective=perspective,id="123456789Z")
-
+from jobs.views import JobDetailView, JobListView
 
 urlpatterns = [
-    url(r'^testjob', contextView(menu_left,menu_top,ansprechpartner,standorte,page_obj,testjob,"web/pages/stellenmarkt/job-detail.html")),
-    url(r'^test', contextView(menu_left,menu_top,ansprechpartner,standorte,page_obj,"","test/test.html")),
-    url(r'^stellenmarkt', contextView(menu_left,menu_top,ansprechpartner,standorte,page_obj,"","web/pages/stellenmarkt.html"), name="stellenmarkt"),
-    view(r'^$'),
-    view(r'^arbeitnehmerueberlassung'),
-    view(r'^arbeitsvermittlung_kompetenzbereiche'),
-    view(r'^arbeitsvermittlung_ansprechpartner'),
-    view(r'^arbeitsvermittlung'),
-    view(r'^bewerber_arbeitsvermittlung_vorteile'),
-    view(r'^bewerber_arbeitsvermittlung_berufsfelder'),
-    view(r'^bewerber_arbeitsvermittlung_antworten'),
-    view(r'^bewerber_arbeitsvermittlung_ansprechpartner'),
-    view(r'^bewerber_arbeitsvermittlung'),
-    view(r'^bewerber_personalvermittlung_vorteile'),
-    view(r'^bewerber_personalvermittlung_berufsfelder'),
-    view(r'^bewerber_personalvermittlung_ansprechpartner'),
-    view(r'^bewerber_personalvermittlung'),
-    view(r'^bewerber_zeitarbeit_vorteile'),
-    view(r'^bewerber_zeitarbeit_berufsfelder'),
-    view(r'^bewerber_zeitarbeit_ansprechpartner'),
-    view(r'^bewerber_zeitarbeit'),
-    view(r'^bewerber'),
-    view(r'^home'),
-    view(r'^impressum'),
-    view(r'^karriere_activjob'),
-    view(r'^karriereberatung'),
-    view(r'^kontakt'),
-    view(r'^leitbild'),
-    view(r'^personalauswahl'),
-    view(r'^personalanfrage'),
-    view(r'^personalvermittlung_referenzen'),
-    view(r'^personalvermittlung_kompetenzbereiche'),
-    view(r'^personalvermittlung_ansprechpartner'),
-    view(r'^personalvermittlung'),
-    view(r'^sitemap'),
-    view(r'^standorte'),
-    view(r'^standort'),
-    view(r'^stellenmarkt'),
-    view(r'^unternehmensprofil'),
-    view(r'^unternehmen'),
-    view(r'^zeitarbeit_kompetenzbereiche'),
-    view(r'^zeitarbeit_ansprechpartner'),
+    url(r"^jobs/",
+        JobListView.as_view(),
+        name="stellenmarkt"
+    ),
+
+    url(r"^job/(?P<pk>\d+)$",
+        JobDetailView.as_view(),
+        name="job_detail"
+    ),
+
+#    url(r'^testjob', contextView(menu_left,menu_top,ansprechpartner,standorte,page_obj,testjob,"web/pages/stellenmarkt/job-detail.html")),
+#    url(r'^test', contextView(menu_left,menu_top,ansprechpartner,standorte,page_obj,"","test/test.html")),
+#    url(r'^stellenmarkt', contextView(menu_left,menu_top,ansprechpartner,standorte,page_obj,"","web/pages/stellenmarkt.html"), name="stellenmarkt"),
+#    view(r'^$'),
+#    view(r'^arbeitnehmerueberlassung'),
+#    view(r'^arbeitsvermittlung_kompetenzbereiche'),
+#    view(r'^arbeitsvermittlung_ansprechpartner'),
+#    view(r'^arbeitsvermittlung'),
+#    view(r'^bewerber_arbeitsvermittlung_vorteile'),
+#    view(r'^bewerber_arbeitsvermittlung_berufsfelder'),
+#    view(r'^bewerber_arbeitsvermittlung_antworten'),
+#    view(r'^bewerber_arbeitsvermittlung_ansprechpartner'),
+#    view(r'^bewerber_arbeitsvermittlung'),
+#    view(r'^bewerber_personalvermittlung_vorteile'),
+#    view(r'^bewerber_personalvermittlung_berufsfelder'),
+#    view(r'^bewerber_personalvermittlung_ansprechpartner'),
+#    view(r'^bewerber_personalvermittlung'),
+#    view(r'^bewerber_zeitarbeit_vorteile'),
+#    view(r'^bewerber_zeitarbeit_berufsfelder'),
+#    view(r'^bewerber_zeitarbeit_ansprechpartner'),
+#    view(r'^bewerber_zeitarbeit'),
+#    view(r'^bewerber'),
+#    view(r'^home'),
+#    view(r'^impressum'),
+#    view(r'^karriere_activjob'),
+#    view(r'^karriereberatung'),
+#    view(r'^kontakt'),
+#    view(r'^leitbild'),
+#    view(r'^personalauswahl'),
+#    view(r'^personalanfrage'),
+#    view(r'^personalvermittlung_referenzen'),
+#    view(r'^personalvermittlung_kompetenzbereiche'),
+#    view(r'^personalvermittlung_ansprechpartner'),
+#    view(r'^personalvermittlung'),
+#    view(r'^sitemap'),
+#    view(r'^standorte'),
+#    view(r'^standort'),
+#    view(r'^stellenmarkt'),
+#    view(r'^unternehmensprofil'),
+#    view(r'^unternehmen'),
+#    view(r'^zeitarbeit_kompetenzbereiche'),
+#    view(r'^zeitarbeit_ansprechpartner'),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
