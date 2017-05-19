@@ -13,8 +13,7 @@ Arbeitnehmerüberlassung - Zeitarbeit{{ block.super }}
   <h3>Zeitarbeit – moderne Perspektive mit
   Zukunft</h3>
 
-  <p>Hier finden Sie eine <a href=
-  "stellenmarkt-P_fBereich_3.html">
+  <p>Hier finden Sie eine <a href="{% url 'stellenmarkt' %}">
   Übersicht über unsere aktuellen Stellen</a>
   im Bereich Arbeitnehmerüberlassung.</p>
 
@@ -48,8 +47,7 @@ Arbeitnehmerüberlassung - Zeitarbeit{{ block.super }}
   <p><a href=
   "http://www.personaldienstleister.de/"><img alt="BAP"
   src=
-  "dateien/Bilder/BAP_S_UZ_unten.gif"
-  style="width: 252px;" /></a></p>
+  "{% static 'images/BAP_S_UZ_unten.gif'%}" /></a></p>
 
   <p>&nbsp;</p>
 

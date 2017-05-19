@@ -21,8 +21,7 @@ Personalvermittlung Dresden, Leipzig, Chemnitz, Sachen und bundesweit{{ block.su
     Kandidaten, die eine neue Herausforderung
     mit Vorfreude und Leistungsbereitschaft
     annehmen. Interessante Angebote dazu finden
-    Sie in unserer <a href=
-    "stellenmarkt-P_fBereich_2.html">
+    Sie in unserer <a href="{% url 'stellenmarkt' %}">
     Übersicht aktueller Stellen</a>.</p>
 
     <p>Gern besprechen wir gemeinsam mit Ihnen
@@ -47,20 +46,6 @@ Personalvermittlung Dresden, Leipzig, Chemnitz, Sachen und bundesweit{{ block.su
   <p>&nbsp;</p>
 </div>
 
-{% endblock %}
-
-{% block banner %}
-<style>
-#banner {
-  background: linear-gradient(to top, #0a2e43, #276382);
-}
-#overlay_object {
-  background-image:url("res/banner/blue_woman.png")
-}
-</style>
-<h2>
-  „Wir sind stets auf der Suche nach qualifizierten und motivierten Fachkräften. Bewerben Sie sich jetzt!“
-</h2>
 {% endblock %}
 
 {% block banner %}

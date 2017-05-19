@@ -12,13 +12,13 @@ activjob. {% endblock title %}
           <div id="topbuttons"></div>
           <div class="topcontent">
             <div class="element inhalt">
-              <p><a href="kontakt.html">Kontakt</a> | <a href=
-              "sitemap.html">Sitemap</a> | <a href=
-              "impressum.html">Impressum</a></p>
+              <p><a href="{% url 'kontakt' %}">Kontakt</a> | <a href=
+              "{% url 'sitemap' %}">Sitemap</a> | <a href=
+              "{% url 'impressum' %}">Impressum</a></p>
             </div>
           </div>
           <div class="logo">
-              <a href="/"><img src={% static 'css/images/logo.gif' %} alt=
+              <a href="/"><img src={% static 'images/logo.gif' %} alt=
               "activjob Logo" /></a>
           </div>
           <div class="menu menu-top">
@@ -43,11 +43,11 @@ activjob. {% endblock title %}
                 {% block banner %}
                 <style>
                 #banner {
-                  background-image:url("res/banner/banner_red_background.png");
+                  background-image: url("{% static 'banner/banner_red_background.png' %}");
                   background-size: cover;
                 }
                 #overlay_object {
-                  background-image:url("res/banner/red_woman.png")
+                  background-image:url("{% static 'banner/red_woman.png' %}");
                 }
                 </style>
 
@@ -69,7 +69,7 @@ activjob. {% endblock title %}
                     <p>Durchsuchen Sie hier die Angebote unseres
                     Stellenmarktes.</p>
 
-                    <form action="http://www.activ-job.com/Stellenmarkt.html" method="post"
+                    <form action="{% url 'stellenmarkt' %}" method="post"
                     enctype="multipart/form-data">
                       <div>
                         <div class=
@@ -101,7 +101,7 @@ activjob. {% endblock title %}
                         class="savebutton form-control" value=" " />
                       </div>
                     </form><a class="adv_search" href=
-                    "Stellenmarkt.html">Detailsuche</a>
+                    "{% url 'stellenmarkt' %}">Detailsuche</a>
                 </div>
               </div>
 {% comment %}<!--end quicksearch -->{% endcomment %}
@@ -144,15 +144,15 @@ activjob. {% endblock title %}
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script   src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"   integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="   crossorigin="anonymous"></script>
-        <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+        <script src="https://getbootstrap.com/dist/js/bootstrap.min.js"></script>
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-        <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+        <script src="https://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
         <script src= {% static 'script/script.js' %} ></script>
 
         <!-- Piwik -->
         <script type="text/javascript">
        //<![CDATA[
-                          var pkBaseURL = (("https:" == document.location.protocol) ? "https://stats.activ-job.com/" : "http://stats.activ-job.com/");
+                          var pkBaseURL = (("https:" == document.location.protocol) ? "https://stats.activ-job.com/" : "https://stats.activ-job.com/");
                           document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
         //]]>
         </script><script type="text/javascript">
@@ -164,7 +164,7 @@ activjob. {% endblock title %}
                           } catch( err ) {}
         //]]>
         </script><noscript>
-        <p><img src="http://stats.activ-job.com/piwik.php?idsite=30"
+        <p><img src="https://stats.activ-job.com/piwik.php?idsite=30"
         style="border:0" alt="" /></p></noscript>
         <!-- End Piwik Tracking Code -->
 

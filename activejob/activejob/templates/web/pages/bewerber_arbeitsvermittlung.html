@@ -17,7 +17,7 @@ Arbeitsvermittlung für Sachsen, Sachsen-Anhalt, Brandenburg, Berlin, Thüringen
   Teilzeit, regional oder bundesweit, wir sind
   Ihr Ansprechpartner. Informieren Sie sich in
   unserem Stellenmarkt über <a href=
-  "stellenmarkt-P_fBereich_1.html">
+  "{% url 'stellenmarkt' %}">
   aktuelle Jobangebote</a>.</p>
 
   <p>So einfach können Sie unsere Leistungen in
@@ -46,13 +46,12 @@ Arbeitsvermittlung für Sachsen, Sachsen-Anhalt, Brandenburg, Berlin, Thüringen
   zuständigen Arbeitsagentur. Die
   Voraussetzungen für den Anspruch auf einen
   AVGS erfahren Sie <a href=
-  "bewerber_arbeitsvermittlung_antworten.html">
+  "{% url 'bewerber_arbeitsvermittlung_antworten' %}">
   hier</a>.</p>
 
   <p>Einen formlosen Musterantrag für den
   Aktivierungs- und Vermittlungsgutschein
-  können Sie <a href=
-  "dateien/pdf/VL3%20Musterantrag%20AVGS2.pdf">
+  können Sie <a href="{% static 'pdf/VL3%20Musterantrag%20AVGS2.pdf' %}">
   hier</a> kostenlos herunterladen.</p>
 
   <p>Unsere langjährige Erfahrung und die guten
@@ -69,20 +68,6 @@ Arbeitsvermittlung für Sachsen, Sachsen-Anhalt, Brandenburg, Berlin, Thüringen
 
 {% endblock %}
 
-{% block banner %}
-<style>
-#banner {
-  background: linear-gradient(to top, #ca6000, #f39700);
-}
-#overlay_object {
-  background-image:url("res/banner/orange_guy.png")
-}
-</style>
-<h2>
-  „Ein fester Ansprechpartner nimmt sich Ihrer
- Anliegen persönlich an und betreut Sie individuell.“
-</h2>
-{% endblock %}
 
 {% block banner %}
   {% include "web/banner/orange.html" with slogan="„Ein fester Ansprechpartner nimmt sich Ihrer Anliegen persönlich an und betreut Sie individuell.“" %}

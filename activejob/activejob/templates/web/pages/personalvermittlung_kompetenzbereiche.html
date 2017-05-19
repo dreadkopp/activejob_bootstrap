@@ -9,7 +9,7 @@ Kompetenzbereiche in der Personalvermittlung{{ block.super }}
 {% block middle_col %}
 
 <div class="floatdiv">
-  <h1 class="csc-firstHeader">Nicht alle
+  <h1>Nicht alle
   Branchen – aber jede Branche mit
   Expertise</h1>
 
@@ -26,53 +26,18 @@ Kompetenzbereiche in der Personalvermittlung{{ block.super }}
   wir die Anforderungen und Besonderheiten
   des Marktes.</p>
 
-  <p class="bodytext"><strong>Branchen, die
-  wir bedienen:</strong></p>
+  <div class="kompetenzbereiche">
+    {% for node in kompetenzbereiche %}
 
-  <ul>
-    <li class="bodytext" style=
-    "margin-left: 40px;">Industrie und
-    Technik</li>
+        <p><strong>{{node}}</strong><p>
+        <ul>
+        {% for subnode in node.jobs %}
+          <li>{{subnode}}</li>
+        {% endfor %}
+        </ul>
+      {% endfor %}
+  </div>
 
-    <li class="bodytext" style=
-    "margin-left: 40px;">Pharma und
-    Medizin</li>
-
-    <li class="bodytext" style=
-    "margin-left: 40px;">IT und
-    Telekommunikation</li>
-
-    <li class="bodytext" style=
-    "margin-left: 40px;">Dienstleistung und
-    Beratung</li>
-
-    <li class="bodytext" style=
-    "margin-left: 40px;">Baugewerbe</li>
-  </ul>
-
-  <p class="bodytext">
-  <strong>Unternehmensbereiche, in denen wir
-  Vakanzen besetzen:</strong></p>
-
-  <ul>
-    <li class="bodytext" style=
-    "margin-left: 40px;">Office und IT</li>
-
-    <li class="bodytext" style=
-    "margin-left: 40px;">Finanzen und
-    Controlling</li>
-
-    <li class="bodytext" style=
-    "margin-left: 40px;">Vertrieb und
-    Marketing</li>
-
-    <li class="bodytext" style=
-    "margin-left: 40px;">Beschaffung</li>
-
-    <li class="bodytext" style=
-    "margin-left: 40px;">Entwicklung und
-    Konstruktion</li>
-  </ul>
 </div>
 
 

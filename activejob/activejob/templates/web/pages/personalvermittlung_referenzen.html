@@ -8,10 +8,7 @@ Referenzen in der Personalvermittlung{{ block.super }}
 
 {% block middle_col %}
 
-<div class="csc-header csc-header-n1">
-  <h1 class="csc-firstHeader">Ein Auszug
-  unserer Referenzprojekte</h1>
-</div>
+<h1>Ein Auszug unserer Referenzprojekte</h1>
 
 <p>Unsere Personalvermittler arbeiten mit
 einer Reihe von Unternehmen engagiert und
@@ -24,23 +21,25 @@ persönlichen Gespräch.</p>
 <p>Folgende Referenzprojekte konnten wir
 erfolgreich abschließen:</p>
 
-{% for node in referenzen %}
-  <p><b>{{node}}</b></p>
-  <ul>
-    {% for subnode in node.jobs %}
-      <li>
-        {{ subnode }}
-      </li>
-    {% endfor %}
-  </ul>
-{% endfor %}
+<div class="referenzen">
+  {% for node in referenzen %}
+    <p><b>{{node}}</b></p>
+    <ul>
+      {% for subnode in node.jobs %}
+        <li>
+          {{ subnode }}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</div>
 
 <p>* Die verwendete männliche Bezeichnung
 umfasst weibliche und männliche Personen.
 Die undifferenzierte Bezeichnung dient
 allein der besseren Lesbarkeit.</p>
 
-<p><a href="referenzen.html">aktuelle
+<p><a href="{% url 'referenzen' %}">aktuelle
 Vermittlungsprojekte</a></p>
 
 

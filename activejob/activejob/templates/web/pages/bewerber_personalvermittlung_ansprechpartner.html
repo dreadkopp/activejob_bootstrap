@@ -14,7 +14,7 @@ Personalvermittlung</h3>
 <div class="element inhalt">
   {% for node in ansprechpartner %}
     <div class="element inhalt">
-      <p><strong>{{node.name}}</strong> <img alt="{{node.name}}" src="{{node.imageurl}}" class="contact_person_image" /></p>
+      <p><strong>{{node.name}}</strong> <img alt="{{node.name}}" src="{% static "Ansprechpartner/" %}{{ node.imageurl }}" class="contact_person_image" /></p>
       <p>
         {{node.stat}}<br />
         Telefon: {{node.phone}}<br />

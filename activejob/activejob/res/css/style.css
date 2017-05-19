@@ -26,11 +26,11 @@
 }
 
 /* __kompetenzbereiche, referenzen */
- .referenzen p, .kompetenzbereiche p {
+ .berufsfelder p, .referenzen p, .kompetenzbereiche p {
    margin-left: 40px;
  }
 
- .referenzen ul, .kompetenzbereiche ul {
+ .berufsfelder ul, .referenzen ul, .kompetenzbereiche ul {
    margin-left: 80px;
  }
 

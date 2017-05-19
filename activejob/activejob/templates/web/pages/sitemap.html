@@ -12,15 +12,15 @@ Sitemap{{ block.super }}
 <div class="sitemap">
   {% for node in sitemap %}
     {% if node.name == "Home" %}
-      <li class="{% if node.active %} active{% endif %}"><a href="{{ node.url }}" class="glyphicon glyphicon-home"></a></li>
+      <li><a href="{% url {{node.url}} %}" class="glyphicon glyphicon-home"></a></li>
     {% else %}
-      <li class="{% if node.active %} active{% endif %}"><a href="{{ node.url }}">{{ node.name }}</a>
+      <li><a href="{% url {{node.url}} %}">{{ node.name }}</a>
         {% if node.sublist %}
         <ul>
           {% for subnode in node.sublist %}
-          <li class="element menuepunkte {% if subnode.active %} active{% endif %}">
+          <li class="element menuepunkte}">
             <div>
-                <a href="{{ subnode.url }}">{{ subnode.name }}</a>
+                <a href="{{% url {{node.url}} %}">{{ subnode.name }}</a>
             </div>
           </li>
           {% endfor %}

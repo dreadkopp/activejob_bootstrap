@@ -31,28 +31,25 @@ Anfrage für die Personalsuche{{ block.super }}
 
 <div class=
 "element mainelement kontaktFormular">
-  <div id="sessionId" style="display: none">
-    77c43206a695b71187a2ebf2d8787ce8f565f45d
-  </div>
 
-  <form action="http://www.activ-job.com/personalanfrage.html" method=
+  <form action="{% url 'personalanfrage' %}" method=
   "post" enctype="multipart/form-data">
     <div>
       <div class="formcontent time" id=
       "nrkontakt1471">
-        <input type="hidden" name="time" value=
-        "1392808170" />
+        <input type="hidden" class="form-control" name="time" value=
+        {% now "jS F Y H:i" %} />
       </div>
 
       <div class="formcontent seitenTitel" id=
       "nrkontakt1472">
-        <input type="hidden" name="seitenTitel"
+        <input type="hidden"  class="form-control" name="seitenTitel"
         value="Personalanfrage" />
       </div>
 
       <div class="formcontent formId" id=
       "nrkontakt1473">
-        <input type="hidden" name="formId"
+        <input type="hidden"  class="form-control" name="formId"
         value="147" />
       </div>
 
@@ -63,7 +60,7 @@ Anfrage für die Personalsuche{{ block.super }}
         <div class="element formularzeile">
           <div class="formcontent 148" id=
           "nrkontakt1">
-            <input type="text" name="148"
+            <input type="text"  class="form-control" name="148"
             value="" />
           </div>
         </div>
@@ -77,7 +74,7 @@ Anfrage für die Personalsuche{{ block.super }}
         <div class="element formularzeile">
           <div class="formcontent 149" id=
           "nrkontakt1">
-            <input type="text" name="149"
+            <input type="text"  class="form-control" name="149"
             value="" />
           </div>
         </div>
@@ -91,7 +88,7 @@ Anfrage für die Personalsuche{{ block.super }}
         <div class="element formularzeile">
           <div class="formcontent 150" id=
           "nrkontakt1">
-            <input type="text" name="150"
+            <input type="text"  class="form-control" name="150"
             value="" />
           </div>
         </div>
@@ -105,7 +102,7 @@ Anfrage für die Personalsuche{{ block.super }}
         <div class="element formularzeile">
           <div class="formcontent 151" id=
           "nrkontakt1">
-            <input type="text" name="151"
+            <input type="text"  class="form-control" name="151"
             value="" />
           </div>
         </div>
@@ -119,7 +116,7 @@ Anfrage für die Personalsuche{{ block.super }}
         <div class="element formularzeile">
           <div class="formcontent 152" id=
           "nrkontakt1">
-            <input type="text" name="152"
+            <input type="text"  class="form-control" name="152"
             value="" />
           </div>
         </div>
@@ -133,7 +130,7 @@ Anfrage für die Personalsuche{{ block.super }}
         <div class="element formularzeile">
           <div class="formcontent 153" id=
           "nrkontakt1">
-            <input type="text" name="153"
+            <input type="text"  class="form-control" name="153"
             value="" />
           </div>
         </div>
@@ -146,7 +143,7 @@ Anfrage für die Personalsuche{{ block.super }}
         <div class="element formularzeile">
           <div class="formcontent 154" id=
           "nrkontakt1">
-            <input type="text" name="154"
+            <input type="text" class="form-control" name="154"
             value="" />
           </div>
         </div>
@@ -160,7 +157,7 @@ Anfrage für die Personalsuche{{ block.super }}
         <div class="element formularzeile">
           <div class="formcontent 155" id=
           "nrkontakt1">
-            <input type="text" name="155"
+            <input type="text" class="form-control" name="155"
             value="" />
           </div>
         </div>
@@ -174,7 +171,7 @@ Anfrage für die Personalsuche{{ block.super }}
         <div class="element formularzeile">
           <div class="formcontent 156" id=
           "nrkontakt1">
-            <input type="text" name="156"
+            <input type="text" class="form-control" name="156"
             value="" />
           </div>
         </div>
@@ -188,7 +185,7 @@ Anfrage für die Personalsuche{{ block.super }}
         <div class="element formularzeile">
           <div class="formcontent 157" id=
           "nrkontakt1">
-            <input type="text" name="157"
+            <input type="text" class="form-control" name="157"
             value="" />
           </div>
         </div>
@@ -202,7 +199,7 @@ Anfrage für die Personalsuche{{ block.super }}
         <div class="element formularzeile">
           <div class="formcontent 158" id=
           "nrkontakt1">
-            <input type="text" name="158"
+            <input type="text" class="form-control" name="158"
             value="" />
           </div>
         </div>
@@ -211,7 +208,7 @@ Anfrage für die Personalsuche{{ block.super }}
 
     <div class="submit">
       <input type="submit" name=
-      "submitkontakt147" class="savebutton"
+      "submitkontakt147" class="savebutton form-control"
       value="Senden" />
     </div>
   </form>

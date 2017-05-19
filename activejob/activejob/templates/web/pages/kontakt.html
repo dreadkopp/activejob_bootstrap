@@ -20,17 +20,14 @@ Kontakt{{ block.super }}
 
       <div class=
       "element mainelement kontaktFormular">
-        <div id="sessionId" style="display: none">
-          77c43206a695b71187a2ebf2d8787ce8f565f45d
-        </div>
 
-        <form action="http://www.activ-job.com/kontakt.html" method="post"
+        <form action="{% url 'kontakt' %}" method="post"
         enctype="multipart/form-data">
           <div>
             <div class="formcontent time" id=
             "nrkontakt861">
               <input class="form-control" type="hidden" name="time" value=
-              "1392808168" />
+              "{% now "jS F Y H:i" %}" />
             </div>
 
             <div class="formcontent seitenTitel" id=

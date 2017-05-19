@@ -48,32 +48,18 @@ Karriereberatung für Bewerber und Kandidaten{{ block.super }}
 </div>
 
 <div class="element inhalt">
-  <p><b>Dipl.-Ing. Roland Nitsche<img alt=""
-  src="res/Ansprechpartner/Roland.Nitsche.jpg"
-  style=
-  "width: 132px; height: 92px; float: right;" /></b></p>
-
-  <p class="bodytext">Systemischer Coach<br />
-  Telefon 0351 2598484<br />
-  E-Mail: <a href=
-  "javascript:mt('roland.nitsche','activ-job.com','','')">
-  roland.nitsche@activ-job.com</a></p>
-
-</div>
-
-<br />
-
-<div class="element inhalt">
-  <p><b>Tom Drechsel<img alt="" src=
-  "res/Ansprechpartner/Tom.Drechsel.jpg"
-  style=
-  "width: 132px; height: 92px; float: right;" /></b></p>
-
-  <p class="bodytext">Personalcoach<br />
-  Telefon 0351 2502088-33<br />
-  E-Mail: <a href=
-  "javascript:mt('tom.drechsel','activ-job.com','','')">
-  tom.drechsel@activ-job.com</a></p>
+  {% for node in ansprechpartner %}
+    <div class="element inhalt">
+      <p><strong>{{node.name}}</strong> <img alt="{{node.name}}" src="{% static "Ansprechpartner/" %}{{ node.imageurl }}" class="contact_person_image" /></p>
+      <p>
+        {{node.stat}}<br />
+        Telefon: {{node.phone}}<br />
+        E-Mail: <a href="mailto:{{node.mail}}">{{node.mail}}</a>
+      </p>
+      <p><br />
+      &nbsp;</p>
+    </div>
+  {% endfor %}
 </div>
 
 {% endblock %}
