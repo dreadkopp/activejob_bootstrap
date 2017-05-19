@@ -25,7 +25,7 @@ class Location(models.Model):
     phone = models.CharField(max_length=100)
     fax = models.CharField(max_length=100)
     mail = models.EmailField()
-    gmaps_iframe_href = models.CharField(max_length=100)
+    gmaps_iframe_href = models.CharField(max_length=999)
 
     def __str__(self):
         return self.name
@@ -39,12 +39,16 @@ class Job(models.Model):
     profile = models.TextField()
     perspective = models.TextField()
     is_intern = models.BooleanField()
+    changed_at = models.DateTimeField()
 
     contact = models.ForeignKey("Contact")
     company = models.ForeignKey("Company")
 
     def __str__(self):
         return self.title
+
+    class Meta:
+        ordering = ["-changed_at"]
 
 
 class Company(models.Model):
