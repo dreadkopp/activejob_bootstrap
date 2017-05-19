@@ -39,12 +39,16 @@ class Job(models.Model):
     profile = models.TextField()
     perspective = models.TextField()
     is_intern = models.BooleanField()
+    changed_at = models.DateTimeField()
 
     contact = models.ForeignKey("Contact")
     company = models.ForeignKey("Company")
 
     def __str__(self):
         return self.title
+
+    class Meta:
+        ordering = ["-changed_at"]
 
 
 class Company(models.Model):
