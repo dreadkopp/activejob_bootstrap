@@ -25,7 +25,7 @@ class Location(models.Model):
     phone = models.CharField(max_length=100)
     fax = models.CharField(max_length=100)
     mail = models.EmailField()
-    gmaps_iframe_href = models.CharField(max_length=100)
+    gmaps_iframe_href = models.CharField(max_length=999)
 
     def __str__(self):
         return self.name
