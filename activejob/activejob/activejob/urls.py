@@ -73,4 +73,4 @@ urlpatterns = [
 #    view(r'^unternehmen'),
 #    view(r'^zeitarbeit_kompetenzbereiche'),
 #    view(r'^zeitarbeit_ansprechpartner'),
-]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
