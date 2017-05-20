@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load to_list %}
 
 {% block title %}{{ job }}, {{ job.location }}{{ block.super }}{% endblock %}
 
@@ -17,15 +18,25 @@
 
         <div> {{ job.company.description|safe }} </div>
 
+        <h4>Ihr Profil</h4>
+
+        <div>
+          <ul>
+            {% for entry in job.profile|to_list %}
+                <li>{{entry}}</li>
+            {% endfor %}
+          </ul>
+        </div>
 
         <h4>Ihre Aufgaben</h4>
 
-        <div> {{ job.description|safe }} </div>
-
-
-        <h4>Ihr Profil</h4>
-
-        <div> {{ job.profile|safe }} </div>
+        <div>
+          <ul>
+            {% for entry in job.description|to_list %}
+                <li>{{entry}}</li>
+            {% endfor %}
+          </ul>
+        </div>
 
 
         <h4>Ihre Perspektive</h4>
