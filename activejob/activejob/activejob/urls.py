@@ -37,7 +37,7 @@ urlpatterns = [
         name="job_detail"
     ),
     url(r"^test",TemplateView.as_view(template_name="web/test/test.html"), name="test"),
-    url(r"^ansprechpartner/(?P<class>\d+)$",AnsprechpartnerView.as_view(),name="ansprechpartner"),
+    url(r"^ansprechpartner/(?P<pk>\d+)$",AnsprechpartnerView.as_view(),name="ansprechpartner"),
     url(r"^kontakt",TemplateView.as_view(template_name="web/pages/kontakt.html"),name="kontakt"),
     url(r"^sitemap",placeholder(),name="sitemap"),
     url(r"^impressum",TemplateView.as_view(template_name="web/pages/impressum.html"),name="impressum"),
