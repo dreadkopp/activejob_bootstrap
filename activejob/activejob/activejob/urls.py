@@ -20,6 +20,9 @@ from django.conf import settings
 
 from jobs.views import JobDetailView, JobListView
 
+def placeholder():
+    return TemplateView.as_view(template_name="web/pages/home")
+
 urlpatterns = [
     url(r"^jobs/",
         JobListView.as_view(),
@@ -30,7 +33,11 @@ urlpatterns = [
         JobDetailView.as_view(),
         name="job_detail"
     ),
-
+    url(r"^kontakt",TemplateView.as_view(template_name="web/pages/kontakt.html"),name="kontakt"),
+    url(r"^sitemap",placeholder(),name="sitemap"),
+    url(r"^impressum",TemplateView.as_view(template_name="web/pages/impressum.html"),name="impressum"),
+    url(r"^unternehmensprofil",TemplateView.as_view(template_name="web/pages/unternehmensprofil.html)"),name="unternehmensprofil"),
+    url(r"^jobs_rss",placeholder(),name="jobs_rss"),
 #    url(r'^testjob', contextView(menu_left,menu_top,ansprechpartner,standorte,page_obj,testjob,"web/pages/stellenmarkt/job-detail.html")),
 #    url(r'^test', contextView(menu_left,menu_top,ansprechpartner,standorte,page_obj,"","test/test.html")),
 #    url(r'^stellenmarkt', contextView(menu_left,menu_top,ansprechpartner,standorte,page_obj,"","web/pages/stellenmarkt.html"), name="stellenmarkt"),
