@@ -20,6 +20,7 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 from jobs.views import JobDetailView, JobListView
+from ansprechpartner.views import AnsprechpartnerView
 
 def placeholder():
     return TemplateView.as_view(template_name="web/pages/home")
@@ -35,6 +36,8 @@ urlpatterns = [
         JobDetailView.as_view(),
         name="job_detail"
     ),
+    url(r"^test",TemplateView.as_view(template_name="web/test/test.html"), name="test"),
+    url(r"^ansprechpartner/(?P<class>\d+)$",AnsprechpartnerView.as_view(),name="ansprechpartner"),
     url(r"^kontakt",TemplateView.as_view(template_name="web/pages/kontakt.html"),name="kontakt"),
     url(r"^sitemap",placeholder(),name="sitemap"),
     url(r"^impressum",TemplateView.as_view(template_name="web/pages/impressum.html"),name="impressum"),
@@ -71,4 +74,4 @@ urlpatterns = [
     url(r"^karriere_activjob",TemplateView.as_view(template_name="web/pages/karriere_activjob.html"),name="karriere_activjob"),
     url(r"^zeitarbeit_kompetenzbereiche",TemplateView.as_view(template_name="web/pages/zeitarbeit_kompetenzbereiche.html"),name="zeitarbeit_kompetenzbereiche"),
     url(r"^zeitarbeit_ansprechpartner",TemplateView.as_view(template_name="web/pages/zeitarbeit_ansprechpartner.html"),name="zeitarbeit_ansprechpartner"),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]

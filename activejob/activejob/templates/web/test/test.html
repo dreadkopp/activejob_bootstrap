@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+ Arbeitsvermittlung, Personalvermittlung, Zeitarbeit {{ block.super }}
+{% endblock %}
+
+{% block page_content %}
+
+
+<div class="home">
+  {% comment %}These borders are found nowhere else so i just put the styling in the html{% endcomment %}
+  <style>
+  @media (min-width:992px) {
+    #contact , #fuer_unternehmen, #fuer_bewerber {
+      border-left: solid 1px #c79193;
+    }
+  }
+  </style>
+  <div id="about" class="col-md-4">
+        <h1>Über uns</h1>
+
+        <p>Herzlich Willkommen bei der activjob GmbH
+        – Ihrem erfahrenen Dienstleister für alle
+        Bereiche der modernen Personalarbeit.</p>
+
+        <ul>
+          <li><a href=
+          "{% url 'unternehmensprofil' %}">Unternehmensprofil</a></li>
+
+          <li><a href=
+          "{% url 'leitbild' %}">Leitbild</a></li>
+
+          <li><a href=
+          "{% url 'standorte' %}">Standorte</a></li>
+        </ul>
+      </div>
+
+  <div id="fuer_unternehmen" class="col-md-4">
+        <h1>Für Unternehmen</h1>
+
+        <p>Wir haben unser Leistungsspektrum optimal
+        auf den aktuellen Personalbedarf von
+        Unternehmen abgestimmt.</p>
+
+        <ul>
+          <li><a href=
+          "{% url 'arbeitnehmerueberlassung' %}">Arbeitnehmerüberlassung</a></li>
+
+          <li><a href=
+          "{% url 'personalvermittlung' %}">Personalvermittlung</a></li>
+
+          <li><a href=
+          "{% url 'arbeitsvermittlung' %}">Arbeitsvermittlung</a></li>
+
+          <li><a href=
+          "{% url 'personalanfrage' %}">Personalanfrage</a></li>
+
+          <li><a href=
+          "{% url 'personalauswahl' %}">Personalauswahl</a></li>
+        </ul>
+  </div>
+
+  <div id="fuer_bewerber" class="col-md-4">
+        <h1>Für Bewerber</h1>
+
+        <p>Egal ob Sie sich für ein&nbsp;
+        Arbeitsverhältnis im Rahmen der Zeitarbeit
+        oder einen Direkteinstieg interessieren, wir
+        sind Ihr Ansprechpartner.</p>
+
+        <ul>
+          <li><a href=
+          "{% url 'bewerber_zeitarbeit' %}">Arbeitnehmerüberlassung</a></li>
+
+          <li><a href=
+          "{% url 'bewerber_personalvermittlung' %}">Personalvermittlung</a></li>
+
+          <li><a href=
+          "{% url 'bewerber_arbeitsvermittlung' %}">Arbeitsvermittlung</a></li>
+
+          <li><a href=
+          "{% url 'karriereberatung' %}">Karriereberatung</a></li>
+
+          <li><a href=
+          "{% url 'stellenmarkt' %}">Stellenmarkt</a></li>
+
+          <li><a href=
+          "{% url 'karriere_activjob' %}">Karriere bei
+          activjob</a></li>
+        </ul>
+  </div>
+
+
+</div>
+
+
+{% endblock %}
