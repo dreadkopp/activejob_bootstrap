@@ -58,7 +58,6 @@
 #topbuttons {
     width: 15px;
     height: 40px;
-    background: url(images/buttons.jpg) no-repeat;
     position: relative;
     margin-top: 20px;
     float: right;
@@ -75,14 +74,6 @@
     font-size: 14px;
     text-decoration: none;
     text-align: center;
-  }
-
-  .menu-top .nav li a {
-    background: url(images/menu_bg.gif) no-repeat;
-  }
-
-  .menu-top .nav li.active a, .menu-top .nav li a:hover {
-      background: url(images/menu_bg_act.gif) no-repeat;
   }
 
   .menu-top .nav li a {
@@ -331,7 +322,6 @@
   color: #fff;
 }
 #quicksearch input.savebutton{
-  background: url(images/searchButton.gif) top left no-repeat;
   border: 0;
   width: 58px;
   height:23px;
@@ -412,9 +402,8 @@
 
 
 
-/*new*/
+/*new...well old actually... TODO: strip unneeded css for smaller style.css */
 body {
-  background: url(images/bg.gif) 0 0 repeat-x #fff;
   padding: 0;
   margin: 0;
   font-family: Arial,sans-serif;
@@ -424,24 +413,12 @@ body {
 body.nobg,html.nobg{
   background: none;
 }
-body{
-  background: url(images/bg.gif) 0 0 repeat-x #fff;
-  padding: 0;
-  margin: 0;
-  font-family: Arial,sans-serif;
-  font-size: 13px;
-}
+
 #site{
   margin: 0 auto 0 auto;
   width: 992px;
-  background: url(images/site_bg.gif) repeat-y;
 }
-#sitetop{
-  background: url(images/sitehead.gif) top no-repeat;
-}
-#sitebot{
-  background: url(images/sitefooter.gif) bottom no-repeat;
-}
+
 a img{
   border: 0;
 }
@@ -474,7 +451,6 @@ a img{
 }
 #menu ul li{
   float: left;
-  background: url(images/menu_bg.gif) no-repeat;
   display: block;
   width: 135px;
   height: 27px;
@@ -485,9 +461,7 @@ a img{
   text-align: center;
   padding-top: 5px;
 }
-#menu ul li.active{
-  background: url(images/menu_bg_act.gif) no-repeat;
-}
+
 #menu ul li a.active{
   color: #616161;
 }
@@ -598,10 +572,7 @@ a img{
 .normal #left ul ul li a{
   color: #9b1000;
 }
-.normal #left ul ul li a.active {
-  background: url(images/li_bg.gif) no-repeat 0px center;
-  padding-left: 6px;
-}
+
 #footer{
   clear: both;
   height: 20px;
@@ -626,13 +597,7 @@ h4{
   font-size: 14px;
   font-weight: bold;
 }
-ul{
-  line-height: 20px;
-  list-style: none;
-  color: #000;
-  padding-left: 15px;
-  list-style-image: url(images/li_bg.gif);
-}
+
 ul li{
   color: #000;
 }
