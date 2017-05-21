@@ -5,4 +5,4 @@ class Berufsfelder(models.Model):
     subtitel = models.CharField(max_length=200)
     banner_color = models.CharField(max_length=6)
     banner_slogan = models.CharField(max_length=200)
-    
+    slug = models.CharField(max_length=100)
