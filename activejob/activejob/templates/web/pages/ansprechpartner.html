@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+
+
+{% block title %}
+{{ ansprechpartner.title }}{{ block.super }}
+{% endblock %}
+
+
+{% block middle_col %}
+
+
+<h3>Ihre Ansprechpartner im Bereich
+{{ ansprechpartner.field }}</h3>
+
+
+<div class="ansprechpartner">
+  {% for node in ansprechpartner.contacts %}
+    <div>
+      <p><strong>{{node.name}}</strong> <img alt="{{node.name}}" src="{% static "Ansprechpartner/" %}{{ node.imageurl }}" class="contact_person_image" /></p>
+      <p>
+        {{node.stat}}<br />
+        Telefon: {{node.phone}}<br />
+        E-Mail: <a href="mailto:{{node.mail}}">{{node.mail}}</a>
+      </p>
+      <p><br />
+      &nbsp;</p>
+    </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
+
+
+{% block banner %}
+  {% include "web/banner/{{ ansprechpartner.banner_color }}.html" with slogan="{{ ansprechpartner.banner_slogan }}"%}
+{% endblock %}

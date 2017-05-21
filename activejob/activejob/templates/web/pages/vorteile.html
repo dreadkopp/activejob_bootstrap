@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+{{ vorteile.titel }}{{ block.super }}
+{% endblock %}
+
+{% block middle_col %}
+
+<h3>{{ vorteile.subtitle }}</h3>
+
+<p>{{ vorteile.text }}</p>
+
+<p><strong>Ihre Vorteile im
+Überblick:</strong></p>
+
+<div class="vorteile">
+  <ul>
+    {% for node in vorteile.pros %}
+      <li>{{ node }}</li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% endblock %}
+
+{% block banner %}
+  {% include "web/banner/{{ vorteile.banner_color }}.html" with slogan="{{ vorteile.banner_slogan }}" %}
+{% endblock %}

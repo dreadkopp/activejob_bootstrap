@@ -1,9 +1,0 @@
-[
-    {
-        "fields": {
-            "title": "Ihre Ansprechpartner im Bereich Zeitarbeit",
-        },
-        "model": "ansprechpartner.ansprechpartner",
-        "pk": "bewerber_zeitarbeit"
-    },
-]
