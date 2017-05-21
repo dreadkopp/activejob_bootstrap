@@ -15,6 +15,19 @@
   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.67);
 }
 
+body {
+  background: url("../images/bg.gif") 0 0 repeat-x #fff;
+}
+#site{
+  background: url("../images/site_bg.gif") repeat-y;
+}
+#sitetop{
+  background: url("../images/sitehead.gif") top no-repeat;
+}
+#sitebot{
+  background: url("../images/sitefooter.gif") bottom no-repeat;
+}
+
 /*sitemap*/
 
 .sitemap li {
@@ -56,6 +69,7 @@
 }
 
 #topbuttons {
+    background: url("../images/buttons.jpg") no-repeat;
     width: 15px;
     height: 40px;
     position: relative;
@@ -65,6 +79,12 @@
 
 /*Menus*/
 
+.menu-top .nav li.active a, .menu-top .nav li a:hover {
+    background: url("../images/menu_bg_act.gif") no-repeat;
+}
+.menu-top .nav li a {
+  background: url("../images/menu_bg.gif") no-repeat;
+}
 @media (min-width: 768px) {
   .menu-top .nav li  {
     display: block;
@@ -322,6 +342,7 @@
   color: #fff;
 }
 #quicksearch input.savebutton{
+  background: url("../images/searchButton.gif") top left no-repeat;
   border: 0;
   width: 58px;
   height:23px;
@@ -402,7 +423,7 @@
 
 
 
-/*new...well old actually... TODO: strip unneeded css for smaller style.css */
+/*new...well old actually... TODO: strip unneeded css for smaller style.css, quicksearch button get rid of image */
 body {
   padding: 0;
   margin: 0;

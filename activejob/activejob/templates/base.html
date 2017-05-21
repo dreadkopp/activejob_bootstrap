@@ -170,37 +170,4 @@ activjob. {% endblock title %}
 
     {% endblock end_js %}
 
-
-    {% comment %} moved some styling from style.css to here since it uses statics {% endcomment %}
-    <style>
-      #topbuttons {
-          background: url({% static "images/buttons.jpg" %}) no-repeat;
-      }
-      .menu-top .nav li a {
-        background: url({% static "images/menu_bg.gif" %}) no-repeat;
-      }
-      .menu-top .nav li.active a, .menu-top .nav li a:hover {
-          background: url({% static "images/menu_bg_act.gif" %}) no-repeat;
-      }
-      /*wait a second... a image for that... not for long....*/
-      #quicksearch input.savebutton{
-        background: url({% static "images/searchButton.gif" %}) top left no-repeat;
-      }
-      body {
-        background: url({% static "images/bg.gif" %}) 0 0 repeat-x #fff;
-      }
-      #site{
-        background: url({% static "images/site_bg.gif" %}) repeat-y;
-      }
-      #sitetop{
-        background: url({% static "images/sitehead.gif" %}) top no-repeat;
-      }
-      #sitebot{
-        background: url({% static "images/sitefooter.gif" %}) bottom no-repeat;
-      }
-    </style>
-
-
-
-
 {% endblock content %}
