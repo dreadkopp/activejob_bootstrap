@@ -42,6 +42,9 @@ INSTALLED_APPS = [
 
     "jobs",
     "ansprechpartner",
+    "kompetenzbereiche",
+    "berufsfelder",
+    "vorteile",
 ]
 
 MIDDLEWARE = [

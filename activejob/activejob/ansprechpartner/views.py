@@ -5,4 +5,4 @@ from .models import Ansprechpartner
 
 class AnsprechpartnerView(DetailView):
     model = Ansprechpartner
-    template_name = "web/test/test.html"
+    template_name = "web/pages/ansprechpartner.html"
