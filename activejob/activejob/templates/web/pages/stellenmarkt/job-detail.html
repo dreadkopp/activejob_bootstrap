@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load static %}
-{% load to_list %}
 
 {% block title %}{{ job }}, {{ job.location }}{{ block.super }}{% endblock %}
 
@@ -30,7 +29,7 @@
 
         <div>
           <ul>
-            {% for entry in job.description|to_list %}
+            {% for entry in job.description|safe %}
                 <li>{{entry}}</li>
             {% endfor %}
           </ul>
