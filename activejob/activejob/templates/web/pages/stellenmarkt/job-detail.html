@@ -22,9 +22,7 @@
 
         <div>
           <ul>
-            {% for entry in job.profile|to_list %}
-                <li>{{entry}}</li>
-            {% endfor %}
+            {{ job.profile|safe }}
           </ul>
         </div>
 
