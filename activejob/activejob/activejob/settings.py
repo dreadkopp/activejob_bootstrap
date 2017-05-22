@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     "kompetenzbereiche",
     "berufsfelder",
     "vorteile",
+    "menus",
 ]
 
 MIDDLEWARE = [
