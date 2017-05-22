@@ -14,7 +14,7 @@ class TopMenu:
         return menuItems
 
 class LeftMenu:
-    menuItems ) models.ForeignKey(MenuItem)
+    menuItems = models.ForeignKey(MenuItem)
 
     __str__(self):
         return menuItems
