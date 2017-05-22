@@ -10,11 +10,11 @@ class MenuItem:
 class TopMenu:
     menuItems = models.ForeignKey(MenuItem)
 
-    __str__(self):
+    def __str__(self):
         return menuItems
 
 class LeftMenu:
     menuItems = models.ForeignKey(MenuItem)
 
-    __str__(self):
+    def __str__(self):
         return menuItems
