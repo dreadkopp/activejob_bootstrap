@@ -1,0 +1,471 @@
+/* Responsive Makeover */
+
+.sitecontent {
+  overflow: hidden;
+}
+
+/*Main Body... Images for shadow are you kidding me? */
+.sitetop {
+  /*padding-right: 0px;*/
+  background: #fff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 30px;
+  padding-bottom: 80px;
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.67);
+}
+
+body {
+  background: url("../images/bg.gif") 0 0 repeat-x #fff;
+}
+
+
+/*sitemap*/
+
+
+.sitemap li {
+  list-style: none;
+}
+
+.sitemap {
+  margin-left: 3em;
+}
+
+/* __kompetenzbereiche, referenzen, vorteile, berufsfelder */
+
+.vorteile p, .berufsfelder p, .referenzen p, .kompetenzbereiche p {
+  margin-left: 40px;
+}
+
+.vorteile p, .berufsfelder ul, .referenzen ul, .kompetenzbereiche ul {
+  margin-left: 80px;
+}
+
+
+
+/*Header*/
+
+.logo {
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.topcontent {
+    float: right;
+    font-size: 0.7em;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+
+.topcontent a {
+  color: grey;
+}
+
+#topbuttons {
+    background: url("../images/buttons.jpg") no-repeat;
+    width: 15px;
+    height: 40px;
+    position: relative;
+    margin-top: 20px;
+    float: right;
+}
+
+/*Menus*/
+
+
+.menu-top .nav li.active a, .menu-top .nav li a:hover {
+    background: url("../images/menu_bg_act.gif") no-repeat;
+}
+.menu-top .nav li a {
+  background: url("../images/menu_bg.gif") no-repeat;
+}
+@media (min-width: 768px) {
+  .menu-top .nav li  {
+    display: block;
+    height: 29px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .menu-top .nav li a {
+    color: #fff;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .menu-top .navbar {
+    min-height: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-top .nav li {
+    text-align:center;
+  }
+  .menu-top .nav li:hover {
+    background-color: #cacaca;
+  }
+  .menu-top .nav li:not(:last-child) {
+    border-bottom: solid 1px #cacaca;
+  }
+
+}
+.row .menu {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.menu .navbar-default {
+    background-color: rgba(0, 0, 0, 0);;
+    border-color: rgba(0, 0, 0, 0);;
+}
+
+.menu .navbar {
+    position: relative;
+    margin-bottom: 0px;
+    border: none;
+}
+
+@media (min-width: 768px) {
+
+#navbar .navbar-nav {
+    float: right;
+    margin: 0;
+}
+}
+
+.menu-left {
+    padding-left: 0px;
+    padding-top: 15px;
+}
+
+.menu-left ul {
+  list-style: none;
+  padding-left: 0px
+}
+
+.menu-left li {
+  line-height: 25px;
+}
+
+.menu-left div {
+  border-bottom: 1px solid #cacaca;
+}
+.menu-left li .active div::before {
+  color: #9b1000;
+  content:"▪";
+}
+
+.menu-left a {
+  color: #5a5a5a;
+}
+
+.menu-left .active a {
+  color: #9b1000
+}
+
+.menu-left li ul {
+  display: none;
+  padding-left: 15px;
+}
+
+.menu-left .active ul {
+  display: block;
+}
+
+/*Fix Standorte Tabellen-Madness */
+.limiter {
+  margin-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 1px solid gray;
+}
+
+.location_info {
+  float:left;
+  width:40%;
+  height: 200px;
+}
+.location_map {
+  float: left;
+  width: 55%;
+  margin-left: 5%;
+}
+
+.location {
+  height: 200px;
+}
+
+/*Ansprechpartner */
+
+.contact_person_image {
+  width: 150px;
+  float: right;
+  height: 100px
+}
+
+#contact_image img {
+  box-shadow: 0px 0px 5px #666;
+  width: 60%;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/*Fix static Bannercrapshit -> maybe keep old banner and just add red */
+
+.header #quicksearch_container {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+/*bar for splitting arch below header. #quicksearch is 100% minus the bars width wide bars color = background color of content. show only in wide view*/
+#bar {
+  width: 10px;
+  height: 310px;
+  position: relative;
+  float: left;
+  z-index: 81;
+  background-color: #fff;
+  display: none;
+}
+
+#quicksearch {
+  width: 100%;
+  padding: 20px;
+}
+
+#arch {
+  width: 100%;
+    height: 46px;
+    display: inline-block;
+    border-radius: 50% 50% 0% 0%;
+    margin-top: -17px;
+    background-color: #fff;
+    box-shadow: 0px -4px 0px 0px #fff;
+    background: #d5a6a7;
+    position: relative;
+    z-index: 79;
+
+}
+
+#arch_helper {
+  width: 123%;
+    height: 46px;
+    border: 10px solid #777;
+    display: inline-block;
+    border-radius: 50%;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    margin-top: -36px;
+    background-color: #fff;
+    position: relative;
+    z-index: 80;
+    left: -12%;
+    right: -12%;
+  }
+
+/* Switch to dual-color arch when on wider screen*/
+@media (min-width: 992px) {
+  #arch {
+    background: linear-gradient(to right, #ccc 0%, #ccc 75%, #d5a6a7 75%, #d5a6a7);
+  }
+  #bar {
+    display: block;
+  }
+  #quicksearch {
+      width: calc(100% - 10px);
+  }
+  #banner {
+    margin-bottom: 0px;
+  }
+  #arch {
+    margin-top: -26px;
+  }
+
+}
+
+
+#banner {
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+#overlay_object {
+  height: 380px;
+  width:calc(50% - 10px);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 100;
+  top: -50px;
+  left: 4%;
+  float:left;
+}
+
+.headcontent .blue #banner, .headcontent .orange #banner,.headcontent .green #banner {
+  background-size:cover;
+}
+
+#banner h2 {
+    color: #fff;
+    width: 90%;
+    margin: auto;
+    padding-top: 110px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+#quicksearch {
+  background: linear-gradient(to top, #7c1b1e 0%, #7c1b1e 90%,#a03739);
+  float: left;
+  color: #fff;
+  height: 300px;
+}
+
+#quicksearch a{
+  color: #fff;
+}
+#quicksearch input.savebutton{
+  background: url("../images/searchButton.gif") top left no-repeat;
+  border: 0;
+  width: 58px;
+  height:23px;
+  float:right;
+  margin-top: 5px;
+  cursor: pointer;
+}
+#quicksearch h2{
+  color: #fff;
+}
+#quicksearch input{
+  width: 100%;
+  margin: 3px 0;
+}
+#searchbg{
+  height: 230px;
+}
+
+
+/* Stellenmarkt Tabelle */
+
+#table_jobs tr td:nth-child(2), #table_jobs tr th:nth-child(2) {
+  text-align: right;
+}
+
+#table_jobs tr:nth-child(2n) {
+  background-color: #eee;
+}
+.pagination {
+  float:right;
+}
+
+/* Job-details */
+
+.link_return {
+  margin-top: 3em;
+}
+
+#job_name{
+  padding-bottom: 3px;
+  border-bottom: 1px solid #cacaca;
+  display: inline-block;
+}
+
+#job_base_details {
+  margin-top: 1em;
+  width: 100%;
+  height: 1em;
+  padding-bottom: 2em;
+}
+#job_base_details dt {
+  float: left;
+  padding-right:20px;
+}
+
+#contact_name, #contact_mail{
+  border-bottom: 1px solid #cacaca;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+#contact_phone {
+  padding-top: 5px;
+}
+
+#job_contact {
+  display: inline-grid;
+}
+
+#job_contact div .col-xs-12, #job_contact div .col-xs-4 {
+  padding-left: 0px;
+}
+
+#contact_image {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+
+
+
+/*new...well old actually... TODO: strip unneeded css for smaller style.css, quicksearch button get rid of image */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial,sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+a img{
+  border: 0;
+}
+
+#split{
+  margin-bottom: 10px;
+  height: 61px;
+  background: linear-gradient(to top, #cdcdcd 30%, #fcfcfc);
+  border-top: 2px solid #afafaf;
+}
+#split .menu{
+  clear: both;
+  float: right;
+}
+
+.kontaktFormular .submit {
+  margin-top:10px;
+}
+
+a{
+  text-decoration: none;
+  color: #9b1000;
+}
+h1,h2{
+  color: #9b1000;
+  font-weight: normal;
+  font-size: 18px;
+}
+h3{
+  color: #9b1000;
+  font-weight: normal;
+  font-size: 16px;
+}
+h4{
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+ul li{
+  color: #000;
+}
