@@ -23,7 +23,9 @@ activjob. {% endblock title %}
           </div>
           <div class="menu menu-top">
             {% block navigation_top %}
+              {% comment %} added testnaviagation template to check if styling is correct {% endcomment %}
               {% include "web/nav/topnav.html" %}
+              {% include "test/topnav.html" %}
             {% endblock %}
           </div>
         </div>
@@ -117,6 +119,8 @@ activjob. {% endblock title %}
               {% block page_content %}
                 <div class="col-md-3 col-sm-4 col-xs-12 menu-left">
                  {% block left_col %}
+                  {% comment %} added testnaviagation template to check if styling is correct {% endcomment %}
+                  {% include "test/leftnav.html" %}
                   {% include "web/nav/leftnav.html" %}
                  {% endblock left_col %}
                </div>
