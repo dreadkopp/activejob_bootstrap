@@ -33,6 +33,5 @@
           "contacts": [3,33]
       },
       "model": "ansprechpartner.Ansprechpartner",
-      "slug": "bewerber_zeitarbeit"
   }
 ]
