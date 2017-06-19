@@ -7,7 +7,7 @@ class Contact(models.Model):
     status = models.CharField(max_length=100)
     phone = models.CharField(max_length=100)
     mail = models.EmailField()
-
+    priority = models.DecimalField()
     location = models.ForeignKey("Location")
 
     def __str__(self):
@@ -16,6 +16,10 @@ class Contact(models.Model):
     @property
     def imageurl(self):
         return "{}.{}.jpg".format(self.first_name, self.last_name)
+
+    class Meta:
+        ordering = ["-priority"]
+
 
 
 class Location(models.Model):
