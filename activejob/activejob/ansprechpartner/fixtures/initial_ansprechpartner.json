@@ -1,11 +1,25 @@
 [
+
+    {
+        "fields": {
+          "first_name": "Tom",
+          "last_name": "Drechsel",
+          "location": 1,
+          "mail": "tom.drechsel@activ-job.com",
+          "phone": "0351 2502088-33",
+          "status": "Gesch\u00e4ftsbereichsleiter Personal- und Arbeitsvermittlung"
+      },
+      "model": "jobs.contact",
+      "pk": 3
+  },
   {
       "fields": {
           "title": "Ansprechpartner für Bewerber in der Zeitarbeit",
           "field": "Arbeitnehmerueberlassung",
           "banner_color": "green",
           "banner_slogan": "„Als vertrauenswürdiger und verlässlicher Partner setzen wir Sie entsprechend Ihren Fähigkeiten und Qualifikationen bei unseren Kundenunternehmen ein.“",
-          "slug": "bewerber_zeitarbeit"
+          "slug": "bewerber_zeitarbeit",
+          "contacts": [3]
       },
       "model": "ansprechpartner.Ansprechpartner",
       "slug": "bewerber_zeitarbeit"
