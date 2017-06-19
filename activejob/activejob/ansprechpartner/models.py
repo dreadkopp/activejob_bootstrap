@@ -7,4 +7,7 @@ class Ansprechpartner(models.Model):
     banner_color = models.CharField(max_length=6)
     banner_slogan = models.CharField(max_length=200)
     contacts = models.ManyToManyField(Contact)
-    slug = models.CharField(max_length=50)
+    slug = models.SlugField()
+
+    def __str__(self):
+        return self.title
