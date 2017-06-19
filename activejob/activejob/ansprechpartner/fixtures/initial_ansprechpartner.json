@@ -1,5 +1,16 @@
 [
-
+    {
+        "fields": {
+            "first_name": "Evelyn",
+            "last_name": "B\u00f6hme",
+            "location": 5,
+            "mail": "leipzig@activ-job.com",
+            "phone": "0341 303792-0",
+            "status": "Teamleiterin Personal- und Arbeitsvermittlung"
+        },
+        "model": "jobs.contact",
+        "pk": 33
+    },
     {
         "fields": {
           "first_name": "Tom",
@@ -19,7 +30,7 @@
           "banner_color": "green",
           "banner_slogan": "„Als vertrauenswürdiger und verlässlicher Partner setzen wir Sie entsprechend Ihren Fähigkeiten und Qualifikationen bei unseren Kundenunternehmen ein.“",
           "slug": "bewerber_zeitarbeit",
-          "contacts": [3]
+          "contacts": [3,33]
       },
       "model": "ansprechpartner.Ansprechpartner",
       "slug": "bewerber_zeitarbeit"
