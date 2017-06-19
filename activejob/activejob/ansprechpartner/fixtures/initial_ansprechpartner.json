@@ -1,12 +1,12 @@
-[
-    {
+{
         "fields": {
             "title": "Ansprechpartner für Bewerber in der Zeitarbeit",
             "field": "Arbeitnehmerueberlassung",
             "banner_color": "green",
             "banner_slogan": "„Als vertrauenswürdiger und verlässlicher Partner setzen wir Sie entsprechend Ihren Fähigkeiten und Qualifikationen bei unseren Kundenunternehmen ein.“",
-            "slug": "bewerber_zeitarbeit"
+            "contacts" : 3,
+            "slug" : "bewerber_zeitarbeit"
         },
-          "pk": 0,
-    },
-]
+          "slug": "bewerber_zeitarbeit",
+          "model": "ansprechpartner.ansprechpartner",
+},
