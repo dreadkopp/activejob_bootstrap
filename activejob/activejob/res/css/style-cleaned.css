@@ -82,6 +82,23 @@ body {
   font-size:0px;
 }
 
+.navbar-nav>li:first-child {
+  bottom: 1px;
+}
+
+/*bootstrap override */
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  background-color: inherit!important;
+}
+
+a:hover {
+    text-decoration: none!important;
+}
+
+.menu-left a:hover {
+  color: #9b1000;
+}
 
 .menu-top .nav li.active a, .menu-top .nav li a:hover {
     background: url("../images/menu_bg_act.gif") no-repeat;
@@ -103,7 +120,6 @@ body {
   .menu-top .nav li a {
     color: #fff;
     padding-top: 5px;
-    padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
   }
