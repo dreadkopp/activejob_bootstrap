@@ -48,6 +48,9 @@ class Job(models.Model):
     contact = models.ForeignKey("Contact")
     company = models.ForeignKey("Company")
 
+    states = models.ManyToManyField("State")
+    categories = models.ManyToManyField("Category")
+
     def __str__(self):
         return self.title
 
@@ -57,3 +60,25 @@ class Job(models.Model):
 
 class Company(models.Model):
     description = models.TextField()
+
+
+class State(models.Model):
+    id = models.CharField(max_length=2, primary_key=True)
+    name = models.CharField(max_length=32)
+
+    def __str__ (self):
+        return self.name
+
+    class Meta:
+        ordering = ["name"]
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=32)
+
+    def __str__ (self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural = "categories"
+        ordering = ["name"]
