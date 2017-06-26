@@ -1,4 +1,4 @@
-def build_main_menu (active_node=None, submenu=None):
+def build_main_menu(active_nodes=None):
     menu_top = [
         {
             "name": "Home",
@@ -20,7 +20,7 @@ def build_main_menu (active_node=None, submenu=None):
     ]
 
     for item in menu_top:
-        item["active"] = item["url"] == active_node
+        item["active"] = item["url"] == active_nodes.get("top")
 
     menu_items = {
         "unternehmensprofil": [
@@ -91,7 +91,7 @@ def build_main_menu (active_node=None, submenu=None):
         ],
     }
 
-    menu_left = menu_items.get(active_node)
+    menu_left = menu_items.get(active_nodes.get("top"))
 
     return {
         "menu_top": menu_top,
@@ -100,14 +100,12 @@ def build_main_menu (active_node=None, submenu=None):
 
 
 class MenuMixin:
-    active_node = None
-    submenu = None
+    active_nodes = {pos: None for pos in ["top", "left", "sub"]}
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         menu_context = build_main_menu(
-            active_node=self.active_node,
-            submenu=self.submenu,
+            active_nodes=self.active_nodes,
         )
         context.update(menu_context)
         return context

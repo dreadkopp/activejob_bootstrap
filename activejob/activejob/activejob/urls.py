@@ -54,7 +54,7 @@ urlpatterns = [
     url(
         r"^kontakt",
         TemplateView.as_view(
-            active_node="bewerber",
+            active_nodes={"top": "bewerber"},
             template_name="web/pages/kontakt.html",
         ),
         name="kontakt",
@@ -66,7 +66,7 @@ urlpatterns = [
     url(
         r"^unternehmensprofil$",
         TemplateView.as_view(
-            active_node="unternehmensprofil",
+            active_nodes={"top": "unternehmensprofil"},
             template_name="web/pages/unternehmensprofil.html",
         ),
         name="unternehmensprofil",
@@ -75,7 +75,7 @@ urlpatterns = [
     url(
         r"^unternehmen$",
         TemplateView.as_view(
-            active_node="unternehmen",
+            active_nodes={"top": "unternehmen"},
             template_name="web/pages/unternehmen.html",
         ),
         name="unternehmen",
@@ -87,7 +87,7 @@ urlpatterns = [
     url(
         r"^$",
         TemplateView.as_view(
-            active_node="home",
+            active_nodes={"top": "home"},
             template_name="web/pages/home.html",
         ),
         name="home",
@@ -109,7 +109,7 @@ urlpatterns = [
     url(
         r"^bewerber$",
         TemplateView.as_view(
-            active_node="bewerber",
+            active_nodes={"top": "bewerber"},
             template_name="web/pages/bewerber.html",
         ),
         name="bewerber",
