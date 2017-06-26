@@ -6,7 +6,6 @@
 
 /*Main Body... Images for shadow are you kidding me? */
 .sitetop {
-  /*padding-right: 0px;*/
   background: #fff;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -207,7 +206,7 @@ a:hover {
   display: block;
 }
 
-/*Fix Standorte Tabellen-Madness */
+/* Standorte */
 .limiter {
   margin-bottom: 10px;
   padding-top: 10px;
@@ -247,7 +246,7 @@ a:hover {
   margin-bottom: 1em;
 }
 
-/*Fix static Bannercrapshit -> maybe keep old banner and just add red */
+/* Banner */
 
 .header #quicksearch_container {
   padding-left: 0px;
@@ -330,7 +329,7 @@ a:hover {
 
 #overlay_object {
   height: 300px;
-  width:calc(50% - 10px);
+  width:calc(40% - 10px);
   background-size: contain;
   background-repeat: no-repeat;
   position: relative;
@@ -346,11 +345,12 @@ a:hover {
 
 #banner h2 {
     color: #fff;
-    width: 90%;
-    margin: auto;
-    padding-top: 110px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
