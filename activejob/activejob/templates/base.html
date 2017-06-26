@@ -18,14 +18,12 @@ activjob. {% endblock title %}
             </div>
           </div>
           <div class="logo">
-              <a href="/"><img src={% static 'images/logo.gif' %} alt=
+              <a href="{% url 'home' %}"><img src={% static 'images/logo.gif' %} alt=
               "activjob Logo" /></a>
           </div>
           <div class="menu menu-top">
             {% block navigation_top %}
-              {% comment %} added testnaviagation template to check if styling is correct {% endcomment %}
               {% include "web/nav/topnav.html" %}
-              {% include "test/topnav.html" %}
             {% endblock %}
           </div>
         </div>

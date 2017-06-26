@@ -22,11 +22,17 @@ from django.conf import settings
 from jobs.views import JobDetailView, JobListView
 from ansprechpartner.views import AnsprechpartnerView
 from berufsfelder.views import BerufsfelderView
+from core.utils import MenuMixin
 from kompetenzbereiche.views import KompetenzbereicheView
 from vorteile.views import VorteileView
 
 def placeholder():
     return TemplateView.as_view(template_name="web/pages/home")
+
+
+# TODO: move this stuff somewhere else
+class TemplateView(MenuMixin, TemplateView):
+    pass
 
 
 urlpatterns = [
