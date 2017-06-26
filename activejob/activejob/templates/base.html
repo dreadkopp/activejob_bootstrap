@@ -1,5 +1,6 @@
 {% extends "bootstrap.html" %}
 {% load static %}
+{% load bootstrap3 %}
 
 {% block title %} -
 activjob. {% endblock title %}
@@ -62,35 +63,11 @@ activjob. {% endblock title %}
                     <p>Durchsuchen Sie hier die Angebote unseres
                     Stellenmarktes.</p>
 
-                    <form action="{% url 'stellenmarkt' %}" method="post"
-                    enctype="multipart/form-data">
-                      <div>
-                        <div class=
-                        "formcontent filterOwnEinsatzort" id=
-                        "nrquick1">
-                          <span class=
-                          "fieldname">Einsatzort:</span><input type="text" class="form-control"
-                          name="filterOwnEinsatzort" value="" id=
-                          "quickStadt" />
-                        </div>
-
-                        <div class="formcontent filterOwnStichwort"
-                        id="nrquick2">
-                          <span class=
-                          "fieldname">Stichwort:</span><input type=
-                          "text" class="form-control" name="filterOwnStichwort" value=""
-                          id="quickStelle" />
-                        </div>
-
-                        <div class="formcontent submit" id=
-                        "nrquick3">
-                          <input type="hidden" name="submit" value=
-                          "" />
-                        </div>
-                      </div>
+                    <form action="{% url 'stellenmarkt' %}" method="get">
+                    {% bootstrap_form quicksearchform layout="inline" %}
 
                       <div class="submit">
-                        <input type="submit" name="submitquick"
+                        <input type="submit"
                         class="savebutton form-control" value=" " />
                       </div>
                     </form><a class="adv_search" href=
