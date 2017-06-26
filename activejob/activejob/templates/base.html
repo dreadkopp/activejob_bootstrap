@@ -41,15 +41,8 @@ activjob. {% endblock title %}
                 <div id="overlay_object">
                 </div>
                 {% block banner %}
-                <style>
-                #banner {
-                  background-image: url("{% static 'banner/banner_red_background.png' %}");
-                  background-size: cover;
-                }
-                #overlay_object {
-                  background-image:url("{% static 'banner/red_woman.png' %}");
-                }
-                </style>
+
+                {% include "web/banner/red.html"%}
 
                 {% endblock %}
               </div>
