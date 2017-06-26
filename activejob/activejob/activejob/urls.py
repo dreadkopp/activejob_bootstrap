@@ -44,7 +44,7 @@ urlpatterns = [
         name="stellenmarkt"
     ),
 
-    url(r"^jobs/(?P<pk>\d+)_(?P<slug>.*)$",
+    url(r"^[jJ]obs/(stellenmarkt-)?(?P<pk>\d+)_(?P<slug>.*)$",
         JobDetailView.as_view(
             active_nodes={"top": "bewerber", "left": "stellenmarkt"},
         ),
