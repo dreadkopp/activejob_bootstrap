@@ -57,7 +57,7 @@ class Job(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse("job_detail", args=[self.pk])
+        return reverse("job_detail", args=[self.pk, self.slug])
 
 
     class Meta:
