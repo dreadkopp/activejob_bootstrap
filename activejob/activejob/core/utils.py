@@ -93,6 +93,9 @@ def build_main_menu(active_nodes=None):
 
     menu_left = menu_items.get(active_nodes.get("top"))
 
+    for item in menu_left:
+        item["active"] = item["url"] == active_nodes.get("left")
+
     return {
         "menu_top": menu_top,
         "menu_left": menu_left,
