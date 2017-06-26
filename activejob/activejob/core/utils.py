@@ -1,3 +1,7 @@
+# TODO:
+#from django.core.urlresolvers import reverse
+
+
 def build_main_menu(active_nodes=None):
     menu_top = [
         {
@@ -26,67 +30,159 @@ def build_main_menu(active_nodes=None):
         "unternehmensprofil": [
             {
                 "name": "Unternehmensprofil",
-                "url": "unternehmensprofil"
+                "url": "unternehmensprofil",
             },
             {
                 "name": "Leitbild",
-                "url": "leitbild"
+                "url": "leitbild",
             },
             {
                 "name": "Standorte",
-                "url": "standorte"
+                "url": "standorte",
             },
             {
                 "name": "Kontakt",
-                "url": "kontakt"
+                "url": "kontakt",
             },
         ],
         "unternehmen": [
             {
                 "name": "Arbeitnehmerüberlassung",
-                "url": "arbeitnehmerueberlassung"
+                "url": "arbeitnehmerueberlassung",
+                "sublist": [
+                    {
+                        "name": "Kompetenzbereiche",
+                        "url": "kompetenzbereiche",
+                    },
+                    {
+                        "name": "Ansprechpartner",
+                        "url": "ansprechpartner",
+                    },
+                ]
             },
             {
                 "name": "Personalvermittlung",
-                "url": "personalvermittlung"
+                "url": "personalvermittlung",
+                "sublist": [
+                    {
+                        "name": "Kompetenzbereiche",
+                        "url": "kompetenzbereiche",
+                    },
+                    {
+                        "name": "Referenzen",
+                        "url": "referenzen",
+                    },
+                    {
+                        "name": "Ansprechpartner",
+                        "url": "ansprechpartner",
+                    },
+                ]
             },
             {
                 "name": "Arbeitsvermittlung",
-                "url": "arbeitsvermittlung"
+                "url": "arbeitsvermittlung",
+                "sublist": [
+                    {
+                        "name": "Kompetenzbereiche",
+                        "url": "kompetenzbereiche",
+                    },
+                    {
+                        "name": "Ansprechpartner",
+                        "url": "ansprechpartner",
+                    },
+                ]
             },
             {
                 "name": "Personalanfrage",
-                "url": "personalanfrage"
+                "url": "personalanfrage",
             },
             {
                 "name": "Personalauswahl",
-                "url": "personalauswahl"
+                "url": "personalauswahl",
             },
         ],
         "bewerber": [
             {
                 "name": "Arbeitnehmerüberlassung",
-                "url": "bewerber_zeitarbeit"
+                "url": "bewerber_zeitarbeit",
+                "sublist": [
+                    {
+                        "name": "Ihre Vorteile",
+                        "url": "vorteile",
+                    },
+                    {
+                        "name": "Berufsfelder",
+                        "url": "berufsfelder",
+                    },
+                    {
+                        "name": "Ansprechpartner",
+                        "url": "ansprechpartner",
+                    },
+                    {
+                        "name": "Stellenmarkt AÜ",
+                        "url": "stellenmarkt",
+                    },
+                ]
             },
             {
                 "name": "Personalvermittlung",
-                "url": "bewerber_personalvermittlung"
+                "url": "bewerber_personalvermittlung",
+                "sublist": [
+                    {
+                        "name": "Ihre Vorteile",
+                        "url": "vorteile",
+                    },
+                    {
+                        "name": "Berufsfelder",
+                        "url": "berufsfelder",
+                    },
+                    {
+                        "name": "Ansprechpartner",
+                        "url": "ansprechpartner",
+                    },
+                    {
+                        "name": "Stellenmarkt PV",
+                        "url": "stellenmarkt",
+                    },
+                ]
             },
             {
                 "name": "Arbeitsvermittlung",
-                "url": "bewerber_arbeitsvermittlung"
+                "url": "bewerber_arbeitsvermittlung",
+                "sublist": [
+                    {
+                        "name": "Ihre Vorteile",
+                        "url": "vorteile",
+                    },
+                    {
+                        "name": "Berufsfelder",
+                        "url": "berufsfelder",
+                    },
+                    {
+                        "name": "Fragen und Antworten",
+                        "url": "bewerber_arbeitsvermittlung_antworten",
+                    },
+                    {
+                        "name": "Ansprechpartner",
+                        "url": "ansprechpartner",
+                    },
+                    {
+                        "name": "Stellenmarkt AV",
+                        "url": "stellenmarkt",
+                    },
+                ]
             },
             {
                 "name": "Karriereberatung",
-                "url": "karriereberatung"
+                "url": "karriereberatung",
             },
             {
                 "name": "Stellenmarkt",
-                "url": "stellenmarkt"
+                "url": "stellenmarkt",
             },
             {
                 "name": "Karriere bei activjob",
-                "url": "karriere_activjob"
+                "url": "karriere_activjob",
             },
         ],
     }
@@ -95,6 +191,9 @@ def build_main_menu(active_nodes=None):
 
     for item in menu_left:
         item["active"] = item["url"] == active_nodes.get("left")
+        if "sublist" in item:
+            for subitem in item["sublist"]:
+                subitem["active"] = subitem["url"] == active_nodes.get("sub")
 
     return {
         "menu_top": menu_top,

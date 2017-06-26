@@ -53,7 +53,13 @@ urlpatterns = [
     url(r"^ansprechpartner/(?P<slug>\w+)$",AnsprechpartnerView.as_view(),name="ansprechpartner"),
     url(r"^berufsfelder/(?P<slug>\w+)$",BerufsfelderView.as_view(),name="berufsfelder"),
     url(r"^kompetenzbereiche/(?P<slug>\w+)$",KompetenzbereicheView.as_view(),name="kompetenzbereiche"),
-    url(r"^vorteile/(?P<slug>\w+)$",VorteileView.as_view(),name="vorteile"),
+
+    url(
+        r"^vorteile/(?P<slug>\w+)$",
+        VorteileView.as_view(
+        ),
+        name="vorteile",
+    ),
 
     url(
         r"^kontakt$",
@@ -94,7 +100,15 @@ urlpatterns = [
     ),
 
     url(r"^jobs_rss",placeholder(),name="jobs_rss"),
-    url(r"^referenzen",TemplateView.as_view(template_name="web/pages/referenzen.html"),name="referenzen"),
+
+    url(
+        r"^referenzen$",
+        TemplateView.as_view(
+            active_nodes={"top": "unternehmen", "left": "referenzen"},
+            template_name="web/pages/referenzen.html",
+        ),
+        name="referenzen",
+    ),
 
     url(
         r"^$",
@@ -190,7 +204,7 @@ urlpatterns = [
     url(
         r"^bewerber_arbeitsvermittlung_antworten$",
         TemplateView.as_view(
-            active_nodes={"top": "bewerber", "left": "bewerber_arbeitsvermittlung"},
+            active_nodes={"top": "bewerber", "left": "bewerber_arbeitsvermittlung", "sub": "bewerber_arbeitsvermittlung_antworten"},
             template_name="web/pages/bewerber_arbeitsvermittlung_antworten.html",
         ),
         name="bewerber_arbeitsvermittlung_antworten",
