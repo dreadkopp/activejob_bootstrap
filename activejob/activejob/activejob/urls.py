@@ -37,14 +37,14 @@ class TemplateView(QuickSearchFormMixin, MenuMixin, TemplateView):
 
 
 urlpatterns = [
-    url(r"^jobs/",
+    url(r"^jobs$",
         JobSearchListView.as_view(
             active_nodes={"top": "bewerber", "left": "stellenmarkt"},
         ),
         name="stellenmarkt"
     ),
 
-    url(r"^job/(?P<pk>\d+)$",
+    url(r"^jobs/(?P<pk>\d+)_(?P<slug>.*)$",
         JobDetailView.as_view(
             active_nodes={"top": "bewerber", "left": "stellenmarkt"},
         ),
