@@ -37,12 +37,16 @@ class TemplateView(MenuMixin, TemplateView):
 
 urlpatterns = [
     url(r"^jobs/",
-        JobListView.as_view(),
+        JobListView.as_view(
+            active_nodes={"top": "bewerber", "left": "stellenmarkt"},
+        ),
         name="stellenmarkt"
     ),
 
     url(r"^job/(?P<pk>\d+)$",
-        JobDetailView.as_view(),
+        JobDetailView.as_view(
+            active_nodes={"top": "bewerber", "left": "stellenmarkt"},
+        ),
         name="job_detail"
     ),
     url(r"^test",TemplateView.as_view(template_name="web/test/test.html"), name="test"),
@@ -52,21 +56,29 @@ urlpatterns = [
     url(r"^vorteile/(?P<slug>\w+)$",VorteileView.as_view(),name="vorteile"),
 
     url(
-        r"^kontakt",
+        r"^kontakt$",
         TemplateView.as_view(
-            active_node="bewerber",
+            active_nodes={"top": "unternehmensprofil", "left": "kontakt"},
             template_name="web/pages/kontakt.html",
         ),
         name="kontakt",
     ),
 
     url(r"^sitemap",placeholder(),name="sitemap"),
-    url(r"^impressum",TemplateView.as_view(template_name="web/pages/impressum.html"),name="impressum"),
+
+    url(
+        r"^impressum$",
+        TemplateView.as_view(
+            active_nodes={"top": "unternehmensprofil"},
+            template_name="web/pages/impressum.html",
+        ),
+        name="impressum",
+    ),
 
     url(
         r"^unternehmensprofil$",
         TemplateView.as_view(
-            active_node="über uns",
+            active_nodes={"top": "unternehmensprofil", "left": "unternehmensprofil"},
             template_name="web/pages/unternehmensprofil.html",
         ),
         name="unternehmensprofil",
@@ -75,7 +87,7 @@ urlpatterns = [
     url(
         r"^unternehmen$",
         TemplateView.as_view(
-            active_node="unternehmen",
+            active_nodes={"top": "unternehmen"},
             template_name="web/pages/unternehmen.html",
         ),
         name="unternehmen",
@@ -87,34 +99,136 @@ urlpatterns = [
     url(
         r"^$",
         TemplateView.as_view(
-            active_node="home",
+            active_nodes={"top": "home"},
             template_name="web/pages/home.html",
         ),
         name="home",
     ),
 
-    url(r"^leitbild",TemplateView.as_view(template_name="web/pages/leitbild.html"),name="leitbild"),
-    url(r"^standorte",TemplateView.as_view(template_name="web/pages/standorte.html"),name="standorte"),
-    url(r"^arbeitnehmerueberlassung",TemplateView.as_view(template_name="web/pages/arbeitnehmerueberlassung.html"),name="arbeitnehmerueberlassung"),
+    url(
+        r"^leitbild$",
+        TemplateView.as_view(
+            active_nodes={"top": "unternehmensprofil", "left": "leitbild"},
+            template_name="web/pages/leitbild.html",
+        ),
+        name="leitbild",
+    ),
+
+    url(
+        r"^standorte$",
+        TemplateView.as_view(
+            active_nodes={"top": "unternehmensprofil", "left": "standorte"},
+            template_name="web/pages/standorte.html",
+        ),
+        name="standorte",
+    ),
+
+    url(r"^arbeitnehmerueberlassung$",
+        TemplateView.as_view(
+            active_nodes={"top": "unternehmen", "left": "arbeitnehmerueberlassung"},
+            template_name="web/pages/arbeitnehmerueberlassung.html",
+        ),
+        name="arbeitnehmerueberlassung",
+    ),
+
     url(r"^personalvermittlung_referenzen",TemplateView.as_view(template_name="web/pages/personalvermittlung_referenzen.html"),name="personalvermittlung_referenzen"),
-    url(r"^personalvermittlung",TemplateView.as_view(template_name="web/pages/personalvermittlung.html"),name="personalvermittlung"),
-    url(r"^arbeitsvermittlung",TemplateView.as_view(template_name="web/pages/arbeitsvermittlung.html"),name="arbeitsvermittlung"),
-    url(r"^personalanfrage",TemplateView.as_view(template_name="web/pages/personalanfrage.html"),name="personalanfrage"),
-    url(r"^personalauswahl",TemplateView.as_view(template_name="web/pages/personalauswahl.html"),name="personalauswahl"),
-    url(r"^bewerber_zeitarbeit",TemplateView.as_view(template_name="web/pages/bewerber_zeitarbeit.html"),name="bewerber_zeitarbeit"),
-    url(r"^bewerber_personalvermittlung",TemplateView.as_view(template_name="web/pages/bewerber_personalvermittlung.html"),name="bewerber_personalvermittlung"),
-    url(r"^bewerber_arbeitsvermittlung_antworten",TemplateView.as_view(template_name="web/pages/bewerber_arbeitsvermittlung_antworten.html"),name="bewerber_arbeitsvermittlung_antworten"),
-    url(r"^bewerber_arbeitsvermittlung",TemplateView.as_view(template_name="web/pages/bewerber_arbeitsvermittlung.html"),name="bewerber_arbeitsvermittlung"),
+
+    url(
+        r"^personalvermittlung$",
+        TemplateView.as_view(
+            active_nodes={"top": "unternehmen", "left": "personalvermittlung"},
+            template_name="web/pages/personalvermittlung.html",
+        ),
+        name="personalvermittlung",
+    ),
+
+    url(
+        r"^arbeitsvermittlung$",
+        TemplateView.as_view(
+            active_nodes={"top": "unternehmen", "left": "arbeitsvermittlung"},
+            template_name="web/pages/arbeitsvermittlung.html",
+        ),
+        name="arbeitsvermittlung",
+    ),
+
+    url(
+        r"^personalanfrage$",
+        TemplateView.as_view(
+            active_nodes={"top": "unternehmen", "left": "personalanfrage"},
+            template_name="web/pages/personalanfrage.html",
+        ),
+        name="personalanfrage",
+    ),
+
+    url(
+        r"^personalauswahl$",
+        TemplateView.as_view(
+            active_nodes={"top": "unternehmen", "left": "personalauswahl"},
+            template_name="web/pages/personalauswahl.html",
+        ),
+        name="personalauswahl",
+    ),
+
+    url(
+        r"^bewerber_zeitarbeit$",
+        TemplateView.as_view(
+            active_nodes={"top": "bewerber", "left": "bewerber_zeitarbeit"},
+            template_name="web/pages/bewerber_zeitarbeit.html",
+        ),
+        name="bewerber_zeitarbeit",
+    ),
+
+    url(
+        r"^bewerber_personalvermittlung$",
+        TemplateView.as_view(
+            active_nodes={"top": "bewerber", "left": "bewerber_personalvermittlung"},
+            template_name="web/pages/bewerber_personalvermittlung.html",
+        ),
+        name="bewerber_personalvermittlung",
+    ),
+
+    url(
+        r"^bewerber_arbeitsvermittlung_antworten$",
+        TemplateView.as_view(
+            active_nodes={"top": "bewerber", "left": "bewerber_arbeitsvermittlung"},
+            template_name="web/pages/bewerber_arbeitsvermittlung_antworten.html",
+        ),
+        name="bewerber_arbeitsvermittlung_antworten",
+    ),
+
+    url(
+        r"^bewerber_arbeitsvermittlung$",
+        TemplateView.as_view(
+            active_nodes={"top": "bewerber", "left": "bewerber_arbeitsvermittlung"},
+            template_name="web/pages/bewerber_arbeitsvermittlung.html",
+        ),
+        name="bewerber_arbeitsvermittlung",
+    ),
 
     url(
         r"^bewerber$",
         TemplateView.as_view(
-            active_node="bewerber",
+            active_nodes={"top": "bewerber"},
             template_name="web/pages/bewerber.html",
         ),
         name="bewerber",
     ),
 
-    url(r"^karriereberatung",TemplateView.as_view(template_name="web/pages/karriereberatung.html"),name="karriereberatung"),
-    url(r"^karriere_activjob",TemplateView.as_view(template_name="web/pages/karriere_activjob.html"),name="karriere_activjob"),
+    url(
+        r"^karriereberatung$",
+        TemplateView.as_view(
+            active_nodes={"top": "bewerber", "left": "karriereberatung"},
+            template_name="web/pages/karriereberatung.html",
+        ),
+        name="karriereberatung",
+    ),
+
+    url(
+        r"^karriere_activjob$",
+        TemplateView.as_view(
+            active_nodes={"top": "bewerber", "left": "karriere_activjob"},
+            template_name="web/pages/karriere_activjob.html",
+        ),
+        name="karriere_activjob",
+    ),
 ]

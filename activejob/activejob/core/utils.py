@@ -1,30 +1,29 @@
-def build_main_menu (active_node=None, submenu=None):
+def build_main_menu(active_nodes=None):
     menu_top = [
         {
             "name": "Home",
-            "active": active_node == "home",
             "url": "home",
             "class": "glyphicon glyphicon-home",
         },
         {
             "name": "Über uns",
             "url": "unternehmensprofil",
-            "active": active_node == "über uns",
         },
         {
             "name": "Unternehmen",
             "url": "unternehmen",
-            "active": active_node == "unternehmen",
         },
         {
             "name": "Bewerber",
             "url": "bewerber",
-            "active": active_node == "bewerber",
         },
     ]
 
+    for item in menu_top:
+        item["active"] = item["url"] == active_nodes.get("top")
+
     menu_items = {
-        "über uns": [
+        "unternehmensprofil": [
             {
                 "name": "Unternehmensprofil",
                 "url": "unternehmensprofil"
@@ -67,15 +66,15 @@ def build_main_menu (active_node=None, submenu=None):
         "bewerber": [
             {
                 "name": "Arbeitnehmerüberlassung",
-                "url": "arbeitnehmerueberlassung"
+                "url": "bewerber_zeitarbeit"
             },
             {
                 "name": "Personalvermittlung",
-                "url": "personalvermittlung"
+                "url": "bewerber_personalvermittlung"
             },
             {
                 "name": "Arbeitsvermittlung",
-                "url": "arbeitsvermittlung"
+                "url": "bewerber_arbeitsvermittlung"
             },
             {
                 "name": "Karriereberatung",
@@ -92,7 +91,10 @@ def build_main_menu (active_node=None, submenu=None):
         ],
     }
 
-    menu_left = menu_items.get(active_node)
+    menu_left = menu_items.get(active_nodes.get("top"), [])
+
+    for item in menu_left:
+        item["active"] = item["url"] == active_nodes.get("left")
 
     return {
         "menu_top": menu_top,
@@ -101,14 +103,12 @@ def build_main_menu (active_node=None, submenu=None):
 
 
 class MenuMixin:
-    active_node = None
-    submenu = None
+    active_nodes = {pos: None for pos in ["top", "left", "sub"]}
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         menu_context = build_main_menu(
-            active_node=self.active_node,
-            submenu=self.submenu,
+            active_nodes=self.active_nodes,
         )
         context.update(menu_context)
         return context
