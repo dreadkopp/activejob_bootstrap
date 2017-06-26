@@ -73,6 +73,16 @@ body {
 /*Menus*/
 
 
+/*bit hackish solution for the home-icon*/
+.glyphicon-home:before {
+    font-size: 20px;
+}
+
+.navbar-nav>li:first-child a {
+  font-size:0px;
+}
+
+
 .menu-top .nav li.active a, .menu-top .nav li a:hover {
     background: url("../images/menu_bg_act.gif") no-repeat;
 }
@@ -300,13 +310,13 @@ body {
 }
 
 #overlay_object {
-  height: 380px;
+  height: 350px;
   width:calc(50% - 10px);
   background-size: contain;
   background-repeat: no-repeat;
   position: relative;
   z-index: 100;
-  top: -50px;
+  top: -30px;
   left: 4%;
   float:left;
 }
