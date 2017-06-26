@@ -19,7 +19,7 @@ from django.views.generic import TemplateView
 from django.conf.urls.static import static
 from django.conf import settings
 
-from jobs.views import JobDetailView, JobListView
+from jobs.views import JobDetailView, JobSearchListView
 from ansprechpartner.views import AnsprechpartnerView
 from berufsfelder.views import BerufsfelderView
 from core.utils import MenuMixin
@@ -37,7 +37,7 @@ class TemplateView(MenuMixin, TemplateView):
 
 urlpatterns = [
     url(r"^jobs/",
-        JobListView.as_view(
+        JobSearchListView.as_view(
             active_nodes={"top": "bewerber", "left": "stellenmarkt"},
         ),
         name="stellenmarkt"
