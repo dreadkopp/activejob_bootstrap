@@ -19,3 +19,10 @@ class JobListView(QuickSearchFormMixin, MenuMixin, ListView):
 
 class JobSearchListView(SearchMixin, JobListView):
     paginate_by = 10
+
+
+class JobInternListView(JobListView):
+    template_name = "web/pages/karriere_activjob.html"
+
+    def get_queryset(self):
+        return super().get_queryset().filter(is_intern=True)
