@@ -66,7 +66,7 @@ urlpatterns = [
     url(
         r"^unternehmensprofil$",
         TemplateView.as_view(
-            active_node="über uns",
+            active_node="unternehmensprofil",
             template_name="web/pages/unternehmensprofil.html",
         ),
         name="unternehmensprofil",

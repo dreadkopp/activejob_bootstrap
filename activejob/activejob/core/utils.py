@@ -2,29 +2,28 @@ def build_main_menu (active_node=None, submenu=None):
     menu_top = [
         {
             "name": "Home",
-            "active": active_node == "home",
             "url": "home",
             "class": "glyphicon glyphicon-home",
         },
         {
             "name": "Über uns",
             "url": "unternehmensprofil",
-            "active": active_node == "über uns",
         },
         {
             "name": "Unternehmen",
             "url": "unternehmen",
-            "active": active_node == "unternehmen",
         },
         {
             "name": "Bewerber",
             "url": "bewerber",
-            "active": active_node == "bewerber",
         },
     ]
 
+    for item in menu_top:
+        item["active"] = item["url"] == active_node
+
     menu_items = {
-        "über uns": [
+        "unternehmensprofil": [
             {
                 "name": "Unternehmensprofil",
                 "url": "unternehmensprofil"
