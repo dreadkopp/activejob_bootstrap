@@ -1,3 +1,4 @@
+from django.contrib.syndication.views import Feed
 from django.shortcuts import render
 from django.views.generic import DetailView, ListView
 
@@ -26,3 +27,18 @@ class JobInternListView(JobListView):
 
     def get_queryset(self):
         return super().get_queryset().filter(is_intern=True)
+
+
+class RSSFeed(Feed):
+    title = "Stellenmarkt activjob GmbH"
+    link = "https://www.activ-job.com"
+    description =  "Stellenmarkt activjob GmbH"
+
+    def items(self):
+        return Job.objects.all()
+
+    def item_title(self, item):
+        return item.title
+
+    def item_description(self, item):
+        return item.description

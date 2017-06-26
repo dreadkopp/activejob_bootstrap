@@ -19,7 +19,7 @@ from django.views.generic import TemplateView
 from django.conf.urls.static import static
 from django.conf import settings
 
-from jobs.views import JobDetailView, JobInternListView, JobSearchListView
+from jobs.views import JobDetailView, JobInternListView, JobSearchListView, RSSFeed
 from ansprechpartner.views import AnsprechpartnerView
 from berufsfelder.views import BerufsfelderView
 from core.utils import MenuMixin
@@ -100,7 +100,11 @@ urlpatterns = [
         name="unternehmen",
     ),
 
-    url(r"^jobs_rss",placeholder(),name="jobs_rss"),
+    url(
+        r"^Jobs/Jobs.xml$",
+        RSSFeed(),
+        name="jobs_rss",
+    ),
 
     url(
         r"^referenzen$",
