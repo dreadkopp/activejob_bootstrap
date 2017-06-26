@@ -9,7 +9,7 @@
     {% for subnode in node.sublist %}
     <li class="element menuepunkte {% if subnode.active %} active{% endif %}">
       <div>
-          <a href="{% url subnode.url %}">{{ subnode.name }}</a>
+          <a href="{{ subnode.url }}">{{ subnode.name }}</a>
       </div>
     </li>
     {% endfor %}

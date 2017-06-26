@@ -1,3 +1,7 @@
+# TODO:
+#from django.core.urlresolvers import reverse
+
+
 def build_main_menu(active_nodes=None):
     menu_top = [
         {
@@ -45,14 +49,48 @@ def build_main_menu(active_nodes=None):
             {
                 "name": "Arbeitnehmerüberlassung",
                 "url": "arbeitnehmerueberlassung",
+                "sublist": [
+                    {
+                        "name": "Kompetenzbereiche",
+                        "url": "kompetenzbereiche",
+                    },
+                    {
+                        "name": "Ansprechpartner",
+                        "url": "ansprechpartner",
+                    },
+                ]
             },
             {
                 "name": "Personalvermittlung",
                 "url": "personalvermittlung",
+                "sublist": [
+                    {
+                        "name": "Kompetenzbereiche",
+                        "url": "kompetenzbereiche",
+                    },
+                    {
+                        "name": "Referenzen",
+                        "url": "referenzen",
+                    },
+                    {
+                        "name": "Ansprechpartner",
+                        "url": "ansprechpartner",
+                    },
+                ]
             },
             {
                 "name": "Arbeitsvermittlung",
                 "url": "arbeitsvermittlung",
+                "sublist": [
+                    {
+                        "name": "Kompetenzbereiche",
+                        "url": "kompetenzbereiche",
+                    },
+                    {
+                        "name": "Ansprechpartner",
+                        "url": "ansprechpartner",
+                    },
+                ]
             },
             {
                 "name": "Personalanfrage",
@@ -67,14 +105,72 @@ def build_main_menu(active_nodes=None):
             {
                 "name": "Arbeitnehmerüberlassung",
                 "url": "bewerber_zeitarbeit",
+                "sublist": [
+                    {
+                        "name": "Ihre Vorteile",
+                        "url": "vorteile",
+                    },
+                    {
+                        "name": "Berufsfelder",
+                        "url": "berufsfelder",
+                    },
+                    {
+                        "name": "Ansprechpartner",
+                        "url": "ansprechpartner",
+                    },
+                    {
+                        "name": "Stellenmarkt AÜ",
+                        "url": "stellenmarkt",
+                    },
+                ]
             },
             {
                 "name": "Personalvermittlung",
                 "url": "bewerber_personalvermittlung",
+                "sublist": [
+                    {
+                        "name": "Ihre Vorteile",
+                        "url": "vorteile",
+                    },
+                    {
+                        "name": "Berufsfelder",
+                        "url": "berufsfelder",
+                    },
+                    {
+                        "name": "Ansprechpartner",
+                        "url": "ansprechpartner",
+                    },
+                    {
+                        "name": "Stellenmarkt PV",
+                        "url": "stellenmarkt",
+                    },
+                ]
             },
             {
                 "name": "Arbeitsvermittlung",
                 "url": "bewerber_arbeitsvermittlung",
+                "sublist": [
+                    {
+                        "name": "Ihre Vorteile",
+                        "url": "vorteile",
+                    },
+                    {
+                        "name": "Berufsfelder",
+                        "url": "berufsfelder",
+                    },
+                    {
+                        "name": "Fragen und Antworten",
+                        "url": "bewerber_arbeitsvermittlung_antworten",
+                    },
+                    {
+                        "name": "Ansprechpartner",
+                        "url": "ansprechpartner",
+                    },
+                    {
+                        "name": "Stellenmarkt AV",
+                        "url": "stellenmarkt",
+                    },
+                ]
             },
             {
                 "name": "Karriereberatung",
