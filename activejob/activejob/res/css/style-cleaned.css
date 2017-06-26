@@ -256,8 +256,8 @@ a:hover {
 
 /*bar for splitting arch below header. #quicksearch is 100% minus the bars width wide bars color = background color of content. show only in wide view*/
 #bar {
-  width: 10px;
-  height: 310px;
+  width: 5px;
+  height: 260px;
   position: relative;
   float: left;
   z-index: 81;
@@ -311,7 +311,7 @@ a:hover {
     display: block;
   }
   #quicksearch {
-      width: calc(100% - 10px);
+      width: calc(100% - 5px);
   }
   #banner {
     margin-bottom: 0px;
@@ -324,12 +324,12 @@ a:hover {
 
 
 #banner {
-  height: 300px;
+  height: 250px;
   margin-bottom: 10px;
 }
 
 #overlay_object {
-  height: 350px;
+  height: 300px;
   width:calc(50% - 10px);
   background-size: contain;
   background-repeat: no-repeat;
@@ -358,7 +358,7 @@ a:hover {
   background: linear-gradient(to top, #7c1b1e 0%, #7c1b1e 90%,#a03739);
   float: left;
   color: #fff;
-  height: 300px;
+  height: 250px;
 }
 
 #quicksearch a{
@@ -461,7 +461,7 @@ a img{
 }
 
 #split{
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   height: 61px;
   background: linear-gradient(to top, #cdcdcd 30%, #fcfcfc);
   border-top: 2px solid #afafaf;
@@ -510,16 +510,23 @@ ul li{
   margin-top: 2em;
   font-size: 80%;
 }
-#cert_container ul li:before {
+
+/*lists*/
+.inhalt ul li:before {
   color: #9b1000;
     content: "▪";
     font-size: 1.5em;
     margin-right: 4px;
 }
-#cert_container ul {
+.inhalt ul {
   list-style: none;
   margin: 0;
   padding: 0 0 10px 10px;
+}
+
+/*links*/
+.inhalt a:hover {
+  color:#d83737;
 }
 
 /*icons*/
