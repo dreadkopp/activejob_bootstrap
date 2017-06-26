@@ -13,12 +13,12 @@ def build_main_menu (active_node=None, submenu=None):
         },
         {
             "name": "Unternehmen",
-            "url": "home",
+            "url": "unternehmen",
             "active": active_node == "unternehmen",
         },
         {
             "name": "Bewerber",
-            "url": "home",
+            "url": "bewerber",
             "active": active_node == "bewerber",
         },
     ]
