@@ -510,16 +510,23 @@ ul li{
   margin-top: 2em;
   font-size: 80%;
 }
-#cert_container ul li:before {
+
+/*lists*/
+.inhalt ul li:before {
   color: #9b1000;
     content: "▪";
     font-size: 1.5em;
     margin-right: 4px;
 }
-#cert_container ul {
+.inhalt ul {
   list-style: none;
   margin: 0;
   padding: 0 0 10px 10px;
+}
+
+/*links*/
+.inhalt a:hover {
+  color:#d83737;
 }
 
 /*icons*/
