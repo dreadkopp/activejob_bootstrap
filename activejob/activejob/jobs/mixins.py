@@ -1,7 +1,7 @@
 from django.db.models import Q
 
 from .models import Category, Department, State
-from .forms import SearchForm
+from .forms import QuickSearchForm, SearchForm
 
 
 class SearchMixin:
@@ -67,4 +67,12 @@ class SearchMixin:
             "searchform": searchform,
         })
 
+        return context
+
+
+class QuickSearchFormMixin:
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        quicksearchform = QuickSearchForm()
+        context.update({"quicksearchform": quicksearchform})
         return context

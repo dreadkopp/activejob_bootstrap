@@ -2,12 +2,14 @@ from django import forms
 from .models import Category, Department, Job, State
 
 
-class SearchForm(forms.Form):
+class QuickSearchForm(forms.Form):
     q = forms.CharField(
         required=False,
         label="Stichwort",
     )
 
+
+class SearchForm(QuickSearchForm):
     states = forms.ModelChoiceField(
         queryset=State.objects.exclude(job=None),
         empty_label="– alle Bundesländer –",
