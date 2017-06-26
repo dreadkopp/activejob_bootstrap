@@ -66,15 +66,15 @@ def build_main_menu(active_nodes=None):
         "bewerber": [
             {
                 "name": "Arbeitnehmerüberlassung",
-                "url": "arbeitnehmerueberlassung"
+                "url": "bewerber_zeitarbeit"
             },
             {
                 "name": "Personalvermittlung",
-                "url": "personalvermittlung"
+                "url": "bewerber_personalvermittlung"
             },
             {
                 "name": "Arbeitsvermittlung",
-                "url": "arbeitsvermittlung"
+                "url": "bewerber_arbeitsvermittlung"
             },
             {
                 "name": "Karriereberatung",
@@ -91,7 +91,7 @@ def build_main_menu(active_nodes=None):
         ],
     }
 
-    menu_left = menu_items.get(active_nodes.get("top"))
+    menu_left = menu_items.get(active_nodes.get("top"), [])
 
     for item in menu_left:
         item["active"] = item["url"] == active_nodes.get("left")
