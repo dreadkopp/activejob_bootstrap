@@ -3,15 +3,15 @@ from django.views.generic import DetailView, ListView
 
 from .models import Job
 from core.utils import MenuMixin
-from .mixins import SearchMixin
+from .mixins import QuickSearchFormMixin, SearchMixin
 
 
-class JobDetailView(MenuMixin, DetailView):
+class JobDetailView(QuickSearchFormMixin, MenuMixin, DetailView):
     model = Job
     template_name = "web/pages/stellenmarkt/job-detail.html"
 
 
-class JobListView(MenuMixin, ListView):
+class JobListView(QuickSearchFormMixin, MenuMixin, ListView):
     model = Job
     template_name = "web/pages/stellenmarkt.html"
     paginate_by = 10

@@ -23,6 +23,7 @@ from jobs.views import JobDetailView, JobSearchListView
 from ansprechpartner.views import AnsprechpartnerView
 from berufsfelder.views import BerufsfelderView
 from core.utils import MenuMixin
+from jobs.mixins import QuickSearchFormMixin
 from kompetenzbereiche.views import KompetenzbereicheView
 from vorteile.views import VorteileView
 
@@ -31,7 +32,7 @@ def placeholder():
 
 
 # TODO: move this stuff somewhere else
-class TemplateView(MenuMixin, TemplateView):
+class TemplateView(QuickSearchFormMixin, MenuMixin, TemplateView):
     pass
 
 
