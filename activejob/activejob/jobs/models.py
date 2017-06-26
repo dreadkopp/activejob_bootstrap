@@ -47,6 +47,7 @@ class Job(models.Model):
 
     contact = models.ForeignKey("Contact")
     company = models.ForeignKey("Company")
+    department = models.ForeignKey("Department")
 
     states = models.ManyToManyField("State")
     categories = models.ManyToManyField("Category")
@@ -81,4 +82,15 @@ class Category(models.Model):
 
     class Meta:
         verbose_name_plural = "categories"
+        ordering = ["name"]
+
+
+class Department(models.Model):
+    id = models.CharField(max_length=2, primary_key=True)
+    name = models.CharField(max_length=32)
+
+    def __str__ (self):
+        return self.name
+
+    class Meta:
         ordering = ["name"]
