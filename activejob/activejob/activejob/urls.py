@@ -54,6 +54,7 @@ urlpatterns = [
     url(r"^sitemap",placeholder(),name="sitemap"),
     url(r"^impressum",TemplateView.as_view(template_name="web/pages/impressum.html"),name="impressum"),
     url(r"^unternehmensprofil",TemplateView.as_view(template_name="web/pages/unternehmensprofil.html"),name="unternehmensprofil"),
+    url(r"^unternehmen",TemplateView.as_view(template_name="web/pages/unternehmen.html"),name="unternehmen"),
     url(r"^jobs_rss",placeholder(),name="jobs_rss"),
     url(r"^referenzen",TemplateView.as_view(template_name="web/pages/referenzen.html"),name="referenzen"),
     url(r"^$",TemplateView.as_view(template_name="web/pages/home.html"),name="home"),
@@ -69,6 +70,7 @@ urlpatterns = [
     url(r"^bewerber_personalvermittlung",TemplateView.as_view(template_name="web/pages/bewerber_personalvermittlung.html"),name="bewerber_personalvermittlung"),
     url(r"^bewerber_arbeitsvermittlung_antworten",TemplateView.as_view(template_name="web/pages/bewerber_arbeitsvermittlung_antworten.html"),name="bewerber_arbeitsvermittlung_antworten"),
     url(r"^bewerber_arbeitsvermittlung",TemplateView.as_view(template_name="web/pages/bewerber_arbeitsvermittlung.html"),name="bewerber_arbeitsvermittlung"),
+    url(r"^bewerber",TemplateView.as_view(template_name="web/pages/bewerber.html"),name="bewerber"),
     url(r"^karriereberatung",TemplateView.as_view(template_name="web/pages/karriereberatung.html"),name="karriereberatung"),
     url(r"^karriere_activjob",TemplateView.as_view(template_name="web/pages/karriere_activjob.html"),name="karriere_activjob"),
 ]

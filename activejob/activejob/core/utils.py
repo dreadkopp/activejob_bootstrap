@@ -1,7 +1,7 @@
 def build_main_menu (active_node=None, submenu=None):
     menu_top = [
         {
-            "name": "Home",
+            "name": "",
             "active": True,
             "url": "home",
             "class": "glyphicon glyphicon-home",
@@ -12,11 +12,11 @@ def build_main_menu (active_node=None, submenu=None):
         },
         {
             "name": "Unternehmen",
-            "url": "home",
+            "url": "unternehmen",
         },
         {
             "name": "Bewerber",
-            "url": "home",
+            "url": "bewerber",
         },
     ]
 
