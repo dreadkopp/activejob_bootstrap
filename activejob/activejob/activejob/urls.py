@@ -50,7 +50,16 @@ urlpatterns = [
     url(r"^berufsfelder/(?P<slug>\w+)$",BerufsfelderView.as_view(),name="berufsfelder"),
     url(r"^kompetenzbereiche/(?P<slug>\w+)$",KompetenzbereicheView.as_view(),name="kompetenzbereiche"),
     url(r"^vorteile/(?P<slug>\w+)$",VorteileView.as_view(),name="vorteile"),
-    url(r"^kontakt",TemplateView.as_view(template_name="web/pages/kontakt.html"),name="kontakt"),
+
+    url(
+        r"^kontakt",
+        TemplateView.as_view(
+            active_node="bewerber",
+            template_name="web/pages/kontakt.html",
+        ),
+        name="kontakt",
+    ),
+
     url(r"^sitemap",placeholder(),name="sitemap"),
     url(r"^impressum",TemplateView.as_view(template_name="web/pages/impressum.html"),name="impressum"),
     url(r"^unternehmensprofil",TemplateView.as_view(template_name="web/pages/unternehmensprofil.html"),name="unternehmensprofil"),
