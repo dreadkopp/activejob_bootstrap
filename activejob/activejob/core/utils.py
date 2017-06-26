@@ -191,6 +191,9 @@ def build_main_menu(active_nodes=None):
 
     for item in menu_left:
         item["active"] = item["url"] == active_nodes.get("left")
+        if "sublist" in item:
+            for subitem in item["sublist"]:
+                subitem["active"] = subitem["url"] == active_nodes.get("sub")
 
     return {
         "menu_top": menu_top,
