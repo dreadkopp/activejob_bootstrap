@@ -26,67 +26,67 @@ def build_main_menu(active_nodes=None):
         "unternehmensprofil": [
             {
                 "name": "Unternehmensprofil",
-                "url": "unternehmensprofil"
+                "url": "unternehmensprofil",
             },
             {
                 "name": "Leitbild",
-                "url": "leitbild"
+                "url": "leitbild",
             },
             {
                 "name": "Standorte",
-                "url": "standorte"
+                "url": "standorte",
             },
             {
                 "name": "Kontakt",
-                "url": "kontakt"
+                "url": "kontakt",
             },
         ],
         "unternehmen": [
             {
                 "name": "Arbeitnehmerüberlassung",
-                "url": "arbeitnehmerueberlassung"
+                "url": "arbeitnehmerueberlassung",
             },
             {
                 "name": "Personalvermittlung",
-                "url": "personalvermittlung"
+                "url": "personalvermittlung",
             },
             {
                 "name": "Arbeitsvermittlung",
-                "url": "arbeitsvermittlung"
+                "url": "arbeitsvermittlung",
             },
             {
                 "name": "Personalanfrage",
-                "url": "personalanfrage"
+                "url": "personalanfrage",
             },
             {
                 "name": "Personalauswahl",
-                "url": "personalauswahl"
+                "url": "personalauswahl",
             },
         ],
         "bewerber": [
             {
                 "name": "Arbeitnehmerüberlassung",
-                "url": "bewerber_zeitarbeit"
+                "url": "bewerber_zeitarbeit",
             },
             {
                 "name": "Personalvermittlung",
-                "url": "bewerber_personalvermittlung"
+                "url": "bewerber_personalvermittlung",
             },
             {
                 "name": "Arbeitsvermittlung",
-                "url": "bewerber_arbeitsvermittlung"
+                "url": "bewerber_arbeitsvermittlung",
             },
             {
                 "name": "Karriereberatung",
-                "url": "karriereberatung"
+                "url": "karriereberatung",
             },
             {
                 "name": "Stellenmarkt",
-                "url": "stellenmarkt"
+                "url": "stellenmarkt",
             },
             {
                 "name": "Karriere bei activjob",
-                "url": "karriere_activjob"
+                "url": "karriere_activjob",
             },
         ],
     }
