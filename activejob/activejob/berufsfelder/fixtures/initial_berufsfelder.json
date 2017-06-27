@@ -1,0 +1,12 @@
+[
+  {
+    "fields": {
+        "title": "Einsatzgebiete und Berufsfelder",
+        "text" : "",
+        "banner_color": "green",
+        "banner_slogan": "„Als vertrauenswürdiger und verlässlicher Partner setzen wir Sie entsprechend Ihren Fähigkeiten und Qualifikationen bei unseren Kundenunternehmen ein.“",
+        "slug": "zeitarbeit"
+    },
+    "model": "berufsfelder.Berufsfelder"
+  }
+]

@@ -120,7 +120,10 @@ def build_main_menu(active_nodes=None):
                     },
                     {
                         "name": "Berufsfelder",
-                        "url": "berufsfelder",
+                        "url": reverse(
+                            "berufsfelder",
+                            args=["zeitarbeit"],
+                        ),
                     },
                     {
                         "name": "Ansprechpartner",

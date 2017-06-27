@@ -68,7 +68,15 @@ urlpatterns = [
         name="ansprechpartner",
     ),
 
-    url(r"^berufsfelder/(?P<slug>\w+)$",BerufsfelderView.as_view(),name="berufsfelder"),
+    url(
+        r"^berufsfelder/(?P<slug>\w+)$",
+        BerufsfelderView.as_view(
+            # TODO: change this dynamically (in the view?)
+            active_nodes={"top": "bewerber", "left": "bewerber_zeitarbeit", "sub": "Berufsfelder"},
+        ),
+        name="berufsfelder",
+    ),
+
     url(r"^kompetenzbereiche/(?P<slug>\w+)$",KompetenzbereicheView.as_view(),name="kompetenzbereiche"),
 
     url(
