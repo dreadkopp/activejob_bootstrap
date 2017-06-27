@@ -51,7 +51,10 @@ def build_main_menu(active_nodes=None):
                 "sublist": [
                     {
                         "name": "Kompetenzbereiche",
-                        "url": "kompetenzbereiche",
+                        "url": reverse(
+                            "kompetenzbereiche",
+                            args=["arbeitnehmerueberlassung"],
+                        ),
                     },
                     {
                         "name": "Ansprechpartner",
