@@ -1,8 +1,22 @@
 [
   {
     "fields": {
+        "name": "test_2"
+    },
+    "pk": 2,
+    "model": "referenzen.field"
+  },
+  {
+    "fields": {
+        "name": "test1"
+    },
+    "pk": 1,
+    "model": "referenzen.field"
+  },
+  {
+    "fields": {
       "name": "testjob_1",
-      "fields": 1000
+      "fields": 1
     },
     "model": "referenzen.job",
     "pk": 1
@@ -10,7 +24,7 @@
   {
     "fields": {
       "name": "testjob_2",
-      "fields": 1000
+      "fields": 1
     },
     "model": "referenzen.job",
     "pk": 2
@@ -18,7 +32,7 @@
   {
     "fields": {
       "name": "testjob_3",
-      "fields": 1000
+      "fields": 1
     },
     "model": "referenzen.job",
     "pk": 3
@@ -26,7 +40,7 @@
   {
     "fields": {
       "name": "testjob_4",
-      "fields": 1001
+      "fields": 2
     },
     "model": "referenzen.job",
     "pk": 4
@@ -34,23 +48,10 @@
   {
     "fields": {
       "name": "testjob_5",
-      "fields": 1001
+      "fields": 2
     },
     "model": "referenzen.job",
     "pk": 5
-  },
-  {
-    "fields": {
-        "name": "test1"
-    },
-    "pk": 1000,
-    "model": "referenzen.field"
-  },
-  {
-    "fields": {
-        "name": "test2"
-    },
-    "pk:": 1001,
-    "model": "referenzen.field"
   }
+
 ]

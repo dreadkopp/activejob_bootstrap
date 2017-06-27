@@ -8,15 +8,25 @@
 
 {% block middle_col %}
 
+<h3>Ein Auszug unserer Referenzprojekte</h3>
+
+<div>Unsere Personalvermittler arbeiten mit einer Reihe von Unternehmen engagiert und vertrauensvoll zusammen. Auskünfte über eine Zusammenarbeit mit uns erhalten Sie von den Ansprechpartnern unserer Kunden. Gern nennen wir Ihnen diese in einem persönlichen Gespräch.
+</div>
+</br>
+<div>Folgende Referenzprojekte konnten wir erfolgreich abschließen:*</div>
+</br>
+
 {% for node in object_list %}
-  {{ node.name }}
-  <ul>
-    {% for job in node.job_set.all %}
-    <li>
-      {{ job.name }}
-    </li>
-    {% endfor %}
-  </ul>
+  <h4>{{ node.name }}</h4>
+  <div class="inhalt further_right_list">
+    <ul>
+      {% for job in node.job_set.all %}
+      <li>
+        {{ job.name }}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
 {% endfor %}
 
 {% endblock %}
