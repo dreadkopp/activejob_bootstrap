@@ -1,5 +1,4 @@
-# TODO:
-#from django.core.urlresolvers import reverse
+from django.core.urlresolvers import reverse
 
 
 def build_main_menu(active_nodes=None):
@@ -116,7 +115,10 @@ def build_main_menu(active_nodes=None):
                     },
                     {
                         "name": "Ansprechpartner",
-                        "url": "ansprechpartner",
+                        "url": reverse(
+                            "ansprechpartner",
+                            args=["bewerber_zeitarbeit"],
+                        ),
                     },
                     {
                         "name": "Stellenmarkt AÜ",
