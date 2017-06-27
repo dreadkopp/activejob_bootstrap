@@ -131,7 +131,7 @@ def build_main_menu(active_nodes=None):
                     },
                     {
                         "name": "Stellenmarkt AÜ",
-                        "url": "stellenmarkt",
+                        "url": reverse("stellenmarkt") + "?aü",
                     },
                 ]
             },
@@ -156,7 +156,7 @@ def build_main_menu(active_nodes=None):
                     },
                     {
                         "name": "Stellenmarkt PV",
-                        "url": "stellenmarkt",
+                        "url": reverse("stellenmarkt") + "?pv",
                     },
                 ]
             },
@@ -185,7 +185,7 @@ def build_main_menu(active_nodes=None):
                     },
                     {
                         "name": "Stellenmarkt AV",
-                        "url": "stellenmarkt",
+                        "url": reverse("stellenmarkt") + "?av",
                     },
                 ]
             },
