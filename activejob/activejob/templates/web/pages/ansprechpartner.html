@@ -36,11 +36,9 @@
 
 {% endblock %}
 
-{% comment %}
-
 
 {% block banner %}
-  {% include "web/banner/{{ ansprechpartner.banner_color }}.html" with slogan="{{ ansprechpartner.banner_slogan }}"%}
+  {% with "web/banner/"|add:ansprechpartner.banner_color|add:".html" as template %}
+    {% include template with slogan=ansprechpartner.banner_slogan %}
+  {% endwith %}
 {% endblock %}
-
-{% endcomment %}

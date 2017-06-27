@@ -10,3 +10,8 @@
 -Styling
 	-.inhalt-lists styling for second line
 	-header <520px
+
+-replace banner_color and banner_slogan with construct like in vorteile.html
+
+-Vorteile:
+	-pros seems empty 

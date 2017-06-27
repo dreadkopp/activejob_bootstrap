@@ -34,5 +34,7 @@ besseren Lesbarkeit.</p>
 {% endblock %}
 
 {% block banner %}
-  {% include "web/banner/{{ kompetenzbreiche.banner_color }}.html" with slogan="{{ kompetenzbereiche.banner_slogan }}" %}
+  {% with "web/banner/"|add:kompetenzbereiche.banner_color|add:".html" as template %}
+    {% include template with slogan=kompetenzbereiche.banner_slogan %}
+  {% endwith %}
 {% endblock %}

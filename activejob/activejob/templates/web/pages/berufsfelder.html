@@ -36,5 +36,7 @@ besseren Lesbarkeit.</p>
 {% endblock %}
 
 {% block banner %}
-  {% include "web/banner/{{ berufsfelder.banner_color }}.html" with slogan="{{ berufsfelder.banner_slogan }}"%}
+  {% with "web/banner/"|add:berufsfelder.banner_color|add:".html" as template %}
+    {% include template with slogan=berufsfelder.banner_slogan %}
+  {% endwith %}
 {% endblock %}
