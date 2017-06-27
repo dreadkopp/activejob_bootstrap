@@ -13,11 +13,11 @@
 {{ kompetenzbereiche.text }}
 
 <div class="kompetenzbereiche">
-  {% for node in kompetenzbereiche.fields %}
+  {% for node in kompetenzbereiche.fields.all %}
 
     <p><strong>{{node}}</strong><p>
     <ul>
-    {% for subnode in node.jobs %}
+    {% for subnode in node.jobs.all %}
       <li>{{subnode}}</li>
     {% endfor %}
     </ul>

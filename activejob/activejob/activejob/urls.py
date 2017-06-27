@@ -77,7 +77,14 @@ urlpatterns = [
         name="berufsfelder",
     ),
 
-    url(r"^kompetenzbereiche/(?P<slug>\w+)$",KompetenzbereicheView.as_view(),name="kompetenzbereiche"),
+    url(
+        r"^kompetenzbereiche/(?P<slug>\w+)$",
+        KompetenzbereicheView.as_view(
+        # TODO: change this dynamically (in the view?)
+        active_nodes={"top": "bewerber", "left": "arbeitnehmerueberlassung", "sub": "kompetenzbereiche"},
+        ),
+        name="kompetenzbereiche"
+    ),
 
     url(
         r"^vorteile/(?P<slug>\w+)$",
