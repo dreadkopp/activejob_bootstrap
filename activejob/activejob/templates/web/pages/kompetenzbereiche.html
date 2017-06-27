@@ -11,17 +11,21 @@
 <h3>{{ kompetenzbereich.subtitle }}</h3>
 
 </br>
-{{ kompetenzbereich.text }}
+<div>{{ kompetenzbereich.text }}</div>
 </br>
-<div class="kompetenzbereiche">
-  {% for node in kompetenzbereiche.fields.all %}
+<div>
+  {% for node in kompetenzbereich.bereich_set.all %}
 
-    <p><strong>{{node}}</strong><p>
-    <ul>
-    {% for subnode in node.jobs.all %}
-      <li>{{subnode}}</li>
-    {% endfor %}
-    </ul>
+    <p><strong>{{ node.title }}</strong><p>
+      <div class="inhalt further_right_list">
+        <ul>
+          {% for subnode in node.job_set.all %}
+            <li>
+              {{ subnode.name }}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
   {% endfor %}
 </div>
 </br>
