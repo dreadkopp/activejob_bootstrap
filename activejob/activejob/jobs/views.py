@@ -21,6 +21,14 @@ class JobListView(QuickSearchFormMixin, MenuMixin, ListView):
 class JobSearchListView(SearchMixin, JobListView):
     paginate_by = 10
 
+    def dispatch(self, request, *args, **kwargs):
+        for department in ["aü", "av", "pv"]:
+            if department in request.GET:
+                request.session["stellenmarkt_department"] = department
+                break
+
+        return super().dispatch(request, *args, **kwargs)
+
 
 class JobInternListView(JobListView):
     template_name = "web/pages/karriere_activjob.html"
