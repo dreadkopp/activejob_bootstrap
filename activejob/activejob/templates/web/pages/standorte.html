@@ -5,7 +5,7 @@
 
 {% block title %}
  Standorte
- {% for node in standorte %}
+ {% for node in standorte.all %}
   {{node.name|cut:"Standort "}}
  {% endfor %}{{ block.super }}
 {% endblock %}
@@ -13,7 +13,7 @@
 {% block middle_col %}
 
 
-{% for node in standorte %}
+{% for node in standorte.locations.all %}
   <div class="location">
           <div class="location_info">
             <h3>activjob GmbH
