@@ -9,11 +9,11 @@
 {% block middle_col %}
 
 <h3>Berufsfelder und Einsatzgebiete</h3>
-
+</br>
 {{ berufsfelder.text }}
-
+</br>
 <div class="berufsfelder">
-  {% for node in berufsfelder.fields %}
+  {% for node in berufsfelder.fields.all %}
 
       <p><strong>{{ node }}</strong><p>
       <div class="inhalt">
@@ -25,7 +25,7 @@
       </div>
     {% endfor %}
 </div>
-
+</br>
 <p>
 * Die verwendete männliche Bezeichnung
 umfasst weibliche und männliche Personen. Die
@@ -36,7 +36,5 @@ besseren Lesbarkeit.</p>
 {% endblock %}
 
 {% block banner %}
-  {% with "web/banner/"|add:berufsfelder.banner_color|add:".html" as template %}
-    {% include template with slogan=berufsfelder.banner_slogan %}
-  {% endwith %}
+    {% include "web/banner/banner.html" with slogan=berufsfelder.banner_slogan color=berufsfelder.banner_color %}
 {% endblock %}
