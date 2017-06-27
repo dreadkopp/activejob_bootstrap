@@ -19,9 +19,10 @@
 <div class="ansprechpartner">
   {% for node in ansprechpartner.contacts.all %}
     <div>
-      <p><strong>{{node.name}}</strong> <img alt="{{node.name}}" src="{% static "Ansprechpartner/" %}{{ node.imageurl }}" class="contact_person_image" /></p>
+      <strong>{{node.first_name}} {{node.last_name}}</strong>
+      <img alt="{{node.name}}" src="{% static "Ansprechpartner/" %}{{ node.imageurl }}" class="contact_person_image" />
       <p>
-        {{node.stat}}<br />
+        {{node.status}}<br />
         Telefon: {{node.phone}}<br />
         E-Mail: <a href="mailto:{{node.mail}}">{{node.mail}}</a>
       </p>

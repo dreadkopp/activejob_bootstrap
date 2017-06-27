@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block title %}
-Karriere in Dresden, Leipzig, Chemnit und Bautzen{{ block.super }}
+Karriere in Dresden, Leipzig, Chemnitz und Bautzen{{ block.super }}
 {% endblock %}
 
 {% block middle_col %}
@@ -22,7 +22,8 @@ Karriere in Dresden, Leipzig, Chemnit und Bautzen{{ block.super }}
 </div>
 
 <div id="jobs_table" style="margin-top:10px">
-{% include "web/pages/stellenmarkt/stellenmarkt-table.html" %}
+  {% comment %}This is deprecated {% endcomment %}
+  {% include "web/pages/stellenmarkt/stellenmarkt-table.html" %}
 </div>
 
 {% endblock %}

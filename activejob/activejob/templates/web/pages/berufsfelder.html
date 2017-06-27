@@ -16,11 +16,13 @@
   {% for node in berufsfelder.fields %}
 
       <p><strong>{{ node }}</strong><p>
-      <ul>
-      {% for subnode in node.jobs %}
-        <li>{{subnode}}</li>
-      {% endfor %}
-      </ul>
+      <div class="inhalt">
+        <ul>
+        {% for subnode in node.jobs %}
+          <li>{{subnode}}</li>
+        {% endfor %}
+        </ul>
+      </div>
     {% endfor %}
 </div>
 
