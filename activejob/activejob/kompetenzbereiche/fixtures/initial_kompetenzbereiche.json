@@ -1,13 +1,13 @@
 [
   {
-    "field": {
+    "fields": {
       "name": "test_node"
     },
     "model": "kompetenzbereiche.job",
     "pk": 0
   },
   {
-    "field": {
+    "fields": {
       "title": "test_title",
       "jobs" : 0
     },
@@ -15,7 +15,7 @@
     "pk": 1000
   },
   {
-    "field": {
+    "fields": {
       "title" : "test_title",
       "subtitle" : "test_subtitle",
       "text" : "test_text",
