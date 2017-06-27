@@ -10,16 +10,16 @@
 
 <h3>Berufsfelder und Einsatzgebiete</h3>
 </br>
-{{ berufsfelder.text }}
+<div>{{ berufsfelder.text }}</div>
 </br>
-<div class="berufsfelder">
-  {% for node in berufsfelder.fields.all %}
+<div>
+  {% for node in berufsfelder.bereich_set.all %}
 
-      <p><strong>{{ node }}</strong><p>
-      <div class="inhalt">
+      <p><strong>{{ node.name }}</strong><p>
+      <div class="inhalt further_right_list">
         <ul>
-        {% for subnode in node.jobs %}
-          <li>{{subnode}}</li>
+        {% for subnode in node.detail_set.all %}
+          <li>{{ subnode.name }}</li>
         {% endfor %}
         </ul>
       </div>

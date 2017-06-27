@@ -3,11 +3,27 @@
     "fields": {
         "title": "Einsatzgebiete und Berufsfelder",
         "text" : "test_text",
-        "fields" : 1000,
         "banner_color": "green",
         "banner_slogan": "„Als vertrauenswürdiger und verlässlicher Partner setzen wir Sie entsprechend Ihren Fähigkeiten und Qualifikationen bei unseren Kundenunternehmen ein.“",
         "slug": "zeitarbeit"
     },
-    "model": "berufsfelder.Berufsfelder"
+    "model": "berufsfelder.Berufsfelder",
+    "pk" : 1
+  },
+  {
+    "fields": {
+      "page": 1,
+      "name": "testbereich"
+    },
+    "model": "berufsfelder.bereich",
+    "pk" : 1
+  },
+  {
+    "fields": {
+      "sector": 1,
+      "name": "testjob"
+    },
+    "model": "berufsfelder.detail",
+    "pk": 1
   }
 ]
