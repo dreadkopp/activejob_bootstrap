@@ -143,7 +143,7 @@ urlpatterns = [
     url(
         r"^leitbild$",
         TemplateView.as_view(
-            active_nodes={"top": "unternehmensprofil", "left": "Leitbild"},
+            active_nodes={"top": "unternehmensprofil", "left": "leitbild"},
             template_name="web/pages/leitbild.html",
         ),
         name="leitbild",
