@@ -14,10 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 
-from django.conf.urls import url
+from django.conf.urls import include, url
 from django.views.generic import TemplateView
 from django.conf.urls.static import static
 from django.conf import settings
+from django.contrib import admin
 
 from jobs.views import JobDetailView, JobInternListView, JobSearchListView, RSSFeed
 from ansprechpartner.views import AnsprechpartnerView
@@ -37,6 +38,11 @@ class TemplateView(QuickSearchFormMixin, MenuMixin, TemplateView):
 
 
 urlpatterns = [
+    url(
+        r'^admin/',
+        include(admin.site.urls),
+    ),
+
     url(r"^jobs$",
         JobSearchListView.as_view(
             active_nodes={"top": "bewerber", "left": "stellenmarkt"},
