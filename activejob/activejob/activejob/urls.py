@@ -63,7 +63,7 @@ urlpatterns = [
         r"^ansprechpartner/(?P<slug>\w+)$",
         AnsprechpartnerView.as_view(
             # TODO: change this dynamically (in the view?)
-            active_nodes={"top": "bewerber", "left": "bewerber_zeitarbeit"},
+            active_nodes={"top": "bewerber", "left": "bewerber_zeitarbeit", "sub": "Ansprechpartner"},
         ),
         name="ansprechpartner",
     ),
@@ -143,7 +143,7 @@ urlpatterns = [
     url(
         r"^leitbild$",
         TemplateView.as_view(
-            active_nodes={"top": "unternehmensprofil", "left": "leitbild"},
+            active_nodes={"top": "unternehmensprofil", "left": "Leitbild"},
             template_name="web/pages/leitbild.html",
         ),
         name="leitbild",

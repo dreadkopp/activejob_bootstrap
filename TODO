@@ -1,8 +1,12 @@
--Fix Views to display correct Menus
 
--Ansprechpartner / Berufsfelder / Jobs / Kompetenzbreiche:
-	-add correct objects identified via URL
+
+- Berufsfelder / Vorteile / Kompetenzbereiche
+
+- generate menus and urls at the same place
+
+-correct links
+	i.e. 'unternehmen'>'arbeitnehmerueberlassung'>'Ansprechpartner' links to 'bewerber'>'arbeitnehmerueberlassung'>'ansprechpartner'
 
 -Styling
-	-red banner background
-	-no much else. minor touchups here and there maybe but without the correct objects i cannot check
+	-.inhalt-lists styling for second line
+	-header <520px
