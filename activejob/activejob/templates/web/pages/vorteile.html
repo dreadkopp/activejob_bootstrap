@@ -9,15 +9,15 @@
 {% block middle_col %}
 
 <h3>{{ vorteile.subtitle }}</h3>
-
-<p>{{ vorteile.text }}</p>
-
+</br>
+<div>{{ vorteile.text }}</div>
+</br>
 <p><strong>Ihre Vorteile im
 Überblick:</strong></p>
 
-<div class="vorteile inhalt">
+<div class="inhalt further_right_list">
   <ul>
-    {% for node in vorteile.pros.all %}
+    {% for node in vorteile.pro_set.all %}
       <li>{{ node.text }}</li>
     {% endfor %}
   </ul>
@@ -26,5 +26,5 @@
 {% endblock %}
 
 {% block banner %}
-    {% include template with slogan=vorteile.banner_slogan color=vorteile.banner_color %}
+    {% include "web/banner/banner.html" with slogan=vorteile.banner_slogan color=vorteile.banner_color %}
 {% endblock %}

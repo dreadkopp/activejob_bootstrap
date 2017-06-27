@@ -119,7 +119,10 @@ def build_main_menu(active_nodes=None):
                 "sublist": [
                     {
                         "name": "Ihre Vorteile",
-                        "url": "vorteile",
+                        "url": reverse(
+                            "vorteile",
+                            args=["zeitarbeit"],
+                        ),
                     },
                     {
                         "name": "Berufsfelder",

@@ -30,16 +30,6 @@ body {
   margin-left: 3em;
 }
 
-/* __kompetenzbereiche, referenzen, vorteile, berufsfelder */
-
-.vorteile p, .berufsfelder p, .referenzen p, .kompetenzbereiche p {
-  margin-left: 40px;
-}
-
-.vorteile p, .berufsfelder ul, .referenzen ul, .kompetenzbereiche ul {
-  margin-left: 80px;
-}
-
 
 
 /*Header*/
