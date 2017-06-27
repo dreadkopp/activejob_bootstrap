@@ -22,7 +22,7 @@
       "fields" : 1000,
       "banner_color" : "green",
       "banner_slogan" : "test_slogan",
-      "slug" : "zeitarbeit"
+      "slug" : "arbeitnehmerueberlassung"
     },
     "model" : "kompetenzbereiche.kompetenzbereiche"
   }
