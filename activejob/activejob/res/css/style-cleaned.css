@@ -91,13 +91,23 @@ a:hover {
   color: #9b1000;
 }
 
-.menu-top .nav li.active a, .menu-top .nav li a:hover {
-    background: url("../images/menu_bg_act.gif") no-repeat;
-}
 .menu-top .nav li a {
-  background: url("../images/menu_bg.gif") no-repeat;
+  background: #eee;
 }
+
+.menu-top .nav li.active a,  .menu-top .nav li a:hover {
+  background: #fff;
+}
+
 @media (min-width: 768px) {
+
+  .menu-top .nav li.active a, .menu-top .nav li a:hover {
+      background: url("../images/menu_bg_act.gif") no-repeat;
+  }
+  .menu-top .nav li a {
+    background: url("../images/menu_bg.gif") no-repeat;
+  }
+  
   .menu-top .nav li  {
     font-weight: bold;
     display: block;
