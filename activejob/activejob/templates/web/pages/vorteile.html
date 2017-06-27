@@ -26,5 +26,7 @@
 {% endblock %}
 
 {% block banner %}
-  {% include "web/banner/{{ vorteile.banner_color }}.html" with slogan="{{ vorteile.banner_slogan }}" %}
+  {% with "web/banner/"|add:vorteile.banner_color|add:".html" as template %}
+    {% include template with slogan=vorteile.banner_slogan %}
+  {% endwith %}
 {% endblock %}
