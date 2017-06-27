@@ -50,7 +50,8 @@ INSTALLED_APPS = [
     "vorteile",
     "menus",
     "standorte",
-    
+    "referenzen",
+
 ]
 
 MIDDLEWARE = [
