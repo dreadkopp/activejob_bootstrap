@@ -67,6 +67,9 @@ class Job(models.Model):
 class Company(models.Model):
     description = models.TextField()
 
+    class Meta:
+        verbose_name_plural = "companies"
+
 
 class State(models.Model):
     id = models.CharField(max_length=2, primary_key=True)
