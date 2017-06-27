@@ -1,29 +1,32 @@
 [
   {
     "fields": {
-      "name": "test_node"
-    },
-    "model": "kompetenzbereiche.job",
-    "pk": 0
-  },
-  {
-    "fields": {
-      "title": "test_title",
-      "jobs" : 0
-    },
-    "model": "kompetenzbereiche.bereich",
-    "pk": 1000
-  },
-  {
-    "fields": {
       "title" : "test_title",
       "subtitle" : "test_subtitle",
       "text" : "test_text",
-      "fields" : 1000,
       "banner_color" : "green",
       "banner_slogan" : "test_slogan",
       "slug" : "arbeitnehmerueberlassung"
     },
-    "model" : "kompetenzbereiche.kompetenzbereiche"
+    "model" : "kompetenzbereiche.kompetenzbereich",
+    "pk" : 1
+  },
+  {
+    "fields": {
+      "title": "test_title",
+      "competencefield" : 1
+    },
+    "model": "kompetenzbereiche.bereich",
+    "pk": 1
+  },
+  {
+    "fields": {
+      "name": "test_node",
+      "field": 1
+    },
+    "model": "kompetenzbereiche.job",
+    "pk": 1
   }
+
+
 ]

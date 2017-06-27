@@ -3,15 +3,15 @@
 {% load static %}
 
 {% block title %}
-{{ kompetenzbereiche.title }}{{ block.super }}
+{{ kompetenzbereich.title }}{{ block.super }}
 {% endblock %}
 
 {% block middle_col %}
 
-<h3>{{ kompetenzbereiche.subtitle }}</h3>
+<h3>{{ kompetenzbereich.subtitle }}</h3>
 
 </br>
-{{ kompetenzbereiche.text }}
+{{ kompetenzbereich.text }}
 </br>
 <div class="kompetenzbereiche">
   {% for node in kompetenzbereiche.fields.all %}
@@ -35,5 +35,5 @@ besseren Lesbarkeit.</p>
 {% endblock %}
 
 {% block banner %}
-    {% include template with slogan=kompetenzbereiche.banner_slogan color=kompetenzbereiche.banner_color %}
+    {% include "web/banner/banner.html" with slogan=object.banner_slogan color=object.banner_color %}
 {% endblock %}
