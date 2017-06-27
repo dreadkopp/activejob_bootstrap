@@ -225,7 +225,7 @@ urlpatterns = [
     url(
         r"^bewerber_arbeitsvermittlung_antworten$",
         TemplateView.as_view(
-            active_nodes={"top": "bewerber", "left": "bewerber_arbeitsvermittlung", "sub": "bewerber_arbeitsvermittlung_antworten"},
+            active_nodes={"top": "bewerber", "left": "bewerber_arbeitsvermittlung", "sub": "Fragen und Antworten"},
             template_name="web/pages/bewerber_arbeitsvermittlung_antworten.html",
         ),
         name="bewerber_arbeitsvermittlung_antworten",
