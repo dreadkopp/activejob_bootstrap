@@ -238,6 +238,9 @@ a:hover {
 
 /* Banner */
 
+
+
+
 .header #quicksearch_container {
   padding-left: 0px;
   padding-right: 0px;
@@ -322,7 +325,7 @@ a:hover {
     left: -12%;
     right: -12%;
   }
-  
+
   #overlay_object {
     height: 290px;
     width:calc(40% - 10px);
@@ -364,6 +367,14 @@ a:hover {
   margin-bottom: 10px;
 }
 
+@media (max-width: 830px){
+    #banner {
+      height: calc(100vw / 3);
+    }
+    #overlay_object {
+      height: calc((100vw / 3) + 40px);
+    }
+}
 
 
 .headcontent .blue #banner, .headcontent .orange #banner,.headcontent .green #banner {
