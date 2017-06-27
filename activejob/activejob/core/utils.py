@@ -55,7 +55,10 @@ def build_main_menu(active_nodes=None):
                     },
                     {
                         "name": "Ansprechpartner",
-                        "url": "ansprechpartner",
+                        "url": reverse(
+                            "ansprechpartner",
+                            args=["zeitarbeit"],
+                        ),
                     },
                 ]
             },
@@ -73,7 +76,10 @@ def build_main_menu(active_nodes=None):
                     },
                     {
                         "name": "Ansprechpartner",
-                        "url": "ansprechpartner",
+                        "url": reverse(
+                            "ansprechpartner",
+                            args=["personalvermittlung"],
+                        ),
                     },
                 ]
             },
@@ -87,7 +93,10 @@ def build_main_menu(active_nodes=None):
                     },
                     {
                         "name": "Ansprechpartner",
-                        "url": "ansprechpartner",
+                        "url": reverse(
+                            "ansprechpartner",
+                            args=["arbeitsvermittlung"],
+                        ),
                     },
                 ]
             },
@@ -117,7 +126,7 @@ def build_main_menu(active_nodes=None):
                         "name": "Ansprechpartner",
                         "url": reverse(
                             "ansprechpartner",
-                            args=["bewerber_zeitarbeit"],
+                            args=["zeitarbeit"],
                         ),
                     },
                     {
@@ -140,7 +149,10 @@ def build_main_menu(active_nodes=None):
                     },
                     {
                         "name": "Ansprechpartner",
-                        "url": "ansprechpartner",
+                        "url": reverse(
+                            "ansprechpartner",
+                            args=["personalvermittlung"],
+                        ),
                     },
                     {
                         "name": "Stellenmarkt PV",
@@ -166,7 +178,10 @@ def build_main_menu(active_nodes=None):
                     },
                     {
                         "name": "Ansprechpartner",
-                        "url": "ansprechpartner",
+                        "url": reverse(
+                            "ansprechpartner",
+                            args=["arbeitsvermittlung"],
+                        ),
                     },
                     {
                         "name": "Stellenmarkt AV",
