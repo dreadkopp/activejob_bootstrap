@@ -322,6 +322,18 @@ a:hover {
     left: -12%;
     right: -12%;
   }
+  
+  #overlay_object {
+    height: 290px;
+    width:calc(40% - 10px);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 100;
+    top: -30px;
+    left: 4%;
+    float:left;
+  }
 
 /* Switch to dual-color arch when on wider screen*/
 @media (min-width: 992px) {
@@ -340,6 +352,9 @@ a:hover {
   #arch {
     margin-top: -26px;
   }
+  #overlay_object {
+    height:300px;
+  }
 
 }
 
@@ -349,17 +364,7 @@ a:hover {
   margin-bottom: 10px;
 }
 
-#overlay_object {
-  height: 300px;
-  width:calc(40% - 10px);
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: relative;
-  z-index: 100;
-  top: -30px;
-  left: 4%;
-  float:left;
-}
+
 
 .headcontent .blue #banner, .headcontent .orange #banner,.headcontent .green #banner {
   background-size:cover;
