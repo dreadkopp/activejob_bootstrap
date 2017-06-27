@@ -8,8 +8,13 @@
 
 {% block middle_col %}
 
-{% for node in fields_list %}
+{% for node in object_list %}
   {{ node.name }}
+  <ul>
+    <li>
+      {{ node.job.name }}
+    </li>
+  </ul>
 {% endfor %}
 
 {% endblock %}
