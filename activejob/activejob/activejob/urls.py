@@ -26,6 +26,7 @@ from core.utils import MenuMixin
 from jobs.mixins import QuickSearchFormMixin
 from kompetenzbereiche.views import KompetenzbereicheView
 from vorteile.views import VorteileView
+from standorte.views import StandorteView
 
 def placeholder():
     return TemplateView.as_view(template_name="web/pages/home")
@@ -144,7 +145,7 @@ urlpatterns = [
 
     url(
         r"^standorte$",
-        TemplateView.as_view(
+        StandorteView.as_view(
             active_nodes={"top": "unternehmensprofil", "left": "standorte"},
             template_name="web/pages/standorte.html",
         ),
