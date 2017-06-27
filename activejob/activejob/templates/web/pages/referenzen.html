@@ -11,9 +11,11 @@
 {% for node in object_list %}
   {{ node.name }}
   <ul>
+    {% for job in node.job_set.all %}
     <li>
-      {{ node.job.name }}
+      {{ job.name }}
     </li>
+    {% endfor %}
   </ul>
 {% endfor %}
 
