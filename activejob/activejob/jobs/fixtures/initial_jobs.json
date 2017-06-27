@@ -1606,7 +1606,7 @@
         "fields": {
             "city": "01069 Dresden",
             "fax": "0351 2502088-6",
-            "gmaps_iframe_href": "https://maps.google.de/maps?f=q&amp;source=s_q&amp;hl=de&amp;geocode=&amp;q=Reichenbachstra%C3%9Fe%2055%2001069%20Dresden&amp;aq=&amp;sll=51.032854740879024,13.74108000000001&amp;sspn=51.02853660133464,13.730780317382823&amp;ie=UTF8&amp;hq=&amp;hnear=Reichenbachstra%C3%9Fe%2055%2001069%20Dresden&amp;ll=51.032854740879024,13.74108000000001&amp;spn=51.02853660133464,13.730780317382823&amp;z=15&amp;iwloc=A&amp;output=embed",
+            "gmaps_iframe_href": "https://maps.google.de/maps?f=q&source=s_q&hl=de&geocode=&q=Reichenbachstra%C3%9Fe%2055%2001069%20Dresden&aq=&sll=51.032854740879024,13.74108000000001&sspn=51.02853660133464,13.730780317382823&ie=UTF8&hq=&hnear=Reichenbachstra%C3%9Fe%2055%2001069%20Dresden&ll=51.032854740879024,13.74108000000001&spn=51.02853660133464,13.730780317382823&z=15&iwloc=A&output=embed",
             "mail": "dresden@activ-job.com",
             "name": "Dresden",
             "phone": "0351 2502088-0",
@@ -1619,7 +1619,7 @@
         "fields": {
             "city": "02625 Bautzen",
             "fax": "03591 351399-6",
-            "gmaps_iframe_href": "https://maps.google.de/maps?f=q&amp;source=s_q&amp;hl=de&amp;geocode=&amp;q=Edisonstra%C3%9Fe%2017%2002625%20Bautzen&amp;aq=&amp;sll=51.163754359569815,14.42515000000003&amp;sspn=51.15944842826866,14.414850317382843&amp;ie=UTF8&amp;hq=&amp;hnear=Edisonstra%C3%9Fe%2017%2002625%20Bautzen&amp;ll=51.163754359569815,14.42515000000003&amp;spn=51.15944842826866,14.414850317382843&amp;z=15&amp;iwloc=A&amp;output=embed",
+            "gmaps_iframe_href": "https://maps.google.de/maps?f=q&source=s_q&hl=de&geocode=&q=Edisonstra%C3%9Fe%2017%2002625%20Bautzen&aq=&sll=51.163754359569815,14.42515000000003&sspn=51.15944842826866,14.414850317382843&ie=UTF8&hq=&hnear=Edisonstra%C3%9Fe%2017%2002625%20Bautzen&ll=51.163754359569815,14.42515000000003&spn=51.15944842826866,14.414850317382843&z=15&iwloc=A&output=embed",
             "mail": "bautzen@activ-job.com",
             "name": "Bautzen",
             "phone": "03591 351399-0",
@@ -1632,7 +1632,7 @@
         "fields": {
             "city": "04275 Leipzig",
             "fax": "0341 303792-19",
-            "gmaps_iframe_href": "https://maps.google.de/maps?f=q&amp;source=s_q&amp;hl=de&amp;geocode=&amp;q=Schlegelstra%C3%9Fe+15+04275+Leipzig&amp;sll=51.327099,12.369018&amp;sspn=0.019013,0.028367&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=Schlegelstra%C3%9Fe+15,+Leipzig+04275+Leipzig,+Sachsen&amp;ll=51.324095,12.366529&amp;spn=0.004693,0.009613&amp;z=15&amp;iwloc=A&amp;output=embed",
+            "gmaps_iframe_href": "https://maps.google.de/maps?f=q&source=s_q&hl=de&geocode=&q=Schlegelstra%C3%9Fe+15+04275+Leipzig&sll=51.327099,12.369018&sspn=0.019013,0.028367&t=m&ie=UTF8&hq=&hnear=Schlegelstra%C3%9Fe+15,+Leipzig+04275+Leipzig,+Sachsen&ll=51.324095,12.366529&spn=0.004693,0.009613&z=15&iwloc=A&output=embed",
             "mail": "leipzig@activ-job.com",
             "name": "Leipzig",
             "phone": "0341 303792-0",
@@ -1645,7 +1645,7 @@
         "fields": {
             "city": "09111 Chemnitz",
             "fax": "0371 4937582-9",
-            "gmaps_iframe_href": "https://maps.google.de/maps?f=q&amp;source=s_q&amp;hl=de&amp;geocode=&amp;q=Bahnhofstra%C3%9Fe%206%2009111%20Chemnitz&amp;aq=&amp;sll=50.83897530436071,12.929059999999936&amp;sspn=50.834639124245356,12.918760317382748&amp;ie=UTF8&amp;hq=&amp;hnear=Bahnhofstra%C3%9Fe%206%2009111%20Chemnitz&amp;ll=50.83897530436071,12.929059999999936&amp;spn=50.834639124245356,12.918760317382748&amp;z=15&amp;iwloc=A&amp;output=embed",
+            "gmaps_iframe_href": "https://maps.google.de/maps?f=q&source=s_q&hl=de&geocode=&q=Bahnhofstra%C3%9Fe%206%2009111%20Chemnitz&aq=&sll=50.83897530436071,12.929059999999936&sspn=50.834639124245356,12.918760317382748&ie=UTF8&hq=&hnear=Bahnhofstra%C3%9Fe%206%2009111%20Chemnitz&ll=50.83897530436071,12.929059999999936&spn=50.834639124245356,12.918760317382748&z=15&iwloc=A&output=embed",
             "mail": "chemnitz@activ-job.com",
             "name": "Chemnitz",
             "phone": "0371 4937582-0",
