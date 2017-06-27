@@ -51,7 +51,16 @@ urlpatterns = [
         name="job_detail"
     ),
     url(r"^test",TemplateView.as_view(template_name="web/test/test.html"), name="test"),
-    url(r"^ansprechpartner/(?P<slug>\w+)$",AnsprechpartnerView.as_view(),name="ansprechpartner"),
+
+    url(
+        r"^ansprechpartner/(?P<slug>\w+)$",
+        AnsprechpartnerView.as_view(
+            # TODO: change this dynamically (in the view?)
+            active_nodes={"top": "bewerber", "left": "bewerber_zeitarbeit"},
+        ),
+        name="ansprechpartner",
+    ),
+
     url(r"^berufsfelder/(?P<slug>\w+)$",BerufsfelderView.as_view(),name="berufsfelder"),
     url(r"^kompetenzbereiche/(?P<slug>\w+)$",KompetenzbereicheView.as_view(),name="kompetenzbereiche"),
 

@@ -17,7 +17,7 @@
 
 
 <div class="ansprechpartner">
-  {% for node in ansprechpartner.contacts %}
+  {% for node in ansprechpartner.contacts.all %}
     <div>
       <p><strong>{{node.name}}</strong> <img alt="{{node.name}}" src="{% static "Ansprechpartner/" %}{{ node.imageurl }}" class="contact_person_image" /></p>
       <p>
