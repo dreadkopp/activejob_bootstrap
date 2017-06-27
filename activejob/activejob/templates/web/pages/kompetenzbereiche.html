@@ -8,10 +8,11 @@
 
 {% block middle_col %}
 
-<h3>{{ komptenzbereiche.subtitle }}</h3>
+<h3>{{ kompetenzbereiche.subtitle }}</h3>
 
+</br>
 {{ kompetenzbereiche.text }}
-
+</br>
 <div class="kompetenzbereiche">
   {% for node in kompetenzbereiche.fields.all %}
 
@@ -23,7 +24,7 @@
     </ul>
   {% endfor %}
 </div>
-
+</br>
 <p>* Die verwendete männliche Bezeichnung
 umfasst weibliche und männliche Personen. Die
 undifferenzierte Bezeichnung dient allein der
