@@ -9,9 +9,12 @@ class Vorteile(models.Model):
     banner_slogan = models.CharField(max_length=200)
     slug = models.CharField(max_length=100)
 
+    def __str__(self):
+        return self.title
+
 class Pro(models.Model):
     text = models.CharField(max_length=1000)
     page = models.ForeignKey("Vorteile")
 
     def __str__(self):
-        return text
+        return self.text

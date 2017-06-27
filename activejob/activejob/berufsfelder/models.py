@@ -7,11 +7,20 @@ class Berufsfelder(models.Model):
     banner_slogan = models.CharField(max_length=200)
     slug = models.CharField(max_length=100)
 
+    def __str__(self):
+        return self.title
+
 class Bereich(models.Model):
     page = models.ForeignKey("Berufsfelder")
     name = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.name
 
 
 class Detail(models.Model):
     sector = models.ForeignKey("Bereich")
     name = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.name

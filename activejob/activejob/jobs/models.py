@@ -67,6 +67,9 @@ class Job(models.Model):
 class Company(models.Model):
     description = models.TextField()
 
+    def __str__(self):
+        return self.description
+
     class Meta:
         verbose_name_plural = "companies"
 
