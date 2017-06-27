@@ -1,0 +1,22 @@
+[
+    {
+      "fields": {
+        "text": "You know Switzerland? the Flag is a big Plus!"
+      },
+      "model": "vorteile.pro",
+      "pk" : 1
+    },
+    {
+        "fields": {
+            "title": "Test",
+            "subtitle": "Test_sub",
+            "text": "test_text",
+            "pros": 1,
+            "banner_color": "green",
+            "banner_slogan": "test_slogan",
+            "slug": "bewerber_zeitarbeit"
+        },
+        "model": "vorteile.vorteile"
+    }
+
+]
