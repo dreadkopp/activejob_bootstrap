@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block title %}
-{{ vorteile.titel }}{{ block.super }}
+{{ vorteile.title }}{{ block.super }}
 {% endblock %}
 
 {% block middle_col %}
@@ -17,8 +17,8 @@
 
 <div class="vorteile inhalt">
   <ul>
-    {% for node in vorteile.pros %}
-      <li>{{ node }}</li>
+    {% for node in vorteile.pros.all %}
+      <li>{{ node.text }}</li>
     {% endfor %}
   </ul>
 </div>
