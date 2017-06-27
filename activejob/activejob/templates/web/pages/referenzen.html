@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+{{ berufsfelder.title }}{{ block.super }}
+{% endblock %}
+
+{% block middle_col %}
+
+{% for node in field_list %}
+  {{ node.name }}
+{% endfor %}
+
+{% endblock %}
+
+{% block banner %}
+  {% include "web/banner/banner.html" with slogan="„Wir vermitteln Mitarbeiter, die nicht nur Ihren fachlichen Anforderungen entsprechen, sondern mit Leidenschaft und Enthusiasmus bei der Arbeit sind.“" color="blue" %}
+{% endblock %}

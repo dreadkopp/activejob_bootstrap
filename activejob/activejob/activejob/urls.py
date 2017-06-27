@@ -28,6 +28,7 @@ from jobs.mixins import QuickSearchFormMixin
 from kompetenzbereiche.views import KompetenzbereicheView
 from vorteile.views import VorteileView
 from standorte.views import StandorteView
+from referenzen.views import ReferenzenView
 
 def placeholder():
     return TemplateView.as_view(template_name="web/pages/home")
@@ -141,7 +142,7 @@ urlpatterns = [
 
     url(
         r"^referenzen$",
-        TemplateView.as_view(
+        ReferenzenView.as_view(
             active_nodes={"top": "unternehmen", "left": "referenzen"},
             template_name="web/pages/referenzen.html",
         ),
