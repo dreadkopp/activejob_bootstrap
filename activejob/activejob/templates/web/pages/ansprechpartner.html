@@ -38,7 +38,5 @@
 
 
 {% block banner %}
-  {% with "web/banner/"|add:ansprechpartner.banner_color|add:".html" as template %}
-    {% include template with slogan=ansprechpartner.banner_slogan %}
-  {% endwith %}
+    {% include "web/banner/banner.html" with slogan=ansprechpartner.banner_slogan color=ansprechpartner.banner_color %}
 {% endblock %}

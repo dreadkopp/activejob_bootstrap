@@ -253,6 +253,38 @@ a:hover {
   padding-right: 0px;
 }
 
+#banner.green {
+  background: linear-gradient(to top, #0f3a33, #185d51);
+}
+.green #overlay_object {
+  background-image:url("../banner/green_guy.png")
+}
+
+#banner.blue {
+  background: linear-gradient(to top, #0a2e43, #124d6b);
+}
+
+.blue #overlay_object {
+  background-image:url("../banner/blue_woman.png")
+}
+
+#banner.red {
+  background-image: url("../banner/banner_red_background_v2.png");
+  background-size: cover;
+}
+
+.red #overlay_object {
+  background-image:url("../banner/red_woman.png");
+}
+
+#banner.orange {
+  background: linear-gradient(to top, #ca6000, #f29500);
+}
+
+.orange #overlay_object {
+  background-image:url("../banner/orange_guy.png")
+}
+
 /*bar for splitting arch below header. #quicksearch is 100% minus the bars width wide bars color = background color of content. show only in wide view*/
 #bar {
   width: 5px;
