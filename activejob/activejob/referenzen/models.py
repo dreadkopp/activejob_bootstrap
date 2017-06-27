@@ -5,4 +5,4 @@ class Field(models.Model):
 
 class Job(models.Model):
     name = models.CharField(max_length=150)
-    field = models.ForeignKey("Field")
+    fields = models.ForeignKey("Field")

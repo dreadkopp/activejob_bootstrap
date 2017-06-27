@@ -2,7 +2,7 @@
   {
     "fields": {
       "name": "testjob_1",
-      "field": 1000
+      "fields": 1000
     },
     "model": "referenzen.job",
     "pk": 1
@@ -10,7 +10,7 @@
   {
     "fields": {
       "name": "testjob_2",
-      "field": 1000
+      "fields": 1000
     },
     "model": "referenzen.job",
     "pk": 2
@@ -18,7 +18,7 @@
   {
     "fields": {
       "name": "testjob_3",
-      "field": 1000
+      "fields": 1000
     },
     "model": "referenzen.job",
     "pk": 3
@@ -26,7 +26,7 @@
   {
     "fields": {
       "name": "testjob_4",
-      "field": 1001
+      "fields": 1001
     },
     "model": "referenzen.job",
     "pk": 4
@@ -34,7 +34,7 @@
   {
     "fields": {
       "name": "testjob_5",
-      "field": 1001
+      "fields": 1001
     },
     "model": "referenzen.job",
     "pk": 5
