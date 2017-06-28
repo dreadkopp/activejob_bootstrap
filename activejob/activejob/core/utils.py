@@ -60,7 +60,7 @@ def build_main_menu(active_nodes=None):
                         "name": "Ansprechpartner",
                         "url": reverse(
                             "ansprechpartner",
-                            args=["zeitarbeit"],
+                            args=["arbeitnehmerueberlassung"],
                         ),
                     },
                 ]
@@ -115,7 +115,7 @@ def build_main_menu(active_nodes=None):
         "bewerber": [
             {
                 "name": "Arbeitnehmerüberlassung",
-                "url": "bewerber_zeitarbeit",
+                "url": "bewerber_arbeitnehmerueberlassung",
                 "sublist": [
                     {
                         "name": "Ihre Vorteile",
@@ -135,7 +135,7 @@ def build_main_menu(active_nodes=None):
                         "name": "Ansprechpartner",
                         "url": reverse(
                             "ansprechpartner",
-                            args=["zeitarbeit"],
+                            args=["bewerber/", "arbeitnehmerueberlassung"],
                         ),
                     },
                     {
@@ -160,7 +160,7 @@ def build_main_menu(active_nodes=None):
                         "name": "Ansprechpartner",
                         "url": reverse(
                             "ansprechpartner",
-                            args=["personalvermittlung"],
+                            args=["bewerber/", "personalvermittlung"],
                         ),
                     },
                     {
@@ -189,7 +189,7 @@ def build_main_menu(active_nodes=None):
                         "name": "Ansprechpartner",
                         "url": reverse(
                             "ansprechpartner",
-                            args=["arbeitsvermittlung"],
+                            args=["bewerber/", "arbeitsvermittlung"],
                         ),
                     },
                     {
