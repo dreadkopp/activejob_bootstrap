@@ -1,10 +1,6 @@
-from django.shortcuts import render
-from django.views.generic import DetailView
-
-from jobs.mixins import QuickSearchFormMixin
-from core.utils import MenuMixin
 from .models import Ansprechpartner
+from core.views import SearchAndMenuDetailView
 
-class AnsprechpartnerView(QuickSearchFormMixin, MenuMixin, DetailView):
+class AnsprechpartnerView(SearchAndMenuDetailView):
     model = Ansprechpartner
     template_name = "web/pages/ansprechpartner.html"

@@ -1,10 +1,6 @@
-from django.shortcuts import render
-from django.views.generic import DetailView
-
 from .models import Berufsfelder
-from jobs.mixins import QuickSearchFormMixin
-from core.utils import MenuMixin
+from core.views import SearchAndMenuDetailView
 
-class BerufsfelderView(QuickSearchFormMixin, MenuMixin, DetailView):
+class BerufsfelderView(SearchAndMenuDetailView):
     model = Berufsfelder
     template_name = "web/pages/berufsfelder.html"
