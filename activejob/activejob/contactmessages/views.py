@@ -2,6 +2,7 @@ from django.contrib import messages
 from django.core.urlresolvers import reverse_lazy
 
 from .models import ContactMessage
+from .models import Personalanfrage
 from core.views import SearchAndMenuCreateView
 
 class ContactMessageView(SearchAndMenuCreateView):
@@ -15,6 +16,29 @@ class ContactMessageView(SearchAndMenuCreateView):
         "email",
         "subject",
         "message",
+    ]
+
+    def form_valid(self, form):
+        msg = "Vielen Dank! Ihre Nachricht wurde gesendet."
+        messages.success(self.request, msg)
+        return super().form_valid(form)
+
+class PersonalanfrageView(SearchAndMenuCreateView):
+    model = Personalanfrage
+    template_name = "web/pages/personalanfrage.html"
+    success_url = reverse_lazy("home")
+    fields = [
+        "company",
+        "first_name",
+        "name",
+        "street",
+        "city",
+        "phone",
+        "email",
+        "job",
+        "qualifications",
+        "location",
+        "from_date",
     ]
 
     def form_valid(self, form):
