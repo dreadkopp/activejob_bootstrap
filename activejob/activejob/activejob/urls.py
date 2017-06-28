@@ -18,6 +18,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 from contactmessages.views import ContactMessageView
+from contactmessages.views import PersonalanfrageView
 from core.views import SearchAndMenuTemplateView as TemplateView
 from jobs.views import JobDetailView, JobInternListView, JobSearchListView, RSSFeed
 from ansprechpartner.views import AnsprechpartnerView
@@ -198,7 +199,7 @@ urlpatterns = [
 
     url(
         r"^personalanfrage$",
-        TemplateView.as_view(
+        PersonalanfrageView.as_view(
             active_nodes={"top": "unternehmen", "left": "personalanfrage"},
             template_name="web/pages/personalanfrage.html",
         ),
