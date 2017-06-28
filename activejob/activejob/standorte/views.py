@@ -1,10 +1,7 @@
-from django.views.generic import ListView
-
-from core.utils import MenuMixin
-from jobs.mixins import QuickSearchFormMixin
+from core.views import SearchAndMenuListView
 from jobs.models import Location
 
 
-class StandorteView(QuickSearchFormMixin, MenuMixin, ListView):
+class StandorteView(SearchAndMenuListView):
     template_name = "web/pages/standorte.html"
     model = Location

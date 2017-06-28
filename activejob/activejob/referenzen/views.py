@@ -1,9 +1,6 @@
-from django.shortcuts import render
-from django.views.generic import ListView
 from .models import Field
-from jobs.mixins import QuickSearchFormMixin
-from core.utils import MenuMixin
+from core.views import SearchAndMenuListView
 
-class ReferenzenView(QuickSearchFormMixin, MenuMixin, ListView):
+class ReferenzenView(SearchAndMenuListView):
     template_name = "web/pages/referenzen.html"
     model = Field

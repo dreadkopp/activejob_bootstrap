@@ -15,16 +15,12 @@ Including another URLconf
 """
 
 from django.conf.urls import include, url
-from django.views.generic import TemplateView
-from django.conf.urls.static import static
-from django.conf import settings
 from django.contrib import admin
 
+from core.views import SearchAndMenuTemplateView as TemplateView
 from jobs.views import JobDetailView, JobInternListView, JobSearchListView, RSSFeed
 from ansprechpartner.views import AnsprechpartnerView
 from berufsfelder.views import BerufsfelderView
-from core.utils import MenuMixin
-from jobs.mixins import QuickSearchFormMixin
 from kompetenzbereiche.views import KompetenzbereicheView
 from vorteile.views import VorteileView
 from standorte.views import StandorteView
@@ -33,10 +29,6 @@ from referenzen.views import ReferenzenView
 def placeholder():
     return TemplateView.as_view(template_name="web/pages/home")
 
-
-# TODO: move this stuff somewhere else
-class TemplateView(QuickSearchFormMixin, MenuMixin, TemplateView):
-    pass
 
 
 urlpatterns = [

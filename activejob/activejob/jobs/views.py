@@ -1,18 +1,16 @@
 from django.contrib.syndication.views import Feed
-from django.shortcuts import render
-from django.views.generic import DetailView, ListView
 
+from .mixins import SearchMixin
 from .models import Job
-from core.utils import MenuMixin
-from .mixins import QuickSearchFormMixin, SearchMixin
+from core.views import SearchAndMenuDetailView, SearchAndMenuListView
 
 
-class JobDetailView(QuickSearchFormMixin, MenuMixin, DetailView):
+class JobDetailView(SearchAndMenuDetailView):
     model = Job
     template_name = "web/pages/stellenmarkt/job-detail.html"
 
 
-class JobListView(QuickSearchFormMixin, MenuMixin, ListView):
+class JobListView(SearchAndMenuListView):
     model = Job
     template_name = "web/pages/stellenmarkt.html"
     paginate_by = 10

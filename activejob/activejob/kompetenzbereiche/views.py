@@ -1,10 +1,6 @@
-from django.shortcuts import render
-from django.views.generic import DetailView
-
 from .models import Kompetenzbereich
-from jobs.mixins import QuickSearchFormMixin
-from core.utils import MenuMixin
+from core.views import SearchAndMenuDetailView
 
-class KompetenzbereicheView(QuickSearchFormMixin, MenuMixin, DetailView):
+class KompetenzbereicheView(SearchAndMenuDetailView):
     model = Kompetenzbereich
     template_name = "web/pages/kompetenzbereiche.html"
