@@ -17,6 +17,7 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+from contactmessages.views import ContactMessageView
 from core.views import SearchAndMenuTemplateView as TemplateView
 from jobs.views import JobDetailView, JobInternListView, JobSearchListView, RSSFeed
 from ansprechpartner.views import AnsprechpartnerView
@@ -90,9 +91,8 @@ urlpatterns = [
 
     url(
         r"^kontakt$",
-        TemplateView.as_view(
+        ContactMessageView.as_view(
             active_nodes={"top": "unternehmensprofil", "left": "kontakt"},
-            template_name="web/pages/kontakt.html",
         ),
         name="kontakt",
     ),
