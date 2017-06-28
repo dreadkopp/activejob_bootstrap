@@ -8,7 +8,7 @@ class Berufsfelder(models.Model):
     slug = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.title
+        return self.slug
 
 class Bereich(models.Model):
     page = models.ForeignKey("Berufsfelder")
