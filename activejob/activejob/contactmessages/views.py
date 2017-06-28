@@ -26,7 +26,7 @@ class ContactMessageView(SearchAndMenuCreateView):
 class PersonalanfrageView(SearchAndMenuCreateView):
     model = Personalanfrage
     template_name = "web/pages/personalanfrage.html"
-    success_url = reverse_lazy("home")
+    success_url = reverse_lazy("unternehmen")
     fields = [
         "company",
         "first_name",
