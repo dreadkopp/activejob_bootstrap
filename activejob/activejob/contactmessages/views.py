@@ -5,7 +5,16 @@ from .models import ContactMessage
 from .models import Personalanfrage
 from core.views import SearchAndMenuCreateView
 
-class ContactMessageView(SearchAndMenuCreateView):
+
+
+class SuccessMessageMixin:
+    def form_valid(self, form):
+        msg = "Vielen Dank! Ihre Nachricht wurde gesendet."
+        messages.success(self.request, msg)
+        return super().form_valid(form)
+
+
+class ContactMessageView(SuccessMessageMixin, SearchAndMenuCreateView):
     model = ContactMessage
     template_name = "web/pages/kontakt.html"
     success_url = reverse_lazy("home")
@@ -18,12 +27,7 @@ class ContactMessageView(SearchAndMenuCreateView):
         "message",
     ]
 
-    def form_valid(self, form):
-        msg = "Vielen Dank! Ihre Nachricht wurde gesendet."
-        messages.success(self.request, msg)
-        return super().form_valid(form)
-
-class PersonalanfrageView(SearchAndMenuCreateView):
+class PersonalanfrageView(SuccessMessageMixin, SearchAndMenuCreateView):
     model = Personalanfrage
     template_name = "web/pages/personalanfrage.html"
     success_url = reverse_lazy("home")
@@ -40,8 +44,3 @@ class PersonalanfrageView(SearchAndMenuCreateView):
         "location",
         "from_date",
     ]
-
-    def form_valid(self, form):
-        msg = "Vielen Dank! Ihre Nachricht wurde gesendet."
-        messages.success(self.request, msg)
-        return super().form_valid(form)
