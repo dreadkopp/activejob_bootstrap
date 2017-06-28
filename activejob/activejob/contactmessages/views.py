@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.core.urlresolvers import reverse_lazy
 
 from .models import ContactMessage
@@ -15,3 +16,8 @@ class ContactMessageView(SearchAndMenuCreateView):
         "subject",
         "message",
     ]
+
+    def form_valid(self, form):
+        msg = "Vielen Dank! Ihre Nachricht wurde gesendet."
+        messages.success(self.request, msg)
+        return super().form_valid(form)
