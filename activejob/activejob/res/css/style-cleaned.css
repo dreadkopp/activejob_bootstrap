@@ -107,7 +107,7 @@ a:hover {
   .menu-top .nav li a {
     background: url("../images/menu_bg.gif") no-repeat;
   }
-  
+
   .menu-top .nav li  {
     font-weight: bold;
     display: block;
@@ -272,7 +272,7 @@ a:hover {
 }
 
 #banner.red {
-  background-image: url("../banner/banner_red_background_v2.png");
+  background-image: url("../banner/banner_red_background.jpg");
   background-size: cover;
 }
 
