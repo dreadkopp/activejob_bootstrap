@@ -19,7 +19,7 @@ from django.contrib import admin
 
 from contactmessages.views import ContactMessageView
 from contactmessages.views import PersonalanfrageView
-from core.views import SearchAndMenuTemplateView as TemplateView
+from core.views import SearchAndMenuTemplateView as TemplateView, SitemapView
 from jobs.views import JobDetailView, JobInternListView, JobSearchListView, RSSFeed
 from ansprechpartner.views import AnsprechpartnerView
 from berufsfelder.views import BerufsfelderView
@@ -96,7 +96,13 @@ urlpatterns = [
         name="kontakt",
     ),
 
-    url(r"^sitemap",placeholder(),name="sitemap"),
+    url(r"^sitemap$",
+        SitemapView.as_view(
+            active_nodes={"top": "home", "left": "unternehmensprofil"},
+            template_name="web/pages/sitemap.html",
+        ),
+        name="sitemap",
+        ),
 
     url(
         r"^impressum$",
