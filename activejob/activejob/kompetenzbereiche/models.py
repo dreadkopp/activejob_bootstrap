@@ -11,12 +11,19 @@ class Kompetenzbereich(models.Model):
     def __str__(self):
         return self.slug
 
+    class Meta:
+        verbose_name_plural = "Kompetenzbereiche"
+
+
 class Bereich(models.Model):
     title = models.CharField(max_length=200)
     competencefield = models.ForeignKey("Kompetenzbereich")
 
     def __str__(self):
         return self.title
+
+    class Meta:
+        verbose_name_plural = "Bereiche"        
 
 class Job(models.Model):
     name = models.CharField(max_length=200)

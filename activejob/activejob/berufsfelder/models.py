@@ -10,12 +10,18 @@ class Berufsfelder(models.Model):
     def __str__(self):
         return self.slug
 
+    class Meta:
+        verbose_name_plural = "Berufsfelder"
+
 class Bereich(models.Model):
     page = models.ForeignKey("Berufsfelder")
     name = models.CharField(max_length=200)
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        verbose_name_plural = "Bereiche"
 
 
 class Detail(models.Model):
