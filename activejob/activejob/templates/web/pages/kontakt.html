@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% load static %}
+{% load bootstrap3 %}
 
 {% block title %}
 Kontakt{{ block.super }}
@@ -23,112 +24,11 @@ Kontakt{{ block.super }}
 
         <form action="{% url 'kontakt' %}" method="post"
         enctype="multipart/form-data">
-          <div>
-            <div class="formcontent time" id=
-            "nrkontakt861">
-              <input class="form-control" type="hidden" name="time" value=
-              "{% now "jS F Y H:i" %}" />
-            </div>
-
-            <div class="formcontent seitenTitel" id=
-            "nrkontakt862">
-              <input type="hidden" name="seitenTitel"
-              value="Kontakt" />
-            </div>
-
-            <div class="formcontent formId" id=
-            "nrkontakt863">
-              <input type="hidden" name="formId"
-              value="86" />
-            </div>
-
-            <div class="formcontent 87" id=
-            "nrkontakt864">
-              <span class="fieldname">Name*:</span>
-
-              <div class="  formularzeile">
-                <div class="formcontent 87" id=
-                "nrkontakt1">
-                  <input class="form-control" type="text" name="87" value=
-                  "" />
-                </div>
-              </div>
-            </div>
-
-            <div class="formcontent 88" id=
-            "nrkontakt865">
-              <span class=
-              "fieldname">Vorname*:</span>
-
-              <div class="  formularzeile">
-                <div class="formcontent 88" id=
-                "nrkontakt1">
-                  <input class="form-control" type="text" name="88" value=
-                  "" />
-                </div>
-              </div>
-            </div>
-
-            <div class="formcontent 89" id=
-            "nrkontakt866">
-              <span class="fieldname">Firma:</span>
-
-              <div class="  formularzeile">
-                <div class="formcontent 89" id=
-                "nrkontakt1">
-                  <input class="form-control" type="text" name="89" value=
-                  "" />
-                </div>
-              </div>
-            </div>
-
-            <div class="formcontent 90" id=
-            "nrkontakt867">
-              <span class="fieldname">E-Mail*:</span>
-
-              <div class="  formularzeile">
-                <div class="formcontent 90" id=
-                "nrkontakt1">
-                  <input class="form-control" type="text" name="90" value=
-                  "" />
-                </div>
-              </div>
-            </div>
-
-            <div class="formcontent 91" id=
-            "nrkontakt868">
-              <span class=
-              "fieldname">Betreff*:</span>
-
-              <div class="  formularzeile">
-                <div class="formcontent 91" id=
-                "nrkontakt1">
-                  <input class="form-control" type="text" name="91" value=
-                  "" />
-                </div>
-              </div>
-            </div>
-
-            <div class="formcontent 92" id=
-            "nrkontakt869">
-              <span class="fieldname">Ihre
-              Mitteilung*:</span>
-
-              <div class="  formularzeile">
-                <div class="formcontent 92" id=
-                "nrkontakt1">
-                  <div>
-                    <textarea class="form-control"  name="92">
-                    </textarea>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        {% csrf_token %}
+        {% bootstrap_form form layout="inline" %}
 
           <div class="submit">
-            <input class="form-control" type="submit" name=
-            "submitkontakt86" class="savebutton"
+            <input class="form-control" type="submit" class="savebutton"
             value="Senden" />
           </div>
         </form>
