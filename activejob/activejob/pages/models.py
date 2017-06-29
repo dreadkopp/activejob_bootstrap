@@ -7,4 +7,7 @@ class Page(models.Model):
     text = models.TextField(max_length=2000)
     banner_color = models.CharField(max_length=6)
     banner_slogan = models.CharField(max_length=128)
+    menu_top_entry = models.CharField(max_length=64)
+    menu_left_entry = models.CharField(max_length=64)
+    menu_left_sub_entry = models.CharField(max_length=64)
     slug = models.CharField(max_length=64)
