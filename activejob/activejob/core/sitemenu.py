@@ -66,7 +66,10 @@ menu_items = {
             "sublist": [
                 {
                     "name": "Kompetenzbereiche",
-                    "url": "kompetenzbereiche",
+                    "url": reverse_lazy(
+                        "kompetenzbereiche",
+                        args=["personalvermittlung"],
+                    ),
                 },
                 {
                     "name": "Referenzen",
@@ -90,7 +93,10 @@ menu_items = {
             "sublist": [
                 {
                     "name": "Kompetenzbereiche",
-                    "url": "kompetenzbereiche",
+                    "url": reverse_lazy(
+                        "kompetenzbereiche",
+                        args=["arbeitsvermittlung"],
+                    ),
                 },
                 {
                     "name": "Ansprechpartner",
@@ -148,11 +154,17 @@ menu_items = {
             "sublist": [
                 {
                     "name": "Ihre Vorteile",
-                    "url": "vorteile",
+                    "url": reverse_lazy(
+                        "vorteile",
+                        args=["personalvermittlung"],
+                    ),
                 },
                 {
                     "name": "Berufsfelder",
-                    "url": "berufsfelder",
+                    "url": reverse_lazy(
+                        "berufsfelder",
+                        args=["personalvermittlung"],
+                    ),
                 },
                 {
                     "name": "Ansprechpartner",
@@ -173,11 +185,17 @@ menu_items = {
             "sublist": [
                 {
                     "name": "Ihre Vorteile",
-                    "url": "vorteile",
+                    "url": reverse_lazy(
+                        "vorteile",
+                        args=["arbeitsvermittlung"],
+                    ),
                 },
                 {
                     "name": "Berufsfelder",
-                    "url": "berufsfelder",
+                    "url": reverse_lazy(
+                        "berufsfelder",
+                        args=["arbeitsvermittlung"],
+                    ),
                 },
                 {
                     "name": "Fragen und Antworten",

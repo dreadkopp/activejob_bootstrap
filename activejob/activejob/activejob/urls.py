@@ -54,7 +54,7 @@ urlpatterns = [
         r"^kompetenzbereiche/(?P<slug>\w+)$",
         KompetenzbereicheView.as_view(
             # TODO: change this dynamically (in the view?)
-            active_nodes={"top": "bewerber", "left": "arbeitnehmerueberlassung", "sub": "Kompetenzbereiche"},
+            active_nodes={"top": "unternehmen", "left": "arbeitnehmerueberlassung", "sub": "Kompetenzbereiche"},
         ),
         name="kompetenzbereiche"
     ),
@@ -120,7 +120,7 @@ urlpatterns = [
     url(
         r"^referenzen/(?P<slug>\w+)$",
         ReferenzenView.as_view(
-            active_nodes={"top": "unternehmen", "left": "referenzen"},
+            active_nodes={"top": "unternehmen", "left": "personalvermittlung", "sub": "Referenzen"},
             template_name="web/pages/referenzen.html",
         ),
         name="referenzen",

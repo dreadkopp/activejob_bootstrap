@@ -2,14 +2,11 @@
 
 -correct links
 	i.e. 'unternehmen'>'arbeitnehmerueberlassung'>'Ansprechpartner' links to 'bewerber'>'arbeitnehmerueberlassung'>'ansprechpartner'
+	- vorteile / kompetenzbereiche / berufsfelder / referenze like ansprechpartner
+
 
 -Styling
-	-.inhalt-lists styling for second line
-
--fill vorteile/referenze/kompetenzbereiche/berufsfelder with real data
 
 -referenzen aktuelle Projekte
 	->https://www.activ-job.com/referenzen.html
 	- das original erscheint mir etwas komisch. Was genau wird hier dargestellt?
-
--newlines in passed texts
