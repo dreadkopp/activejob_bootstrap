@@ -9,22 +9,22 @@ class SearchMixin:
         request = self.request
         session = request.session
 
-        if "stellenmarkt_categories" not in session:
-            session["stellenmarkt_categories"] = [
+        if "jobs_categories" not in session:
+            session["jobs_categories"] = [
                 category.id for category in Category.objects.all()
             ]
 
         if "q" in request.GET:
-            session["stellenmarkt_q"] = request.GET.get("q")
-            session["stellenmarkt_states"] = request.GET.get("states")
-            session["stellenmarkt_department"] = request.GET.get("department")
+            session["jobs_q"] = request.GET.get("q")
+            session["jobs_states"] = request.GET.get("states")
+            session["jobs_department"] = request.GET.get("department")
 
-            session["stellenmarkt_categories"] = request.GET.getlist("categories") \
+            session["jobs_categories"] = request.GET.getlist("categories") \
                 or [category.id for category in Category.objects.all()]
 
         queryset = super().get_queryset().distinct()
 
-        self.q = session.get("stellenmarkt_q")
+        self.q = session.get("jobs_q")
         if self.q:
             filter = (
                 Q(title__icontains=self.q) |
@@ -38,15 +38,15 @@ class SearchMixin:
 
             queryset = queryset.filter(filter)
 
-        self.states = session.get("stellenmarkt_states")
+        self.states = session.get("jobs_states")
         if self.states:
             queryset = queryset.filter(states__in=[self.states])
 
-        self.department = session.get("stellenmarkt_department")
+        self.department = session.get("jobs_department")
         if self.department:
             queryset = queryset.filter(department=self.department)
 
-        self.categories = session.get("stellenmarkt_categories")
+        self.categories = session.get("jobs_categories")
         if self.categories:
             queryset = queryset.filter(categories__in=self.categories)
 
