@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Kompetenzbereich(models.Model):
     title = models.CharField(max_length=150)
     subtitle = models.CharField(max_length=200)
@@ -24,6 +25,7 @@ class Bereich(models.Model):
 
     class Meta:
         verbose_name_plural = "Bereiche"
+
 
 class Job(models.Model):
     name = models.CharField(max_length=200)

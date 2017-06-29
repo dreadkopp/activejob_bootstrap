@@ -15,6 +15,7 @@ class Vorteile(models.Model):
     class Meta:
         verbose_name_plural = "Vorteile"
 
+
 class Pro(models.Model):
     text = models.CharField(max_length=1000)
     page = models.ForeignKey("Vorteile")

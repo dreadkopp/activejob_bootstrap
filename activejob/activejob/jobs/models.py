@@ -22,7 +22,6 @@ class Contact(models.Model):
         ordering = ["-priority"]
 
 
-
 class Location(models.Model):
     name = models.CharField(max_length=100)
     city = models.CharField(max_length=100)
@@ -59,7 +58,6 @@ class Job(models.Model):
     def get_absolute_url(self):
         return reverse("job_detail", args=[self.pk, self.slug])
 
-
     class Meta:
         ordering = ["-changed_at"]
 
@@ -78,7 +76,7 @@ class State(models.Model):
     id = models.CharField(max_length=2, primary_key=True)
     name = models.CharField(max_length=32)
 
-    def __str__ (self):
+    def __str__(self):
         return self.name
 
     class Meta:
@@ -88,7 +86,7 @@ class State(models.Model):
 class Category(models.Model):
     name = models.CharField(max_length=32)
 
-    def __str__ (self):
+    def __str__(self):
         return self.name
 
     class Meta:
@@ -100,7 +98,7 @@ class Department(models.Model):
     id = models.CharField(max_length=2, primary_key=True)
     name = models.CharField(max_length=32)
 
-    def __str__ (self):
+    def __str__(self):
         return self.name
 
     class Meta:

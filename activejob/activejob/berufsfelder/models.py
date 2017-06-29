@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Berufsfelder(models.Model):
     title = models.CharField(max_length=150)
     text = models.TextField(max_length=1000)
@@ -12,6 +13,7 @@ class Berufsfelder(models.Model):
 
     class Meta:
         verbose_name_plural = "Berufsfelder"
+
 
 class Bereich(models.Model):
     page = models.ForeignKey("Berufsfelder")

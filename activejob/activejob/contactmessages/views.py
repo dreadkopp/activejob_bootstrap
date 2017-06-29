@@ -25,6 +25,7 @@ class ContactMessageView(SuccessMessageMixin, SearchAndMenuCreateView):
         "message",
     ]
 
+
 class PersonalanfrageView(SuccessMessageMixin, SearchAndMenuCreateView):
     model = Personalanfrage
     template_name = "web/pages/personalanfrage.html"
