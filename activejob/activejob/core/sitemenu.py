@@ -132,7 +132,7 @@ menu_items = {
                     "name": "Berufsfelder",
                     "url": reverse_lazy(
                         "berufsfelder",
-                        args=["zeitarbeit"],
+                        args=["bewerber/" , "arbeitnehmerueberlassung"],
                     ),
                 },
                 {
@@ -163,7 +163,7 @@ menu_items = {
                     "name": "Berufsfelder",
                     "url": reverse_lazy(
                         "berufsfelder",
-                        args=["personalvermittlung"],
+                        args=["bewerber/", "personalvermittlung"],
                     ),
                 },
                 {
@@ -194,7 +194,7 @@ menu_items = {
                     "name": "Berufsfelder",
                     "url": reverse_lazy(
                         "berufsfelder",
-                        args=["arbeitsvermittlung"],
+                        args=["bewerber/", "arbeitsvermittlung"],
                     ),
                 },
                 {

@@ -42,10 +42,8 @@ urlpatterns = [
     ),
 
     url(
-        r"^berufsfelder/(?P<slug>\w+)$",
+        r"^berufsfelder/(:?(?P<variant>\w+)/)?(?P<slug>\w+)$",
         BerufsfelderView.as_view(
-            # TODO: change this dynamically (in the view?)
-            active_nodes={"top": "bewerber", "left": "bewerber_zeitarbeit", "sub": "Berufsfelder"},
         ),
         name="berufsfelder",
     ),
