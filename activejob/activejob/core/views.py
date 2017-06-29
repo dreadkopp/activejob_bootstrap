@@ -1,7 +1,7 @@
 from django.views.generic import CreateView, DetailView, ListView, TemplateView
 from .mixins import MenuMixin
 from jobs.mixins import QuickSearchFormMixin
-from .utils import menu_items
+from .sitemenu import menu_items
 
 
 class SearchAndMenuCreateView(QuickSearchFormMixin, MenuMixin, CreateView):
