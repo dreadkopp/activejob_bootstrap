@@ -1,5 +1,4 @@
 from django.db import models
-from datetime import datetime
 
 
 class ContactMessage(models.Model):
@@ -11,8 +10,9 @@ class ContactMessage(models.Model):
     subject = models.CharField("Betreff", max_length=64)
     message = models.TextField("Mitteilung")
 
-    def __str__ (self):
+    def __str__(self):
         return "{} {}".format(self.first_name, self.name)
+
 
 class Personalanfrage(models.Model):
     created = models.DateTimeField(auto_now_add=True)
@@ -28,7 +28,7 @@ class Personalanfrage(models.Model):
     location = models.CharField("Einsatzort/Gebiet", max_length=64)
     from_date = models.CharField("Einsatzbeginn", max_length=32)
 
-    def __str__ (self):
+    def __str__(self):
         return "{} {}".format(self.company, self.job)
 
     class Meta:

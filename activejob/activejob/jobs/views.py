@@ -38,7 +38,7 @@ class JobInternListView(JobListView):
 class RSSFeed(Feed):
     title = "Stellenmarkt activjob GmbH"
     link = "https://www.activ-job.com"
-    description =  "Stellenmarkt activjob GmbH"
+    description = "Stellenmarkt activjob GmbH"
 
     def items(self):
         return Job.objects.all()

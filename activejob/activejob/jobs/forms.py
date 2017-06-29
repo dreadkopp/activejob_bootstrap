@@ -1,5 +1,5 @@
 from django import forms
-from .models import Category, Department, Job, State
+from .models import Category, Department, State
 
 
 class QuickSearchForm(forms.Form):

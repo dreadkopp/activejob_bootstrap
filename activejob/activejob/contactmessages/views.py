@@ -1,10 +1,8 @@
 from django.contrib import messages
 from django.core.urlresolvers import reverse_lazy
 
-from .models import ContactMessage
-from .models import Personalanfrage
+from .models import ContactMessage, Personalanfrage
 from core.views import SearchAndMenuCreateView
-
 
 
 class SuccessMessageMixin:
@@ -26,6 +24,7 @@ class ContactMessageView(SuccessMessageMixin, SearchAndMenuCreateView):
         "subject",
         "message",
     ]
+
 
 class PersonalanfrageView(SuccessMessageMixin, SearchAndMenuCreateView):
     model = Personalanfrage

@@ -1,19 +1,3 @@
-"""activejob URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/1.11/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  url(r'^$', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  url(r'^$', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.conf.urls import url, include
-    2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
-"""
-
 from django.conf.urls import include, url
 from django.contrib import admin
 
@@ -49,7 +33,6 @@ urlpatterns = [
         ),
         name="job_detail"
     ),
-    url(r"^test",TemplateView.as_view(template_name="web/test/test.html"), name="test"),
 
     url(
         r"^ansprechpartner/(:?(?P<variant>\w+)/)?(?P<slug>\w+)$",
@@ -70,8 +53,8 @@ urlpatterns = [
     url(
         r"^kompetenzbereiche/(?P<slug>\w+)$",
         KompetenzbereicheView.as_view(
-        # TODO: change this dynamically (in the view?)
-        active_nodes={"top": "bewerber", "left": "arbeitnehmerueberlassung", "sub": "Kompetenzbereiche"},
+            # TODO: change this dynamically (in the view?)
+            active_nodes={"top": "bewerber", "left": "arbeitnehmerueberlassung", "sub": "Kompetenzbereiche"},
         ),
         name="kompetenzbereiche"
     ),
@@ -79,8 +62,8 @@ urlpatterns = [
     url(
         r"^vorteile/(?P<slug>\w+)$",
         VorteileView.as_view(
-        # TODO: change this dynamically (in the view?)
-        active_nodes={"top": "bewerber", "left": "bewerber_zeitarbeit", "sub": "Ihre Vorteile"},
+            # TODO: change this dynamically (in the view?)
+            active_nodes={"top": "bewerber", "left": "bewerber_zeitarbeit", "sub": "Ihre Vorteile"},
         ),
         name="vorteile",
     ),
@@ -178,6 +161,7 @@ urlpatterns = [
         name="arbeitnehmerueberlassung",
     ),
 
+    # TODO: What is this?
     url(r"^personalvermittlung_referenzen",TemplateView.as_view(template_name="web/pages/personalvermittlung_referenzen.html"),name="personalvermittlung_referenzen"),
 
     url(
