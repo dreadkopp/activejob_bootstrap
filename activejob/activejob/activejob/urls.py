@@ -29,10 +29,6 @@ from standorte.views import StandorteView
 from referenzen.views import ReferenzenView
 from pages.views import PageView
 
-def placeholder():
-    return TemplateView.as_view(template_name="web/pages/home")
-
-
 
 urlpatterns = [
     url(
