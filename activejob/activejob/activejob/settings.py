@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     "standorte",
     "referenzen",
     "contactmessages",
+    "pages",
 ]
 
 MIDDLEWARE = [

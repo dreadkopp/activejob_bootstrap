@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+{{ page.title }}{{ block.super }}
+{% endblock %}
+
+{% block middle_col %}
+
+<h3>{{ page.subtitle }}</h3>
+</br>
+<div>{{ page.text|safe }}</div>
+
+
+{% endblock %}
+
+{% block banner %}
+    {% include "web/banner/banner.html" with slogan=page.banner_slogan color=page.banner_color %}
+{% endblock %}
