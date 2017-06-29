@@ -11,7 +11,7 @@
 <h3>{{ kompetenzbereich.subtitle }}</h3>
 
 </br>
-<div>{{ kompetenzbereich.text }}</div>
+<div>{{ kompetenzbereich.text|linebreaks }}</div>
 </br>
 <div>
   {% for node in kompetenzbereich.bereich_set.all %}

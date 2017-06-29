@@ -4,7 +4,7 @@ from django.db import models
 class Vorteile(models.Model):
     title = models.CharField(max_length=150)
     subtitle = models.CharField(max_length=200)
-    text = models.CharField(max_length=1000)
+    text = models.TextField(max_length=1000)
     banner_color = models.CharField(max_length=6)
     banner_slogan = models.CharField(max_length=200)
     slug = models.CharField(max_length=100)

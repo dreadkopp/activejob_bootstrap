@@ -3,7 +3,7 @@ from django.db import models
 class Kompetenzbereich(models.Model):
     title = models.CharField(max_length=150)
     subtitle = models.CharField(max_length=200)
-    text = models.CharField(max_length=1000)
+    text = models.TextField(max_length=1000)
     banner_color = models.CharField(max_length=6)
     banner_slogan = models.CharField(max_length=200)
     slug = models.CharField(max_length=100)
@@ -23,7 +23,7 @@ class Bereich(models.Model):
         return self.title
 
     class Meta:
-        verbose_name_plural = "Bereiche"        
+        verbose_name_plural = "Bereiche"
 
 class Job(models.Model):
     name = models.CharField(max_length=200)

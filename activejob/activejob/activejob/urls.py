@@ -138,7 +138,7 @@ urlpatterns = [
     ),
 
     url(
-        r"^referenzen$",
+        r"^referenzen/(?P<slug>\w+)$",
         ReferenzenView.as_view(
             active_nodes={"top": "unternehmen", "left": "referenzen"},
             template_name="web/pages/referenzen.html",

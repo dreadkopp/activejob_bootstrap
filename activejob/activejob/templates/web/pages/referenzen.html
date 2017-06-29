@@ -3,20 +3,17 @@
 {% load static %}
 
 {% block title %}
-activJob Referenzen in der Personalvermittlung{{ block.super }}
+{{ page.title }}{{ block.super }}
 {% endblock %}
 
 {% block middle_col %}
 
-<h3>Ein Auszug unserer Referenzprojekte</h3>
+<h3>{{ page.subtitle }}</h3>
 
-<div>Unsere Personalvermittler arbeiten mit einer Reihe von Unternehmen engagiert und vertrauensvoll zusammen. Auskünfte über eine Zusammenarbeit mit uns erhalten Sie von den Ansprechpartnern unserer Kunden. Gern nennen wir Ihnen diese in einem persönlichen Gespräch.
-</div>
-</br>
-<div>Folgende Referenzprojekte konnten wir erfolgreich abschließen:*</div>
+<div>{{ page.text|linebreaks }}</div>
 </br>
 
-{% for node in object_list %}
+{% for node in page.field_set.all %}
   <h4>{{ node.name }}</h4>
   <div class="inhalt further_right_list">
     <ul>
@@ -32,5 +29,5 @@ activJob Referenzen in der Personalvermittlung{{ block.super }}
 {% endblock %}
 
 {% block banner %}
-  {% include "web/banner/banner.html" with slogan="„Wir vermitteln Mitarbeiter, die nicht nur Ihren fachlichen Anforderungen entsprechen, sondern mit Leidenschaft und Enthusiasmus bei der Arbeit sind.“" color="blue" %}
+  {% include "web/banner/banner.html" with slogan=page.banner_slogan color=page.banner_color %}
 {% endblock %}

@@ -1,6 +1,6 @@
-from .models import Field
-from core.views import SearchAndMenuListView
+from .models import Page
+from core.views import SearchAndMenuDetailView
 
-class ReferenzenView(SearchAndMenuListView):
+class ReferenzenView(SearchAndMenuDetailView):
     template_name = "web/pages/referenzen.html"
-    model = Field
+    model = Page

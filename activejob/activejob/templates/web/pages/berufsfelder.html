@@ -10,7 +10,7 @@
 
 <h3>Berufsfelder und Einsatzgebiete</h3>
 </br>
-<div>{{ berufsfelder.text }}</div>
+<div>{{ berufsfelder.text|linebreaks }}</div>
 </br>
 <div>
   {% for node in berufsfelder.bereich_set.all %}
