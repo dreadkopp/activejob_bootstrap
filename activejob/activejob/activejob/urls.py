@@ -114,10 +114,8 @@ urlpatterns = [
     ),
 
     url(
-        r"^referenzen/(?P<slug>\w+)$",
+        r"^referenzen/(:?(?P<variant>\w+)/)?(?P<slug>\w+)$",
         ReferenzenView.as_view(
-            active_nodes={"top": "unternehmen", "left": "personalvermittlung", "sub": "Referenzen"},
-            template_name="web/pages/referenzen.html",
         ),
         name="referenzen",
     ),
