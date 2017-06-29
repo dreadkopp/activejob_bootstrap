@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     "kompetenzbereiche",
     "berufsfelder",
     "vorteile",
-    "menus",
     "standorte",
     "referenzen",
     "contactmessages",
