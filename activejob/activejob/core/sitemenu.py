@@ -125,7 +125,7 @@ menu_items = {
                     "name": "Ihre Vorteile",
                     "url": reverse_lazy(
                         "vorteile",
-                        args=["zeitarbeit"],
+                        args=["bewerber/", "arbeitnehmerueberlassung"],
                     ),
                 },
                 {
@@ -156,7 +156,7 @@ menu_items = {
                     "name": "Ihre Vorteile",
                     "url": reverse_lazy(
                         "vorteile",
-                        args=["personalvermittlung"],
+                        args=["bewerber/", "personalvermittlung"],
                     ),
                 },
                 {
@@ -187,7 +187,7 @@ menu_items = {
                     "name": "Ihre Vorteile",
                     "url": reverse_lazy(
                         "vorteile",
-                        args=["arbeitsvermittlung"],
+                        args=["bewerber", "arbeitsvermittlung"],
                     ),
                 },
                 {

@@ -56,10 +56,8 @@ urlpatterns = [
     ),
 
     url(
-        r"^vorteile/(?P<slug>\w+)$",
+        r"^vorteile/(:?(?P<variant>\w+)/)?(?P<slug>\w+)$",
         VorteileView.as_view(
-            # TODO: change this dynamically (in the view?)
-            active_nodes={"top": "bewerber", "left": "bewerber_zeitarbeit", "sub": "Ihre Vorteile"},
         ),
         name="vorteile",
     ),
