@@ -7,6 +7,6 @@ register = template.Library()
 
 @register.filter
 def get_url(text):
-    #TODO: search text for {% url 'foo' %}, replace with reverse('foo')
-    
+    #TODO: search text for {% url 'foo' %}, replace with return of reverse('foo')
+    text = re.sub("{%/s[^>]*\%}",reverse( 'foo' ), text)
     return text
