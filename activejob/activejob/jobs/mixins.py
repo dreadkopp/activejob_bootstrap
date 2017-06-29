@@ -1,6 +1,6 @@
 from django.db.models import Q
 
-from .models import Category, Department, State
+from .models import Category, State
 from .forms import QuickSearchForm, SearchForm
 
 

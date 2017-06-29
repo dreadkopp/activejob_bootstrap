@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from core.views import SearchAndMenuDetailView
 from .models import Page
 

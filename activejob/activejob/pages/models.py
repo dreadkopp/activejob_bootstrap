@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+
 class Page(models.Model):
     title           = models.CharField(max_length=64)
     subtitle        = models.CharField(max_length=64)
