@@ -9,11 +9,7 @@ class KompetenzbereicheView(SearchAndMenuDetailView):
             "left": kwargs["slug"],
             "sub": "Kompetenzbereiche",
         }
-
-        if kwargs["variant"]:
-            self.active_nodes["top"] = "bewerber"
-            self.active_nodes["left"] = "bewerber_" + self.active_nodes["left"]
-
+        
         return super().dispatch(request, *args, **kwargs)
 
     model = Kompetenzbereich

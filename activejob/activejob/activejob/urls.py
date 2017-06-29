@@ -42,21 +42,21 @@ urlpatterns = [
     ),
 
     url(
-        r"^berufsfelder/(:?(?P<variant>\w+)/)?(?P<slug>\w+)$",
+        r"^berufsfelder/(?P<slug>\w+)$",
         BerufsfelderView.as_view(
         ),
         name="berufsfelder",
     ),
 
     url(
-        r"^kompetenzbereiche/(:?(?P<variant>\w+)/)?(?P<slug>\w+)$",
+        r"^kompetenzbereiche/(?P<slug>\w+)$",
         KompetenzbereicheView.as_view(
         ),
         name="kompetenzbereiche"
     ),
 
     url(
-        r"^vorteile/(:?(?P<variant>\w+)/)?(?P<slug>\w+)$",
+        r"^vorteile/(?P<slug>\w+)$",
         VorteileView.as_view(
         ),
         name="vorteile",
@@ -112,7 +112,7 @@ urlpatterns = [
     ),
 
     url(
-        r"^referenzen/(:?(?P<variant>\w+)/)?(?P<slug>\w+)$",
+        r"^referenzen/(?P<slug>\w+)$",
         ReferenzenView.as_view(
         ),
         name="referenzen",

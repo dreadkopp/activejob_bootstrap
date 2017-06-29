@@ -125,14 +125,14 @@ menu_items = {
                     "name": "Ihre Vorteile",
                     "url": reverse_lazy(
                         "vorteile",
-                        args=["bewerber/", "arbeitnehmerueberlassung"],
+                        args=["arbeitnehmerueberlassung"],
                     ),
                 },
                 {
                     "name": "Berufsfelder",
                     "url": reverse_lazy(
                         "berufsfelder",
-                        args=["bewerber/" , "arbeitnehmerueberlassung"],
+                        args=["arbeitnehmerueberlassung"],
                     ),
                 },
                 {
@@ -156,14 +156,14 @@ menu_items = {
                     "name": "Ihre Vorteile",
                     "url": reverse_lazy(
                         "vorteile",
-                        args=["bewerber/", "personalvermittlung"],
+                        args=["personalvermittlung"],
                     ),
                 },
                 {
                     "name": "Berufsfelder",
                     "url": reverse_lazy(
                         "berufsfelder",
-                        args=["bewerber/", "personalvermittlung"],
+                        args=["personalvermittlung"],
                     ),
                 },
                 {
@@ -187,14 +187,14 @@ menu_items = {
                     "name": "Ihre Vorteile",
                     "url": reverse_lazy(
                         "vorteile",
-                        args=["bewerber", "arbeitsvermittlung"],
+                        args=["arbeitsvermittlung"],
                     ),
                 },
                 {
                     "name": "Berufsfelder",
                     "url": reverse_lazy(
                         "berufsfelder",
-                        args=["bewerber/", "arbeitsvermittlung"],
+                        args=["arbeitsvermittlung"],
                     ),
                 },
                 {

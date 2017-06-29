@@ -11,10 +11,6 @@ class ReferenzenView(SearchAndMenuDetailView):
             "sub": "Referenzen",
         }
 
-        if kwargs["variant"]:
-            self.active_nodes["top"] = "bewerber"
-            self.active_nodes["left"] = "bewerber_" + self.active_nodes["left"]
-
         return super().dispatch(request, *args, **kwargs)
 
     template_name = "web/pages/referenzen.html"
