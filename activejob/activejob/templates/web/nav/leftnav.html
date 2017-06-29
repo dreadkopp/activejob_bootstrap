@@ -2,14 +2,14 @@
 {% for node in menu_left %}
 <li class="element menuepunkte {% if node.active %} active{% endif %}">
   <div>
-      <a href="{% url node.url %}">{{ node.name }}</a>
+      <a href="{% url node.url %}#main_content">{{ node.name }}</a>
   </div>
   {% if node.sublist %}
   <ul>
     {% for subnode in node.sublist %}
     <li class="element menuepunkte {% if subnode.active %} active{% endif %}">
       <div>
-          <a href="{{ subnode.url }}">{{ subnode.name }}</a>
+          <a href="{{ subnode.url }}#main_content">{{ subnode.name }}</a>
       </div>
     </li>
     {% endfor %}
