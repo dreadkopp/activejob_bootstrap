@@ -70,7 +70,10 @@ menu_items = {
                 },
                 {
                     "name": "Referenzen",
-                    "url": "referenzen",
+                    "url": reverse_lazy(
+                        "referenzen",
+                        args=["personalvermittlung"],
+                    ),
                 },
                 {
                     "name": "Ansprechpartner",
