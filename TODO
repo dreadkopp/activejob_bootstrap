@@ -1,11 +1,6 @@
--maybe remove 'variant' and check in views for fields which only appear in one mainblock (maybe not for future edits?)
-
-
--Styling
-	-beautify list views
+- fix menu for 'berufsfelder' and 'vorteile'
+-correct Stellenmarkt aü / av / pv in core.sitemenu.menu_items
 
 -referenzen aktuelle Projekte
 	->https://www.activ-job.com/referenzen.html
 	- das original erscheint mir etwas komisch. Was genau wird hier dargestellt?
-
--correct Stellenmarkt aü / av / pv in core.sitemenu.menu_items
