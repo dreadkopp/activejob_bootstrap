@@ -2,12 +2,8 @@ from .sitemenu import menu_top, menu_items
 
 
 def build_main_menu(active_nodes=None):
-
-
     for item in menu_top:
         item["active"] = item["url"] == active_nodes.get("top")
-
-
 
     menu_left = menu_items.get(active_nodes.get("top"), [])
 
