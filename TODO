@@ -2,7 +2,8 @@
 
 -correct links
 	i.e. 'unternehmen'>'arbeitnehmerueberlassung'>'Ansprechpartner' links to 'bewerber'>'arbeitnehmerueberlassung'>'ansprechpartner'
-	- vorteile like ansprechpartner
+
+-maybe remove 'variant' and check in views for fields which only appear in one mainblock (maybe not for future edits?)
 
 
 -Styling
