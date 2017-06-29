@@ -1,12 +1,8 @@
-- generate menus and urls at the same place
-
--correct links
-	i.e. 'unternehmen'>'arbeitnehmerueberlassung'>'Ansprechpartner' links to 'bewerber'>'arbeitnehmerueberlassung'>'ansprechpartner'
-
 -maybe remove 'variant' and check in views for fields which only appear in one mainblock (maybe not for future edits?)
 
 
 -Styling
+	-beautify list views
 
 -referenzen aktuelle Projekte
 	->https://www.activ-job.com/referenzen.html
