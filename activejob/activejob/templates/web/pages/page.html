@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% load static %}
+{% load get_url %}
 
 {% block title %}
 {{ page.title }}{{ block.super }}
@@ -10,7 +11,7 @@
 
 <h3>{{ page.subtitle }}</h3>
 </br>
-<div>{{ page.text|safe }}</div>
+<div>{{ page.text|safe|get_url }}</div>
 
 
 {% endblock %}
