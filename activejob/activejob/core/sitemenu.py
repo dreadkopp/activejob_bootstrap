@@ -72,7 +72,8 @@ menu_items = {
                     "name": "Referenzen",
                     "url": reverse_lazy(
                         "referenzen",
-                        args=["personalvermittlung"],
+                        args=["personalvermittlung"]
+                    ),
                 },
                 {
                     "name": "Ansprechpartner",
