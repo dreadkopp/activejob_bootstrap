@@ -5,16 +5,42 @@ Sitemap{{ block.super }}
 {% endblock %}
 
 {% block middle_col %}
-<div class="element inhalt">
+<div>
   <h1>Sitemap</h1>
 </div>
 
 <div class="sitemap">
-  {% for entry, subentry in menu_left_sm.items %}
-    {{ entry }}
-    {% for entry in subentry %}
-      {{ entry }}
+
+
+<ul>
+  <li>
+    <a class="glyphicon glyphicon-home" href="{% url 'home' %}">     HOME</a>
+  </li>
+  {% for entry in menu_left_sm.items %}
+    <li>
+      {% for topentry in menu_top %}
+        {% if entry.0 == topentry.url %}
+          <a href="{{ topentry.url }}">{{ topentry.name }}</a>
+        {% endif %}
+      {% endfor %}
+      <ul>
+        {% for subentry in entry.1 %}
+          <li>
+            <a href="{{ subentry.url }}">{{ subentry.name }}</a>
+              {% if subentry.sublist %}
+                <ul>
+                  {% for subsubentry in subentry.sublist %}
+                    <li>
+                      <a href="{{ subsubentry.url }}">{{ subsubentry.name }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </li>
     {% endfor %}
-  {% endfor %}
+  </ul>
 </div>
 {% endblock %}
