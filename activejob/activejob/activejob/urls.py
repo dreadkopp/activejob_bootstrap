@@ -152,6 +152,8 @@ urlpatterns = [
         name="standorte",
     ),
 
+
+
     # TODO: What is this?
     url(r"^personalvermittlung_referenzen",TemplateView.as_view(template_name="web/pages/personalvermittlung_referenzen.html"),name="personalvermittlung_referenzen"),
 
@@ -255,9 +257,8 @@ urlpatterns = [
 
     url(
         r"(?P<slug>\w+)$",
-        PageView.as_view(
-
-        ),
+        PageView.as_view(),
         name="page"
     )
+    
 ]
