@@ -1,8 +1,4 @@
 - fix menu for 'berufsfelder' and 'vorteile'
 -correct Stellenmarkt aü / av / pv in core.sitemenu.menu_items
 
--referenzen aktuelle Projekte
-	->https://www.activ-job.com/referenzen.html
-	- das original erscheint mir etwas komisch. Was genau wird hier dargestellt?
-
--PageView check for empty slug -> home
+-PageView check for empty slug -> home (?)
