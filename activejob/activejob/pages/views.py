@@ -16,3 +16,7 @@ class PageView(SearchAndMenuDetailView):
             "sub": p.menu_left_sub_entry,
         }
         return super().get_context_data(**kwargs)
+
+
+def homepage(request):
+    return PageView.as_view()(request, slug="home")

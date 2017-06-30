@@ -12,7 +12,7 @@ from vorteile.views import VorteileView
 from standorte.views import StandorteView
 from referenzen.views import ReferenzenView, ReferenzenBlingView
 from pages.models import Page
-from pages.views import PageView
+from pages.views import PageView, homepage
 from django.views.generic import RedirectView
 
 class Dummy(TemplateView):
@@ -129,8 +129,10 @@ urlpatterns = [
 
     url(
     	r"^$",
-        RedirectView.as_view(url='home'),
+        homepage,
+        name="home",
     ),
+
     url(
         r"(?P<slug>\w+)$",
         PageView.as_view(),
@@ -144,4 +146,9 @@ urlpatterns += [
         Dummy,
         name=page.slug,
     ) for page in Page.objects.all()
+        if page.slug not in (
+            pattern.name
+            for pattern in urlpatterns
+                if hasattr(pattern, "name")
+        )
 ]
