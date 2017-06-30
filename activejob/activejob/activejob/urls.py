@@ -79,14 +79,6 @@ urlpatterns = [
         name="sitemap",
         ),
 
-    url(
-        r"^impressum$",
-        TemplateView.as_view(
-            active_nodes={"top": "unternehmensprofil"},
-            template_name="web/pages/impressum.html",
-        ),
-        name="impressum",
-    ),
 
     url(
         r"^unternehmensprofil$",
@@ -261,9 +253,16 @@ urlpatterns = [
         PageView.as_view(),
         name="page",
     ),
+
     url(
         r"^arbeitnehmerueberlassung$",
         Dummy.as_view(),
         name="arbeitnehmerueberlassung",
     ),
+    url(
+        r"^impressum$",
+        Dummy.as_view(),
+        name="impressum",
+    ),
+
 ]

@@ -4,3 +4,7 @@
 -referenzen aktuelle Projekte
 	->https://www.activ-job.com/referenzen.html
 	- das original erscheint mir etwas komisch. Was genau wird hier dargestellt?
+
+
+->Page text -> max_length=2000 is not enough
+-> slogan to default empty string 
