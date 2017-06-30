@@ -1,0 +1,13 @@
+.menu-left {
+  display:none;
+}
+.main-content {
+   width: 100%;
+   padding-left: 0px;
+   margin-top: -36px;
+}
+@media (min-width:992px) {
+#contact , #fuer_unternehmen, #fuer_bewerber {
+  border-left: solid 1px #c79193;
+}
+}
