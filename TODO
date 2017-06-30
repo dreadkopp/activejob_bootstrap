@@ -1,4 +1,5 @@
-- fix menu for 'berufsfelder' and 'vorteile'
--correct Stellenmarkt aü / av / pv in core.sitemenu.menu_items
+-correct Stellenmarkt aü / av / pv in core.sitemenu.menu_items --- YEY! new problem found
 
--PageView check for empty slug -> home (?)
+-Jobs:
+  -fill 'Ihre Aufgaben'
+  -'Ihr Profil' to List
