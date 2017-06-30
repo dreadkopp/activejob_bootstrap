@@ -116,14 +116,6 @@ urlpatterns = [
         ),
         name="personalanfrage",
     ),
-    url(
-        r"^karriereberatung$",
-        TemplateView.as_view(
-            active_nodes={"top": "bewerber", "left": "karriereberatung"},
-            template_name="web/pages/karriereberatung.html",
-        ),
-        name="karriereberatung",
-    ),
 
     url(
         r"^karriere_activjob$",
@@ -141,6 +133,7 @@ urlpatterns = [
         ),
         name="home",
     ),
+
     url(
         r"(?P<slug>\w+)$",
         PageView.as_view(),
@@ -212,6 +205,13 @@ urlpatterns = [
         Dummy,
         name="bewerber",
     ),
+    url(
+        r"^karriereberatung$",
+        Dummy,
+        name="karriereberatung",
+    ),
+
+
 
 
 
