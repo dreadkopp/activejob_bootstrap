@@ -101,24 +101,6 @@ urlpatterns = [
     ),
 
     url(
-        r"^$",
-        TemplateView.as_view(
-            active_nodes={"top": "home"},
-            template_name="web/pages/home.html",
-        ),
-        name="home",
-    ),
-
-    url(
-        r"^leitbild$",
-        TemplateView.as_view(
-            active_nodes={"top": "unternehmensprofil", "left": "leitbild"},
-            template_name="web/pages/leitbild.html",
-        ),
-        name="leitbild",
-    ),
-
-    url(
         r"^standorte$",
         StandorteView.as_view(
             active_nodes={"top": "unternehmensprofil", "left": "standorte"},
@@ -222,6 +204,14 @@ urlpatterns = [
     ),
 
     url(
+        r"^$",
+        TemplateView.as_view(
+            active_nodes={"top": "home"},
+            template_name="web/pages/home.html",
+        ),
+        name="home",
+    ),
+    url(
         r"(?P<slug>\w+)$",
         PageView.as_view(),
         name="page",
@@ -252,6 +242,13 @@ urlpatterns = [
         Dummy,
         name="unternehmen",
     ),
+    url(
+        r"^leitbild$",
+        Dummy,
+        name="leitbild",
+    ),
+
+
 
 
 ]
