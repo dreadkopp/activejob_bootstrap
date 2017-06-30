@@ -79,16 +79,6 @@ urlpatterns = [
         name="sitemap",
         ),
 
-
-    url(
-        r"^unternehmensprofil$",
-        TemplateView.as_view(
-            active_nodes={"top": "unternehmensprofil", "left": "unternehmensprofil"},
-            template_name="web/pages/unternehmensprofil.html",
-        ),
-        name="unternehmensprofil",
-    ),
-
     url(
         r"^unternehmen$",
         TemplateView.as_view(
@@ -257,8 +247,13 @@ urlpatterns = [
     ),
     url(
         r"^arbeitsvermittlung$",
-        Dummy.as_view,
+        Dummy.as_view(),
         name="arbeitsvermittlung",
+    ),
+    url(
+        r"^unternehmensprofil$",
+        Dummy.as_view(),
+        name="unternehmensprofil",
     ),
 
 
