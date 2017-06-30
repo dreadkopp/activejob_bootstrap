@@ -11,6 +11,7 @@ from kompetenzbereiche.views import KompetenzbereicheView
 from vorteile.views import VorteileView
 from standorte.views import StandorteView
 from referenzen.views import ReferenzenView, ReferenzenBlingView
+from pages.models import Page
 from pages.views import PageView
 
 class Dummy(TemplateView):
@@ -139,88 +140,12 @@ urlpatterns = [
         PageView.as_view(),
         name="page",
     ),
+]
 
+urlpatterns += [
     url(
-        r"^arbeitnehmerueberlassung$",
+        r"^{}$".format(page.slug),
         Dummy,
-        name="arbeitnehmerueberlassung",
-    ),
-    url(
-        r"^impressum$",
-        Dummy,
-        name="impressum",
-    ),
-    url(
-        r"^arbeitsvermittlung$",
-        Dummy,
-        name="arbeitsvermittlung",
-    ),
-    url(
-        r"^unternehmensprofil$",
-        Dummy,
-        name="unternehmensprofil",
-    ),
-    url(
-        r"^unternehmen$",
-        Dummy,
-        name="unternehmen",
-    ),
-    url(
-        r"^leitbild$",
-        Dummy,
-        name="leitbild",
-    ),
-    url(
-        r"^personalvermittlung$",
-        Dummy,
-        name="personalvermittlung",
-    ),
-    url(
-        r"^personalauswahl$",
-        Dummy,
-        name="personalauswahl",
-    ),
-    url(
-        r"^bewerber_arbeitnehmerueberlassung$",
-        Dummy,
-        name="bewerber_arbeitnehmerueberlassung",
-    ),
-    url(
-        r"^bewerber_personalvermittlung$",
-        Dummy,
-        name="bewerber_personalvermittlung",
-    ),
-    url(
-        r"^bewerber_arbeitsvermittlung_antworten$",
-        Dummy,
-        name="bewerber_arbeitsvermittlung_antworten",
-    ),
-    url(
-        r"^bewerber_arbeitsvermittlung$",
-        Dummy,
-        name="bewerber_arbeitsvermittlung",
-    ),
-    url(
-        r"^bewerber$",
-        Dummy,
-        name="bewerber",
-    ),
-    url(
-        r"^karriereberatung$",
-        Dummy,
-        name="karriereberatung",
-    ),
-
-
-
-
-
-
-
-
-
-
-
-
-
+        name=page.slug,
+    ) for page in Page.objects.all()
 ]
