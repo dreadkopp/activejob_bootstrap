@@ -10,7 +10,7 @@ from berufsfelder.views import BerufsfelderView
 from kompetenzbereiche.views import KompetenzbereicheView
 from vorteile.views import VorteileView
 from standorte.views import StandorteView
-from referenzen.views import ReferenzenView
+from referenzen.views import ReferenzenView, ReferenzenBlingView
 from pages.views import PageView
 
 
@@ -109,6 +109,13 @@ urlpatterns = [
         r"^Jobs/Jobs.xml$",
         RSSFeed(),
         name="jobs_rss",
+    ),
+
+    url(
+        r"^referenzen/(?P<slug>\w+)/aktuell$",
+        ReferenzenBlingView.as_view(
+        ),
+        name="referenzen_aktuell",
     ),
 
     url(
