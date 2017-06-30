@@ -152,14 +152,6 @@ urlpatterns = [
         name="standorte",
     ),
 
-    url(r"^arbeitnehmerueberlassung$",
-        TemplateView.as_view(
-            active_nodes={"top": "unternehmen", "left": "arbeitnehmerueberlassung"},
-            template_name="web/pages/arbeitnehmerueberlassung.html",
-        ),
-        name="arbeitnehmerueberlassung",
-    ),
-
     # TODO: What is this?
     url(r"^personalvermittlung_referenzen",TemplateView.as_view(template_name="web/pages/personalvermittlung_referenzen.html"),name="personalvermittlung_referenzen"),
 

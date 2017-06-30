@@ -11,3 +11,6 @@ class Page(models.Model):
     menu_left_entry = models.CharField(max_length=64)
     menu_left_sub_entry = models.CharField(max_length=64)
     slug = models.CharField(max_length=64)
+
+    def __str__(self):
+        return self.slug
