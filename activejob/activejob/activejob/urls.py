@@ -12,6 +12,7 @@ from vorteile.views import VorteileView
 from standorte.views import StandorteView
 from referenzen.views import ReferenzenView, ReferenzenBlingView
 from pages.views import PageView
+from core.views import Dummy
 
 
 urlpatterns = [
@@ -258,7 +259,11 @@ urlpatterns = [
     url(
         r"(?P<slug>\w+)$",
         PageView.as_view(),
-        name="page"
-    )
-    
+        name="page",
+    ),
+    url(
+        r"^arbeitnehmerueberlassung$",
+        Dummy.as_view(),
+        name="arbeitnehmerueberlassung",
+    ),
 ]

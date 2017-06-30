@@ -2,7 +2,7 @@
 {% for node in menu_left %}
 <li class="element menuepunkte {% if node.active %} active{% endif %}">
   <div>
-      <a href="{{ node.url }}#main_content">{{ node.name }}</a>
+      <a href="{% url node.url %}#main_content">{{ node.name }}</a>
   </div>
   {% if node.sublist %}
   <ul>
