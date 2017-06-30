@@ -25,6 +25,3 @@ class SitemapView(SearchAndMenuTemplateView):
         context = super().get_context_data(**kwargs)
         context.update({"menu_left_sm": menu_items})
         return context
-
-class Dummy(TemplateView):
-    pass

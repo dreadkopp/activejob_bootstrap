@@ -12,8 +12,9 @@ from vorteile.views import VorteileView
 from standorte.views import StandorteView
 from referenzen.views import ReferenzenView, ReferenzenBlingView
 from pages.views import PageView
-from core.views import Dummy
 
+class Dummy(TemplateView):
+    pass
 
 urlpatterns = [
     url(
@@ -252,7 +253,7 @@ urlpatterns = [
     ),
     url(
         r"^unternehmensprofil$",
-        Dummy.as_view(),
+        Dummy,
         name="unternehmensprofil",
     ),
 
