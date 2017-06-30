@@ -11,7 +11,7 @@ class PageView(SearchAndMenuDetailView):
 
     def dispatch(self, request, *args, **kwargs):
         response = super().dispatch(request, *args, **kwargs)
-        p = get_object_or_404(Page, slug=kwargs["slug"])
+        p = self.object
         self.active_nodes = {
             "top": p.menu_top_entry,
             "left": p.menu_left_entry,
