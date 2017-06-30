@@ -11,6 +11,7 @@ from kompetenzbereiche.views import KompetenzbereicheView
 from vorteile.views import VorteileView
 from standorte.views import StandorteView
 from referenzen.views import ReferenzenView, ReferenzenBlingView
+from pages.models import Page
 from pages.views import PageView
 
 class Dummy(TemplateView):
@@ -139,4 +140,12 @@ urlpatterns = [
         PageView.as_view(),
         name="page",
     ),
+]
+
+urlpatterns += [
+    url(
+        r"^{}$".format(page.slug),
+        Dummy,
+        name=page.slug,
+    ) for page in Page.objects.all()
 ]
