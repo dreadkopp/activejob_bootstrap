@@ -160,15 +160,6 @@ urlpatterns = [
     ),
 
     url(
-        r"^arbeitsvermittlung$",
-        TemplateView.as_view(
-            active_nodes={"top": "unternehmen", "left": "arbeitsvermittlung"},
-            template_name="web/pages/arbeitsvermittlung.html",
-        ),
-        name="arbeitsvermittlung",
-    ),
-
-    url(
         r"^personalanfrage$",
         PersonalanfrageView.as_view(
             active_nodes={"top": "unternehmen", "left": "personalanfrage"},
@@ -264,5 +255,11 @@ urlpatterns = [
         Dummy.as_view(),
         name="impressum",
     ),
+    url(
+        r"^arbeitsvermittlung$",
+        Dummy.as_view,
+        name="arbeitsvermittlung",
+    ),
+
 
 ]
