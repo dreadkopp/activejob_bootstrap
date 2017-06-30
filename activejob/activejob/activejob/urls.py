@@ -13,6 +13,7 @@ from standorte.views import StandorteView
 from referenzen.views import ReferenzenView, ReferenzenBlingView
 from pages.models import Page
 from pages.views import PageView
+from django.views.generic import RedirectView
 
 class Dummy(TemplateView):
     pass
@@ -127,14 +128,9 @@ urlpatterns = [
     ),
 
     url(
-        r"^$",
-        TemplateView.as_view(
-            active_nodes={"top": "home"},
-            template_name="web/pages/home.html",
-        ),
-        name="home",
+    	r"^$",
+        RedirectView.as_view(url='home'),
     ),
-
     url(
         r"(?P<slug>\w+)$",
         PageView.as_view(),
