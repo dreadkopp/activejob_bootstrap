@@ -108,21 +108,6 @@ urlpatterns = [
         ),
         name="standorte",
     ),
-
-
-
-    # TODO: What is this?
-    url(r"^personalvermittlung_referenzen",TemplateView.as_view(template_name="web/pages/personalvermittlung_referenzen.html"),name="personalvermittlung_referenzen"),
-
-    url(
-        r"^personalvermittlung$",
-        TemplateView.as_view(
-            active_nodes={"top": "unternehmen", "left": "personalvermittlung"},
-            template_name="web/pages/personalvermittlung.html",
-        ),
-        name="personalvermittlung",
-    ),
-
     url(
         r"^personalanfrage$",
         PersonalanfrageView.as_view(
@@ -247,6 +232,12 @@ urlpatterns = [
         Dummy,
         name="leitbild",
     ),
+    url(
+        r"^personalvermittlung$",
+        Dummy,
+        name="personalvermittlung",
+    ),
+
 
 
 
