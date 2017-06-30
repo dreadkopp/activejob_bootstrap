@@ -118,15 +118,6 @@ urlpatterns = [
     ),
 
     url(
-        r"^bewerber_arbeitnehmerueberlassung$",
-        TemplateView.as_view(
-            active_nodes={"top": "bewerber", "left": "bewerber_arbeitnehmerueberlassung"},
-            template_name="web/pages/bewerber_zeitarbeit.html",
-        ),
-        name="bewerber_arbeitnehmerueberlassung",
-    ),
-
-    url(
         r"^bewerber_personalvermittlung$",
         TemplateView.as_view(
             active_nodes={"top": "bewerber", "left": "bewerber_personalvermittlung"},
@@ -233,6 +224,12 @@ urlpatterns = [
         Dummy,
         name="personalauswahl",
     ),
+    url(
+        r"^bewerber_arbeitnehmerueberlassung$",
+        Dummy,
+        name="bewerber_arbeitnehmerueberlassung",
+    ),
+
 
 
 
