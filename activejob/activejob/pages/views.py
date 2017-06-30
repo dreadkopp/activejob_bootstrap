@@ -8,15 +8,14 @@ class PageView(SearchAndMenuDetailView):
     template_name = "web/pages/page.html"
     model = Page
 
-    def get(self, request, *args, **kwargs):
-        self.object = self.get_object()
+    def get_object(self):
+        the_object = super().get_object()
 
-        p = self.object
+        p = the_object
         self.active_nodes = {
             "top": p.menu_top_entry,
             "left": p.menu_left_entry,
             "sub": p.menu_left_sub_entry,
         }
 
-        context = self.get_context_data(object=self.object)
-        return self.render_to_response(context)
+        return the_object
