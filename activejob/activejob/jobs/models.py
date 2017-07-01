@@ -28,6 +28,16 @@ class ContactProfile(models.Model):
     class Meta:
         ordering = ["-priority"]
 
+    # proxy:
+    def first_name(self):
+        return self.contact.first_name
+
+    def last_name(self):
+        return self.contact.last_name
+
+    def imageurl(self):
+        return self.contact.imageurl
+
 
 class Location(models.Model):
     name = models.CharField(max_length=100)
