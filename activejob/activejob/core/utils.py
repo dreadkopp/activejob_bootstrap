@@ -11,21 +11,22 @@ def build_main_menu(active_nodes=None):
         if "sublist" in item:
             for subitem in item["sublist"]:
                 subitem["active"] = subitem["name"] == active_nodes.get("sub")
-                #need to do this here. if this happens in sitemenu.menu_items
-                #it tries to resolve reverse_lazy() to early and rises error
-                if subitem["name"] == "Stellenmarkt AÜ":
-                    if not "?aü" in subitem["url"]:
-                        subitem["url"] += "?aü"
-                if subitem["name"] == "Stellenmarkt PV":
-                    if not "?pv" in subitem["url"]:
-                        subitem["url"] += "?pv"
-                if subitem["name"] == "Stellenmarkt AV":
-                    if not "?av" in subitem["url"]:
-                        subitem["url"] += "?av"
-
-
 
     return {
         "menu_top": menu_top,
         "menu_left": menu_left,
     }
+
+
+def fix_stellenmarkt_links():
+    menu_left = menu_items.get("bewerber", [])
+
+    for item in menu_left:
+        if "sublist" in item:
+            for subitem in item["sublist"]:
+                if subitem["name"] == "Stellenmarkt AÜ":
+                        subitem["url"] += "?aü"
+                if subitem["name"] == "Stellenmarkt PV":
+                        subitem["url"] += "?pv"
+                if subitem["name"] == "Stellenmarkt AV":
+                        subitem["url"] += "?av"

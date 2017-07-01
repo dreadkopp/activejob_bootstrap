@@ -14,6 +14,7 @@ from referenzen.views import ReferenzenView, ReferenzenBlingView
 from pages.models import Page
 from pages.views import PageView, homepage
 from django.views.generic import RedirectView
+from core.utils import fix_stellenmarkt_links
 
 class Dummy(TemplateView):
     pass
@@ -152,3 +153,5 @@ urlpatterns += [
                 if hasattr(pattern, "name")
         )
 ]
+
+fix_stellenmarkt_links()
