@@ -5,11 +5,6 @@ from django.db import models
 class Contact(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
-    status = models.CharField(max_length=100)
-    phone = models.CharField(max_length=100)
-    mail = models.EmailField()
-    priority = models.DecimalField(max_digits=2, decimal_places=0)
-    location = models.ForeignKey("Location")
 
     def __str__(self):
         return "{} {}".format(self.first_name, self.last_name)
@@ -17,9 +12,6 @@ class Contact(models.Model):
     @property
     def imageurl(self):
         return "{}.{}.jpg".format(self.first_name, self.last_name)
-
-    class Meta:
-        ordering = ["-priority"]
 
 
 class ContactProfile(models.Model):
@@ -32,6 +24,9 @@ class ContactProfile(models.Model):
 
     def __str__(self):
         return "{} ({})".format(self.contact, self.status)
+
+    class Meta:
+        ordering = ["-priority"]
 
 
 class Location(models.Model):
