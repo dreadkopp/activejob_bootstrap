@@ -49,8 +49,8 @@ class Job(models.Model):
     company = models.ForeignKey("Company")
     department = models.ForeignKey("Department")
 
-    states = models.ManyToManyField("State",blank=True)
-    categories = models.ManyToManyField("Category",blank=True)
+    states = models.ManyToManyField("State")
+    categories = models.ManyToManyField("Category")
 
     def __str__(self):
         return self.title
