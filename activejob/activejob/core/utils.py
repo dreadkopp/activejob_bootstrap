@@ -1,4 +1,5 @@
 from .sitemenu import menu_top, menu_items
+#DEBUG
 import sys
 
 def build_main_menu(active_nodes=None):
@@ -21,7 +22,7 @@ def build_main_menu(active_nodes=None):
                 if subitem["name"] == "Stellenmarkt AV":
                     subitem["url"] += "?av"
                     #DEBUG
-                    subitem["url"] += str(sys.getsizeof(menu_left))
+                    subitem["url"] += str(len(menu_left))
 
 
     return {
