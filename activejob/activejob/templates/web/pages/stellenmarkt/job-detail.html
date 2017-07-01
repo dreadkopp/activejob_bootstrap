@@ -50,34 +50,34 @@
         </div>
 
         <div id="contact_name">
-          <h4 class="col-xs-12">{{ job.contact }}</h4>
+          <h4 class="col-xs-12">{{ job.contact_profile.contact }}</h4>
 
         </div>
 
         <div id="contact_mail" >
           <strong class="col-xs-4">E-Mail:</strong>
-            <a class="col-xs-8" href="mailto:{{ job.contact.mail }}">
-{{ job.contact.mail }}</a>
+            <a class="col-xs-8" href="mailto:{{ job.contact_profile.mail }}">
+{{ job.contact_profile.mail }}</a>
         </div>
 
         <div id="contact_phone" >
           <strong class="col-xs-4">Telefon:</strong>
-            <a class="col-xs-8" href="tel:{{ job.contact.phone|cut:" " }}">
-{{ job.contact.phone }}</a>
+            <a class="col-xs-8" href="tel:{{ job.contact_profile.phone|cut:" " }}">
+{{ job.contact_profile.phone }}</a>
         </div>
 
         <div id="contact_image" >
-          <img class="" alt="{{ job.contact }}"
-          src="{% static "Ansprechpartner/" %}{{ job.contact.imageurl }}" />
+          <img class="" alt="{{ job.contact_profile.contact }}"
+          src="{% static "Ansprechpartner/" %}{{ job.contact_profile.contact.imageurl }}" />
         </div>
 
         <div id="contact_adress" >
           <p class="col-xs-12">
             activjob GmbH
             <br />
-            {{ job.contact.location.street }}
+            {{ job.contact_profile.location.street }}
             <br />
-            {{ job.contact.location.city }}
+            {{ job.contact_profile.location.city }}
           </p>
         </div>
     </div>
