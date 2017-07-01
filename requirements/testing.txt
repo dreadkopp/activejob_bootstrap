@@ -1,0 +1,7 @@
+-r base.txt
+coverage
+ipython
+mixer
+pytest
+pytest-cov
+pytest-django
