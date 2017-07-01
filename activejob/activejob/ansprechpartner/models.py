@@ -1,3 +1,5 @@
+import warnings
+
 from django.db import models
 from jobs.models import ContactProfile
 
@@ -15,3 +17,10 @@ class Ansprechpartner(models.Model):
 
     class Meta:
         verbose_name_plural = "Ansprechpartner"
+
+    def contacts(self):
+        warnings.warn(
+            "Ansprechpartner.contacts() called",
+            PendingDeprecationWarning
+        )
+        return self.contact_profiles
