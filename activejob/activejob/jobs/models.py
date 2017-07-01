@@ -52,7 +52,7 @@ class Job(models.Model):
     is_intern = models.BooleanField()
     changed_at = models.DateTimeField()
 
-    contact_profile = models.ForeignKey("ContactProfile", null=True)
+    contact_profile = models.ForeignKey("ContactProfile")
     company = models.ForeignKey("Company")
     department = models.ForeignKey("Department")
 
