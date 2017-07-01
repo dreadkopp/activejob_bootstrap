@@ -5,6 +5,20 @@ from __future__ import unicode_literals
 from django.db import migrations
 
 
+def transfer_profile_data(apps, schema_editor):
+    Contact = apps.get_model('jobs', 'Contact')
+    ContactProfile = apps.get_model('jobs', 'ContactProfile')
+
+    for contact in Contact.objects.all():
+        contact_profile = ContactProfile()
+
+        for attr in ["status", "phone", "mail", "priority", "location"]:
+            setattr(contact_profile, attr, getattr(contact, attr))
+
+        contact_profile.contact = contact
+        contact_profile.save()
+
+
 class Migration(migrations.Migration):
 
     dependencies = [
@@ -12,4 +26,5 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
+        migrations.RunPython(transfer_profile_data),
     ]
