@@ -5,6 +5,15 @@ from __future__ import unicode_literals
 from django.db import migrations
 
 
+def attach_fk_to_job(apps, schema_editor):
+    Job = apps.get_model('jobs', 'Job')
+
+    for job in Job.objects.all():
+        job.contact_profile = job.contact.contactprofile_set.first()
+
+        job.save()
+
+
 class Migration(migrations.Migration):
 
     dependencies = [
@@ -12,4 +21,5 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
+        migrations.RunPython(attach_fk_to_job),
     ]
