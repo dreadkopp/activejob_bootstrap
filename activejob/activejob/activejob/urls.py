@@ -1,5 +1,6 @@
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.db.utils import ProgrammingError
 
 from contactmessages.views import ContactMessageView
 from contactmessages.views import PersonalanfrageView
@@ -141,17 +142,26 @@ urlpatterns = [
     ),
 ]
 
-urlpatterns += [
-    url(
-        r"^{}$".format(page.slug),
-        Dummy,
-        name=page.slug,
-    ) for page in Page.objects.all()
-        if page.slug not in (
-            pattern.name
-            for pattern in urlpatterns
-                if hasattr(pattern, "name")
-        )
-]
+try:
+    pages = list(Page.objects.all())
+except ProgrammingError as e:
+    if 'relation "pages_page" does not exist' not in str(e):
+        raise
+    msg = ("== skipping call to Pages.objects.all() "
+        "because we’re migrating or something ==")
+    print(msg)
+else:
+    urlpatterns += [
+        url(
+            r"^{}$".format(page.slug),
+            Dummy,
+            name=page.slug,
+        ) for page in pages
+            if page.slug not in (
+                pattern.name
+                for pattern in urlpatterns
+                    if hasattr(pattern, "name")
+            )
+    ]
 
 fix_stellenmarkt_links()
