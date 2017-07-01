@@ -60,7 +60,7 @@ class Job(models.Model):
     categories = models.ManyToManyField("Category")
 
     def __str__(self):
-        return self.title
+        return "{} ({}) {}".format(self.title, self.location, self.pk)
 
     def get_absolute_url(self):
         return reverse("job_detail", args=[self.pk, self.slug])
