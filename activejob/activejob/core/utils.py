@@ -1,6 +1,4 @@
 from .sitemenu import menu_top, menu_items
-#DEBUG
-import sys
 
 def build_main_menu(active_nodes=None):
     for item in menu_top:
@@ -20,9 +18,9 @@ def build_main_menu(active_nodes=None):
                 if subitem["name"] == "Stellenmarkt PV":
                     subitem["url"] += "?pv"
                 if subitem["name"] == "Stellenmarkt AV":
-                    subitem["url"] += "?av"
-                    #DEBUG
-                    subitem["url"] += str(len(menu_left))
+                    if not "?av" in subitem["url"]:
+                        subitem["url"] += "?av"
+
 
 
     return {
