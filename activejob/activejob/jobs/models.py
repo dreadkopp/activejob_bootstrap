@@ -22,6 +22,18 @@ class Contact(models.Model):
         ordering = ["-priority"]
 
 
+class ContactProfile(models.Model):
+    status = models.CharField(max_length=100)
+    phone = models.CharField(max_length=100)
+    mail = models.EmailField()
+    priority = models.DecimalField(max_digits=2, decimal_places=0)
+    location = models.ForeignKey("Location")
+    contact = models.ForeignKey("Contact")
+
+    def __str__(self):
+        return "{} ({})".format(self.contact, self.status)
+
+
 class Location(models.Model):
     name = models.CharField(max_length=100)
     city = models.CharField(max_length=100)
