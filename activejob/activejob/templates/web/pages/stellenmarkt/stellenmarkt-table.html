@@ -31,7 +31,7 @@
             <tr>
                 <td>
                   {% comment %}<!--missing url 'stelle' slug=job.slug -->{% endcomment %}
-                    <a href="{% url "job_detail" job.pk job.slug %}">{{ job }}</a>
+                    <a href="{% url "job_detail" job.pk job.slug %}">{{ job.title }}</a>
                 </td>
                 <td>
                     {{ job.location }}
