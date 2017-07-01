@@ -5,6 +5,14 @@ from __future__ import unicode_literals
 from django.db import migrations
 
 
+def add_contact_profiles(apps, schema_editor):
+    Ansprechpartner = apps.get_model('ansprechpartner', 'Ansprechpartner')
+
+    for ap in Ansprechpartner.objects.all():
+        for contact in ap.contacts.all():
+            ap.contact_profiles.add(contact.contactprofile_set.first())
+
+
 class Migration(migrations.Migration):
 
     dependencies = [
@@ -12,4 +20,5 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
+        migrations.RunPython(add_contact_profiles),
     ]
