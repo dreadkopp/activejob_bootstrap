@@ -14,9 +14,11 @@ def build_main_menu(active_nodes=None):
                 #need to do this here. if this happens in sitemenu.menu_items
                 #it tries to resolve reverse_lazy() to early and rises error
                 if subitem["name"] == "Stellenmarkt AÜ":
-                    subitem["url"] += "?aü"
+                    if not "?aü" in subitem["url"]:
+                        subitem["url"] += "?aü"
                 if subitem["name"] == "Stellenmarkt PV":
-                    subitem["url"] += "?pv"
+                    if not "?pv" in subitem["url"]:
+                        subitem["url"] += "?pv"
                 if subitem["name"] == "Stellenmarkt AV":
                     if not "?av" in subitem["url"]:
                         subitem["url"] += "?av"
