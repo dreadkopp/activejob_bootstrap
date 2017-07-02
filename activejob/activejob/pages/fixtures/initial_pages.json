@@ -211,21 +211,6 @@
 },
 {
   "model": "pages.page",
-  "pk": 17,
-  "fields": {
-    "title": "Karriereberatung f\u00fcr Bewerber und Kandidaten",
-    "subtitle": "Karriereberatung \u2013 ein Weg zu beruflichem Erfolg",
-    "text": "{% load static %}\r\n<p>Nutzen Sie die Chance, Ihr Leben und Ihre\r\n  Karriere neu auszurichten und herauszufinden,\r\n  was wirklich in Ihnen steckt \u2013 machen Sie\r\n  sich zu einer unverwechselbaren Marke. Unsere\r\n  erfahrenen Berater begleiten Sie in diesem\r\n  Prozess.</p>\r\n\r\n  <p>In einem ersten Schritt bestimmen wir Ihre\r\n  derzeitige Situation. Gemeinsam finden wir im\r\n  zweiten Schritt heraus, was Ihre Potentiale\r\n  und Kompetenzen sind. Das ist die Basis zur\r\n  Definierung Ihres idealen Berufsfeldes und\r\n  der Formulierung Ihrer\r\n  Bewerbungsunterlagen.</p>\r\n\r\n  <p>Gern beraten wir Sie zielgerichtet zu\r\n  Ihren Karriereschritten und leiten Sie an.\r\n  Ein direktes Feedback zu Ihrer Person sowie\r\n  zu dem Weg, den Sie beschreiten wollen, hilft\r\n  Ihnen bei der erfolgreichen Verwirklichung\r\n  Ihrer beruflichen Ziele.</p>\r\n\r\n  <p>Ob die Erstellung Ihrer\r\n  Bewerbungsunterlagen oder die Vorbereitung\r\n  auf ein anstehendes Vorstellungsgespr\u00e4ch \u2013\r\n  wir unterst\u00fctzen Sie in allen Fragen Ihrer\r\n  Karriere.</p>\r\n\r\n  <p>Kontaktieren Sie uns per E-Mail oder rufen\r\n  Sie uns an.<br />\r\n  Wir freuen uns darauf, Sie\r\n  kennenzulernen.<br />\r\n  &nbsp;</p>\r\n\r\n<div class=\"ansprechpartner\">\r\n                      <p><b>Dipl.-Ing. Roland Nitsche<img alt=\"\" src=\"{% static \"Ansprechpartner/Roland.Nitsche.jpg\" %}\" style=\"width: 132px; height: 92px; float: right;\"></b></p>\r\n\r\n                      <p class=\"bodytext\">Systemischer Coach<br>\r\n                      Telefon 0351 2598484<br>\r\n                      E-Mail: <a href=\"mailto: roland.nitsche@activ-job.com\">\r\n                      roland.nitsche@activ-job.com</a></p>\r\n</div>\r\n</br>\r\n<div class=\"ansprechpartner\">\r\n                      <p><b>Tom Drechsel<img alt=\"\" src=\"{% static \"Ansprechpartner/Tom.Drechsel.jpg\" %}\"style=\"width: 132px; height: 92px; float: right;\"></b></p>\r\n\r\n                      <p class=\"bodytext\">Personalcoach<br>\r\n                      Telefon 0351 2502088-33<br>\r\n                      E-Mail: <a href=\"mailto: roland.nitsche@activ-job.com\">\r\n                      tom.drechsel@activ-job.com</a></p>\r\n</div>",
-    "banner_color": "red",
-    "banner_slogan": "",
-    "menu_top_entry": "bewerber",
-    "menu_left_entry": "karriereberatung",
-    "menu_left_sub_entry": "none",
-    "slug": "karriereberatung"
-  }
-},
-{
-  "model": "pages.page",
   "pk": 18,
   "fields": {
     "title": "Arbeitsvermittlung, Personalvermittlung, Zeitarbeit",

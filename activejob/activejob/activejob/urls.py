@@ -6,7 +6,7 @@ from contactmessages.views import ContactMessageView
 from contactmessages.views import PersonalanfrageView
 from core.views import SearchAndMenuTemplateView as TemplateView, SitemapView
 from jobs.views import JobDetailView, JobInternListView, JobSearchListView, RSSFeed
-from ansprechpartner.views import AnsprechpartnerView
+from ansprechpartner.views import AnsprechpartnerView, karriereberatung
 from berufsfelder.views import BerufsfelderView
 from kompetenzbereiche.views import KompetenzbereicheView
 from vorteile.views import VorteileView
@@ -127,6 +127,11 @@ urlpatterns = [
             active_nodes={"top": "bewerber", "left": "karriere_activjob"},
         ),
         name="karriere_activjob",
+    ),
+    url(
+        r"^karriereberatung$",
+        karriereberatung,
+        name="karriereberatung"
     ),
 
     url(

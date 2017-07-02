@@ -18,3 +18,6 @@ class AnsprechpartnerView(SearchAndMenuDetailView):
 
     model = Ansprechpartner
     template_name = "web/pages/ansprechpartner.html"
+
+def karriereberatung(request):
+    return AnsprechpartnerView.as_view(template_name="web/pages/karriereberatung.html")(request,variant="bewerber", slug="karriereberatung")

@@ -53,5 +53,19 @@
       145
     ]
   }
+},
+{
+  "model": "ansprechpartner.ansprechpartner",
+  "pk": 4,
+  "fields": {
+    "title": "Karriereberatung f\u00fcr Bewerber und Kandidaten",
+    "field": "Karriereberatung",
+    "banner_color": "red",
+    "banner_slogan": "",
+    "slug": "karriereberatung",
+    "contact_profiles": [
+      1
+    ]
+  }
 }
 ]
