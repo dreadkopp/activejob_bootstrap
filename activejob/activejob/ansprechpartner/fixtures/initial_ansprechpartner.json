@@ -28,7 +28,7 @@
     "title": "Ansprechpartner AV",
     "field": "Arbeitsvermittlung",
     "banner_color": "orange",
-    "banner_slogan": "x",
+    "banner_slogan": "„Ein offenes Wort und eine ehrliche Einschätzung sind Dinge, die Kunden und Mitarbeiter jederzeit von uns erwarten können.“",
     "slug": "arbeitsvermittlung",
     "contact_profiles": [
       3,
@@ -46,7 +46,7 @@
     "title": "Ansprechpartner PV",
     "field": "Personalvermittlung",
     "banner_color": "blue",
-    "banner_slogan": "x",
+    "banner_slogan": "„Wir vermitteln Mitarbeiter, die nicht nur Ihren fachlichen Anforderungen entsprechen, sondern mit Leidenschaft und Enthusiasmus bei der Arbeit sind.“",
     "slug": "personalvermittlung",
     "contact_profiles": [
       3,
