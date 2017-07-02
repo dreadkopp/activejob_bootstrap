@@ -11,8 +11,13 @@ class AnsprechpartnerView(SearchAndMenuDetailView):
         }
 
         if kwargs["variant"]:
-            self.active_nodes["top"] = "bewerber"
-            self.active_nodes["left"] = "bewerber_" + self.active_nodes["left"]
+            if kwargs["variant"] == "karriereberatung":
+                self.active_nodes["top"] = "bewerber"
+                self.active_nodes["left"] = "karriereberatung"
+            else:
+                self.active_nodes["top"] = "bewerber"
+                self.active_nodes["left"] = "bewerber_" + self.active_nodes["left"]
+
 
         return super().dispatch(request, *args, **kwargs)
 
@@ -20,4 +25,6 @@ class AnsprechpartnerView(SearchAndMenuDetailView):
     template_name = "web/pages/ansprechpartner.html"
 
 def karriereberatung(request):
-    return AnsprechpartnerView.as_view(template_name="web/pages/karriereberatung.html")(request,variant="bewerber", slug="karriereberatung")
+    return AnsprechpartnerView.as_view(
+        template_name="web/pages/karriereberatung.html",
+        )(request,variant="karriereberatung", slug="karriereberatung")
