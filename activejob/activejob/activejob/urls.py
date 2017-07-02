@@ -1,6 +1,6 @@
 from django.conf.urls import include, url
 from django.contrib import admin
-from django.db.utils import ProgrammingError
+from django.db.utils import ProgrammingError, OperationalError
 
 from contactmessages.views import ContactMessageView
 from contactmessages.views import PersonalanfrageView
@@ -144,9 +144,14 @@ urlpatterns = [
 
 try:
     pages = list(Page.objects.all())
-except ProgrammingError as e:
-    if 'relation "pages_page" does not exist' not in str(e):
+except (OperationalError, ProgrammingError) as e:
+    error_messages = [
+        'relation "pages_page" does not exist',
+        'no such table: pages_page',
+    ]
+    if all(err not in str(e) for err in error_messages):
         raise
+
     msg = ("== skipping call to Pages.objects.all() "
         "because we’re migrating or something ==")
     print(msg)

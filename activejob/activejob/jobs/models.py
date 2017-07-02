@@ -80,13 +80,15 @@ class Job(models.Model):
 
 
 class Company(models.Model):
+    name = models.CharField(max_length=255)
     description = models.TextField()
 
     def __str__(self):
-        return self.description
+        return self.name
 
     class Meta:
         verbose_name_plural = "companies"
+        ordering = ["name", "pk"]
 
 
 class State(models.Model):
