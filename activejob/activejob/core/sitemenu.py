@@ -199,7 +199,7 @@ menu_items = {
                 },
                 {
                     "name": "Fragen und Antworten",
-                    "url": "bewerber_arbeitsvermittlung_antworten",
+                    "url": reverse_lazy("bewerber_arbeitsvermittlung_antworten"),
                 },
                 {
                     "name": "Ansprechpartner",
