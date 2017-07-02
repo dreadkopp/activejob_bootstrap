@@ -54,7 +54,7 @@ class Location(models.Model):
 
 class Job(models.Model):
     title = models.CharField(max_length=100)
-    slug = models.SlugField()
+    slug = models.SlugField(max_length=255)
     location = models.CharField(max_length=100)
     description = models.TextField()
     profile = models.TextField()
