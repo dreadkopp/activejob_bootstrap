@@ -23,7 +23,7 @@ class JobSearchListView(SearchMixin, JobListView):
     def dispatch(self, request, *args, **kwargs):
         for department in ["aü", "av", "pv"]:
             if department in request.GET:
-                request.session["stellenmarkt_department"] = department
+                request.session["jobs_department"] = department
                 break
 
         try:
