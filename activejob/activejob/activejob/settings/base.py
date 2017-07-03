@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "referenzen",
     "contactmessages",
     "pages",
+    "datenweitergabe",
 ]
 
 MIDDLEWARE = [
