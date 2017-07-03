@@ -1,4 +1,5 @@
 from django.contrib.syndication.views import Feed
+from django.shortcuts import redirect
 
 from .mixins import SearchMixin
 from .models import Job
@@ -24,6 +25,11 @@ class JobSearchListView(SearchMixin, JobListView):
             if department in request.GET:
                 request.session["stellenmarkt_department"] = department
                 break
+
+        try:
+            return redirect(Job.objects.get(pk=request.GET.get("q")))
+        except (ValueError, Job.DoesNotExist):
+            pass
 
         return super().dispatch(request, *args, **kwargs)
 
