@@ -26,7 +26,7 @@ class ContactProfile(models.Model):
         return "{} ({})".format(self.contact, self.status)
 
     class Meta:
-        ordering = ["-priority"]
+        ordering = ["contact__last_name", "contact__first_name", "pk"]
 
     # proxy:
     def first_name(self):
