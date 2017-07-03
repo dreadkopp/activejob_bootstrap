@@ -32,10 +32,16 @@ class SearchMixin:
                 Q(description__icontains=self.q) |
                 Q(profile__icontains=self.q) |
                 Q(perspective__icontains=self.q) |
-                Q(pk=self.q) |
 
                 Q(states__in=State.objects.filter(name__icontains=self.q))
             )
+
+            try:
+                q_as_int = int(self.q)
+            except ValueError:
+                pass
+            else:
+                filter |= Q(pk=q_as_int)
 
             queryset = queryset.filter(filter)
 
