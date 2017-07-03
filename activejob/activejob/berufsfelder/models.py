@@ -16,7 +16,7 @@ class Berufsfelder(models.Model):
 
 
 class Bereich(models.Model):
-    page = models.ForeignKey("Berufsfelder")
+    page = models.ForeignKey("Berufsfelder", on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
 
     def __str__(self):
@@ -27,7 +27,7 @@ class Bereich(models.Model):
 
 
 class Detail(models.Model):
-    sector = models.ForeignKey("Bereich")
+    sector = models.ForeignKey("Bereich", on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
 
     def __str__(self):

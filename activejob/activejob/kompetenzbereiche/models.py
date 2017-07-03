@@ -18,7 +18,7 @@ class Kompetenzbereich(models.Model):
 
 class Bereich(models.Model):
     title = models.CharField(max_length=200)
-    competencefield = models.ForeignKey("Kompetenzbereich")
+    competencefield = models.ForeignKey("Kompetenzbereich", on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title
@@ -29,7 +29,7 @@ class Bereich(models.Model):
 
 class Job(models.Model):
     name = models.CharField(max_length=200)
-    field = models.ForeignKey("Bereich")
+    field = models.ForeignKey("Bereich", on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name

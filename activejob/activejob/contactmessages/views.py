@@ -1,5 +1,5 @@
 from django.contrib import messages
-from django.core.urlresolvers import reverse_lazy
+from django.urls import reverse_lazy
 
 from .models import ContactMessage, Personalanfrage
 from core.views import SearchAndMenuCreateView

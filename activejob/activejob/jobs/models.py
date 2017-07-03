@@ -1,5 +1,5 @@
-from django.core.urlresolvers import reverse
 from django.db import models
+from django.urls import reverse
 
 
 class Contact(models.Model):
@@ -19,8 +19,8 @@ class ContactProfile(models.Model):
     phone = models.CharField(max_length=100)
     mail = models.EmailField()
     priority = models.DecimalField(max_digits=2, decimal_places=0)
-    location = models.ForeignKey("Location")
-    contact = models.ForeignKey("Contact")
+    location = models.ForeignKey("Location", on_delete=models.CASCADE)
+    contact = models.ForeignKey("Contact", on_delete=models.CASCADE)
 
     def __str__(self):
         return "{} ({})".format(self.contact, self.status)
@@ -62,9 +62,9 @@ class Job(models.Model):
     is_intern = models.BooleanField()
     changed_at = models.DateTimeField()
 
-    contact_profile = models.ForeignKey("ContactProfile")
-    company = models.ForeignKey("Company")
-    department = models.ForeignKey("Department")
+    contact_profile = models.ForeignKey("ContactProfile", on_delete=models.CASCADE)
+    company = models.ForeignKey("Company", on_delete=models.CASCADE)
+    department = models.ForeignKey("Department", on_delete=models.CASCADE)
 
     states = models.ManyToManyField("State")
     categories = models.ManyToManyField("Category")
