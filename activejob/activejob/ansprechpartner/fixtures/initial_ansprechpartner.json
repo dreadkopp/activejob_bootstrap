@@ -11,13 +11,26 @@
     "contact_profiles": [
       3,
       5,
+      11,
+      21,
       52,
+      53,
+      56,
       82,
+      91,
       108,
+      110,
       173,
       182,
+      188,
+      202,
       203,
-      218
+      205,
+      212,
+      215,
+      216,
+      218,
+      222
     ]
   }
 },
@@ -28,12 +41,15 @@
     "title": "Ansprechpartner AV",
     "field": "Arbeitsvermittlung",
     "banner_color": "orange",
-    "banner_slogan": "„Ein offenes Wort und eine ehrliche Einschätzung sind Dinge, die Kunden und Mitarbeiter jederzeit von uns erwarten können.“",
+    "banner_slogan": "\u201eEin offenes Wort und eine ehrliche Einsch\u00e4tzung sind Dinge, die Kunden und Mitarbeiter jederzeit von uns erwarten k\u00f6nnen.\u201c",
     "slug": "arbeitsvermittlung",
     "contact_profiles": [
       3,
       4,
       33,
+      56,
+      188,
+      202,
       219,
       220
     ]
@@ -46,11 +62,20 @@
     "title": "Ansprechpartner PV",
     "field": "Personalvermittlung",
     "banner_color": "blue",
-    "banner_slogan": "„Wir vermitteln Mitarbeiter, die nicht nur Ihren fachlichen Anforderungen entsprechen, sondern mit Leidenschaft und Enthusiasmus bei der Arbeit sind.“",
+    "banner_slogan": "\u201eWir vermitteln Mitarbeiter, die nicht nur Ihren fachlichen Anforderungen entsprechen, sondern mit Leidenschaft und Enthusiasmus bei der Arbeit sind.\u201c",
     "slug": "personalvermittlung",
     "contact_profiles": [
       3,
-      145
+      33,
+      53,
+      56,
+      88,
+      128,
+      145,
+      188,
+      202,
+      219,
+      220
     ]
   }
 },
@@ -64,7 +89,8 @@
     "banner_slogan": "",
     "slug": "karriereberatung",
     "contact_profiles": [
-      1
+      1,
+      3
     ]
   }
 }
