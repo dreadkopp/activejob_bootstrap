@@ -5,6 +5,7 @@ from django.db.utils import ProgrammingError, OperationalError
 from contactmessages.views import ContactMessageView
 from contactmessages.views import PersonalanfrageView
 from core.views import SearchAndMenuTemplateView as TemplateView, SitemapView
+from datenweitergabe.views import ConfirmationCreateView
 from jobs.views import JobDetailView, JobInternListView, JobSearchListView, RSSFeed
 from ansprechpartner.views import AnsprechpartnerView, karriereberatung
 from berufsfelder.views import BerufsfelderView
@@ -138,6 +139,12 @@ urlpatterns = [
     	r"^$",
         homepage,
         name="home",
+    ),
+
+    url(
+        r"^datenweitergabe/(?P<slug>[0-9a-f]{8,32})$",
+        ConfirmationCreateView.as_view(),
+        name="datenweitergabe"
     ),
 
     url(
