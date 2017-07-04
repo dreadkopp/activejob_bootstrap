@@ -24,42 +24,40 @@ class SearchMixin:
 
         queryset = super().get_queryset().distinct()
 
-        self.q = session.get("jobs_q")
-        if self.q:
+        word = session.get("jobs_q")
+        if word:
             filter = (
-                Q(title__icontains=self.q) |
-                Q(location__icontains=self.q) |
-                Q(description__icontains=self.q) |
-                Q(profile__icontains=self.q) |
-                Q(perspective__icontains=self.q) |
+                Q(title__icontains=word) |
+                Q(location__icontains=word) |
+                Q(description__icontains=word) |
+                Q(profile__icontains=word) |
+                Q(perspective__icontains=word) |
 
-                Q(states__in=State.objects.filter(name__icontains=self.q))
+                Q(states__in=State.objects.filter(name__icontains=word))
             )
 
             queryset = queryset.filter(filter)
 
-        self.states = session.get("jobs_states")
-        if self.states:
-            queryset = queryset.filter(states__in=[self.states])
+        if session.get("jobs_states"):
+            queryset = queryset.filter(states__in=[session.get("jobs_states")])
 
-        self.department = session.get("jobs_department")
-        if self.department:
-            queryset = queryset.filter(department=self.department)
+        if session.get("jobs_department"):
+            queryset = queryset.filter(department=session.get("jobs_department"))
 
-        self.categories = session.get("jobs_categories")
-        if self.categories:
-            queryset = queryset.filter(categories__in=self.categories)
+        if session.get("jobs_categories"):
+            queryset = queryset.filter(categories__in=session.get("jobs_categories"))
 
         return queryset
 
     def get_context_data(self):
         context = super().get_context_data()
 
+        session = self.request.session
         searchform = SearchForm(initial={
-            "q": self.q,
-            "categories": self.categories,
-            "department": self.department,
-            "states": self.states,
+            "q": session.get("jobs_q"),
+            "categories": session.get("jobs_categories"),
+            "department": session.get("jobs_department"),
+            "states": session.get("jobs_states"),
         })
 
         context.update({
