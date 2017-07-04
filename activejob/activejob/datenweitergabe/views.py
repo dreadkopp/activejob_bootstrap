@@ -1,7 +1,7 @@
 import json
 
 from django.contrib import messages
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse_lazy
 
 from .models import Confirmation, PendingConfirmation
@@ -18,6 +18,11 @@ class ConfirmationCreateView(SearchAndMenuCreateView):
             PendingConfirmation,
             slug=kwargs["slug"]
         )
+
+        if self.pending_confirmation.has_expired():
+            msg = "Dieser Bestätigungslink ist nicht mehr gültig."
+            messages.error(request, msg)
+            return redirect("home")
 
         return super().dispatch(request, *args, **kwargs)
 

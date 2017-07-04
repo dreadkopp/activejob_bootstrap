@@ -15,6 +15,9 @@ class PendingConfirmation(models.Model):
     def __str__(self):
         return self.slug
 
+    def has_expired(self):
+        return self.expires_at <= timezone.now()
+
 
 class Confirmation(models.Model):
     pending_confirmation = models.ForeignKey(
