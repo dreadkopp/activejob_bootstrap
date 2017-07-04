@@ -1,1 +1,223 @@
-[{"model": "referenzen.field", "pk": 1005, "fields": {"name": "Informationstechnologie und Telekommunikation"}}, {"model": "referenzen.field", "pk": 1006, "fields": {"name": "Ingenieurwesen/Industrie und Technik"}}, {"model": "referenzen.field", "pk": 1007, "fields": {"name": "Gesundheitswesen"}}, {"model": "referenzen.job", "pk": 6, "fields": {"name": "Systemadministrator", "fields": 1005}}, {"model": "referenzen.job", "pk": 7, "fields": {"name": "Vertriebsmitarbeiter", "fields": 1005}}, {"model": "referenzen.job", "pk": 8, "fields": {"name": "Vertriebscontroller", "fields": 1005}}, {"model": "referenzen.job", "pk": 9, "fields": {"name": "Berater Mobilfunkl\u00f6sungen", "fields": 1005}}, {"model": "referenzen.job", "pk": 10, "fields": {"name": "Assistenz Bereich Finanzen", "fields": 1005}}, {"model": "referenzen.job", "pk": 11, "fields": {"name": "Personalsachbearbeiter", "fields": 1005}}, {"model": "referenzen.job", "pk": 12, "fields": {"name": "Call-Center-Agent", "fields": 1005}}, {"model": "referenzen.job", "pk": 13, "fields": {"name": "Bereichsleiter Bahnsicherung", "fields": 1006}}, {"model": "referenzen.job", "pk": 14, "fields": {"name": "Eisenbahnbetriebsleiter", "fields": 1006}}, {"model": "referenzen.job", "pk": 15, "fields": {"name": "Technischer Kundenberater", "fields": 1006}}, {"model": "referenzen.job", "pk": 16, "fields": {"name": "Assistenz der Gesch\u00e4ftsf\u00fchrung", "fields": 1006}}, {"model": "referenzen.job", "pk": 17, "fields": {"name": "Mitarbeiter Qualit\u00e4tssicherung", "fields": 1006}}, {"model": "referenzen.job", "pk": 18, "fields": {"name": "Projektingenieure f\u00fcr Verkehrswesen- und Schienenfahrzeugtechnik", "fields": 1006}}, {"model": "referenzen.job", "pk": 19, "fields": {"name": "Ingenieur Elektrotechnik", "fields": 1006}}, {"model": "referenzen.job", "pk": 20, "fields": {"name": "Vertriebsingenieur", "fields": 1006}}, {"model": "referenzen.job", "pk": 21, "fields": {"name": "Projektkoordinator Produktentwicklung", "fields": 1006}}, {"model": "referenzen.job", "pk": 22, "fields": {"name": "Techniker Inbetriebnahme", "fields": 1006}}, {"model": "referenzen.job", "pk": 23, "fields": {"name": "Leiter strategisch und operativer Einkauf", "fields": 1006}}, {"model": "referenzen.job", "pk": 24, "fields": {"name": "Wissenschaftsingenieur", "fields": 1006}}, {"model": "referenzen.job", "pk": 25, "fields": {"name": "Examinierte Pflegefachkraft", "fields": 1007}}, {"model": "referenzen.job", "pk": 26, "fields": {"name": "Medizintechniker", "fields": 1007}}, {"model": "referenzen.job", "pk": 27, "fields": {"name": "Customer Service Mitarbeiter", "fields": 1007}}, {"model": "referenzen.job", "pk": 28, "fields": {"name": "Arzthelfer", "fields": 1007}}, {"model": "referenzen.job", "pk": 29, "fields": {"name": "Mitarbeiter Apothekenau\u00dfendienst", "fields": 1007}}, {"model": "referenzen.job", "pk": 30, "fields": {"name": "Pharmareferent", "fields": 1007}}]
+[
+  {
+    "fields": {
+      "name": "Informationstechnologie und Telekommunikation"
+    },
+    "pk": 1005,
+    "model": "referenzen.field"
+  },
+  {
+    "fields": {
+      "name": "Ingenieurwesen/Industrie und Technik"
+    },
+    "pk": 1006,
+    "model": "referenzen.field"
+  },
+  {
+    "fields": {
+      "name": "Gesundheitswesen"
+    },
+    "pk": 1007,
+    "model": "referenzen.field"
+  },
+  {
+    "fields": {
+      "fields": 1005,
+      "name": "Systemadministrator"
+    },
+    "pk": 6,
+    "model": "referenzen.job"
+  },
+  {
+    "fields": {
+      "fields": 1005,
+      "name": "Vertriebsmitarbeiter"
+    },
+    "pk": 7,
+    "model": "referenzen.job"
+  },
+  {
+    "fields": {
+      "fields": 1005,
+      "name": "Vertriebscontroller"
+    },
+    "pk": 8,
+    "model": "referenzen.job"
+  },
+  {
+    "fields": {
+      "fields": 1005,
+      "name": "Berater Mobilfunkl\u00f6sungen"
+    },
+    "pk": 9,
+    "model": "referenzen.job"
+  },
+  {
+    "fields": {
+      "fields": 1005,
+      "name": "Assistenz Bereich Finanzen"
+    },
+    "pk": 10,
+    "model": "referenzen.job"
+  },
+  {
+    "fields": {
+      "fields": 1005,
+      "name": "Personalsachbearbeiter"
+    },
+    "pk": 11,
+    "model": "referenzen.job"
+  },
+  {
+    "fields": {
+      "fields": 1005,
+      "name": "Call-Center-Agent"
+    },
+    "pk": 12,
+    "model": "referenzen.job"
+  },
+  {
+    "fields": {
+      "fields": 1006,
+      "name": "Bereichsleiter Bahnsicherung"
+    },
+    "pk": 13,
+    "model": "referenzen.job"
+  },
+  {
+    "fields": {
+      "fields": 1006,
+      "name": "Eisenbahnbetriebsleiter"
+    },
+    "pk": 14,
+    "model": "referenzen.job"
+  },
+  {
+    "fields": {
+      "fields": 1006,
+      "name": "Technischer Kundenberater"
+    },
+    "pk": 15,
+    "model": "referenzen.job"
+  },
+  {
+    "fields": {
+      "fields": 1006,
+      "name": "Assistenz der Gesch\u00e4ftsf\u00fchrung"
+    },
+    "pk": 16,
+    "model": "referenzen.job"
+  },
+  {
+    "fields": {
+      "fields": 1006,
+      "name": "Mitarbeiter Qualit\u00e4tssicherung"
+    },
+    "pk": 17,
+    "model": "referenzen.job"
+  },
+  {
+    "fields": {
+      "fields": 1006,
+      "name": "Projektingenieure f\u00fcr Verkehrswesen- und Schienenfahrzeugtechnik"
+    },
+    "pk": 18,
+    "model": "referenzen.job"
+  },
+  {
+    "fields": {
+      "fields": 1006,
+      "name": "Ingenieur Elektrotechnik"
+    },
+    "pk": 19,
+    "model": "referenzen.job"
+  },
+  {
+    "fields": {
+      "fields": 1006,
+      "name": "Vertriebsingenieur"
+    },
+    "pk": 20,
+    "model": "referenzen.job"
+  },
+  {
+    "fields": {
+      "fields": 1006,
+      "name": "Projektkoordinator Produktentwicklung"
+    },
+    "pk": 21,
+    "model": "referenzen.job"
+  },
+  {
+    "fields": {
+      "fields": 1006,
+      "name": "Techniker Inbetriebnahme"
+    },
+    "pk": 22,
+    "model": "referenzen.job"
+  },
+  {
+    "fields": {
+      "fields": 1006,
+      "name": "Leiter strategisch und operativer Einkauf"
+    },
+    "pk": 23,
+    "model": "referenzen.job"
+  },
+  {
+    "fields": {
+      "fields": 1006,
+      "name": "Wissenschaftsingenieur"
+    },
+    "pk": 24,
+    "model": "referenzen.job"
+  },
+  {
+    "fields": {
+      "fields": 1007,
+      "name": "Examinierte Pflegefachkraft"
+    },
+    "pk": 25,
+    "model": "referenzen.job"
+  },
+  {
+    "fields": {
+      "fields": 1007,
+      "name": "Medizintechniker"
+    },
+    "pk": 26,
+    "model": "referenzen.job"
+  },
+  {
+    "fields": {
+      "fields": 1007,
+      "name": "Customer Service Mitarbeiter"
+    },
+    "pk": 27,
+    "model": "referenzen.job"
+  },
+  {
+    "fields": {
+      "fields": 1007,
+      "name": "Arzthelfer"
+    },
+    "pk": 28,
+    "model": "referenzen.job"
+  },
+  {
+    "fields": {
+      "fields": 1007,
+      "name": "Mitarbeiter Apothekenau\u00dfendienst"
+    },
+    "pk": 29,
+    "model": "referenzen.job"
+  },
+  {
+    "fields": {
+      "fields": 1007,
+      "name": "Pharmareferent"
+    },
+    "pk": 30,
+    "model": "referenzen.job"
+  }
+]
