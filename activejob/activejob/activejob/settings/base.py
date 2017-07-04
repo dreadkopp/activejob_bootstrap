@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+from django.contrib.messages import constants as message_constants
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -116,3 +117,11 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'res')
 ]
+
+
+# Django’s and Boostrap’s message system paly well together
+# with the exception of “error” vs. “danger”, so we
+# override the latter
+MESSAGE_TAGS = {
+    message_constants.ERROR: "danger",
+}
