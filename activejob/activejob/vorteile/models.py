@@ -18,7 +18,7 @@ class Vorteile(models.Model):
 
 class Pro(models.Model):
     text = models.CharField(max_length=1000)
-    page = models.ForeignKey("Vorteile")
+    page = models.ForeignKey("Vorteile", on_delete=models.CASCADE)
 
     def __str__(self):
         return self.text

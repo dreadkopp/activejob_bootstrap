@@ -15,7 +15,7 @@ class Page(models.Model):
 
 class Field(models.Model):
     name = models.CharField(max_length=128)
-    page = models.ForeignKey("Page")
+    page = models.ForeignKey("Page", on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
@@ -23,7 +23,7 @@ class Field(models.Model):
 
 class Job(models.Model):
     name = models.CharField(max_length=128)
-    fields = models.ForeignKey("Field")
+    fields = models.ForeignKey("Field", on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
