@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import PendingConfirmation, Confirmation
+
+
+admin.site.register(PendingConfirmation)
+admin.site.register(Confirmation)
