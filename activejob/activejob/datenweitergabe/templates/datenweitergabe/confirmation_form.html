@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% load bootstrap3 %}
+
+{% block title %}
+Zustimmung zur Weitergabe von Daten{{ block.super }}
+{% endblock %}
+
+{% block middle_col %}
+  <h1>Zustimmung zur Weitergabe von Daten</h1>
+
+  <p>
+    Bitte bestätigen Sie Ihre Zustimmung zur Weitergabe Ihrer Daten
+    zum Zweck der Bewerbung an das Unternehmen:
+    <div class="well well-sm">{{ view.pending_confirmation.company }}</div>
+  </p>
+
+  <form method="post">
+    {% csrf_token %}
+    <input
+      type="submit"
+      class="form-control btn btn-primary"
+      value="Ich stimme zu."
+    >
+  </form>
+
+  <p>
+    Sie haben Fragen zu unseren Dienstleistungen?
+    <a href=" {% url "kontakt" %}">Kontaktieren Sie uns</a>.<br>
+    Wir setzen uns umgehend mit Ihnen in Verbindung.
+  </p>
+{% endblock %}
