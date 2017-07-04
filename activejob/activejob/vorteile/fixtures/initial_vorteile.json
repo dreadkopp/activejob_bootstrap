@@ -1,1 +1,238 @@
-[{"model": "vorteile.vorteile", "pk": 1, "fields": {"title": "Zeitarbeit - Ihre Vorteile", "subtitle": "Ihre Vorteile", "text": "Als Mitarbeiter bei der activjob GmbH erhalten Sie im Rahmen der Zeitarbeit eine dauerhafte, gesicherte Besch\u00e4ftigung mit Weiterbildungsm\u00f6glichkeiten, sozialer Absicherung und eine individuelle Betreuung. Sie lernen verschiedene T\u00e4tigkeitsbereiche, Firmen und Unternehmenskulturen kennen. Dabei gewinnen Sie nicht nur berufliche Erfahrung, sondern kn\u00fcpfen auch wertvolle Kontakte.  Bei uns legen Sie sich nicht auf ein eng eingegrenztes Aufgabengebiet fest, sondern haben entsprechend Ihrer Berufsausbildung die M\u00f6glichkeit, durch wechselnde Eins\u00e4tze vertiefende und umfangreiche Einblicke in bereits bekannte und neue Arbeitsfelder und Arbeitsprozesse zu gewinnen.  Damit st\u00e4rken Sie Ihre Vielseitigkeit und die eigene Sicherheit. In k\u00fcrzester Zeit runden Sie Ihr Profil ab und gewinnen vielf\u00e4ltige Erfahrungen. Ihre Chancen am Arbeitsmarkt steigen.", "banner_color": "green", "banner_slogan": "\u201eAls vertrauensw\u00fcrdiger und verl\u00e4sslicher Partner setzen wir Sie entsprechend Ihren F\u00e4higkeiten und Qualifikationen bei unseren Kundenunternehmen ein.\u201c", "slug": "zeitarbeit"}}, {"model": "vorteile.vorteile", "pk": 2, "fields": {"title": "Personalvermittlung - Vorteile f\u00fcr Kandidaten", "subtitle": "Vorteile durch Teamwork", "text": "Wir beraten Sie umfassend und individuell, um Ihre Bewerbung zum Erfolg zu bringen. Offenheit und gegenseitiges Vertrauen sind wesentliche Voraussetzungen f\u00fcr eine partnerschaftliche Zusammenarbeit. Schlie\u00dflich geht es um Sie und Ihre Zukunft.  Gemeinsam helfen wir Ihnen zu erkennen, wo ihre F\u00e4higkeiten am besten zum Einsatz kommen. Wir setzen uns f\u00fcr Sie ein und bereiten Sie kompetent im Hinblick auf anstehende Bewerbungsgespr\u00e4che vor.", "banner_color": "blue", "banner_slogan": "\u201eWir sind stets auf der Suche nach qualifizierten und motivierten Fachkr\u00e4ften. Bewerben Sie sich jetzt!\u201c", "slug": "personalvermittlung"}}, {"model": "vorteile.vorteile", "pk": 3, "fields": {"title": "Arbeitsvermittlung f\u00fcr Sachsen, Sachsen Anhalt,   Brandenburg, Berlin, Th\u00fcringen, Bayern, Baden-W\u00fcrttemberg", "subtitle": "Ihre Vorteile", "text": "Ob Sie den Wiedereinstieg suchen oder ins Berufsleben starten, wir vermitteln Sie direkt an einen festen Arbeitgeber. Als wegweisender Personaldienstleister stehen wir in permanentem Dialog mit vielen renommierten Unternehmen \u2013 in Ihrer Region und im gesamten Bundesgebiet. Nutzen Sie unser Karriere-Netzwerk.", "banner_color": "orange", "banner_slogan": "\u201eEin fester Ansprechpartner nimmt sich Ihrer  Anliegen pers\u00f6nlich an und betreut Sie individuell.\u201c", "slug": "arbeitsvermittlung"}}, {"model": "vorteile.pro", "pk": 1, "fields": {"text": "unbefristeter Arbeitsvertrag", "page": 1}}, {"model": "vorteile.pro", "pk": 2, "fields": {"text": "festes Bruttogehalt zuz\u00fcglich Zulagen", "page": 1}}, {"model": "vorteile.pro", "pk": 3, "fields": {"text": "mindestens tarifliche Verg\u00fctung", "page": 1}}, {"model": "vorteile.pro", "pk": 4, "fields": {"text": "langfristige Arbeitseins\u00e4tze in Ihrer Region", "page": 1}}, {"model": "vorteile.pro", "pk": 5, "fields": {"text": "anspruchsvolle und wechselnde Aufgaben in namhaften Unternehmen", "page": 1}}, {"model": "vorteile.pro", "pk": 6, "fields": {"text": "ausf\u00fchrliche Informationen \u00fcber Ihren Einsatzbetrieb", "page": 1}}, {"model": "vorteile.pro", "pk": 7, "fields": {"text": "Chance auf \u00dcbernahme in ein festes Anstellungsverh\u00e4ltnis bei unserem Kunden", "page": 1}}, {"model": "vorteile.pro", "pk": 8, "fields": {"text": "Urlaub w\u00e4hrend der Probezeit", "page": 1}}, {"model": "vorteile.pro", "pk": 9, "fields": {"text": "Verm\u00f6genswirksame Leistungen", "page": 1}}, {"model": "vorteile.pro", "pk": 10, "fields": {"text": "pers\u00f6nliche und vertrauensvolle Betreuung", "page": 1}}, {"model": "vorteile.pro", "pk": 11, "fields": {"text": "Erreichbarkeit Ihrer Ansprechpartner auch au\u00dferhalb der Arbeitszeiten", "page": 1}}, {"model": "vorteile.pro", "pk": 12, "fields": {"text": "sehr gutes Betriebsklima", "page": 1}}, {"model": "vorteile.pro", "pk": 13, "fields": {"text": "Mitarbeiterfeiern mit Familie, z. B. Weihnachtsfest", "page": 1}}, {"model": "vorteile.pro", "pk": 14, "fields": {"text": "t\u00e4tigkeitsbezogene Weiterbildungsangebote", "page": 1}}, {"model": "vorteile.pro", "pk": 15, "fields": {"text": "Kontakte und Informationen zu interessanten Unternehmen", "page": 2}}, {"model": "vorteile.pro", "pk": 16, "fields": {"text": "Vermittlung mit Empfehlung: Wir setzen uns f\u00fcr Sie beim Unternehmen ein", "page": 2}}, {"model": "vorteile.pro", "pk": 17, "fields": {"text": "intensive Beratung und Unterst\u00fctzung", "page": 2}}, {"model": "vorteile.pro", "pk": 18, "fields": {"text": "Coaching f\u00fcr Bewerbungsgespr\u00e4che", "page": 2}}, {"model": "vorteile.pro", "pk": 19, "fields": {"text": "absolute Diskretion bei der Verwendung Ihrer Daten", "page": 2}}, {"model": "vorteile.pro", "pk": 20, "fields": {"text": "Mit nur einer Bewerbung erhalten Sie Zugang zu einer Vielzahl an Stellen und hervorragend positionierten Unternehmen. Damit erh\u00f6hen Sie die Chancen f\u00fcr Ihren Karrieresprung.", "page": 3}}, {"model": "vorteile.pro", "pk": 21, "fields": {"text": "Wir erkunden gemeinsam mit Ihnen Ihre F\u00e4higkeiten und St\u00e4rken. Im Rahmen ausf\u00fchrlicher Gespr\u00e4che ermitteln wir Ihre individuellen Vorstellungen und entwerfen ein pers\u00f6nlichkeits- und fachbezogenes Profil von Ihnen.", "page": 3}}, {"model": "vorteile.pro", "pk": 22, "fields": {"text": "Sie erhalten von uns ausschlie\u00dflich Stellenangebote, die Ihren spezifischen Berufsw\u00fcnschen entsprechen. Zus\u00e4tzlich schlagen wir Sie auf Wunsch bei attraktiven Unternehmen aktiv vor und machen uns stark f\u00fcr Sie.", "page": 3}}, {"model": "vorteile.pro", "pk": 23, "fields": {"text": "Auch die gezielte Vorbereitung auf Ihr Vorstellungsgespr\u00e4ch geh\u00f6rt zu unseren Leistungen. Eine Begleitung \u00fcber die gesamte Bewerbungsphase bis hin zur Vertragsunterzeichnung ist f\u00fcr uns selbstverst\u00e4ndlich.", "page": 3}}, {"model": "vorteile.pro", "pk": 24, "fields": {"text": "Sie vermeiden den sonst \u00fcblichen Bewerbungsaufwand. Die Terminkoordination und Vereinbarung von Vorstellungsgespra\u0308chen stimmen wir Im Vorfeld mit Ihnen ab.", "page": 3}}, {"model": "vorteile.pro", "pk": 25, "fields": {"text": "Die Arbeitsvermittlung ist f\u00fcr Sie als Bewerber/in in der Regel v\u00f6llig kostenfrei.", "page": 3}}]
+[
+{
+  "model": "vorteile.vorteile",
+  "pk": 1,
+  "fields": {
+    "title": "Zeitarbeit - Ihre Vorteile",
+    "subtitle": "Ihre Vorteile",
+    "text": "Als Mitarbeiter bei der activjob GmbH erhalten Sie im Rahmen der Zeitarbeit eine dauerhafte, gesicherte Besch\u00e4ftigung mit Weiterbildungsm\u00f6glichkeiten, sozialer Absicherung und eine individuelle Betreuung. Sie lernen verschiedene T\u00e4tigkeitsbereiche, Firmen und Unternehmenskulturen kennen. Dabei gewinnen Sie nicht nur berufliche Erfahrung, sondern kn\u00fcpfen auch wertvolle Kontakte.  Bei uns legen Sie sich nicht auf ein eng eingegrenztes Aufgabengebiet fest, sondern haben entsprechend Ihrer Berufsausbildung die M\u00f6glichkeit, durch wechselnde Eins\u00e4tze vertiefende und umfangreiche Einblicke in bereits bekannte und neue Arbeitsfelder und Arbeitsprozesse zu gewinnen.  Damit st\u00e4rken Sie Ihre Vielseitigkeit und die eigene Sicherheit. In k\u00fcrzester Zeit runden Sie Ihr Profil ab und gewinnen vielf\u00e4ltige Erfahrungen. Ihre Chancen am Arbeitsmarkt steigen.",
+    "banner_color": "green",
+    "banner_slogan": "\u201eAls vertrauensw\u00fcrdiger und verl\u00e4sslicher Partner setzen wir Sie entsprechend Ihren F\u00e4higkeiten und Qualifikationen bei unseren Kundenunternehmen ein.\u201c",
+    "slug": "arbeitnehmerueberlassung"
+  }
+},
+{
+  "model": "vorteile.vorteile",
+  "pk": 2,
+  "fields": {
+    "title": "Personalvermittlung - Vorteile f\u00fcr Kandidaten",
+    "subtitle": "Vorteile durch Teamwork",
+    "text": "Wir beraten Sie umfassend und individuell, um Ihre Bewerbung zum Erfolg zu bringen. Offenheit und gegenseitiges Vertrauen sind wesentliche Voraussetzungen f\u00fcr eine partnerschaftliche Zusammenarbeit. Schlie\u00dflich geht es um Sie und Ihre Zukunft.  Gemeinsam helfen wir Ihnen zu erkennen, wo ihre F\u00e4higkeiten am besten zum Einsatz kommen. Wir setzen uns f\u00fcr Sie ein und bereiten Sie kompetent im Hinblick auf anstehende Bewerbungsgespr\u00e4che vor.",
+    "banner_color": "blue",
+    "banner_slogan": "\u201eWir sind stets auf der Suche nach qualifizierten und motivierten Fachkr\u00e4ften. Bewerben Sie sich jetzt!\u201c",
+    "slug": "personalvermittlung"
+  }
+},
+{
+  "model": "vorteile.vorteile",
+  "pk": 3,
+  "fields": {
+    "title": "Arbeitsvermittlung f\u00fcr Sachsen, Sachsen Anhalt,   Brandenburg, Berlin, Th\u00fcringen, Bayern, Baden-W\u00fcrttemberg",
+    "subtitle": "Ihre Vorteile",
+    "text": "Ob Sie den Wiedereinstieg suchen oder ins Berufsleben starten, wir vermitteln Sie direkt an einen festen Arbeitgeber. Als wegweisender Personaldienstleister stehen wir in permanentem Dialog mit vielen renommierten Unternehmen \u2013 in Ihrer Region und im gesamten Bundesgebiet. Nutzen Sie unser Karriere-Netzwerk.",
+    "banner_color": "orange",
+    "banner_slogan": "\u201eEin fester Ansprechpartner nimmt sich Ihrer  Anliegen pers\u00f6nlich an und betreut Sie individuell.\u201c",
+    "slug": "arbeitsvermittlung"
+  }
+},
+{
+  "model": "vorteile.pro",
+  "pk": 1,
+  "fields": {
+    "text": "unbefristeter Arbeitsvertrag",
+    "page": 1
+  }
+},
+{
+  "model": "vorteile.pro",
+  "pk": 2,
+  "fields": {
+    "text": "festes Bruttogehalt zuz\u00fcglich Zulagen",
+    "page": 1
+  }
+},
+{
+  "model": "vorteile.pro",
+  "pk": 3,
+  "fields": {
+    "text": "mindestens tarifliche Verg\u00fctung",
+    "page": 1
+  }
+},
+{
+  "model": "vorteile.pro",
+  "pk": 4,
+  "fields": {
+    "text": "langfristige Arbeitseins\u00e4tze in Ihrer Region",
+    "page": 1
+  }
+},
+{
+  "model": "vorteile.pro",
+  "pk": 5,
+  "fields": {
+    "text": "anspruchsvolle und wechselnde Aufgaben in namhaften Unternehmen",
+    "page": 1
+  }
+},
+{
+  "model": "vorteile.pro",
+  "pk": 6,
+  "fields": {
+    "text": "ausf\u00fchrliche Informationen \u00fcber Ihren Einsatzbetrieb",
+    "page": 1
+  }
+},
+{
+  "model": "vorteile.pro",
+  "pk": 7,
+  "fields": {
+    "text": "Chance auf \u00dcbernahme in ein festes Anstellungsverh\u00e4ltnis bei unserem Kunden",
+    "page": 1
+  }
+},
+{
+  "model": "vorteile.pro",
+  "pk": 8,
+  "fields": {
+    "text": "Urlaub w\u00e4hrend der Probezeit",
+    "page": 1
+  }
+},
+{
+  "model": "vorteile.pro",
+  "pk": 9,
+  "fields": {
+    "text": "Verm\u00f6genswirksame Leistungen",
+    "page": 1
+  }
+},
+{
+  "model": "vorteile.pro",
+  "pk": 10,
+  "fields": {
+    "text": "pers\u00f6nliche und vertrauensvolle Betreuung",
+    "page": 1
+  }
+},
+{
+  "model": "vorteile.pro",
+  "pk": 11,
+  "fields": {
+    "text": "Erreichbarkeit Ihrer Ansprechpartner auch au\u00dferhalb der Arbeitszeiten",
+    "page": 1
+  }
+},
+{
+  "model": "vorteile.pro",
+  "pk": 12,
+  "fields": {
+    "text": "sehr gutes Betriebsklima",
+    "page": 1
+  }
+},
+{
+  "model": "vorteile.pro",
+  "pk": 13,
+  "fields": {
+    "text": "Mitarbeiterfeiern mit Familie, z. B. Weihnachtsfest",
+    "page": 1
+  }
+},
+{
+  "model": "vorteile.pro",
+  "pk": 14,
+  "fields": {
+    "text": "t\u00e4tigkeitsbezogene Weiterbildungsangebote",
+    "page": 1
+  }
+},
+{
+  "model": "vorteile.pro",
+  "pk": 15,
+  "fields": {
+    "text": "Kontakte und Informationen zu interessanten Unternehmen",
+    "page": 2
+  }
+},
+{
+  "model": "vorteile.pro",
+  "pk": 16,
+  "fields": {
+    "text": "Vermittlung mit Empfehlung: Wir setzen uns f\u00fcr Sie beim Unternehmen ein",
+    "page": 2
+  }
+},
+{
+  "model": "vorteile.pro",
+  "pk": 17,
+  "fields": {
+    "text": "intensive Beratung und Unterst\u00fctzung",
+    "page": 2
+  }
+},
+{
+  "model": "vorteile.pro",
+  "pk": 18,
+  "fields": {
+    "text": "Coaching f\u00fcr Bewerbungsgespr\u00e4che",
+    "page": 2
+  }
+},
+{
+  "model": "vorteile.pro",
+  "pk": 19,
+  "fields": {
+    "text": "absolute Diskretion bei der Verwendung Ihrer Daten",
+    "page": 2
+  }
+},
+{
+  "model": "vorteile.pro",
+  "pk": 20,
+  "fields": {
+    "text": "Mit nur einer Bewerbung erhalten Sie Zugang zu einer Vielzahl an Stellen und hervorragend positionierten Unternehmen. Damit erh\u00f6hen Sie die Chancen f\u00fcr Ihren Karrieresprung.",
+    "page": 3
+  }
+},
+{
+  "model": "vorteile.pro",
+  "pk": 21,
+  "fields": {
+    "text": "Wir erkunden gemeinsam mit Ihnen Ihre F\u00e4higkeiten und St\u00e4rken. Im Rahmen ausf\u00fchrlicher Gespr\u00e4che ermitteln wir Ihre individuellen Vorstellungen und entwerfen ein pers\u00f6nlichkeits- und fachbezogenes Profil von Ihnen.",
+    "page": 3
+  }
+},
+{
+  "model": "vorteile.pro",
+  "pk": 22,
+  "fields": {
+    "text": "Sie erhalten von uns ausschlie\u00dflich Stellenangebote, die Ihren spezifischen Berufsw\u00fcnschen entsprechen. Zus\u00e4tzlich schlagen wir Sie auf Wunsch bei attraktiven Unternehmen aktiv vor und machen uns stark f\u00fcr Sie.",
+    "page": 3
+  }
+},
+{
+  "model": "vorteile.pro",
+  "pk": 23,
+  "fields": {
+    "text": "Auch die gezielte Vorbereitung auf Ihr Vorstellungsgespr\u00e4ch geh\u00f6rt zu unseren Leistungen. Eine Begleitung \u00fcber die gesamte Bewerbungsphase bis hin zur Vertragsunterzeichnung ist f\u00fcr uns selbstverst\u00e4ndlich.",
+    "page": 3
+  }
+},
+{
+  "model": "vorteile.pro",
+  "pk": 24,
+  "fields": {
+    "text": "Sie vermeiden den sonst \u00fcblichen Bewerbungsaufwand. Die Terminkoordination und Vereinbarung von Vorstellungsgespra\u0308chen stimmen wir Im Vorfeld mit Ihnen ab.",
+    "page": 3
+  }
+},
+{
+  "model": "vorteile.pro",
+  "pk": 25,
+  "fields": {
+    "text": "Die Arbeitsvermittlung ist f\u00fcr Sie als Bewerber/in in der Regel v\u00f6llig kostenfrei.",
+    "page": 3
+  }
+}
+]
