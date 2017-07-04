@@ -24,7 +24,7 @@ class SearchMixin:
 
         queryset = super().get_queryset().distinct()
 
-        for word in session.get("jobs_q").split():
+        for word in session.get("jobs_q", "").split():
             filter = (
                 Q(title__icontains=word) |
                 Q(location__icontains=word) |
