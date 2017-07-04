@@ -1,1 +1,659 @@
-[{"model": "berufsfelder.berufsfelder", "pk": 1, "fields": {"title": "Einsatzgebiete und Berufsfelder", "text": "Gern beraten wir Sie individuell. Entsprechend Ihrer Qualifikationen vermitteln wir Ihnen langfristige Eins\u00e4tze bei einem Unternehmen, dass Ihre F\u00e4higkeiten zu sch\u00e4tzen wei\u00df.  Sie bekommen bei uns einen unbefristeten Arbeitsvertrag und erhalten so Planungssicherheit f\u00fcr sich und Ihre Familie. Ihr Ansprechpartner unterst\u00fctzt Sie dauerhaft bei allen Angelegenheiten und Fragen.  Wir sind immer auf der Suche nach:*", "banner_color": "green", "banner_slogan": "\u201eAls vertrauensw\u00fcrdiger und verl\u00e4sslicher Partner setzen wir Sie entsprechend Ihren F\u00e4higkeiten und Qualifikationen bei unseren Kundenunternehmen ein.\u201c", "slug": "zeitarbeit"}}, {"model": "berufsfelder.berufsfelder", "pk": 2, "fields": {"title": "Berufsfelder und Einsatzgebiete", "text": "Gern beraten wir Sie individuell und vermitteln Sie direkt in ein festes Arbeitsverh\u00e4ltnis bei namhaften Unternehmen. Im Auftrag unserer Kunden suchen wir f\u00fcr folgende beispielhafte Profile den richtigen Bewerber:*", "banner_color": "blue", "banner_slogan": "\u201eWir sind stets auf der Suche nach qualifizierten und motivierten Fachkr\u00e4ften. Bewerben Sie sich jetzt!\u201c", "slug": "personalvermittlung"}}, {"model": "berufsfelder.berufsfelder", "pk": 3, "fields": {"title": "Berufsfelder und Einsatzgebiete", "text": "Als Jobvermittler nimmt activjob Ihnen die Arbeitssuche ab. Wir nehmen Sie mit Ihren pers\u00f6nlichen St\u00e4rken in unsere Datenbank auf, offerieren Ihnen Jobangebote, die sich an Ihren F\u00e4higkeiten orientieren und vermitteln Sie an freie Stellen in namhaften Unternehmen.  Wir sind jederzeit auf der Suche nach qualifizierten Fachkr\u00e4ften und Helfern aus den folgenden Bereichen:*", "banner_color": "orange", "banner_slogan": "\u201eWir sind stets auf der Suche nach qualifizierten und motivierten Fachkr\u00e4ften. Bewerben Sie sich jetzt!\u201c", "slug": "arbeitsvermittlung"}}, {"model": "berufsfelder.bereich", "pk": 1, "fields": {"page": 1, "name": "Facharbeitern aus allen gewerblichen T\u00e4tigkeitsfeldern:"}}, {"model": "berufsfelder.bereich", "pk": 2, "fields": {"page": 1, "name": "Technikern und Ingenieuren aus den Fachgebieten:"}}, {"model": "berufsfelder.bereich", "pk": 3, "fields": {"page": 1, "name": "kaufm\u00e4nnischem Personal aus den Funktionsbereichen:"}}, {"model": "berufsfelder.bereich", "pk": 4, "fields": {"page": 1, "name": "Dienstleistungsfachkr\u00e4ften aus den Bereichen:"}}, {"model": "berufsfelder.bereich", "pk": 5, "fields": {"page": 3, "name": "Wach- und Sicherheitsgewerbe, z. B."}}, {"model": "berufsfelder.bereich", "pk": 6, "fields": {"page": 3, "name": "Hotel- und Gastgewerbe, z. B."}}, {"model": "berufsfelder.bereich", "pk": 7, "fields": {"page": 3, "name": "Spedition und Logistik, z. B."}}, {"model": "berufsfelder.bereich", "pk": 8, "fields": {"page": 3, "name": "Handel und Dienstleistungen, z. B."}}, {"model": "berufsfelder.bereich", "pk": 9, "fields": {"page": 3, "name": "Bahndienstleistungen, z. B."}}, {"model": "berufsfelder.bereich", "pk": 10, "fields": {"page": 3, "name": "Bau- und Baunebengewerbe, z. B."}}, {"model": "berufsfelder.bereich", "pk": 11, "fields": {"page": 3, "name": "Facilitymanagement, z. B."}}, {"model": "berufsfelder.bereich", "pk": 12, "fields": {"page": 3, "name": "Gesundheitswesen"}}, {"model": "berufsfelder.bereich", "pk": 13, "fields": {"page": 2, "name": "Ingenieurwesen/Industrie und Technik"}}, {"model": "berufsfelder.bereich", "pk": 14, "fields": {"page": 2, "name": "Informationstechnologie und Telekommunikation"}}, {"model": "berufsfelder.bereich", "pk": 15, "fields": {"page": 2, "name": "Kaufm\u00e4nnische Berufe und Assistenz"}}, {"model": "berufsfelder.bereich", "pk": 16, "fields": {"page": 2, "name": "Gesundheitswesen"}}, {"model": "berufsfelder.detail", "pk": 1, "fields": {"sector": 1, "name": "Schlosser und Schwei\u00dfer"}}, {"model": "berufsfelder.detail", "pk": 2, "fields": {"sector": 1, "name": "Installateure HLS"}}, {"model": "berufsfelder.detail", "pk": 3, "fields": {"sector": 1, "name": "Elektriker und Energieelektroniker"}}, {"model": "berufsfelder.detail", "pk": 4, "fields": {"sector": 1, "name": "Industrie- und Anlagenmechaniker"}}, {"model": "berufsfelder.detail", "pk": 5, "fields": {"sector": 1, "name": "Tischler und Fenstermonteure"}}, {"model": "berufsfelder.detail", "pk": 6, "fields": {"sector": 1, "name": "CNC-Fachkr\u00e4fte"}}, {"model": "berufsfelder.detail", "pk": 7, "fields": {"sector": 1, "name": "Mechatroniker"}}, {"model": "berufsfelder.detail", "pk": 8, "fields": {"sector": 1, "name": "Lackierer und Maler"}}, {"model": "berufsfelder.detail", "pk": 9, "fields": {"sector": 2, "name": "Maschinenbau, Automatisierungs-, Energie- und Anlagentechnik"}}, {"model": "berufsfelder.detail", "pk": 10, "fields": {"sector": 2, "name": "Elektrotechnik/Elektronik, Nachrichtentechnik"}}, {"model": "berufsfelder.detail", "pk": 11, "fields": {"sector": 2, "name": "Fahrzeugtechnik, Konstruktion, Entwicklung"}}, {"model": "berufsfelder.detail", "pk": 12, "fields": {"sector": 2, "name": "Feinwerk-, Verfahrens- und Umwelttechnik"}}, {"model": "berufsfelder.detail", "pk": 13, "fields": {"sector": 2, "name": "Vermessungs- und Bauwesen"}}, {"model": "berufsfelder.detail", "pk": 14, "fields": {"sector": 3, "name": "Office und Sachbearbeitung"}}, {"model": "berufsfelder.detail", "pk": 15, "fields": {"sector": 3, "name": "Finanzen und Controlling"}}, {"model": "berufsfelder.detail", "pk": 16, "fields": {"sector": 3, "name": "Vertrieb und Marketing"}}, {"model": "berufsfelder.detail", "pk": 17, "fields": {"sector": 3, "name": "Personal"}}, {"model": "berufsfelder.detail", "pk": 18, "fields": {"sector": 4, "name": "Call-Center"}}, {"model": "berufsfelder.detail", "pk": 19, "fields": {"sector": 4, "name": "Kundenbetreuung"}}, {"model": "berufsfelder.detail", "pk": 20, "fields": {"sector": 12, "name": "Kranken- und Altenpflegekr\u00e4fte"}}, {"model": "berufsfelder.detail", "pk": 21, "fields": {"sector": 11, "name": "Reinigungskr\u00e4fte"}}, {"model": "berufsfelder.detail", "pk": 22, "fields": {"sector": 11, "name": "Hauswirtschaftskr\u00e4fte"}}, {"model": "berufsfelder.detail", "pk": 23, "fields": {"sector": 10, "name": "Baufachkr\u00e4fte"}}, {"model": "berufsfelder.detail", "pk": 24, "fields": {"sector": 10, "name": "Bauhelfer"}}, {"model": "berufsfelder.detail", "pk": 25, "fields": {"sector": 9, "name": "Sicherungsposten (SIPO/SAKRA, B\u00dcP, Bediener AWS)"}}, {"model": "berufsfelder.detail", "pk": 26, "fields": {"sector": 9, "name": "technisches Bahnpersonal"}}, {"model": "berufsfelder.detail", "pk": 27, "fields": {"sector": 9, "name": "technische F\u00fchrungskr\u00e4fte"}}, {"model": "berufsfelder.detail", "pk": 28, "fields": {"sector": 9, "name": "Bahnlogistiker"}}, {"model": "berufsfelder.detail", "pk": 29, "fields": {"sector": 8, "name": "Backwarenfachverk\u00e4ufer"}}, {"model": "berufsfelder.detail", "pk": 30, "fields": {"sector": 8, "name": "Fleischwarenverk\u00e4ufer"}}, {"model": "berufsfelder.detail", "pk": 31, "fields": {"sector": 8, "name": "Fachkr\u00e4fte im Einzelhandel"}}, {"model": "berufsfelder.detail", "pk": 32, "fields": {"sector": 7, "name": "Kraftfahrer und Disponenten"}}, {"model": "berufsfelder.detail", "pk": 33, "fields": {"sector": 7, "name": "Lagerhelfer"}}, {"model": "berufsfelder.detail", "pk": 34, "fields": {"sector": 6, "name": "Hotel- und Restaurantfachkr\u00e4fte"}}, {"model": "berufsfelder.detail", "pk": 35, "fields": {"sector": 6, "name": "K\u00f6che und K\u00fcchenhilfskr\u00e4fte"}}, {"model": "berufsfelder.detail", "pk": 36, "fields": {"sector": 5, "name": "Sicherheitsfachkr\u00e4fte"}}, {"model": "berufsfelder.detail", "pk": 37, "fields": {"sector": 5, "name": "Aufsichten f\u00fcr Museen"}}, {"model": "berufsfelder.detail", "pk": 38, "fields": {"sector": 16, "name": "Assistenzberufe"}}, {"model": "berufsfelder.detail", "pk": 39, "fields": {"sector": 16, "name": "Pflegeberufe"}}, {"model": "berufsfelder.detail", "pk": 40, "fields": {"sector": 16, "name": "Pharmaberater & -referent"}}, {"model": "berufsfelder.detail", "pk": 41, "fields": {"sector": 16, "name": "Praxispersonal"}}, {"model": "berufsfelder.detail", "pk": 42, "fields": {"sector": 16, "name": "Therapeutische Berufe"}}, {"model": "berufsfelder.detail", "pk": 43, "fields": {"sector": 15, "name": "Office-Management, Sekretariat"}}, {"model": "berufsfelder.detail", "pk": 44, "fields": {"sector": 15, "name": "Kundenberater, Telefonzentrale"}}, {"model": "berufsfelder.detail", "pk": 45, "fields": {"sector": 15, "name": "Personalwesen"}}, {"model": "berufsfelder.detail", "pk": 46, "fields": {"sector": 15, "name": "Vertrieb, Marketing"}}, {"model": "berufsfelder.detail", "pk": 47, "fields": {"sector": 15, "name": "Finanzen, Handel, Einkauf"}}, {"model": "berufsfelder.detail", "pk": 48, "fields": {"sector": 14, "name": "Datenbankadministration & -entwicklung"}}, {"model": "berufsfelder.detail", "pk": 49, "fields": {"sector": 14, "name": "E-Business & E-Commerce"}}, {"model": "berufsfelder.detail", "pk": 50, "fields": {"sector": 14, "name": "Helpdesk & Technischer Support"}}, {"model": "berufsfelder.detail", "pk": 51, "fields": {"sector": 14, "name": "IT-Architektur"}}, {"model": "berufsfelder.detail", "pk": 52, "fields": {"sector": 14, "name": "Netzwerkadministration & Sicherheit"}}, {"model": "berufsfelder.detail", "pk": 53, "fields": {"sector": 14, "name": "Software-, Anwendungsentwicklung und -programmierung"}}, {"model": "berufsfelder.detail", "pk": 54, "fields": {"sector": 14, "name": "Systemadministration"}}, {"model": "berufsfelder.detail", "pk": 55, "fields": {"sector": 14, "name": "Telekommunikation & Mobilsysteme"}}, {"model": "berufsfelder.detail", "pk": 56, "fields": {"sector": 13, "name": "Bauingenieure, Bautechniker"}}, {"model": "berufsfelder.detail", "pk": 57, "fields": {"sector": 13, "name": "Elektrotechnik-Ingenieure, Elektrotechniker"}}, {"model": "berufsfelder.detail", "pk": 58, "fields": {"sector": 13, "name": "Maschinenbau-Ingenieure, -techniker"}}, {"model": "berufsfelder.detail", "pk": 59, "fields": {"sector": 13, "name": "Qualit\u00e4tsmanager & Qualit\u00e4tsingenieur"}}, {"model": "berufsfelder.detail", "pk": 60, "fields": {"sector": 13, "name": "Servicetechniker"}}, {"model": "berufsfelder.detail", "pk": 61, "fields": {"sector": 13, "name": "Verfahrenstechnik-Ingenieure"}}, {"model": "berufsfelder.detail", "pk": 62, "fields": {"sector": 13, "name": "Vertriebsingenieur"}}]
+[
+{
+  "model": "berufsfelder.berufsfelder",
+  "pk": 1,
+  "fields": {
+    "title": "Einsatzgebiete und Berufsfelder",
+    "text": "Gern beraten wir Sie individuell. Entsprechend Ihrer Qualifikationen vermitteln wir Ihnen langfristige Eins\u00e4tze bei einem Unternehmen, dass Ihre F\u00e4higkeiten zu sch\u00e4tzen wei\u00df.  Sie bekommen bei uns einen unbefristeten Arbeitsvertrag und erhalten so Planungssicherheit f\u00fcr sich und Ihre Familie. Ihr Ansprechpartner unterst\u00fctzt Sie dauerhaft bei allen Angelegenheiten und Fragen.  Wir sind immer auf der Suche nach:*",
+    "banner_color": "green",
+    "banner_slogan": "\u201eAls vertrauensw\u00fcrdiger und verl\u00e4sslicher Partner setzen wir Sie entsprechend Ihren F\u00e4higkeiten und Qualifikationen bei unseren Kundenunternehmen ein.\u201c",
+    "slug": "arbeitnehmerueberlassung"
+  }
+},
+{
+  "model": "berufsfelder.berufsfelder",
+  "pk": 2,
+  "fields": {
+    "title": "Berufsfelder und Einsatzgebiete",
+    "text": "Gern beraten wir Sie individuell und vermitteln Sie direkt in ein festes Arbeitsverh\u00e4ltnis bei namhaften Unternehmen. Im Auftrag unserer Kunden suchen wir f\u00fcr folgende beispielhafte Profile den richtigen Bewerber:*",
+    "banner_color": "blue",
+    "banner_slogan": "\u201eWir sind stets auf der Suche nach qualifizierten und motivierten Fachkr\u00e4ften. Bewerben Sie sich jetzt!\u201c",
+    "slug": "personalvermittlung"
+  }
+},
+{
+  "model": "berufsfelder.berufsfelder",
+  "pk": 3,
+  "fields": {
+    "title": "Berufsfelder und Einsatzgebiete",
+    "text": "Als Jobvermittler nimmt activjob Ihnen die Arbeitssuche ab. Wir nehmen Sie mit Ihren pers\u00f6nlichen St\u00e4rken in unsere Datenbank auf, offerieren Ihnen Jobangebote, die sich an Ihren F\u00e4higkeiten orientieren und vermitteln Sie an freie Stellen in namhaften Unternehmen.  Wir sind jederzeit auf der Suche nach qualifizierten Fachkr\u00e4ften und Helfern aus den folgenden Bereichen:*",
+    "banner_color": "orange",
+    "banner_slogan": "\u201eWir sind stets auf der Suche nach qualifizierten und motivierten Fachkr\u00e4ften. Bewerben Sie sich jetzt!\u201c",
+    "slug": "arbeitsvermittlung"
+  }
+},
+{
+  "model": "berufsfelder.bereich",
+  "pk": 1,
+  "fields": {
+    "page": 1,
+    "name": "Facharbeitern aus allen gewerblichen T\u00e4tigkeitsfeldern:"
+  }
+},
+{
+  "model": "berufsfelder.bereich",
+  "pk": 2,
+  "fields": {
+    "page": 1,
+    "name": "Technikern und Ingenieuren aus den Fachgebieten:"
+  }
+},
+{
+  "model": "berufsfelder.bereich",
+  "pk": 3,
+  "fields": {
+    "page": 1,
+    "name": "kaufm\u00e4nnischem Personal aus den Funktionsbereichen:"
+  }
+},
+{
+  "model": "berufsfelder.bereich",
+  "pk": 4,
+  "fields": {
+    "page": 1,
+    "name": "Dienstleistungsfachkr\u00e4ften aus den Bereichen:"
+  }
+},
+{
+  "model": "berufsfelder.bereich",
+  "pk": 5,
+  "fields": {
+    "page": 3,
+    "name": "Wach- und Sicherheitsgewerbe, z. B."
+  }
+},
+{
+  "model": "berufsfelder.bereich",
+  "pk": 6,
+  "fields": {
+    "page": 3,
+    "name": "Hotel- und Gastgewerbe, z. B."
+  }
+},
+{
+  "model": "berufsfelder.bereich",
+  "pk": 7,
+  "fields": {
+    "page": 3,
+    "name": "Spedition und Logistik, z. B."
+  }
+},
+{
+  "model": "berufsfelder.bereich",
+  "pk": 8,
+  "fields": {
+    "page": 3,
+    "name": "Handel und Dienstleistungen, z. B."
+  }
+},
+{
+  "model": "berufsfelder.bereich",
+  "pk": 9,
+  "fields": {
+    "page": 3,
+    "name": "Bahndienstleistungen, z. B."
+  }
+},
+{
+  "model": "berufsfelder.bereich",
+  "pk": 10,
+  "fields": {
+    "page": 3,
+    "name": "Bau- und Baunebengewerbe, z. B."
+  }
+},
+{
+  "model": "berufsfelder.bereich",
+  "pk": 11,
+  "fields": {
+    "page": 3,
+    "name": "Facilitymanagement, z. B."
+  }
+},
+{
+  "model": "berufsfelder.bereich",
+  "pk": 12,
+  "fields": {
+    "page": 3,
+    "name": "Gesundheitswesen"
+  }
+},
+{
+  "model": "berufsfelder.bereich",
+  "pk": 13,
+  "fields": {
+    "page": 2,
+    "name": "Ingenieurwesen/Industrie und Technik"
+  }
+},
+{
+  "model": "berufsfelder.bereich",
+  "pk": 14,
+  "fields": {
+    "page": 2,
+    "name": "Informationstechnologie und Telekommunikation"
+  }
+},
+{
+  "model": "berufsfelder.bereich",
+  "pk": 15,
+  "fields": {
+    "page": 2,
+    "name": "Kaufm\u00e4nnische Berufe und Assistenz"
+  }
+},
+{
+  "model": "berufsfelder.bereich",
+  "pk": 16,
+  "fields": {
+    "page": 2,
+    "name": "Gesundheitswesen"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 1,
+  "fields": {
+    "sector": 1,
+    "name": "Schlosser und Schwei\u00dfer"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 2,
+  "fields": {
+    "sector": 1,
+    "name": "Installateure HLS"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 3,
+  "fields": {
+    "sector": 1,
+    "name": "Elektriker und Energieelektroniker"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 4,
+  "fields": {
+    "sector": 1,
+    "name": "Industrie- und Anlagenmechaniker"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 5,
+  "fields": {
+    "sector": 1,
+    "name": "Tischler und Fenstermonteure"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 6,
+  "fields": {
+    "sector": 1,
+    "name": "CNC-Fachkr\u00e4fte"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 7,
+  "fields": {
+    "sector": 1,
+    "name": "Mechatroniker"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 8,
+  "fields": {
+    "sector": 1,
+    "name": "Lackierer und Maler"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 9,
+  "fields": {
+    "sector": 2,
+    "name": "Maschinenbau, Automatisierungs-, Energie- und Anlagentechnik"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 10,
+  "fields": {
+    "sector": 2,
+    "name": "Elektrotechnik/Elektronik, Nachrichtentechnik"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 11,
+  "fields": {
+    "sector": 2,
+    "name": "Fahrzeugtechnik, Konstruktion, Entwicklung"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 12,
+  "fields": {
+    "sector": 2,
+    "name": "Feinwerk-, Verfahrens- und Umwelttechnik"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 13,
+  "fields": {
+    "sector": 2,
+    "name": "Vermessungs- und Bauwesen"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 14,
+  "fields": {
+    "sector": 3,
+    "name": "Office und Sachbearbeitung"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 15,
+  "fields": {
+    "sector": 3,
+    "name": "Finanzen und Controlling"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 16,
+  "fields": {
+    "sector": 3,
+    "name": "Vertrieb und Marketing"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 17,
+  "fields": {
+    "sector": 3,
+    "name": "Personal"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 18,
+  "fields": {
+    "sector": 4,
+    "name": "Call-Center"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 19,
+  "fields": {
+    "sector": 4,
+    "name": "Kundenbetreuung"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 20,
+  "fields": {
+    "sector": 12,
+    "name": "Kranken- und Altenpflegekr\u00e4fte"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 21,
+  "fields": {
+    "sector": 11,
+    "name": "Reinigungskr\u00e4fte"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 22,
+  "fields": {
+    "sector": 11,
+    "name": "Hauswirtschaftskr\u00e4fte"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 23,
+  "fields": {
+    "sector": 10,
+    "name": "Baufachkr\u00e4fte"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 24,
+  "fields": {
+    "sector": 10,
+    "name": "Bauhelfer"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 25,
+  "fields": {
+    "sector": 9,
+    "name": "Sicherungsposten (SIPO/SAKRA, B\u00dcP, Bediener AWS)"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 26,
+  "fields": {
+    "sector": 9,
+    "name": "technisches Bahnpersonal"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 27,
+  "fields": {
+    "sector": 9,
+    "name": "technische F\u00fchrungskr\u00e4fte"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 28,
+  "fields": {
+    "sector": 9,
+    "name": "Bahnlogistiker"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 29,
+  "fields": {
+    "sector": 8,
+    "name": "Backwarenfachverk\u00e4ufer"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 30,
+  "fields": {
+    "sector": 8,
+    "name": "Fleischwarenverk\u00e4ufer"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 31,
+  "fields": {
+    "sector": 8,
+    "name": "Fachkr\u00e4fte im Einzelhandel"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 32,
+  "fields": {
+    "sector": 7,
+    "name": "Kraftfahrer und Disponenten"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 33,
+  "fields": {
+    "sector": 7,
+    "name": "Lagerhelfer"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 34,
+  "fields": {
+    "sector": 6,
+    "name": "Hotel- und Restaurantfachkr\u00e4fte"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 35,
+  "fields": {
+    "sector": 6,
+    "name": "K\u00f6che und K\u00fcchenhilfskr\u00e4fte"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 36,
+  "fields": {
+    "sector": 5,
+    "name": "Sicherheitsfachkr\u00e4fte"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 37,
+  "fields": {
+    "sector": 5,
+    "name": "Aufsichten f\u00fcr Museen"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 38,
+  "fields": {
+    "sector": 16,
+    "name": "Assistenzberufe"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 39,
+  "fields": {
+    "sector": 16,
+    "name": "Pflegeberufe"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 40,
+  "fields": {
+    "sector": 16,
+    "name": "Pharmaberater & -referent"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 41,
+  "fields": {
+    "sector": 16,
+    "name": "Praxispersonal"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 42,
+  "fields": {
+    "sector": 16,
+    "name": "Therapeutische Berufe"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 43,
+  "fields": {
+    "sector": 15,
+    "name": "Office-Management, Sekretariat"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 44,
+  "fields": {
+    "sector": 15,
+    "name": "Kundenberater, Telefonzentrale"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 45,
+  "fields": {
+    "sector": 15,
+    "name": "Personalwesen"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 46,
+  "fields": {
+    "sector": 15,
+    "name": "Vertrieb, Marketing"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 47,
+  "fields": {
+    "sector": 15,
+    "name": "Finanzen, Handel, Einkauf"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 48,
+  "fields": {
+    "sector": 14,
+    "name": "Datenbankadministration & -entwicklung"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 49,
+  "fields": {
+    "sector": 14,
+    "name": "E-Business & E-Commerce"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 50,
+  "fields": {
+    "sector": 14,
+    "name": "Helpdesk & Technischer Support"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 51,
+  "fields": {
+    "sector": 14,
+    "name": "IT-Architektur"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 52,
+  "fields": {
+    "sector": 14,
+    "name": "Netzwerkadministration & Sicherheit"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 53,
+  "fields": {
+    "sector": 14,
+    "name": "Software-, Anwendungsentwicklung und -programmierung"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 54,
+  "fields": {
+    "sector": 14,
+    "name": "Systemadministration"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 55,
+  "fields": {
+    "sector": 14,
+    "name": "Telekommunikation & Mobilsysteme"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 56,
+  "fields": {
+    "sector": 13,
+    "name": "Bauingenieure, Bautechniker"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 57,
+  "fields": {
+    "sector": 13,
+    "name": "Elektrotechnik-Ingenieure, Elektrotechniker"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 58,
+  "fields": {
+    "sector": 13,
+    "name": "Maschinenbau-Ingenieure, -techniker"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 59,
+  "fields": {
+    "sector": 13,
+    "name": "Qualit\u00e4tsmanager & Qualit\u00e4tsingenieur"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 60,
+  "fields": {
+    "sector": 13,
+    "name": "Servicetechniker"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 61,
+  "fields": {
+    "sector": 13,
+    "name": "Verfahrenstechnik-Ingenieure"
+  }
+},
+{
+  "model": "berufsfelder.detail",
+  "pk": 62,
+  "fields": {
+    "sector": 13,
+    "name": "Vertriebsingenieur"
+  }
+}
+]
