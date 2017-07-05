@@ -28,7 +28,7 @@ class JobSearchListView(SearchMixin, JobListView):
 
         try:
             return redirect(Job.objects.get(pk=request.GET.get("q")))
-        except (ValueError, Job.DoesNotExist):
+        except (ValueError, Job.DoesNotExist, OverflowError):
             pass
 
         return super().dispatch(request, *args, **kwargs)
