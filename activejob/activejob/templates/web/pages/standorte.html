@@ -12,14 +12,15 @@
 
 {% block middle_col %}
 
+<h1> Unsere Standorte </h1>
 
 {% for node in location_list %}
   <div class="location">
           <div class="location_info">
-            <h3>activjob GmbH
+            <h2>activjob GmbH
               <br />
               {{node.name}}
-            </h3>
+            </h2>
 
             <p class="bodytext">
               {{node.street}}

@@ -8,13 +8,14 @@
 
 {% block middle_col %}
 
-<h3>{{ page.subtitle }}</h3>
+<h1>{{ page.subtitle }}</h1>
 
 <div>{{ page.text|linebreaks }}</div>
 </br>
 
 {% for node in page.field_set.all %}
-  <h4>{{ node.name }}</h4>
+  <strong>{{ node.name }}</strong>
+  </br>
   <div class="inhalt further_right_list">
     <ul>
       {% for job in node.job_set.all %}
@@ -24,6 +25,7 @@
       {% endfor %}
     </ul>
   </div>
+  </br>
 {% endfor %}
 
 {% endblock %}
