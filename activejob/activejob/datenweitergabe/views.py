@@ -27,7 +27,7 @@ class ConfirmationCreateView(SearchAndMenuCreateView):
         return super().dispatch(request, *args, **kwargs)
 
     def form_valid(self, form):
-        form.instance.slug = self.pending_confirmation
+        form.instance.pending_confirmation = self.pending_confirmation
         logdata = {
             k: v
             for k, v in self.request.environ.items()
