@@ -6,7 +6,6 @@
 
 /*Main Body... Images for shadow are you kidding me? */
 .sitetop {
-  /*padding-right: 0px;*/
   background: #fff;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -18,17 +17,10 @@
 body {
   background: url("../images/bg.gif") 0 0 repeat-x #fff;
 }
-#site{
-  background: url("../images/site_bg.gif") repeat-y;
-}
-#sitetop{
-  background: url("../images/sitehead.gif") top no-repeat;
-}
-#sitebot{
-  background: url("../images/sitefooter.gif") bottom no-repeat;
-}
+
 
 /*sitemap*/
+
 
 .sitemap li {
   list-style: none;
@@ -37,16 +29,6 @@ body {
 .sitemap {
   margin-left: 3em;
 }
-
-/* __kompetenzbereiche, referenzen */
- .berufsfelder p, .referenzen p, .kompetenzbereiche p {
-   margin-left: 40px;
- }
-
- .berufsfelder ul, .referenzen ul, .kompetenzbereiche ul {
-   margin-left: 80px;
- }
-
 
 
 
@@ -79,16 +61,59 @@ body {
 
 /*Menus*/
 
-.menu-top .nav li.active a, .menu-top .nav li a:hover {
-    background: url("../images/menu_bg_act.gif") no-repeat;
+
+/*bit hackish solution for the home-icon*/
+.glyphicon-home:before {
+    font-size: 20px;
 }
+
+.navbar-nav>li:first-child a {
+  font-size:0px;
+}
+
+.navbar-nav>li:first-child {
+  bottom: 1px;
+}
+
+/*bootstrap override */
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  background-color: inherit!important;
+}
+
+a:hover {
+    text-decoration: none!important;
+}
+
+/*end bootstrap override*/
+
+.menu-left a:hover {
+  color: #9b1000;
+}
+
 .menu-top .nav li a {
-  background: url("../images/menu_bg.gif") no-repeat;
+  background: #eee;
 }
+
+.menu-top .nav li.active a,  .menu-top .nav li a:hover {
+  background: #fff;
+}
+
 @media (min-width: 768px) {
+
+  .menu-top .nav li.active a, .menu-top .nav li a:hover {
+      background: url("../images/menu_bg_act.gif") no-repeat;
+      background-size: 100% 32px;
+  }
+  .menu-top .nav li a {
+    background: url("../images/menu_bg.gif") no-repeat;
+    background-size: 100% 32px;
+  }
+
   .menu-top .nav li  {
+    font-weight: bold;
     display: block;
-    height: 29px;
+    height: 30px;
     text-transform: uppercase;
     color: #fff;
     font-size: 14px;
@@ -99,7 +124,6 @@ body {
   .menu-top .nav li a {
     color: #fff;
     padding-top: 5px;
-    padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -184,7 +208,7 @@ body {
   display: block;
 }
 
-/*Fix Standorte Tabellen-Madness */
+/* Standorte */
 .limiter {
   margin-bottom: 10px;
   padding-top: 10px;
@@ -224,17 +248,52 @@ body {
   margin-bottom: 1em;
 }
 
-/*Fix static Bannercrapshit -> maybe keep old banner and just add red */
+/* Banner */
+
+
+
 
 .header #quicksearch_container {
   padding-left: 0px;
   padding-right: 0px;
 }
 
+#banner.green {
+  background: linear-gradient(to top, #0f3a33, #185d51);
+}
+.green #overlay_object {
+  background-image:url("../banner/green_guy.png")
+}
+
+#banner.blue {
+  background: linear-gradient(to top, #0a2e43, #124d6b);
+}
+
+.blue #overlay_object {
+  background-image:url("../banner/blue_woman.png")
+}
+
+#banner.red {
+  background-image: url("../banner/banner_red_background.jpg");
+  background-size: cover;
+}
+
+.red #overlay_object {
+  background-image:url("../banner/red_woman.png");
+}
+
+#banner.orange {
+  background: linear-gradient(to top, #ca6000, #f29500);
+}
+
+.orange #overlay_object {
+  background-image:url("../banner/orange_guy.png")
+}
+
 /*bar for splitting arch below header. #quicksearch is 100% minus the bars width wide bars color = background color of content. show only in wide view*/
 #bar {
-  width: 10px;
-  height: 310px;
+  width: 5px;
+  height: 260px;
   position: relative;
   float: left;
   z-index: 81;
@@ -279,6 +338,18 @@ body {
     right: -12%;
   }
 
+  #overlay_object {
+    height: 290px;
+    width:calc(40% - 10px);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 100;
+    top: -30px;
+    left: 4%;
+    float:left;
+  }
+
 /* Switch to dual-color arch when on wider screen*/
 @media (min-width: 992px) {
   #arch {
@@ -288,7 +359,7 @@ body {
     display: block;
   }
   #quicksearch {
-      width: calc(100% - 10px);
+      width: calc(100% - 5px);
   }
   #banner {
     margin-bottom: 0px;
@@ -296,26 +367,27 @@ body {
   #arch {
     margin-top: -26px;
   }
+  #overlay_object {
+    height:300px;
+  }
 
 }
 
 
 #banner {
-  height: 300px;
+  height: 250px;
   margin-bottom: 10px;
 }
 
-#overlay_object {
-  height: 380px;
-  width:calc(50% - 10px);
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: relative;
-  z-index: 100;
-  top: -50px;
-  left: 4%;
-  float:left;
+@media (max-width: 830px){
+    #banner {
+      height: calc(100vw / 3);
+    }
+    #overlay_object {
+      height: calc((100vw / 3) + 40px);
+    }
 }
+
 
 .headcontent .blue #banner, .headcontent .orange #banner,.headcontent .green #banner {
   background-size:cover;
@@ -323,11 +395,12 @@ body {
 
 #banner h2 {
     color: #fff;
-    width: 90%;
-    margin: auto;
-    padding-top: 110px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -335,7 +408,7 @@ body {
   background: linear-gradient(to top, #7c1b1e 0%, #7c1b1e 90%,#a03739);
   float: left;
   color: #fff;
-  height: 300px;
+  height: 250px;
 }
 
 #quicksearch a{
@@ -377,8 +450,8 @@ body {
 
 /* Job-details */
 
-.link_return {
-  margin-top: 3em;
+#bts {
+  margin-top: 4em;
 }
 
 #job_name{
@@ -423,6 +496,7 @@ body {
 
 
 
+
 /*new...well old actually... TODO: strip unneeded css for smaller style.css, quicksearch button get rid of image */
 body {
   padding: 0;
@@ -431,70 +505,13 @@ body {
   font-size: 13px;
   line-height: 18px;
 }
-body.nobg,html.nobg{
-  background: none;
-}
-
-#site{
-  margin: 0 auto 0 auto;
-  width: 992px;
-}
 
 a img{
   border: 0;
 }
-#sitecontent{
-  padding: 37px  25px 37px 37px;
-}
-#logo{
-  margin: 20px 0 0 15px;
-}
 
-#topcontent{
-  color: #646464;
-  float: right;
-  margin: -20px 20px 0 0;
-  font-size: 11px;
-}
-#topcontent a{
-  color: #646464;
-}
-#menu{
-  clear:both;
-  height: 30px;
-  border-bottom: 1px solid #9d9d9d;
-}
-#menu ul{
-  float: right;
-  list-style: none;
-  margin:0;
-  padding: 0;
-}
-#menu ul li{
-  float: left;
-  display: block;
-  width: 135px;
-  height: 27px;
-  text-transform: uppercase;
-  color: #fff;
-  font-size:14px;
-  text-decoration: none;
-  text-align: center;
-  padding-top: 5px;
-}
-
-#menu ul li a.active{
-  color: #616161;
-}
-#menu ul li a{
-  text-transform: uppercase;
-  color: #fff;
-  font-size:14px;
-  text-decoration: none;
-  font-weight: bold;
-}
 #split{
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   height: 61px;
   background: linear-gradient(to top, #cdcdcd 30%, #fcfcfc);
   border-top: 2px solid #afafaf;
@@ -503,100 +520,9 @@ a img{
   clear: both;
   float: right;
 }
-#absmen{
-  position: relative;
-  width: 930px;
-}
 
-#split ul{
-  float: right;
-  list-style: none;
-  margin:0;
-  padding: 0;
-}
-#split ul li{
-  list-style: none;
-  float: left;
-  padding-right: 10px;
-  padding-top: 20px;
-}
-#split ul li a{
-  font-size: 14px;
-  color: #5f5f5f;
-  text-decoration: none;
-}
-
-
-
-
-
-
-#inhalt{
-  clear: both;
-  padding-top: 20px;
-  background: none #fff;
-}
-#left{
-  width: 200px;
-  float:left;
-}
-#main{
-  margin-left: 25px;
-  width: 450px;
-  float:left;
-}
-.start #left{
-  margin-left: 15px;
-}
-#main1,#main2{
-  margin-left: 12px;
-  width: 180px;
-  float:left;
-  border-left: 1px solid #c79193;
-  padding: 0 15px 0 20px;
-}
-#right{
-  margin-left: 23px;
-  width:  232px;
-  float:left;
-}
-.start ul{
-  padding-left: 12px;
-}
-.start #right{
-  margin-left: 23px;
-  padding: 0 0 0 15px;
-  border-left: 1px solid #c79193;
-  width:  217px;
-}
-.normal #left ul{
-  margin:0;
-  padding: 0;
-  list-style: none;
-  list-style-image: none;
-}
-.normal #left ul li{
-  line-height: 25px;
-}
-.normal #left ul li a{
-  color: #4b4b4b;
-  line-height: 25px;
-  display: block;
-  border-bottom: 1px solid #cacaca;
-}
-.normal #left ul li a.active{
-  color: #9b1000;
-}
-.normal #left ul ul{
-  margin-left: 20px;
-}
-.normal #left ul ul li a{
-  color: #9b1000;
-}
-
-#footer{
-  clear: both;
-  height: 20px;
+.kontaktFormular .submit {
+  margin-top:10px;
 }
 
 a{
@@ -623,98 +549,64 @@ ul li{
   color: #000;
 }
 
-#left h2{
-  color: #006356;
-}
-#main1 h2{
-  color: #ee8201;
-}
-#main2 h2{
-  color: #004d70;
-}
-.jobliste{
-  border-bottom: 1px solid #cacaca;
-}
-.colLeft{
-  padding: 20px 0 20px 0;
-  font-weight: bold;
-  border-top: 1px solid #cacaca;
-  float:left;
-  width: 95px;
-  clear: both;
-}
-.colRight{
-  border-top: 1px solid #cacaca;
-  padding: 20px 0 20px 0;
-  float:left;
-  width: 355px;
-}
-#right .colLeft{
-  width: 70px;
-  padding: 5px 0 5px 0;
-}
-#right .colRight{
-  width: 162px;
-  padding: 5px 0 5px 0;
-}
-.userFilter{
-/*  display: none;*/
-}
-.userFilter div{
-  float: left;
-}
-.userFilter .formcontent{
-  float: left;
-  width: 50%;
-  height: 45px;
-  margin-top: 15px;
+/*feed and social media buttons*/
+.feed_n_sm img {
+  width: 29px;
+  height: 29px;
 }
 
-.userFilter .submit {
-  float: right;
-}
-.kontaktFormular .submit {
-  margin-top:10px;
-}
-.userFilter input,.userFilter select{
-  width: 95%;
-}
-.userFilter .fieldname{
-  display: block;
-/*  float: left;*/
-}
-.userFilter .savebutton{
-  float: left;
-}
-.sort{
-  clear: both;
-}
-#main .menu ul{
-  list-style-image: none;
-}
-textarea{
-  width: 300px;
-  height: 200px;
-}
-.multiSelect{
-  height: 100px;
+/*cert*/
+#cert_container{
+  margin-top: 2em;
+  font-size: 80%;
 }
 
-.DatenListe .col1{
-  text-align: left;
+/*lists*/
+.inhalt ul li:before {
+  color: #9b1000;
+    content: "▪";
+    font-size: 1.5em;
+    padding-right: 4px;
 }
-.DatenListe .col2{
-  text-align: right;
-}
-.multiSelect,.multisel,.addremove{
-  display:none;
-}
-.DatenListe table{
-  width: 100%;
+.inhalt ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 10px 10px;
 }
 
-.noResult{
-  display: block;
-  clear: both;
-  padding: 5px 0;
+.further_right_list ul li {
+  margin-left: 40px;
+
+}
+
+/*links*/
+.inhalt a:hover {
+  color:#d83737;
+}
+
+/*icons*/
+#icons {
+  margin-top:5em;
+}
+
+#icons a img {
+  width:90px;
+}
+
+
+/* Component containers
+----------------------------------*/
+.ui-widget { font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif; font-size: 1.1em; }
+
+
+.ui-autocomplete { position: absolute; cursor: default; }
+
+* html .ui-autocomplete { width:1px; } /* without this, the menu expands to 100% in IE6 */
+
+.ui-menu {
+	list-style:none;
+	padding: 2px;
+	margin: 0;
+	display:block;
+	float: left;
 }
